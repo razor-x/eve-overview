@@ -5,3 +5,4 @@ assets:
     js: ""
 
 google_analytics: false
+piwik: false
