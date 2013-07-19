@@ -67,7 +67,9 @@ task :deploy do
   port = config[:deploy][:port]
   path = config[:deploy][:path]
 
-  flags = %w{ -r -t --del -e -z }
+  flags = %w{ -r -t --del -z -v }
+  rsync = [ 'rsync', *flags, '-e', %Q{"ssh -p #{port}"}, local + '/', "#{user}@#{server}:#{path}" ].join(' ')
 
-  system 'rsync', *flags, "ssh -p #{port}", local, "#{user}@#{server}:#{path}"
+  p "Now running: #{rsync}"
+  system rsync
 end
