@@ -1,0 +1,7 @@
+assets:
+  cache: true
+  compress:
+    css: ""
+    js: ""
+
+google_analytics: false

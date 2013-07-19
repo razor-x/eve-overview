@@ -1,0 +1,11 @@
+/* TEAM */
+
+Owner & Developer: Your Name
+Site: yoursite.com
+Location: Your Location, Country
+
+/* SITE */
+
+Standards: HTML5, CSS3
+Components: Modernizr, jQuery, Zepto, Foundation by ZURB
+Software: Ruby, Rake, Jekyll, Jekyll::AssetsPlugin, Compass, Sass, Uglifier

@@ -1,0 +1,4 @@
+.jekyll-assets-cache/
+.kateproject.d/
+_site
+Gemfile.lock

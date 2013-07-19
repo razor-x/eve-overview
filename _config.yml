@@ -1,0 +1,10 @@
+name: Site Name
+markdown: redcarpet
+pygments: true
+
+exclude: [ 'CHANGELOG.md', 'LICENSE.txt', 'README.md', 'VERSION', 'Gemfile.lock', 'Gemfile', 'Rakefile' ]
+
+assets:
+  compress:
+    css: sass
+    js: uglifier
