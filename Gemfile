@@ -1,7 +1,7 @@
 source 'https://rubygems.org'
 
-gem 'rake'
-gem 'bump'
+gem 'rake', '~> 10.1.0'
+gem 'bump', '~> 0.4.2'
 
 gem 'jekyll', '~> 1.1.0'
 gem 'jekyll-assets', '~> 0.6.0'
