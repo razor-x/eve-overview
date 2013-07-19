@@ -58,7 +58,7 @@ end
 
 # rake deploy
 desc 'Deploy the site using rsync.'
-task :deploy do
+task :deploy => :build do
   raise '>> error: must add :depoly: section to _config.yml.' if config[:deploy].nil?
 
   local = File.expand_path '_site/'
