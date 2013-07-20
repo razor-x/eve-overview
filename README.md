@@ -3,7 +3,7 @@
 Source for your personal blog running on Jekyll and Foundation.
 Just clone and blog: create the `_posts` and `_drafts` folder.
 
-- Bare bones: HTML5 & CSS3 ready.
+- Bare bones [Jekyll](http://jekyllrb.com/) blog: HTML5 & CSS3 ready.
 - Running [Foundation by ZURB](http://foundation.zurb.com/).
 - Asset pipeline with [Jekyll::AssetsPlugin](https://github.com/ixti/jekyll-assets).
 - [Compass](http://compass-style.org/), [Sass](http://sass-lang.com/), [CoffeeScript](http://coffeescript.org/).
@@ -11,3 +11,48 @@ Just clone and blog: create the `_posts` and `_drafts` folder.
 - [Disqus](https://disqus.com/) ready: set `disqus: your_shortname` in `_config.yml`.
 - [Google Analytics](http://www.google.com/analytics/) ready: set `google_analytics: UA-YOUR_CODE` in `_config.yml`.
 - [Piwik](https://piwik.org/) ready: set `piwik: yoursite.com/piwik/` in `_config.yml` (yoursite.com/piwik/ points to the piwik install root).
+
+## Quick start
+
+Just clone this with
+
+    git clone git@github.com:razor-x/jekyll-and-zurb.git my_blog
+
+run `bundle`, and create the `_posts` folder.
+Head over to the [Jekyll Docs](http://jekyllrb.com/docs/home/) for the rest of the details.
+
+## Add future update support
+
+If you want to merge in future updates from this project and have your own origin,
+set up a separate branch to track this.
+
+    git remote rename origin razorx-jekyll-and-zurb
+    git branch jekyll-and-zurb
+    git branch -u razorx-jekyll-and-zurb/master jekyll-and-zurb
+
+Then add an origin and push master
+
+    git remote add origin git@github.com:username/username-blog.git
+    git push -u origin master
+
+Now, the `razorx-jekyll-and-zurb` branch will pull changes from this project,
+which you can then merge into your other branches.
+
+## Updating
+
+The `Gemfile` is using pessimistic version constraints for everything,
+so if you want major updates, you need to bump the versions yourself.
+
+If you update Foundation, but sure to also update the JavaScript in `_assets/javascripts/vendor/`.
+Note that `custom.modernizr.js` has been renamed `custom_modernizr.js` for this project.
+
+## License
+
+This code is licensed under the MIT license.
+
+## Warranty
+
+This software is provided "as is" and without any express or
+implied warranties, including, without limitation, the implied
+warranties of merchantibility and fitness for a particular
+purpose.
