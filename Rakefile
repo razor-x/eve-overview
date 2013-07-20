@@ -2,6 +2,7 @@
 require 'rake'
 require 'yaml'
 require 'fileutils'
+require 'net/sftp'
 
 # Load the configuration file
 config = YAML.load_file '_config.yml'
@@ -62,14 +63,26 @@ task :deploy => :build do
   raise '>> error: must add :depoly: section to _config.yml.' if config[:deploy].nil?
 
   local = File.expand_path '_site/'
+  protocol = config[:deploy][:protocol]
   server = config[:deploy][:server]
   user = config[:deploy][:user]
   port = config[:deploy][:port]
   path = config[:deploy][:path]
 
-  flags = %w{ -r -t --del -z -v }
-  rsync = [ 'rsync', *flags, '-e', %Q{"ssh -p #{port}"}, local + '/', "#{user}@#{server}:#{path}" ].join(' ')
+  case protocol
+  when :rsync
 
-  p "Now running: #{rsync}"
-  system rsync
+    flags = %w{ -r -t --del -z -v }
+    rsync = [ 'rsync', *flags, '-e', %Q{"ssh -p #{port}"}, local + '/', "#{user}@#{server}:#{path}" ].join(' ')
+    p "Now running: #{rsync}"
+    system rsync
+
+  when :sftp
+    Net::SFTP.start "#{server}", user, :port => port do |sftp|
+      p "Now uploading via sftp"
+      sftp.rmdir path
+      sftp.mkdir path
+      sftp.upload local, path
+    end
+  end
 end

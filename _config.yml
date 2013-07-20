@@ -8,3 +8,17 @@ assets:
   compress:
     css: sass
     js: uglifier
+
+# uncomment below to enable deploy
+# :deploy:
+#   # either :rsync or :sftp
+#   :protocol: :rsync
+#   # domain name
+#   :server: example.com
+#   # remote username
+#   :user: www
+#   # remote port
+#   :port: 22
+#   # path to remote folder where contents of _site should go
+#   # must have trailing slash
+#   :path: /var/www/example.com/htdocs/
