@@ -78,7 +78,7 @@ task :deploy => :build do
     system rsync
 
   when :sftp
-    Net::SFTP.start "#{server}", user, :port => port do |sftp|
+    Net::SFTP.start "#{server}", user, :port => port, :compression => 'zlib'  do |sftp|
       p "Now uploading via sftp"
       sftp.rmdir path
       sftp.mkdir path
