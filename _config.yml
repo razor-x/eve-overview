@@ -9,7 +9,7 @@ assets:
     css: sass
     js: uglifier
 
-# uncomment below to enable deploy
+# Uncomment below to enable deploy.
 # :deploy:
 #   # either :rsync or :sftp
 #   :protocol: :rsync

@@ -13,7 +13,7 @@ dev_config = '_config.yml,_config.dev.yml'
 # Set "rake watch" as default task
 task :default => :draft
 
-# spawn a server and kill it gracefully when interrupt is received
+# Spawn a server and kill it gracefully when interrupt is received
 def spawn *cmd
   pid = Process.spawn *cmd
 
