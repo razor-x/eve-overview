@@ -15,6 +15,10 @@
 #             alt="The strange case of responsive images" class="gal-img" data-selected %}
 #
 # See the documentation for full configuration and usage instructions.
+#
+# Plugin modified by Evan Sosenko for Jekyll & ZURB.
+# Added Foundation's Interchange as a new supported markup.
+#
 
 require 'fileutils'
 require 'pathname'
@@ -156,7 +160,7 @@ module Jekyll
         picture_tag = "<span #{html_attr_string}>\n"\
                       "#{source_tags}"\
                       "<noscript>\n"\
-                      "<img src=\"#{instance['source_default'][:generated_src]}\" alt=\"#{html_attr['data-alt']}\">\n"\
+                      "<img src=\"#{instance['source_default'][:generated_src]}\" alt=\"#{html_attr['data-alt']}\" />\n"\
                       "</noscript>\n"\
                       "</span>\n"
 
@@ -165,9 +169,9 @@ module Jekyll
         source_tags = ''
         source_keys.each { |source|
           if source == 'source_default'
-            source_tags += "<img src=\"#{instance[source][:generated_src]}\" alt=\"#{html_attr['alt']}\">\n"
+            source_tags += "<img src=\"#{instance[source][:generated_src]}\" alt=\"#{html_attr['alt']}\" />\n"
           else
-            source_tags += "<source src=\"#{instance[source][:generated_src]}\" media=\"#{instance[source]['media']}\">\n"
+            source_tags += "<source src=\"#{instance[source][:generated_src]}\" media=\"#{instance[source]['media']}\" />\n"
           end
         }
 
@@ -176,6 +180,15 @@ module Jekyll
                       "#{source_tags}"\
                       "<p>#{html_attr['alt']}</p>\n"\
                       "</picture>"
+
+      elsif settings['markup'] == 'interchange'
+
+        interchange_data = Array.new
+        source_keys.reverse.each do |source|
+          interchange_data << "[#{instance[source][:generated_src]}, #{source == 'source_default' ? '(default)' : instance[source]['media']}]"
+        end
+
+        picture_tag = %Q{<img src="#{instance['source_default'][:generated_src]}" data-interchange="#{interchange_data.join ', '}" alt="#{html_attr['alt']}" />}
       end
 
         # Return the markup!

@@ -23,15 +23,23 @@ assets:
 #   # must have trailing slash
 #   :path: /var/www/example.com/htdocs/
 
+# Foundation Interchange markup support added to
+# Jekyll Picture Tag (https://github.com/robwierzbowski/jekyll-picture-tag)
 # Uncomment below to enable responsive images.
 # picture:
+#   markup: "interchange"
 #   source: pictures/_fullsize
 #   output: pictures
-#   markup: 'interchange'
 #   presets:
 #     default:
+#       source_large:
+#         media: "(large)"
+#         width: "1440"
 #       source_medium:
-#         media: "(min-width: 40em)"
-#         width: "600"
+#         media: "(medium)"
+#         width: "1280"
+#       source_small:
+#         media: "(small)"
+#         width: "768"
 #       source_default:
 #         width: "500"
