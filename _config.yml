@@ -22,3 +22,16 @@ assets:
 #   # path to remote folder where contents of _site should go
 #   # must have trailing slash
 #   :path: /var/www/example.com/htdocs/
+
+# Uncomment below to enable responsive images.
+# picture:
+#   source: pictures/_fullsize
+#   output: pictures
+#   markup: 'interchange'
+#   presets:
+#     default:
+#       source_medium:
+#         media: "(min-width: 40em)"
+#         width: "600"
+#       source_default:
+#         width: "500"
