@@ -23,9 +23,16 @@ class YouTube < Liquid::Tag
   Syntax = /^\s*([^\s]+)(\s+(\d+)\s+(\d+)\s*)?/
 
   def initialize tagName, markup, tokens
+    @markup = markup
     super
+  end
 
-    if markup =~ Syntax then
+  def render context
+
+    # Render any liquid variables in tag arguments and unescape template code
+    render_markup = Liquid::Template.parse(@markup).render(context).gsub(/\\\{\\\{|\\\{\\%/, '\{\{' => '{{', '\{\%' => '{%')
+
+    if render_markup =~ Syntax then
       @id = $1
 
       if $2.nil? then
@@ -38,9 +45,7 @@ class YouTube < Liquid::Tag
     else
       raise %Q{No YouTube ID provided in the "youtube" tag}
     end
-  end
 
-  def render context
     content = String.new
     content << '<div class="video youtube">'
     content << %Q{<iframe width="#{@width}" height="#{@height}" src="//www.youtube.com/embed/#{@id}" frameborder="0" allowfullscreen></iframe>}
