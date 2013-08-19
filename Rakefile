@@ -54,7 +54,7 @@ end
 desc 'Start a server and watch the site for changes.' + "\n" +
      'Include all drafts in site.'
 task :draft do
-  spawn 'jekyll', 'serve', '--watch', '--drafts', testing_config
+  spawn 'jekyll', 'serve', '--watch', '--drafts', '--config', testing_config
 end
 
 # rake deploy
