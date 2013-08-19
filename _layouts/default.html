@@ -33,18 +33,18 @@
 
   <script>
     $(document).foundation();
+
+    {% if site.disqus %}
+      {% asset vendor/disqus %}
+    {% endif %}
+
+    {% if site.google_analytics %}
+      {% asset vendor/google_analytics %}
+    {% endif %}
+
+    {% if site.piwik %}
+      {% asset vendor/piwik %}
+    {% endif %}
   </script>
-
-  {% if site.disqus %}
-    {% javascript vendor/disqus %}
-  {% endif %}
-
-  {% if site.google_analytics %}
-    {% javascript vendor/google_analytics %}
-  {% endif %}
-
-  {% if site.piwik %}
-    {% javascript vendor/piwik %}
-  {% endif %}
 </body>
 </html>
