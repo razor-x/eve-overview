@@ -9,6 +9,12 @@ assets:
     css: sass
     js: uglifier
 
+# Uncomment below and add your Tracking ID to enable Google Analytics.
+# google_analytics: UA-00000000-0
+
+# Uncomment below and add your Piwik URL to enable Google Analytics.
+# piwik: example.com/piwik/
+
 # Uncomment below to enable deploy.
 # :deploy:
 #   # either :rsync or :sftp
