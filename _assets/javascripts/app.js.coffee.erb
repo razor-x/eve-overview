@@ -7,7 +7,7 @@
       require_asset 'vendor/picturefill'
     when 'interchange'
       require_asset 'vendor/foundation/foundation.interchange'
-    end
+    end unless site.config['picture'].nil?
 %>
 
 # Foundation decides to load jQuery or Zepto and stores it in libFuncName
