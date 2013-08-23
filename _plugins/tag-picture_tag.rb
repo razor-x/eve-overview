@@ -188,7 +188,7 @@ module Jekyll
           interchange_data << "[#{instance[source][:generated_src]}, #{source == 'source_default' ? '(default)' : instance[source]['media']}]"
         end
 
-        picture_tag = %Q{<img src="#{instance['source_default'][:generated_src]}" data-interchange="#{interchange_data.join ', '}" alt="#{html_attr['alt']}" />}
+        picture_tag = %Q{<img src="#{instance['source_default'][:generated_src]}" data-interchange="#{interchange_data.join ', '}" #{html_attr_string} />}
       end
 
         # Return the markup!
