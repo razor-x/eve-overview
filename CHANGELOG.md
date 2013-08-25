@@ -1,5 +1,10 @@
 # Changelog
 
+## 0.3.0
+
+- Google Analytics tracking code updated to use Universal Analytics.
+  * `google_analytics` config variable is now a hash which takes `id` and `url`.
+
 ## 0.2.0
 
 - Jekyll YouTube Embed Plugin for Foundation.

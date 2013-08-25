@@ -12,8 +12,10 @@ assets:
 # Uncomment below and add your Disqus Shortname to enable Disqus.
 # disqus: shortname
 
-# Uncomment below and add your Tracking ID to enable Google Analytics.
-# google_analytics: UA-00000000-0
+# Uncomment below and add your Tracking ID and URL to enable Google Analytics.
+# google_analytics:
+#   id: UA-00000000-0
+#   url: example.com
 
 # Uncomment below and add your Piwik URL to enable Piwik.
 # piwik: example.com/piwik/
