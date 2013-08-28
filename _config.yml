@@ -22,7 +22,7 @@ assets:
 
 # Uncomment below to enable deploy.
 # :deploy:
-#   # either :rsync or :sftp
+#   # only :rsync supported
 #   :protocol: :rsync
 #   # domain name
 #   :server: example.com

@@ -73,16 +73,12 @@ task :deploy => :build do
   when :rsync
 
     flags = %w{ -r -t --del -z -v }
-    rsync = [ 'rsync', *flags, '-e', %Q{"ssh -p #{port}"}, local + '/', "#{user}@#{server}:#{path}" ].join(' ')
+    if port.to_i != 22
+      flags << '-e'
+      flags << %Q{"ssh -p #{port}"}
+    end
+    rsync = [ 'rsync', *flags, local + '/', "#{user}@#{server}:#{path}" ].join(' ')
     p "Now running: #{rsync}"
     system rsync
-
-  when :sftp
-    Net::SFTP.start "#{server}", user, :port => port, :compression => 'zlib'  do |sftp|
-      p "Now uploading via sftp"
-      sftp.rmdir path
-      sftp.mkdir path
-      sftp.upload local, path
-    end
   end
 end

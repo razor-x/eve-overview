@@ -1,5 +1,9 @@
 # Changelog
 
+## 0.4.0
+
+- Removed sftp deploy support.
+
 ## 0.3.0
 
 - Google Analytics tracking code updated to use Universal Analytics.
