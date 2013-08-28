@@ -9,7 +9,7 @@
 
   {% stylesheet app %}
 
-  {% javascript vendor/custom_modernizr %}
+  {% javascript vendor/modernizr-custom %}
 
   <title>{{ page.title }}</title>
 </head>
@@ -39,7 +39,7 @@
   {% endif %}
 
   {% if site.google_analytics %}
-    {% asset vendor/google_analytics %}
+    {% asset vendor/google-analytics %}
   {% endif %}
 
   {% if site.piwik %}
