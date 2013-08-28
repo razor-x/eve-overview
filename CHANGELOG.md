@@ -3,6 +3,10 @@
 ## 0.4.0
 
 - Removed sftp deploy support.
+- Social features
+  * Facebook share button.
+  * Google+ share button.
+  * Twitter tweet button.
 
 ## 0.3.0
 

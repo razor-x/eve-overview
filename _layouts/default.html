@@ -6,6 +6,7 @@
   <meta name="viewport" content="width=device-width" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
   <link type="text/plain" rel="author" href="humans.txt" />
+  <link rel="canonical" href="{{ site.domain }}{{ page.url }}" />
 
   {% stylesheet app %}
 
@@ -22,8 +23,25 @@
   {{ content }}
 
   <footer>
-    <a href="http://www.w3.org/html/logo/"><img src="{% asset_path html5-badge-h-css3-semantics.png %}" alt="HTML5 Powered with CSS3 / Styling, and Semantics" title="HTML5 Powered with CSS3 / Styling, and Semantics" width="165" height="64" /></a>
+
+  {% if site.social.facebook.enabled %}
+    <div class="fb-like" data-href="{{ site.domain }}{{ page.url }}" data-width="450" data-layout="button_count" data-show-faces="false" data-send="false"></div>
+  {% endif %}
+
+  {% if site.social.google.enabled %}
+    <div class="g-plus" data-action="share" data-annotation="bubble"></div>
+  {% endif %}
+
+  {% if site.social.twitter.enabled %}
+    <a href="https://twitter.com/share" class="twitter-share-button" data-via="{{ site.social.twitter.via }}">Tweet</a>
+  {% endif %}
+
+    <p><a href="http://www.w3.org/html/logo/"><img src="{% asset_path html5-badge-h-css3-semantics.png %}" alt="HTML5 Powered with CSS3 / Styling, and Semantics" title="HTML5 Powered with CSS3 / Styling, and Semantics" width="165" height="64" /></a></p>
   </footer>
+
+{% if site.social.facebook.enabled %}
+  <div id="fb-root"></div>
+{% endif %}
 
   <script>
     document.write( ( '__proto__' in {} ? '{{ "vendor/zepto" | javascript | replace:"/script","\/script" }}' : '{{ "vendor/jquery" | javascript | replace:"/script","\/script" }}' ) );
@@ -33,6 +51,18 @@
 
   <script>
     $(document).foundation();
+
+  {% if site.social.facebook.enabled %}
+    {% asset vendor/social-facebook %}
+  {% endif %}
+
+  {% if site.social.google.enabled %}
+    {% asset vendor/social-google %}
+  {% endif %}
+
+  {% if site.social.twitter.enabled %}
+    {% asset vendor/social-twitter %}
+  {% endif %}
 
   {% if site.disqus %}
     {% asset vendor/disqus %}
