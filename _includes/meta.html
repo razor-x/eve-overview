@@ -33,7 +33,7 @@
 {% endif %}
 
 {% if site.keywords or page.keywords or page.categories or page.tags %}
-  <meta property="keywords" content="{% if page.keywords %}{{ page.keywords | join:',' }},{% endif %}{% if page.tags != empty %}{{ page.tags | join:',' }},{% endif %}{% if page.categories %}{{ page.categories | join:',' }},{% endif %}{% if site.keywords %}{{ site.keywords | join:',' }}{% endif %}" />
+  <meta property="keywords" content="{% if page.keywords %}{{ page.keywords | join:',' }},{% endif %}{% if page.tags and page.tags != empty %}{{ page.tags | join:',' }},{% endif %}{% if page.categories and page.categories != empty %}{{ page.categories | join:',' }},{% endif %}{% if site.keywords %}{{ site.keywords | join:',' }}{% endif %}" />
 {% endif %}
 
 {% if page.image %}
