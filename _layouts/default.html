@@ -1,17 +1,17 @@
 <!DOCTYPE html>
-<!--[if IE 8]><html class="no-js lt-ie9" lang="en" ><![endif]-->
-<!--[if gt IE 8]><!--><html class="no-js" lang="en" ><!--<![endif]-->
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" prefix="og: http://ogp.me/ns#"><![endif]-->
+<!--[if gt IE 8]><!--><html class="no-js" lang="en" prefix="og: http://ogp.me/ns#"><!--<![endif]-->
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
   <link type="text/plain" rel="author" href="humans.txt" />
 
+  {% include meta.html %}
+
   {% stylesheet app %}
 
   {% javascript vendor/modernizr-custom %}
-
-  <title>{{ page.title }}</title>
 </head>
 
 <body>
@@ -32,7 +32,16 @@
   {% endif %}
 
   {% if site.social.twitter.enabled %}
-    <a href="https://twitter.com/share" class="twitter-share-button" data-via="{{ site.social.twitter.via }}">Tweet</a>
+    {% if page.meta.twitter.creator %}
+      {% assign twitter_via = page.meta.twitter.creator %}
+    {% elsif site.meta.twitter.creator %}
+      {% assign twitter_via = site.meta.twitter.creator %}
+    {% elsif site.meta.twitter.site %}
+      {% assign twitter_via = site.meta.twitter.site %}
+    {% else %}
+      {% assign twitter_via = null %}
+    {% endif %}
+    <a href="https://twitter.com/share" class="twitter-share-button"{% if twitter_via %} data-via="{{ twitter_via }}"{% endif %}>Tweet</a>
   {% endif %}
 
     <p><a href="http://www.w3.org/html/logo/"><img src="{% asset_path html5-badge-h-css3-semantics.png %}" alt="HTML5 Powered with CSS3 / Styling, and Semantics" title="HTML5 Powered with CSS3 / Styling, and Semantics" width="165" height="64" /></a></p>

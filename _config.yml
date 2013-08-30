@@ -10,6 +10,19 @@ assets:
     css: sass
     js: uglifier
 
+# Keywords will be merged with categories, tags, and page keywords.
+keywords: [ blog, personal ]
+
+# Uncomment below to set default meta info.
+# meta:
+#   locale: en_US
+#   title:
+#     prefix: ""
+#     suffix: " - Site Name"
+#   twitter:
+#     site: "@example.com"
+#     creator: "@username"
+
 # Uncomment below and add your Disqus Shortname to enable Disqus.
 # disqus: shortname
 
@@ -40,7 +53,7 @@ assets:
 # Uncomment below to enable responsive images.
 # picture:
 #   markup: 'interchange'
-#   source: pictures/_fullsize
+#   source: pictures/fullsize
 #   output: pictures
 #   presets:
 #     default:

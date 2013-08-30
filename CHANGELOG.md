@@ -2,7 +2,9 @@
 
 ## 0.4.0
 
+- Some config defaults have been added and changed.
 - Removed sftp deploy support.
+- New meta data system.
 - Social features
   * Facebook share button.
   * Google+ share button.

@@ -9,6 +9,7 @@ Just clone and blog: create the `_posts` and `_drafts` folder.
 - Plugins for easy responsive images and YouTube videos.
 - [Compass](http://compass-style.org/), [Sass](http://sass-lang.com/), [CoffeeScript](http://coffeescript.org/).
 - Basic [Rake](https://github.com/jimweirich/rake) tasks with support for dev and testing modes, run `rake -D` for info.
+- Meta data system for SEO.
 - [Disqus](https://disqus.com/) ready: set `disqus: your_shortname` in `_config.yml`.
 - [Google Analytics](http://www.google.com/analytics/) ready: see `google_analytics` variable in `_config.yml`.
 - [Piwik](https://piwik.org/) ready: set `piwik: yoursite.com/piwik/` in `_config.yml` (yoursite.com/piwik/ points to the piwik install root).
