@@ -1,5 +1,7 @@
 # Jekyll & ZURB
 
+[![Dependency Status](https://gemnasium.com/razor-x/jekyll-and-zurb.png)](https://gemnasium.com/razor-x/jekyll-and-zurb)
+
 Source for your personal blog running on Jekyll and Foundation.
 Just clone and blog: create the `_posts` and `_drafts` folder.
 
