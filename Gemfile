@@ -6,11 +6,11 @@ gem 'net-sftp', '~> 2.1.2'
 gem 'bump', '~> 0.4.2'
 
 # Jekyll
-gem 'jekyll', '~> 1.1.2'
+gem 'jekyll', '~> 1.2.1'
 
 # Jekyll::AssetsPlugin and dependencies
-gem 'jekyll-assets', '~> 0.6.0'
-gem 'uglifier', '~> 2.1.2'
+gem 'jekyll-assets', '~> 0.7.2'
+gem 'uglifier', '~> 2.2.1'
 gem 'coffee-script', '2.2.0'
 gem 'compass', '~> 0.12.2'
 
