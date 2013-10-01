@@ -3,7 +3,7 @@ source 'https://rubygems.org'
 # Development dependencies
 gem 'rake', '~> 10.1.0'
 gem 'net-sftp', '~> 2.1.2'
-gem 'bump', '~> 0.4.2'
+gem 'bump', '~> 0.5.0'
 
 # Jekyll
 gem 'jekyll', '~> 1.2.1'
