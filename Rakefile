@@ -79,11 +79,10 @@ task :deploy => :build do
       flags << %Q{"ssh -p #{port}"}
     end
 
-    excludes = upload_only.collect { |e| "--exclude=#{e}" }
-    includes = upload_only.collect { |e| "--include=#{e}" }
+    excludes = upload_only.collect { |e| "--exclude='#{e}'" }
 
     rsync = [ 'rsync', *flags, '--del', *excludes, "#{local}/", "#{user}@#{server}:#{path}" ].join(' ')
-    rsync_uploads = [ 'rsync', *flags, '--exclude="*"', *includes, "#{local}/", "#{user}@#{server}:#{path}" ].join(' ')
+    rsync_uploads = [ 'rsync', *flags, "#{local}/", "#{user}@#{server}:#{path}" ].join(' ')
 
     p "Now running: #{rsync}"
     system rsync
