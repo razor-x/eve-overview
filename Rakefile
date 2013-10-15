@@ -68,17 +68,26 @@ task :deploy => :build do
   user = config[:deploy][:user]
   port = config[:deploy][:port]
   path = config[:deploy][:path]
+  upload_only = config[:deploy][:upload_only]
 
   case protocol
   when :rsync
 
-    flags = %w{ -r -t --del -z -v }
+    flags = %w{-r -t -z -v}
     if port.to_i != 22
       flags << '-e'
       flags << %Q{"ssh -p #{port}"}
     end
-    rsync = [ 'rsync', *flags, local + '/', "#{user}@#{server}:#{path}" ].join(' ')
+
+    excludes = upload_only.collect { |e| "--exclude=#{e}" }
+    includes = upload_only.collect { |e| "--include=#{e}" }
+
+    rsync = [ 'rsync', *flags, '--del', *excludes, "#{local}/", "#{user}@#{server}:#{path}" ].join(' ')
+    rsync_uploads = [ 'rsync', *flags, '--exclude="*"', *includes, "#{local}/", "#{user}@#{server}:#{path}" ].join(' ')
+
     p "Now running: #{rsync}"
     system rsync
+    p "Now running: #{rsync_uploads}"
+    system rsync_uploads
   end
 end
