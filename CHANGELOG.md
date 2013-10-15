@@ -1,6 +1,6 @@
 # Changelog
 
-## 0.5.0
+## 0.6.0
 
 - New option upload_only for deploy.
 - Better meta tag order for SEO.
