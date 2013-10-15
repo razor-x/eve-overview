@@ -1,5 +1,10 @@
 # Changelog
 
+## 0.5.0
+
+- New option upload_only for deploy.
+- Better meta tag order for SEO.
+
 ## 0.4.0
 
 - Some config defaults have been added and changed.
