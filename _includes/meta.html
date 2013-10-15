@@ -1,3 +1,13 @@
+{% if page.title %}
+  <title>{{ site.meta.title.prefix }}{{ page.title }}{{ site.meta.title.suffix }}</title>
+  <meta property="og:title" content="{{ page.title }}" />
+{% endif %}
+
+{% if description %}
+  <meta name="description" content="{{ description | strip_html }}" />
+  <meta property="og:description" content="{{ description | strip_html }}" />
+{% endif %}
+
 <link rel="canonical" href="{{ site.domain }}{{ page.url }}" />
 <meta property="og:url" content="{{ site.domain }}{{ page.url }}" />
 <meta property="og:site_name" content="{{ site.name }}" />
@@ -6,11 +16,6 @@
 
 {% if site.meta.locale or page.meta.locale %}
   <meta property="og:locale" content="{% if page.meta.locale %}{{ page.meta.locale }}{% else %}{{ site.meta.locale }}{% endif %}" />
-{% endif %}
-
-{% if page.title %}
-  <title>{{ site.meta.title.prefix }}{{ page.title }}{{ site.meta.title.suffix }}</title>
-  <meta property="og:title" content="{{ page.title }}" />
 {% endif %}
 
 {% if page.meta.determiner %}
@@ -25,11 +30,6 @@
   {% assign description = page.excerpt %}
 {% else %}
   {% assign description = null %}
-{% endif %}
-
-{% if description %}
-  <meta name="description" content="{{ description | strip_html }}" />
-  <meta property="og:description" content="{{ description | strip_html }}" />
 {% endif %}
 
 {% if site.keywords or page.keywords or page.categories or page.tags %}
