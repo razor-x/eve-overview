@@ -1,3 +1,7 @@
 language: ruby
 rvm: [ 2.0.0 ]
 script: rake build
+
+before_script:
+  - npm install bower -g
+  - bower install
