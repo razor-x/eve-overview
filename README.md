@@ -23,7 +23,7 @@ Just clone and blog: create the `_posts` and `_drafts` folder.
 
 Just clone this with
 
-    git clone git@github.com:razor-x/jekyll-and-zurb.git my_blog
+    git clone https://github.com/razor-x/jekyll-and-zurb.git my_blog
 
 run `bundle && bower install` and create the `_posts` folder.
 Head over to the [Jekyll Docs](http://jekyllrb.com/docs/home/) for the rest of the details.
