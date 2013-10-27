@@ -1,14 +1,27 @@
+# Jekyll options.
 name: Site Name
 domain: http://example.com
 markdown: redcarpet
 pygments: true
 
-exclude: [ 'CHANGELOG.md', 'LICENSE.txt', 'README.md', 'VERSION', 'Gemfile.lock', 'Gemfile', 'Rakefile' ]
+exclude: [ 'CHANGELOG.md', 'LICENSE.txt', 'README.md', 'VERSION', 'Gemfile.lock', 'Gemfile', 'Rakefile', bower_components ]
 
+# Jekyll::AssetsPlugin options.
 assets:
+  sources:
+    - _assets/images
+    - _assets/javascripts
+    - _assets/stylesheets
+    - bower_components
   compress:
     css: sass
     js: uglifier
+
+# Use a cdn to load some libraries.
+cdn:
+  # [ url, fallback test, local asset fallback path ]
+  libs:
+    - [ "//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js", "!window.jQuery", "jquery/jquery.js" ]
 
 # Keywords will be merged with categories, tags, and page keywords.
 keywords: [ blog, personal ]

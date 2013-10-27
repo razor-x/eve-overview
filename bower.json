@@ -1,0 +1,9 @@
+{
+  "name": "Jekyll & ZURB",
+  "version": "1.0.0",
+  "dependencies": {
+    "modernizr": "2.6.2",
+    "jquery": "2.0.3",
+    "foundation": "4.3.2"
+  }
+}

@@ -1,4 +1,9 @@
 assets:
+  sources:
+    - _assets/images
+    - _assets/javascripts
+    - _assets/stylesheets
+    - bower_components
   cache: true
   compress:
     css: ""

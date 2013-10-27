@@ -7,10 +7,8 @@
   <meta name="viewport" content="width=device-width" />
   {% include meta.html %}
   <link type="text/plain" rel="author" href="humans.txt" />
-
   {% stylesheet app %}
-
-  {% javascript vendor/modernizr-custom %}
+  <script src="{% asset_path foundation/js/vendor/custom.modernizr.js %}"></script>
 </head>
 
 <body>
@@ -51,14 +49,19 @@
 {% endif %}
 
   <script>
-    document.write( ( '__proto__' in {} ? '{{ "vendor/zepto" | javascript | replace:"/script","\/script" }}' : '{{ "vendor/jquery" | javascript | replace:"/script","\/script" }}' ) );
-  </script>
-
-  {% javascript app %}
-
-  <script>
-    $(document).foundation();
-
+    Modernizr.load([
+    {% for lib in site.cdn.libs %}
+      {
+        load: '{{ lib[0] }}',
+        complete: function () {
+          if ( {{ lib[1] }} ) {
+            Modernizr.load('{{ lib[2] | asset_path }}');
+          }
+        }
+      },
+    {% endfor %}
+      '{% asset_path app.js %}'
+    ]);
   {% if site.social.facebook.enabled %}
     {% asset vendor/social-facebook %}
   {% endif %}

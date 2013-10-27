@@ -1,5 +1,12 @@
 # Changelog
 
+## 1.0.0
+
+- Now using Bower for javascript libs.
+  * Need to run `bower install`.
+  * jQuery version 2 by default.
+  * Loading scripts via Modernizr.load.
+
 ## 0.6.0
 
 - New option upload_only for deploy.
