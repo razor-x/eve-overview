@@ -52,7 +52,7 @@
     Modernizr.load([
     {% for lib in site.cdn.libs %}
       {
-        load: '{{ lib[0] }}',
+        load: '{% if site.cdn_enabled %}{{ lib[0] }}{% else %}{{ lib[2] | asset_path }}{% endif %}',
         complete: function () {
           if ( {{ lib[1] }} ) {
             Modernizr.load('{{ lib[2] | asset_path }}');

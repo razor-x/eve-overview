@@ -18,6 +18,7 @@ assets:
     js: uglifier
 
 # Use a cdn to load some libraries.
+cdn_enabled: true
 cdn:
   # [ url, fallback test, local asset fallback path ]
   libs:

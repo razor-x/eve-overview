@@ -9,5 +9,7 @@ assets:
     css: ""
     js: ""
 
+cdn_enabled: false
+
 google_analytics: false
 piwik: false
