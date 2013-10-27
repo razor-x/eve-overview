@@ -50,8 +50,9 @@ which you can then merge into your other branches.
 The `Gemfile` is using pessimistic version constraints for everything,
 so if you want major updates, you need to bump the versions yourself.
 
-If you update Foundation, but sure to also update the JavaScript in `_assets/javascripts/vendor/`.
-Note that `custom.modernizr.js` has been renamed `custom_modernizr.js` for this project.
+JavaScript library versions need to be updated in `bower.json` and `_config.yml`.
+
+If you update Foundation, but sure to update the version numbers in `Gemfile` and `bower.json`.
 
 ## License
 
