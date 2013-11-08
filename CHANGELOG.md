@@ -1,5 +1,9 @@
 # Changelog
 
+## HEAD
+
+- Optional pagination using Foundation.
+
 ## 1.0.0
 
 - Now using Bower for javascript libs.

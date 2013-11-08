@@ -4,6 +4,9 @@ domain: http://example.com
 markdown: redcarpet
 pygments: true
 
+# Uncomment below to enable pagination.
+# paginate: 5
+
 exclude:
   - CHANGELOG.md
   - LICENSE.txt
