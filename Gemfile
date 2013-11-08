@@ -7,7 +7,7 @@ gem 'net-sftp', '~> 2.1.2'
 gem 'bump', '~> 0.5.0'
 
 # Jekyll
-gem 'jekyll', '~> 1.2.1'
+gem 'jekyll', '~> 1.3.0'
 
 # Jekyll::AssetsPlugin and dependencies
 gem 'jekyll-assets', '~> 0.7.2'
