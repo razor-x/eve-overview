@@ -9,6 +9,8 @@
   {% assign description = page.preview %}
 {% elsif page.excerpt %}
   {% assign description = page.excerpt %}
+{% elsif site.meta.description %}
+  {% assign description = site.meta.description %}
 {% else %}
   {% assign description = null %}
 {% endif %}

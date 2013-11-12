@@ -45,6 +45,7 @@ keywords: [ blog, personal ]
 #   title:
 #     prefix: ""
 #     suffix: " - Site Name"
+#   description: "My Site's default description."
 #   twitter:
 #     default_card: summary
 #     site: "@example.com"
