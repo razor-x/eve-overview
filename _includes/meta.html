@@ -3,6 +3,16 @@
   <meta property="og:title" content="{{ page.title }}" />
 {% endif %}
 
+{% if page.meta.description %}
+  {% assign description = page.meta.description %}
+{% elsif page.preview %}
+  {% assign description = page.preview %}
+{% elsif page.excerpt %}
+  {% assign description = page.excerpt %}
+{% else %}
+  {% assign description = null %}
+{% endif %}
+
 {% if description %}
   <meta name="description" content="{{ description | strip_html }}" />
   <meta property="og:description" content="{{ description | strip_html }}" />
@@ -20,16 +30,6 @@
 
 {% if page.meta.determiner %}
   <meta property="og:determiner" content="{{ page.meta.determiner }}" />
-{% endif %}
-
-{% if page.meta.description %}
-  {% assign description = page.meta.description %}
-{% elsif page.preview %}
-  {% assign description = page.preview %}
-{% elsif page.excerpt %}
-  {% assign description = page.excerpt %}
-{% else %}
-  {% assign description = null %}
 {% endif %}
 
 {% if site.keywords or page.keywords or page.categories or page.tags %}
