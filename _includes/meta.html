@@ -58,6 +58,8 @@
 
 {% if page.meta.twitter.card %}
   <meta name="twitter:card" content="{{ page.meta.twitter.card }}" />
+{% elsif site.meta.twitter.default_card %}
+  <meta name="twitter:card" content="{{ site.meta.twitter.default_card }}" />
 {% endif %}
 
 {% if site.meta.twitter.site %}

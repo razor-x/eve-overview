@@ -46,6 +46,7 @@ keywords: [ blog, personal ]
 #     prefix: ""
 #     suffix: " - Site Name"
 #   twitter:
+#     default_card: summary
 #     site: "@example.com"
 #     creator: "@username"
 
