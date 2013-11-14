@@ -2,7 +2,6 @@
 require 'rake'
 require 'yaml'
 require 'fileutils'
-require 'net/sftp'
 
 # Load the configuration file
 config = YAML.load_file '_config.yml'
