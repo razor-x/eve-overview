@@ -18,6 +18,13 @@ exclude:
   - bower.json
   - bower_components
 
+gems:
+  - json
+  - jekyll-assets
+  - jekyll-assets/compass
+  - zurb-foundation
+  - coffee_script
+
 # Jekyll::AssetsPlugin options.
 assets:
   sources:
