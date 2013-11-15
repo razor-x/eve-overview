@@ -6,8 +6,8 @@ assets:
     - bower_components
   cache: true
   compress:
-    css: ""
-    js: ""
+    css: null
+    js: null
 
 cdn_enabled: false
 
