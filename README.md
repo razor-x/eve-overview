@@ -43,7 +43,7 @@ Then add an origin and push master
     git remote add origin git@github.com:username/username-blog.git
     git push -u origin master
 
-Now, the `razorx-jekyll-and-zurb` branch will pull changes from this project,
+Now, the `jekyll-and-zurb` branch will pull changes from this project,
 which you can then merge into your other branches.
 
 ## Updating
