@@ -22,7 +22,6 @@ gems:
   - json
   - jekyll-assets
   - jekyll-assets/compass
-  - zurb-foundation
   - coffee_script
 
 # Jekyll::AssetsPlugin options.

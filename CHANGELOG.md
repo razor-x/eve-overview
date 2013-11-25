@@ -2,6 +2,7 @@
 
 ## HEAD
 
+- Foundation updated to version 5.
 - Optional pagination using Foundation.
 
 ## 1.0.0
