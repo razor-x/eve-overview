@@ -1,6 +1,6 @@
 # Changelog
 
-## HEAD
+## 1.2.0
 
 - Foundation updated to version 5.
 - Optional pagination using Foundation.
