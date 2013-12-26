@@ -6,4 +6,16 @@ before_script:
   - npm install bower -g
   - bower install
 
-script: rake build
+script: rake travis
+
+# set the branch that will be built and published to GitHub pages
+branches:
+  only:
+    - example
+
+# create a GitHub Personal Access Token
+# install the travis gem
+# and run the command below (fill in your name, email, and token)
+# $ travis encrypt 'GIT_NAME="Your Name" GIT_EMAIL=email@example.com GH_TOKEN=token'
+# replace the value of secure with your generated value
+secure: "BY1gTgLtpshbcRep4DMKuyTUzg7HNCKCme4y6BAnpGq9KW8gl4yJIxNOtk5HLq6gJdPxFTEAFhevEm1Pn42/isCNV9TfLTb8AE7MYYahO93RCkWV9/EZ0NSl6FTNvmtdpBXuS/6kzgBxshbtDTbVY+GIHW4MUgv8Q43567Szqso="

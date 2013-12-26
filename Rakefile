@@ -9,12 +9,14 @@ config = YAML.load_file '_config.yml'
 testing_config = '_config.yml,_config.testing.yml'
 dev_config = '_config.yml,_config.dev.yml'
 
+config[:destination] ||= '_site/'
+
 # Set "rake watch" as default task
 task :default => :draft
 
 # Spawn a server and kill it gracefully when interrupt is received
 def spawn *cmd
-  pid = Process.spawn *cmd
+  pid = Process.spawn 'bundle', 'exec', *cmd
 
   switch = true
   Signal.trap 'SIGINT' do
@@ -27,7 +29,7 @@ end
 # rake build
 desc 'Generate the site'
 task :build do
-  system 'jekyll', 'build'
+  system 'bundle', 'exec', 'jekyll', 'build'
 end
 
 # rake test
@@ -91,4 +93,40 @@ task :deploy => :build do
       system rsync_uploads
     end
   end
+end
+
+
+desc 'Generate site from Travis CI and publish site to GitHub Pages.'
+task :travis do
+  # if this is a pull request, do a simple build of the site and stop
+  if ENV['TRAVIS_PULL_REQUEST'].to_s.to_i > 0
+    puts 'Pull request detected. Executing build only.'
+    system 'bundle exec jekyll build'
+    next
+  end
+
+  # setup credentials so Travis CI can push to GitHub
+  system "git config user.name '#{ENV['GIT_NAME']}'"
+  system "git config user.email '#{ENV['GIT_EMAIL']}'"
+  system 'git config credential.helper "store --file=.git/credentials"'
+  File.open('.git/credentials', 'w') do |f|
+    f.write("https://#{ENV['GH_TOKEN']}:@github.com")
+  end
+
+  repo = %x(git config remote.origin.url).gsub(/^git:/, 'https:')
+  deploy_branch = repo.match(/github\.io\.git$/) ? 'master' : 'gh-pages'
+  destination = File.join config[:destination], '/'
+  rev = `git rev-parse HEAD`
+
+  system "git remote add deploy #{repo}"
+  system "git remote set-branches deploy #{deploy_branch}"
+  system 'git fetch -q deploy'
+  system "git branch #{deploy_branch} deploy/#{deploy_branch}"
+  system 'bundle exec rake build'
+  system "git checkout #{deploy_branch}"
+  system %Q(rsync -rt --delete-after --exclude=".git" --exclude=".nojekyll" #{destination} .)
+  system "git add --all ."
+  system "git commit -m 'Built from #{rev}'"
+  system "git push deploy #{deploy_branch}"
+  File.delete '.git/credentials'
 end

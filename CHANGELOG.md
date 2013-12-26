@@ -1,5 +1,8 @@
 # Changelog
 
+## HEAD
+- Automatically publish to GitHub pages with Travis CI.
+
 ## 1.2.0
 
 - Foundation updated to version 5.
