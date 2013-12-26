@@ -106,17 +106,18 @@ task :travis do
   end
 
   # setup credentials so Travis CI can push to GitHub
+  credential_file = '.git/credentials'
   system "git config user.name '#{ENV['GIT_NAME']}'"
   system "git config user.email '#{ENV['GIT_EMAIL']}'"
-  system 'git config credential.helper "store --file=.git/credentials"'
-  File.open('.git/credentials', 'w') do |f|
+  system %Q{git config credential.helper "store --file=#{credential_file}"}
+  File.open(credential_file, 'w') do |f|
     f.write("https://#{ENV['GH_TOKEN']}:@github.com")
   end
 
   repo = %x(git config remote.origin.url).gsub(/^git:/, 'https:')
   deploy_branch = repo.match(/github\.io\.git$/) ? 'master' : 'gh-pages'
   destination = File.join config[:destination], '/'
-  rev = `git rev-parse HEAD`
+  rev = %x(git rev-parse HEAD)
 
   system "git remote add deploy #{repo}"
   system "git remote set-branches deploy #{deploy_branch}"
@@ -128,5 +129,5 @@ task :travis do
   system "git add --all ."
   system "git commit -m 'Built from #{rev}'"
   system "git push deploy #{deploy_branch}"
-  File.delete '.git/credentials'
+  File.delete credential_file
 end
