@@ -4,6 +4,7 @@ assets:
     - _assets/javascripts
     - _assets/stylesheets
     - bower_components
+  cachebust: soft
   cache: true
   compress:
     css: null
