@@ -1,6 +1,6 @@
 # Jekyll options.
 name: Site Name
-domain: http://example.com
+domain: http://razor-x.github.io/jekyll-and-zurb
 markdown: redcarpet
 pygments: true
 
@@ -26,6 +26,7 @@ gems:
 
 # Jekyll::AssetsPlugin options.
 assets:
+  baseurl: http://razor-x.github.io/jekyll-and-zurb/assets/
   sources:
     - _assets/images
     - _assets/javascripts

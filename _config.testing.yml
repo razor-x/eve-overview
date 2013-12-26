@@ -1,2 +1,5 @@
+assets:
+  baseurl: /assets/
+
 google_analytics: false
 piwik: false

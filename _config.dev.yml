@@ -1,9 +1,5 @@
 assets:
-  sources:
-    - _assets/images
-    - _assets/javascripts
-    - _assets/stylesheets
-    - bower_components
+  baseurl: /assets/
   cachebust: soft
   cache: true
   compress:
