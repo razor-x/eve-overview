@@ -120,6 +120,9 @@ task :travis do
   system 'git fetch -q deploy'
   system "git branch #{deploy_branch} deploy/#{deploy_branch}"
   system 'bundle exec rake build'
+
+  fail "Build failed." unless Dir.exists? destination
+
   system "git checkout #{deploy_branch}"
   system %Q(rsync -rt --delete-after --exclude=".git" --exclude=".nojekyll" #{destination} .)
   system "git add --all ."
