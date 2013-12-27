@@ -10,6 +10,7 @@ testing_config = '_config.yml,_config.testing.yml'
 dev_config = '_config.yml,_config.dev.yml'
 
 config[:destination] ||= '_site/'
+config[:sub_content] ||= []
 
 # Set "rake watch" as default task
 task :default => :draft
@@ -30,6 +31,22 @@ end
 desc 'Generate the site'
 task :build do
   system 'bundle', 'exec', 'jekyll', 'build'
+
+  config[:sub_content].each do |content|
+    repo = content[0]
+    branch = content[1]
+    dir = content[2]
+    rev = content[3]
+    Dir.chdir config[:destination] do
+      FileUtils.mkdir_p dir
+      system "git clone -b #{branch} #{repo} #{dir}"
+      Dir.chdir dir do
+        system "git checkout #{rev}" if rev
+        FileUtils.remove_entry_secure '.git'
+        FileUtils.remove_entry_secure '.nojekyll' if File.exists? '.nojekyll'
+      end if dir
+    end if Dir.exists? config[:destination]
+  end
 end
 
 # rake test

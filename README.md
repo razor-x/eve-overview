@@ -7,6 +7,8 @@
 Source for your personal blog running on Jekyll and Foundation 5.
 Just clone and blog: create the `_posts` and `_drafts` folder.
 
+Lots of baked in features that work even if you don't want to use Foundation.
+
 - Bare bones [Jekyll](http://jekyllrb.com/) blog: HTML5 & CSS3 ready.
 - Automatically publish to [GitHub pages](http://pages.github.com/) with [Travis CI](https://travis-ci.org/).
 - Running [Foundation by ZURB](http://foundation.zurb.com/).
@@ -21,6 +23,7 @@ Just clone and blog: create the `_posts` and `_drafts` folder.
 - [Disqus](https://disqus.com/) ready: set `disqus: your_shortname` in `_config.yml`.
 - [Google Analytics](http://www.google.com/analytics/) ready: see `google_analytics` variable in `_config.yml`.
 - [Piwik](https://piwik.org/) ready: set `piwik: yoursite.com/piwik/` in `_config.yml` (yoursite.com/piwik/ points to the piwik install root).
+- Easily incorporate the source from other web projects as subdirectories in your site (see sub_content in `_config.yml`).
 
 ## Quick start
 

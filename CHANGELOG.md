@@ -2,6 +2,7 @@
 
 ## HEAD
 - Automatically publish to GitHub pages with Travis CI.
+- Easily incorporate the source from other web projects as subdirectories in your site (see sub_content in `_config.yml`).
 
 ## 1.2.0
 
