@@ -1,7 +1,7 @@
 # Jekyll & ZURB
 
 [![Dependency Status](https://gemnasium.com/razor-x/jekyll-and-zurb.png)](https://gemnasium.com/razor-x/jekyll-and-zurb)
-[![Build Status](https://travis-ci.org/razor-x/jekyll-and-zurb.png?branch=master)](https://travis-ci.org/razor-x/jekyll-and-zurb)
+[![Build Status](https://travis-ci.org/razor-x/jekyll-and-zurb.png?branch=example)](https://travis-ci.org/razor-x/jekyll-and-zurb)
 [![Bitdeli Badge](https://d2weczhvl823v0.cloudfront.net/razor-x/jekyll-and-zurb/trend.png)](https://bitdeli.com/free "Bitdeli Badge")
 
 Source for your personal blog running on Jekyll and Foundation 5.
