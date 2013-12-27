@@ -88,11 +88,16 @@ The `master` branch otherwise functions like the `gh-pages` branch below.
 
 [See here](http://pages.github.com/) for details on the different use cases.
 
-First, make a `gh-pages` branch unless you are using `master` as discussed above.
+First, make a `gh-pages` branch unless you are using `master` as discussed above,
+
 ````bash
 $ git checkout --orphan gh-pages
 ````
-then make an initial commit, push it, and make sure goes live online.
+
+and **remove all files and folders except the `.git` directory**.
+
+Then, make an initial commit, push it, and make sure goes live online.
+
 ````bash
 $ echo "GitHub Pages placeholder" > index.html
 $ git add index.html
@@ -102,12 +107,15 @@ $ git checkout master
 ````
 
 Next, install the travis gem,
+
 ````bash
 $ gem install travis
 ````
+
 create a [GitHub Personal Access Token](https://github.com/settings/applications),
 and add your name, email, and token to travis as encrypted data
 (fill in your values in the command below),
+
 ````bash
 $ travis encrypt 'GIT_NAME="Your Name" GIT_EMAIL=you@example.com GH_TOKEN=token'
 ````
@@ -115,6 +123,7 @@ and replace the secure string in `.travis.yml` with the one you just got;
 also set the branch you want to build (normally `master`, see the comments in that file).
 
 Finally, switch on your repo in Travis CI and push your changes.
+
 ````bash
 $ git add .travis.yml
 $ git commit -m "Automatic publishing to GitHub pages with Travis CI."
