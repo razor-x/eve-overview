@@ -32,7 +32,7 @@ You will need [Ruby Bundler](http://bundler.io/) and [Bower](http://bower.io/).
 Just clone this with
 
 ````bash
-$ git clone https://github.com/razor-x/jekyll-and-zurb.git my_blog
+$ git clone https://github.com/razor-x/jekyll-and-zurb.git my-blog
 ````
 
 run `bundle && bower install` and create the `_posts` folder.
@@ -65,7 +65,7 @@ $ git branch -u razor-x-jekyll-and-zurb/master jekyll-and-zurb
 Then add an origin and push master
 
 ````bash
-$ git remote add origin git@github.com:username/username-blog.git
+$ git remote add origin git@github.com:username/my-blog.git
 $ git push -u origin master
 ````
 
