@@ -1,6 +1,6 @@
 assets:
   baseurl: /assets/
-  cachebust: soft
+  cachebust: none
   cache: true
   compress:
     css: null
