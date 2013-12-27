@@ -108,7 +108,7 @@ $ travis encrypt 'GIT_NAME="Your Name" GIT_EMAIL=you@example.com GH_TOKEN=token'
 and replace the secure string in `.travis.yml` with the one you just got;
 also set the branch you want to build (normally `master`, see the comments in that file).
 
-Finally, switch on your repo in Travis CI push your changes.
+Finally, switch on your repo in Travis CI and push your changes.
 ````bash
 $ git add .travis.yml
 $ git commit -m "Automatic publishing to GitHub pages with Travis CI."
