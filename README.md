@@ -8,7 +8,7 @@ Source for your personal blog running on Jekyll and Foundation 5.
 Just clone and blog: create the `_posts` and `_drafts` folder.
 
 - Bare bones [Jekyll](http://jekyllrb.com/) blog: HTML5 & CSS3 ready.
-- Automatically publish to GitHub pages with Travis CI.
+- Automatically publish to [GitHub pages](http://pages.github.com/) with [Travis CI](https://travis-ci.org/).
 - Running [Foundation by ZURB](http://foundation.zurb.com/).
 - Asset pipeline with [Jekyll::AssetsPlugin](https://github.com/ixti/jekyll-assets).
 - Bower for asset dependency management.
@@ -26,27 +26,94 @@ Just clone and blog: create the `_posts` and `_drafts` folder.
 
 Just clone this with
 
-    git clone https://github.com/razor-x/jekyll-and-zurb.git my_blog
+````
+$ git clone https://github.com/razor-x/jekyll-and-zurb.git my_blog
+````
 
 run `bundle && bower install` and create the `_posts` folder.
 Head over to the [Jekyll Docs](http://jekyllrb.com/docs/home/) for the rest of the details.
+
+## Example site and documentation
+
+The `master` branch of this project is designed to be used
+as a starting point for your site and as a branch to pull updates from.
+Thus, most features are disabled by default,
+and only the `index.html` page has been created with minimal markup.
+
+The `example` branch is a full website that will contain
+real examples and documentation for the included features.
+This branch is automatically built and published by Travis CI.
+
+[Examples site hosted on GitHub pages.](http://razor-x.github.io/jekyll-and-zurb/)
 
 ## Add future update support
 
 If you want to merge in future updates from this project and have your own origin,
 set up a separate branch to track this.
 
-    git remote rename origin razorx-jekyll-and-zurb
-    git branch jekyll-and-zurb
-    git branch -u razorx-jekyll-and-zurb/master jekyll-and-zurb
+````bash
+$ git remote rename origin razor-x-jekyll-and-zurb
+$ git branch jekyll-and-zurb
+$ git branch -u razor-x-jekyll-and-zurb/master jekyll-and-zurb
+````
 
 Then add an origin and push master
 
-    git remote add origin git@github.com:username/username-blog.git
-    git push -u origin master
+````bash
+$ git remote add origin git@github.com:username/username-blog.git
+$ git push -u origin master
+````
 
 Now, the `jekyll-and-zurb` branch will pull changes from this project,
 which you can then merge into your other branches.
+
+If you later clone your repo you will need to create the update branch again.
+````bash
+$ git remote add razor-x-jekyll-and-zurb https://github.com/razor-x/jekyll-and-zurb.git
+$ git fetch razor-x-jekyll-and-zurb
+$ git checkout -b jekyll-and-zurb razor-x-jekyll-and-zurb/master
+````
+
+## Automatic publishing to GitHub pages with Travis CI
+
+If you are hosting at `username.github.io` you will need to leave the `master` branch empty
+and put your code in a different branch.
+The `master` branch otherwise functions like the `gh-pages` branch below.
+
+[See here](http://pages.github.com/) for details on the different use cases.
+
+First, make a `gh-pages` branch unless you are using `master` as discussed above.
+````bash
+$ git checkout --orphan gh-pages
+````
+then make an initial commit, push it, and make sure goes live online.
+````bash
+$ echo "GitHub Pages placeholder" > index.html
+$ git add index.html
+$ git commit -m "GitHub Pages placeholder"
+$ git push -u origin gh-pages
+$ git checkout master
+````
+
+Next, install the travis gem,
+````bash
+$ gem install travis
+````
+create a [GitHub Personal Access Token](https://github.com/settings/applications),
+and add your name, email, and token to travis as encrypted data
+(fill in your values in the command below),
+````bash
+$ travis encrypt 'GIT_NAME="Your Name" GIT_EMAIL=you@example.com GH_TOKEN=token'
+````
+and replace the secure string in `.travis.yml` with the one you just got;
+also set the branch you want to build (normally `master`, see the comments in that file).
+
+Finally, switch on your repo in Travis CI push your changes.
+````bash
+$ git add .travis.yml
+$ git commit -m "Automatic publishing to GitHub pages with Travis CI."
+$ git push
+````
 
 ## Updating
 
