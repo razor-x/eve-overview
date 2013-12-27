@@ -27,9 +27,11 @@ Lots of baked in features that work even if you don't want to use Foundation.
 
 ## Quick start
 
+You will need [Ruby Bundler](http://bundler.io/) and [Bower](http://bower.io/).
+
 Just clone this with
 
-````
+````bash
 $ git clone https://github.com/razor-x/jekyll-and-zurb.git my_blog
 ````
 
@@ -45,7 +47,7 @@ and only the `index.html` page has been created with minimal markup.
 
 The `example` branch is a full website that will contain
 real examples and documentation for the included features.
-This branch is automatically built and published by Travis CI.
+That branch is automatically built and published by Travis CI.
 
 [Examples site hosted on GitHub pages.](http://razor-x.github.io/jekyll-and-zurb/)
 
@@ -71,6 +73,7 @@ Now, the `jekyll-and-zurb` branch will pull changes from this project,
 which you can then merge into your other branches.
 
 If you later clone your repo you will need to create the update branch again.
+
 ````bash
 $ git remote add razor-x-jekyll-and-zurb https://github.com/razor-x/jekyll-and-zurb.git
 $ git fetch razor-x-jekyll-and-zurb

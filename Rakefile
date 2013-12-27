@@ -12,7 +12,7 @@ dev_config = '_config.yml,_config.dev.yml'
 config[:destination] ||= '_site/'
 config[:sub_content] ||= []
 
-# Set "rake watch" as default task
+# Set "rake draft" as default task
 task :default => :draft
 
 # Spawn a server and kill it gracefully when interrupt is received
