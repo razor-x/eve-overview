@@ -21,27 +21,7 @@
   {{ content }}
 
   <footer>
-  {% if site.social.facebook.enabled %}
-    <div class="fb-like" data-href="{{ site.root_url }}{{ page.url }}" data-width="450" data-layout="button_count" data-show-faces="false" data-send="false"></div>
-  {% endif %}
-
-  {% if site.social.google.enabled %}
-    <div class="g-plus" data-action="share" data-annotation="bubble"></div>
-  {% endif %}
-
-  {% if site.social.twitter.enabled %}
-    {% if page.meta.twitter.creator %}
-      {% assign twitter_via = page.meta.twitter.creator %}
-    {% elsif site.meta.twitter.creator %}
-      {% assign twitter_via = site.meta.twitter.creator %}
-    {% elsif site.meta.twitter.site %}
-      {% assign twitter_via = site.meta.twitter.site %}
-    {% else %}
-      {% assign twitter_via = null %}
-    {% endif %}
-    <a href="https://twitter.com/share" class="twitter-share-button"{% if twitter_via %} data-via="{{ twitter_via }}"{% endif %}>Tweet</a>
-  {% endif %}
-
+    {% include social_buttons.html %}
     <p><a href="http://www.w3.org/html/logo/"><img src="{% asset_path html5-badge-h-css3-semantics.png %}" alt="HTML5 Powered with CSS3 / Styling, and Semantics" title="HTML5 Powered with CSS3 / Styling, and Semantics" width="165" height="64" /></a></p>
   </footer>
 
