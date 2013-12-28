@@ -41,6 +41,7 @@ module Jekyll
 
       # Gather settings
       site = context.registers[:site]
+      root_url = site.config['root_url']
       settings = site.config['picture']
       markup = /^(?:(?<preset>[^\s.:\/]+)\s+)?(?<image_src>[^\s]+\.[a-zA-Z0-9]{3,4})\s*(?<source_src>(?:(source_[^\s.:\/]+:\s+[^\s]+\.[a-zA-Z0-9]{3,4})\s*)+)?(?<html_attr>[\s\S]+)?$/.match(render_markup)
       preset = settings['presets'][ markup[:preset] ] || settings['presets']['default']
@@ -153,14 +154,14 @@ module Jekyll
         # Reference: https://github.com/scottjehl/picturefill/issues/79
         source_keys.reverse.each { |source|
           media = " data-media=\"#{instance[source]['media']}\"" unless source == 'source_default'
-          source_tags += "<span data-src=\"#{instance[source][:generated_src]}\"#{media}></span>\n"
+          source_tags += "<span data-src=\"#{root_url}#{instance[source][:generated_src]}\"#{media}></span>\n"
         }
 
         # Note: we can't indent html output because markdown parsers will turn 4 spaces into code blocks
         picture_tag = "<span #{html_attr_string}>\n"\
                       "#{source_tags}"\
                       "<noscript>\n"\
-                      "<img src=\"#{instance['source_default'][:generated_src]}\" alt=\"#{html_attr['data-alt']}\" />\n"\
+                      "<img src=\"#{root_url}#{instance['source_default'][:generated_src]}\" alt=\"#{html_attr['data-alt']}\" />\n"\
                       "</noscript>\n"\
                       "</span>\n"
 
@@ -169,9 +170,9 @@ module Jekyll
         source_tags = ''
         source_keys.each { |source|
           if source == 'source_default'
-            source_tags += "<img src=\"#{instance[source][:generated_src]}\" alt=\"#{html_attr['alt']}\" />\n"
+            source_tags += "<img src=\"#{root_url}#{instance[source][:generated_src]}\" alt=\"#{html_attr['alt']}\" />\n"
           else
-            source_tags += "<source src=\"#{instance[source][:generated_src]}\" media=\"#{instance[source]['media']}\" />\n"
+            source_tags += "<source src=\"#{root_url}#{instance[source][:generated_src]}\" media=\"#{instance[source]['media']}\" />\n"
           end
         }
 
@@ -185,10 +186,10 @@ module Jekyll
 
         interchange_data = Array.new
         source_keys.reverse.each do |source|
-          interchange_data << "[#{instance[source][:generated_src]}, #{source == 'source_default' ? '(default)' : instance[source]['media']}]"
+          interchange_data << "[#{root_url}#{instance[source][:generated_src]}, #{source == 'source_default' ? '(default)' : instance[source]['media']}]"
         end
 
-        picture_tag = %Q{<img src="#{instance['source_default'][:generated_src]}" data-interchange="#{interchange_data.join ', '}" #{html_attr_string} />}
+        picture_tag = %Q{<img src="#{root_url}#{instance['source_default'][:generated_src]}" data-interchange="#{interchange_data.join ', '}" #{html_attr_string} />}
       end
 
         # Return the markup!
