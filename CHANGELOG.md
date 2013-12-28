@@ -1,8 +1,11 @@
 # Changelog
 
 ## HEAD
+
 - Automatically publish to GitHub pages with Travis CI.
 - Easily incorporate the source from other web projects as subdirectories in your site (see sub_content in `_config.yml`).
+- Load fonts with Web Font Loader.
+- Included Foundation Icon Fonts.
 
 ## 1.2.0
 
