@@ -7,5 +7,5 @@ Location: Your Location, Country
 /* SITE */
 
 Standards: HTML5, CSS3
-Components: Modernizr, jQuery, Foundation by ZURB
+Components: Modernizr, jQuery, Foundation by ZURB, Foundation Icon Fonts, Web Font Loader
 Software: Ruby, Rake, Jekyll, Jekyll::AssetsPlugin, Compass, Sass, Uglifier
