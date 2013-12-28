@@ -20,7 +20,7 @@ title: Page Title
   <nav>
     <ul class="pagination">
       {% if paginator.previous_page %}
-        <li class="arrow"><a href="{{ paginator.previous_page_path }}">&laquo;</a></li>
+        <li class="arrow"><a href="{{ site.root_url }}{{ paginator.previous_page_path }}">&laquo;</a></li>
       {% else %}
         <li class="arrow unavailable"><a>&laquo;</a></li>
       {% endif %}
