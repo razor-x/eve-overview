@@ -12,7 +12,7 @@ title: Page Title
 <h1>blog posts</h1>
 <ul class="posts">
 {% for post in posts %}
-  <li>{{ post.date | date_to_string }} &raquo; <a href="{{ site.root_url }}{{ post.url }}">{{ post.title }}</a></li>
+  <li>{{ post.date | date_to_string }} &raquo; <a href="{{ site.baseurl }}{{ post.url }}">{{ post.title }}</a></li>
 {% endfor %}
 </ul>
 

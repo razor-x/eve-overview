@@ -1,4 +1,4 @@
-root_url: null
+baseurl: null
 
 assets:
   baseurl: /assets/
