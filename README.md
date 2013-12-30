@@ -100,7 +100,7 @@ $ git checkout --orphan gh-pages
 
 and **remove all files and folders except the `.git` directory**.
 
-Then, make an initial commit with only `index.html`, push it, and make sure goes live online.
+Then, make an initial commit with only `index.html`, push it, and make sure it goes live online.
 
 ````bash
 $ git add --all
