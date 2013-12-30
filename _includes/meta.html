@@ -1,3 +1,5 @@
+{% assign url = page.url | replace: 'index.html', '' %}
+
 {% if page.title %}
   <title>{{ site.meta.title.prefix }}{{ page.title }}{{ site.meta.title.suffix }}</title>
   <meta property="og:title" content="{{ page.title }}" />
@@ -20,8 +22,8 @@
   <meta property="og:description" content="{{ description | strip_html }}" />
 {% endif %}
 
-<link rel="canonical" href="{{ site.domain }}{{ page.url }}" />
-<meta property="og:url" content="{{ site.domain }}{{ page.url }}" />
+<link rel="canonical" href="{{ site.domain }}{{ url }}" />
+<meta property="og:url" content="{{ site.domain }}{{ url }}" />
 <meta property="og:site_name" content="{{ site.name }}" />
 
 <meta property="og:updated_time" content="{% if page.meta.update %}{{ page.meta.update | date_to_xmlschema }}{% elsif page.date %}{{ page.date | date_to_xmlschema }}{% else %} {{ site.time | date_to_xmlschema }}{% endif %}" />
