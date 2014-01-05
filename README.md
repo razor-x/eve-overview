@@ -28,7 +28,7 @@ Lots of baked in features that work even if you don't want to use Foundation.
 
 ### Asset pipeline with [Jekyll::AssetsPlugin](https://github.com/ixti/jekyll-assets).
 
-  * Bower for asset dependency management.
+  * [Bower](http://bower.io/) for asset dependency management.
   * [Compass](http://compass-style.org/), [Sass](http://sass-lang.com/), [CoffeeScript](http://coffeescript.org/).
 
 ### Modern web libraries and patterns.
