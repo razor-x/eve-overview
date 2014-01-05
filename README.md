@@ -11,24 +11,43 @@ Demo at [io.evansosenko.com/jekyll-and-zurb/](http://io.evansosenko.com/jekyll-a
 
 Lots of baked in features that work even if you don't want to use Foundation.
 
-- Bare bones [Jekyll](http://jekyllrb.com/) blog: HTML5 & CSS3 ready.
-- Automatically publish to [GitHub pages](http://pages.github.com/) with [Travis CI](https://travis-ci.org/).
-- Running [Foundation by ZURB](http://foundation.zurb.com/).
-- Includes Foundation Icon Fonts.
-- Syntax highlighting with highlight.js.
-- Load fonts with Web Font Loader.
-- Asset pipeline with [Jekyll::AssetsPlugin](https://github.com/ixti/jekyll-assets).
-- Bower for asset dependency management.
-- Plugins for easy responsive images and YouTube videos.
-- [Compass](http://compass-style.org/), [Sass](http://sass-lang.com/), [CoffeeScript](http://coffeescript.org/).
-- Basic [Rake](https://github.com/jimweirich/rake) tasks with support for dev and testing modes, run `rake -D` for info.
-- Social media buttons (optional).
-- Meta data system for SEO and social media support.
-- Optional pagination using Foundation.
-- [Disqus](https://disqus.com/) ready: set `disqus: your_shortname` in `_config.yml`.
-- [Google Analytics](http://www.google.com/analytics/) ready: see `google_analytics` variable in `_config.yml`.
-- [Piwik](https://piwik.org/) ready: set `piwik: yoursite.com/piwik/` in `_config.yml` (yoursite.com/piwik/ points to the piwik install root).
-- Easily incorporate the source from other web projects as subdirectories in your site (see sub_content in `_config.yml`).
+### Bare bones [Jekyll](http://jekyllrb.com/) site or blog: HTML5 & CSS3 ready.
+
+  * Basic [Rake](https://github.com/jimweirich/rake) tasks with support
+    for dev and testing modes, run `rake -D` for info.
+  * Automatically publish to [GitHub pages](http://pages.github.com/)
+    with [Travis CI](https://travis-ci.org/).
+  * Easily incorporate the source from other web projects as
+    subdirectories in your site (see sub_content in `_config.yml`).
+
+### Running [Foundation by ZURB](http://foundation.zurb.com/).
+
+  * Plugins for easy responsive images and YouTube videos.
+  * Optional pagination using Foundation.
+  * Includes [Foundation Icon Fonts](http://zurb.com/playground/foundation-icon-fonts-3).
+
+### Asset pipeline with [Jekyll::AssetsPlugin](https://github.com/ixti/jekyll-assets).
+
+  * Bower for asset dependency management.
+  * [Compass](http://compass-style.org/), [Sass](http://sass-lang.com/), [CoffeeScript](http://coffeescript.org/).
+
+### Modern web libraries and patterns.
+
+  * Syntax highlighting with [highlight.js](http://highlightjs.org/).
+  * Load fonts with [Web Font Loader](https://github.com/typekit/webfontloader).
+  * Load JavaScript asynchronously with [Modernizr.load](http://modernizr.com/docs/#load).
+  * Meta data system for SEO and social media support.
+
+### Analytics and social features.
+
+  * Social media button support.
+  * [Disqus](https://disqus.com/) ready:
+    set `disqus: your_shortname` in `_config.yml`.
+  * [Google Analytics](http://www.google.com/analytics/) ready:
+    see `google_analytics` variable in `_config.yml`.
+  * [Piwik](https://piwik.org/) ready:
+    set `piwik: yoursite.com/piwik/` in `_config.yml`
+    (yoursite.com/piwik/ points to the piwik install root).
 
 ## Quick start
 
