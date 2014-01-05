@@ -6,6 +6,10 @@
 - Easily incorporate the source from other web projects as subdirectories in your site (see sub_content in `_config.yml`).
 - Load fonts with Web Font Loader.
 - Included Foundation Icon Fonts.
+- Only load basic Foundation JavaScript, but no plugins by default.
+  * If you are using Foundation JavaScript plugins
+    you will need to require them in
+    `_assets/javascripts/app.js.coffee.erb`.
 
 ## 1.2.0
 
