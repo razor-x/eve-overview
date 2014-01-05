@@ -11,7 +11,7 @@ script: rake travis
 # set the branch that will be built and published to GitHub pages
 branches:
   only:
-    - example
+    - demo
 
 # create a GitHub Personal Access Token
 # install the travis gem
