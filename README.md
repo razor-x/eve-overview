@@ -15,6 +15,7 @@ Lots of baked in features that work even if you don't want to use Foundation.
 - Automatically publish to [GitHub pages](http://pages.github.com/) with [Travis CI](https://travis-ci.org/).
 - Running [Foundation by ZURB](http://foundation.zurb.com/).
 - Includes Foundation Icon Fonts.
+- Syntax highlighting with highlight.js.
 - Load fonts with Web Font Loader.
 - Asset pipeline with [Jekyll::AssetsPlugin](https://github.com/ixti/jekyll-assets).
 - Bower for asset dependency management.
