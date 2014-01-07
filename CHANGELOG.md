@@ -8,6 +8,7 @@
 - Load fonts with Web Font Loader.
 - Included Foundation Icon Fonts.
 - Switched to highlight.js.
+- Load GitHub Gists asynchronously.
 - Only load basic Foundation JavaScript, but no plugins by default.
   * If you are using Foundation JavaScript plugins
     you will need to require them in
