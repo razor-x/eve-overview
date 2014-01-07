@@ -18,6 +18,8 @@ $ ->
   code = []
   stylesheets = []
 
+  elements.addClass('loading')
+
   # Get elements referencing a gist
   # and build a gists hash referencing
   # the elements that use it.
