@@ -1,7 +1,8 @@
 # Standard library
-require 'rake'
-require 'yaml'
 require 'fileutils'
+require 'rake'
+require 'tmpdir'
+require 'yaml'
 
 # Load the configuration file
 config = YAML.load_file '_config.yml'
@@ -112,6 +113,28 @@ task :deploy => :build do
   end
 end
 
+desc 'Generate site and publish to GitHub Pages.'
+task :ghpages do
+  repo = %x(git config remote.origin.url).strip
+  deploy_branch = repo.match(/github\.io\.git$/) ? 'master' : 'gh-pages'
+  destination = File.join config[:destination], '/'
+  rev = %x(git rev-parse HEAD).strip
+
+  system 'bundle update'
+  system 'bower update'
+
+  Dir.mktmpdir do |dir|
+    system "git clone --branch #{deploy_branch} #{repo.strip} #{dir}"
+    system 'bundle exec rake build'
+    system %Q(rsync -rt --delete-after --exclude=".git" --exclude=".nojekyll" #{destination} #{dir})
+    Dir.chdir dir do
+      system 'git add --all'
+      system "git commit -m 'Built from #{rev}'"
+      system 'git push'
+    end
+  end
+end
+
 desc 'Generate site from Travis CI and publish site to GitHub Pages.'
 task :travis do
   # if this is a pull request, do a simple build of the site and stop
@@ -125,11 +148,11 @@ task :travis do
   system "git config user.name '#{ENV['GIT_NAME']}'"
   system "git config user.email '#{ENV['GIT_EMAIL']}'"
 
-  repo = %x(git config remote.origin.url).gsub(/^git:/, 'https:')
+  repo = %x(git config remote.origin.url).gsub(/^git:/, 'https:').strip
   deploy_url = repo.gsub %r{https://}, "https://#{ENV['GH_TOKEN']}@"
   deploy_branch = repo.match(/github\.io\.git$/) ? 'master' : 'gh-pages'
   destination = File.join config[:destination], '/'
-  rev = %x(git rev-parse HEAD)
+  rev = %x(git rev-parse HEAD).strip
 
   system "git remote add deploy #{repo}"
   system "git remote set-branches deploy #{deploy_branch}"
@@ -141,7 +164,7 @@ task :travis do
 
   system "git checkout #{deploy_branch}"
   system %Q(rsync -rt --delete-after --exclude=".git" --exclude=".nojekyll" #{destination} .)
-  system "git add --all ."
+  system 'git add --all'
   system "git commit -m 'Built from #{rev}'"
   system "git push -q #{deploy_url} #{deploy_branch}"
 end
