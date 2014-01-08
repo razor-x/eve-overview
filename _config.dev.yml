@@ -3,7 +3,7 @@ baseurl: null
 assets:
   baseurl: /assets/
   cachebust: none
-  cache: true
+  cache: false
   compress:
     css: null
     js: null
