@@ -6,13 +6,16 @@
 # or load everything by requiring foundation/js/foundation.
 
 # Require JavaScript for responsive images.
-<%= case site.config['picture']['markup']
+<% case site.config['picture']['markup']
     when 'picturefill'
       require_asset 'vendor/picturefill'
     when 'interchange'
       require_asset 'foundation/js/foundation/foundation.interchange'
     end unless site.config['picture'].nil?
 %>
+
+# Load this when using social buttons.
+<% if site.config['social'] then require_asset 'social-buttons' end %>
 
 # Invoke Foundation.
 $(document).foundation()

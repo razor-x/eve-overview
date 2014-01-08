@@ -1,10 +1,14 @@
+{% if site.social.facebook.enabled or site.social.google.enabled or site.social.twitter.enabled %}
 <aside class="social-buttons">
 {% if site.social.facebook.enabled %}
   <div class="fb-like" data-href="{{ site.domain }}{{ page.url }}" data-width="450" data-layout="button_count" data-show-faces="false" data-send="false"></div>
 {% endif %}
 
 {% if site.social.google.enabled %}
-  <div class="g-plus" data-action="share" data-annotation="bubble"></div>
+  {% comment %}Google +1 button needs a container to target child elements.{% endcomment %}
+  <div class="g-plus-container">
+    <div class="g-plus" data-action="share" data-annotation="bubble"></div>
+  </div>
 {% endif %}
 
 {% if site.social.twitter.enabled %}
@@ -17,6 +21,7 @@
   {% else %}
     {% assign twitter_via = null %}
   {% endif %}
-  <a href="https://twitter.com/share" class="twitter-share-button"{% if twitter_via %} data-via="{{ twitter_via }}"{% endif %}>Tweet</a>
+  <a href="https://twitter.com/share" class="twitter-share-button"{% if twitter_via %} data-via="{{ twitter_via }}"{% endif %}></a>
 {% endif %}
 </aside>
+{% endif %}
