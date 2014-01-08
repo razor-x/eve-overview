@@ -1,11 +1,11 @@
-# Add JavaScript required for your app (will be compressed together)
+# Add JavaScript required for your app (will be compressed together).
 #= require highlightjs
 #= require gist-async
 #= require foundation/js/foundation/foundation
 # Require addtional foundation plugins above this line,
-# or load everything by requiring foundation/js/foundation
+# or load everything by requiring foundation/js/foundation.
 
-# Require JavaScript for responsive images
+# Require JavaScript for responsive images.
 <%= case site.config['picture']['markup']
     when 'picturefill'
       require_asset 'vendor/picturefill'
@@ -14,8 +14,8 @@
     end unless site.config['picture'].nil?
 %>
 
-# Invoke Foundation
+# Invoke Foundation.
 $(document).foundation()
 
-# Invoke highlight.js on page load
+# Invoke highlight.js on page load.
 hljs.initHighlightingOnLoad()
