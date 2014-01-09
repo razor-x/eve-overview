@@ -12,6 +12,7 @@ dev_config = '_config.yml,_config.dev.yml'
 
 config[:destination] ||= '_site/'
 config[:sub_content] ||= []
+destination = File.join config[:destination], '/'
 
 # Set "rake draft" as default task
 task :default => :draft
@@ -81,7 +82,7 @@ desc 'Deploy the site using rsync.'
 task :deploy => :build do
   raise '>> error: must add :depoly: section to _config.yml.' if config[:deploy].nil?
 
-  local = File.expand_path '_site/'
+  local = File.expand_path destination
   protocol = config[:deploy][:protocol]
   server = config[:deploy][:server]
   user = config[:deploy][:user]
@@ -117,7 +118,6 @@ desc 'Generate site and publish to GitHub Pages.'
 task :ghpages do
   repo = %x(git config remote.origin.url).strip
   deploy_branch = repo.match(/github\.io\.git$/) ? 'master' : 'gh-pages'
-  destination = File.join config[:destination], '/'
   rev = %x(git rev-parse HEAD).strip
 
   system 'bundle update'
@@ -151,7 +151,6 @@ task :travis do
   repo = %x(git config remote.origin.url).gsub(/^git:/, 'https:').strip
   deploy_url = repo.gsub %r{https://}, "https://#{ENV['GH_TOKEN']}@"
   deploy_branch = repo.match(/github\.io\.git$/) ? 'master' : 'gh-pages'
-  destination = File.join config[:destination], '/'
   rev = %x(git rev-parse HEAD).strip
 
   system "git remote add deploy #{repo}"
