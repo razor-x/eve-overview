@@ -42,7 +42,7 @@ cdn_enabled: true
 cdn:
   # [ url, fallback test, local asset fallback path ]
   libs:
-    - [ "//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js", "!window.jQuery", "jquery/jquery.js" ]
+    - [ "https://ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js", "!window.jQuery", "jquery/jquery.js" ]
 
 # Keywords will be merged with categories, tags, and page keywords.
 keywords: [ blog, personal ]
@@ -68,7 +68,7 @@ keywords: [ blog, personal ]
 #   url: example.com
 
 # Uncomment below and add your Piwik URL to enable Piwik.
-# piwik: example.com/piwik/
+# piwik: https://example.com/piwik/
 
 # Uncomment below to enable deploy.
 # :deploy:

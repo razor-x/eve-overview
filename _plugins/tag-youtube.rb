@@ -48,7 +48,7 @@ class YouTube < Liquid::Tag
 
     content = String.new
     content << '<div class="video youtube">'
-    content << %Q{<iframe width="#{@width}" height="#{@height}" src="//www.youtube.com/embed/#{@id}" frameborder="0" allowfullscreen></iframe>}
+    content << %Q{<iframe width="#{@width}" height="#{@height}" src="https://www.youtube.com/embed/#{@id}" frameborder="0" allowfullscreen></iframe>}
     content << '</div>'
   end
 
