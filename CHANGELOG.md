@@ -2,6 +2,9 @@
 
 ## HEAD
 
+- Foundation updated to version 5.0.3.
+- Modernizr.load replaced by yepnope.
+- Fastclick included.
 - Automatically publish to GitHub pages with Travis CI.
 - Easily incorporate the source from other web projects as
   subdirectories in your site (see sub_content in `_config.yml`).

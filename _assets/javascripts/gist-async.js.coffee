@@ -39,7 +39,7 @@ $ ->
       stylesheet = gist.data.stylesheet
       if stylesheets.indexOf(stylesheet) < 0
         stylesheets.push stylesheet
-        Modernizr.load(GIST_HOST + stylesheet)
+        yepnope(GIST_HOST + stylesheet)
 
       div = gist.data.div
       gist.files = $(div).find('.gist-file')

@@ -10,7 +10,7 @@
   <script src="https://ajax.googleapis.com/ajax/libs/webfont/1.5.0/webfont.js"></script>
   {% stylesheet app %}
   <script>{% asset fonts %}</script>
-  {% javascript vendor/modernizr %}
+  {% javascript header %}
 </head>
 
 <body>
@@ -31,13 +31,13 @@
 
 {% capture site_javascript %}
   <script>
-    Modernizr.load([
+    yepnope([
     {% for lib in site.cdn.libs %}
       {
         load: '{% if site.cdn_enabled %}{{ lib[0] }}{% else %}{{ lib[2] | asset_path }}{% endif %}',
         complete: function () {
           if ( {{ lib[1] }} ) {
-            Modernizr.load('{{ lib[2] | asset_path }}');
+            yepnope('{{ lib[2] | asset_path }}');
           }
         }
       },
