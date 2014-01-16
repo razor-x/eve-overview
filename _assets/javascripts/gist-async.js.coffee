@@ -1,7 +1,7 @@
 # Load GitHub Gists asynchronously
 # and optionally specify which file to show.
 #
-# Requires Modernizr.load and jQuery.
+# Requires yepnope and jQuery.
 #
 # Based on Mark Selby's async-gists.js:
 # https://gist.github.com/markselby/7209751
