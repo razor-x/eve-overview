@@ -1,6 +1,6 @@
 # Changelog
 
-## HEAD
+## 2.0.0
 
 - Foundation updated to version 5.0.3.
 - Modernizr.load replaced by yepnope.
