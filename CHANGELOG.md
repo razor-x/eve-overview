@@ -1,5 +1,9 @@
 # Changelog
 
+## HEAD
+
+- Normalize.css updated to version 3.0.0.
+
 ## 2.0.0
 
 - Foundation updated to version 5.0.3.
