@@ -4,9 +4,9 @@
   "dependencies": {
     "fastclick": "0.6.11",
     "highlightjs": "8.0",
-    "foundation": "5.0.3",
+    "foundation": "5.1.1",
     "foundation-icon-fonts": "latest",
-    "jquery": "2.0.3",
+    "jquery": "2.1.0",
     "normalize-css": "3.0.0",
     "modernizr": "2.7.1",
     "yepnope": "1.5.4"
