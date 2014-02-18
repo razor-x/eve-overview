@@ -3,6 +3,10 @@ aside.social-buttons
   visibility: hidden
   height: 22px
 
+  // Like button is misaligned because it sets vertical-align: bottom
+  div.fb-like.fb_iframe_widget > span
+    vertical-align: initial !important
+
   // Hide Google +1 button (it shows even if parent is hidden).
   div.g-plus-container
     display: inline-block
