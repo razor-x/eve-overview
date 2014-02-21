@@ -124,12 +124,12 @@ task :ghpages do
   system 'bower update'
 
   Dir.mktmpdir do |dir|
-    system "git clone --branch #{deploy_branch} #{repo.strip} #{dir}"
+    system "git clone --branch #{deploy_branch} #{repo} #{dir}"
     system 'bundle exec rake build'
     system %Q(rsync -rt --delete-after --exclude=".git" --exclude=".nojekyll" #{destination} #{dir})
     Dir.chdir dir do
       system 'git add --all'
-      system "git commit -m 'Built from #{rev}'"
+      system "git commit -m 'Built from #{rev}'."
       system 'git push'
     end
   end
@@ -144,26 +144,25 @@ task :travis do
     next
   end
 
-  # setup credentials so Travis CI can push to GitHub
-  system "git config user.name '#{ENV['GIT_NAME']}'"
-  system "git config user.email '#{ENV['GIT_EMAIL']}'"
-
   repo = %x(git config remote.origin.url).gsub(/^git:/, 'https:').strip
   deploy_url = repo.gsub %r{https://}, "https://#{ENV['GH_TOKEN']}@"
   deploy_branch = repo.match(/github\.io\.git$/) ? 'master' : 'gh-pages'
   rev = %x(git rev-parse HEAD).strip
 
-  system "git remote add deploy #{repo}"
-  system "git remote set-branches deploy #{deploy_branch}"
-  system 'git fetch -q deploy'
-  system "git branch #{deploy_branch} deploy/#{deploy_branch}"
-  system 'bundle exec rake build'
+  Dir.mktmpdir do |dir|
+    dir = File.join dir, 'site'
+    system 'bundle exec rake build'
+    fail "Build failed." unless Dir.exists? destination
+    system "git clone --branch #{deploy_branch} #{repo} #{dir}"
+    system %Q(rsync -rt --del --exclude=".git" --exclude=".nojekyll" #{destination} #{dir})
+    Dir.chdir dir do
+      # setup credentials so Travis CI can push to GitHub
+      system "git config user.name '#{ENV['GIT_NAME']}'"
+      system "git config user.email '#{ENV['GIT_EMAIL']}'"
 
-  fail "Build failed." unless Dir.exists? destination
-
-  system "git checkout #{deploy_branch}"
-  system %Q(rsync -rt --delete-after --exclude=".git" --exclude=".nojekyll" #{destination} .)
-  system 'git add --all'
-  system "git commit -m 'Built from #{rev}'"
-  system "git push -q #{deploy_url} #{deploy_branch}"
+      system 'git add --all'
+      system "git commit -m 'Built from #{rev}'."
+      system "git push -q #{deploy_url} #{deploy_branch}"
+    end
+  end
 end
