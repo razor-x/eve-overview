@@ -1,4 +1,7 @@
 # Hide the social buttons until they have all loaded, then fade them in.
+
+'use strict'
+
 $ ->
   enabled = [
     <%= "'facebook'" if site.config['social']['facebook']['enabled'] unless site.config['social']['facebook'].nil? %>

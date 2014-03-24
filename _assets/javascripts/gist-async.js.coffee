@@ -11,6 +11,9 @@
 # Source and usage instructions:
 # https://gist.github.com/razor-x/8288761
 #
+
+'use strict'
+
 $ ->
   GIST_HOST = 'https://gist.github.com'
   elements = $('div[data-gist]')

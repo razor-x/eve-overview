@@ -31,6 +31,7 @@
 
 {% capture site_javascript %}
   <script>
+    'use strict';
     yepnope([
     {% for lib in site.cdn.libs %}
       {
