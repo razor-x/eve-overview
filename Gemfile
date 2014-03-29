@@ -5,7 +5,7 @@ gem 'rake', '~> 10.1.0'
 gem 'bump', '~> 0.5.0'
 
 # Jekyll
-gem 'jekyll', '~> 1.4.1'
+gem 'jekyll', '~> 1.5.1'
 
 # Jekyll::AssetsPlugin and dependencies
 gem 'jekyll-assets', '~> 0.7.2'
