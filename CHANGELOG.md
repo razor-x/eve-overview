@@ -1,6 +1,6 @@
 # Changelog
 
-## HEAD
+## 2.1.0
 
 - Foundation updated to version 5.1.1.
 - jQuery updated to version 2.1.0.
