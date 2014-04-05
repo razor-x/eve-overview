@@ -1,7 +1,7 @@
 # Jekyll & ZURB
 
-[![Dependency Status](https://gemnasium.com/razor-x/jekyll-and-zurb.png)](https://gemnasium.com/razor-x/jekyll-and-zurb)
-[![Build Status](https://travis-ci.org/razor-x/jekyll-and-zurb.png?branch=demo)](https://travis-ci.org/razor-x/jekyll-and-zurb)
+[![Dependency Status](http://img.shields.io/gemnasium/razor-x/jekyll-and-zurb.svg)](https://gemnasium.com/razor-x/jekyll-and-zurb)
+[![Build Status](http://img.shields.io/travis/razor-x/jekyll-and-zurb/demo.svg)](https://travis-ci.org/razor-x/jekyll-and-zurb)
 
 Source for your personal blog running on Jekyll and Foundation 5.
 Just clone and blog: create the `_posts` and `_drafts` folder.
