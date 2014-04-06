@@ -1,6 +1,6 @@
 # Changelog
 
-### HEAD
+## 2.2.0
 
 - Foundation updated to version 5.2.2.
 - Added Display Advertising to Google Analytics Tracking Code.

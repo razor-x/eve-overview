@@ -1,6 +1,5 @@
 {
   "name": "Jekyll & ZURB",
-  "version": "2.1.0",
   "dependencies": {
     "fastclick": "1.0.0",
     "highlightjs": "8.0",
