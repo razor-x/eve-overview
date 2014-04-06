@@ -5,7 +5,7 @@ node_js: [ 0.10 ]
 before_script:
   - npm install bower -g
   - bower install
-  
+
 install:
   - bundle update
 
