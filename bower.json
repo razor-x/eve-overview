@@ -4,14 +4,11 @@
   "dependencies": {
     "fastclick": "1.0.0",
     "highlightjs": "8.0",
-    "foundation": "5.2.1",
+    "foundation": "5.2.2",
     "foundation-icon-fonts": "latest",
     "jquery": "2.1.0",
     "normalize-css": "3.0.0",
-    "modernizr": "2.7.1",
+    "modernizr": "2.7.2",
     "yepnope": "1.5.4"
-  },
-  "resolutions": {
-    "fastclick": "1.0.0"
   }
 }
