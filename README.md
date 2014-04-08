@@ -83,9 +83,9 @@ If you want to merge in future updates from this project and have your own origi
 set up a separate branch to track this.
 
 ````bash
-$ git remote rename origin razor-x-jekyll-and-zurb
+$ git remote rename origin upstream
 $ git branch jekyll-and-zurb
-$ git branch -u razor-x-jekyll-and-zurb/master jekyll-and-zurb
+$ git branch -u upstream/master jekyll-and-zurb
 ````
 
 Then add an origin and push master
@@ -101,9 +101,9 @@ which you can then merge into your other branches.
 If you later clone your repo you will need to create the update branch again.
 
 ````bash
-$ git remote add razor-x-jekyll-and-zurb https://github.com/razor-x/jekyll-and-zurb.git
-$ git fetch razor-x-jekyll-and-zurb
-$ git checkout -b jekyll-and-zurb razor-x-jekyll-and-zurb/master
+$ git remote add upstream https://github.com/razor-x/jekyll-and-zurb.git
+$ git fetch upstream
+$ git checkout -b jekyll-and-zurb upstream/master
 ````
 
 ## Automatic publishing to GitHub pages with Travis CI
