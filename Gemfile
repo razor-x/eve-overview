@@ -1,7 +1,7 @@
 source 'https://rubygems.org'
 
 # Development dependencies
-gem 'rake', '~> 10.2.0'
+gem 'rake', '~> 10.3.1'
 gem 'bump', '~> 0.5.0'
 
 # Jekyll
