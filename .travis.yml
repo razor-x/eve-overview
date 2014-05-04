@@ -9,7 +9,7 @@ before_script:
 install:
   - bundle update
 
-script: rake travis
+script: bundle exec rake travis
 
 # set the branch that will be built and published to GitHub pages
 branches:
