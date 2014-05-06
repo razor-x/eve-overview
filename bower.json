@@ -7,7 +7,7 @@
     "foundation-icon-fonts": "latest",
     "jquery": "2.1.0",
     "normalize-css": "3.0.0",
-    "modernizr": "2.7.2",
+    "modernizr": "2.8.1",
     "yepnope": "1.5.4"
   }
 }
