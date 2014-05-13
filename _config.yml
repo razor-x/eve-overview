@@ -3,7 +3,7 @@ name: Site Name
 domain: http://razor-x.github.io/jekyll-and-zurb
 baseurl: http://razor-x.github.io/jekyll-and-zurb
 markdown: redcarpet
-pygments: true
+highlighter: pygments
 
 # Uncomment below to enable pagination.
 # paginate: 5

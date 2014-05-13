@@ -1,5 +1,9 @@
 # Changelog
 
+## HEAD
+
+- Jekyll to 2.0.
+
 ## 2.2.0
 
 - Foundation updated to version 5.2.2.
