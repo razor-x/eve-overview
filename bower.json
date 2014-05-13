@@ -5,7 +5,7 @@
     "highlightjs": "8.0",
     "foundation": "5.2.2",
     "foundation-icon-fonts": "latest",
-    "jquery": "2.1.0",
+    "jquery": "2.1.1",
     "normalize-css": "3.0.1",
     "modernizr": "2.8.1",
     "yepnope": "1.5.4"
