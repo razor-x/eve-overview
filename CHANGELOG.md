@@ -1,6 +1,6 @@
 # Changelog
 
-## HEAD
+## 2.3.0
 
 - Jekyll to 2.1.0.
 - Foundation to 5.3.0.
