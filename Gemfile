@@ -10,7 +10,7 @@ gem 'jekyll', '~> 2.1.0'
 # Jekyll::AssetsPlugin and dependencies
 gem 'jekyll-assets', '~> 0.8.0'
 gem 'uglifier', '~> 2.5.0'
-gem 'coffee-script', '2.2.0'
+gem 'coffee-script', '2.3.0'
 gem 'compass', '~> 0.12.2'
 
 # Jekyll Picture Tag dependencies
