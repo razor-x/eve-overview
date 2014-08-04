@@ -8,7 +8,7 @@ gem 'bump', '~> 0.5.0'
 gem 'jekyll', '~> 2.2.0'
 
 # Jekyll::AssetsPlugin and dependencies
-gem 'jekyll-assets', '~> 0.8.0'
+gem 'jekyll-assets', '~> 0.9.1'
 gem 'uglifier', '~> 2.5.0'
 gem 'coffee-script', '2.3.0'
 gem 'compass', '~> 0.12.2'
