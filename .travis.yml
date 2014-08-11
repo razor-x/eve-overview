@@ -1,3 +1,4 @@
+---
 language: [ ruby, node_js ]
 rvm: [ 2.1.1 ]
 node_js: [ 0.10 ]
