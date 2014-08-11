@@ -6,6 +6,9 @@ before_script:
   - npm install bower -g
   - bower install
 
+before_install:
+  - 'echo ''gem: --no-document'' > ~/.gemrc'
+
 install:
   - bundle update
 
