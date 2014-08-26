@@ -17,3 +17,7 @@
 
 // Load this when using social buttons.
 <%= '@import social-buttons' if site.config['social'] %>
+
+// Fix Gist layout issue with Foundation.
+div.gist table
+  table-layout: initial
