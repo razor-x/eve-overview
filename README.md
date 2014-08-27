@@ -1,12 +1,36 @@
 # EVE Online Overview Profiles
 
+_Generates DRY modular overview profiles._
+
 [![MIT License](http://img.shields.io/badge/license-MIT-red.svg?style=flat)](./LICENSE.txt)
 
 ## Description
 
 ## Installation
 
+Download the pre-built YAML files under [releases]. 
+
+Alternatively, clone or fork this project and roll your own.
+
+[releases]: https://github.com/razor-x/eve-overview/releases
+
+## Requirements
+
+Ruby ≥ 2 with [Bundler](http://bundler.io/).
+
 ## Usage
+
+Install the required gems with
+
+````bash
+$ bundle
+````
+
+Build the overview files to the `_overviews` directory with
+
+````bash
+$ rake
+````
 
 ## Development and Testing
 
