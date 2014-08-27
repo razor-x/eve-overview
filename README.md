@@ -6,7 +6,6 @@ _Generates DRY modular overview profiles._
 [![Dependency Status](http://img.shields.io/gemnasium/razor-x/eve-overview.svg?style=flat)](https://gemnasium.com/razor-x/eve-overview)
 [![Build Status](http://img.shields.io/travis/razor-x/eve-overview.svg?style=flat)](https://travis-ci.org/razor-x/eve-overview)
 
-
 ## Installation
 
 Download the pre-built YAML files under [releases].
