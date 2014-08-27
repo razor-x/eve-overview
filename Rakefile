@@ -22,6 +22,10 @@ task :compile_overviews do
   end
 end
 
+task travis: [:build] do
+  system 'tar', '-czf', 'overviews.tar.gz', '-C', build, '.'
+end
+
 def compile_overview(name, path, overview)
   overview_hash = {}
   overview.each do |k, v|

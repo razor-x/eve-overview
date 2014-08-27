@@ -1,0 +1,21 @@
+language: ruby
+rvm: 2.1.2
+
+before_install:
+- 'echo ''gem: --no-document'' > ~/.gemrc'
+
+install:
+- bundle update
+
+script: bundle exec rake travis
+
+deploy:
+  provider: releases
+  api_key:
+    secure: E4Rieypa6Nsy75bdGGcr6JyJs8Jhvli5s9v7Gjoivu9r7IRMcXxNC4HviVpbNpVIR2gUUubiQUUM8ODradpMMI9D8JY1diW2FWQqdUKQFvp0RWHf6tYl5+MpqV4YqWk7GzSFcLG2G8TYSOBtAAJ4ftfhhUPcAzrBMig0h7v042I=
+  file: overview.tar.gz
+  on:
+    repo: razor-x/eve-overview
+
+env:
+  - secure: aP3taS/I7SqbHFL5iccZzw4mvwA1zzggEadUupHVWSKWpu1wACf2owtUa38WwjBwiVI49O4oOvO7q0Gte9oGMB87/VahoE1DoWoLP2Q3ZpQshbCZtou6KSXimLFh6DxxMuOgBPLrrLAWRpo5WoNW3Foj3gEAMum1mHeCVFna52E=
