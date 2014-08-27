@@ -2,8 +2,8 @@
 
 _Generates DRY modular overview profiles._
 
-[![MIT License](http://img.shields.io/badge/license-MIT-red.svg?style=flat)](./LICENSE.txt)
-[![Build Status](http://img.shields.io/travis/razor-x/eve-overview.svg?style=flat)](https://travis-ci.org/razor-x/eve-overview)
+[![MIT License](http://img.shields.io/badge/license-MIT-red.svg?style=flat-square)](./LICENSE.txt)
+[![Build Status](http://img.shields.io/travis/razor-x/eve-overview.svg?style=flat-square)](https://travis-ci.org/razor-x/eve-overview)
 
 
 ## Installation
