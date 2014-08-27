@@ -1,0 +1,25 @@
+---
+- name: ✈
+  color: FFFFBB33
+  overview: all
+  bracket: all
+
+- name: primary
+  color: FF33B5E5
+  overview: all
+  bracket: all
+
+- name: tactical
+  color: FF99CC00
+  overview: all
+  bracket: all
+
+- name: auxiliary
+  color: FFAA66CC
+  overview: all
+  bracket: all
+
+- name: disengage
+  color: FFFF4444
+  overview: all
+  bracket: all
