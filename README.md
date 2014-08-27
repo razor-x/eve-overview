@@ -1,4 +1,4 @@
-# EVE Online Overview Profiles
+# EVE Online Overview Profile Generator
 
 _Generates DRY modular overview profiles._
 
@@ -6,7 +6,7 @@ _Generates DRY modular overview profiles._
 
 ## Installation
 
-Download the pre-built YAML files under [releases]. 
+Download the pre-built YAML files under [releases].
 
 Alternatively, clone or fork this project and roll your own.
 
@@ -118,6 +118,8 @@ The preset will use the filters defined in all supplied states.
 
 Ruby ≥ 2 with [Bundler](http://bundler.io/).
 
+[Bundler]: http://bundler.io/
+
 ## Usage
 
 Install the required gems with
@@ -136,13 +138,15 @@ $ rake
 
 ### Source Code
 
-The [source for these overview profiles](https://github.com/razor-x/eve-overview)
+The [source for EVE Online Overview Profile Generator][source]
 is hosted on GitHub.
 To clone the project run
 
 ````bash
 $ git clone https://github.com/razor-x/eve-overview.git
 ````
+
+[source]: https://github.com/razor-x/eve-overview
 
 ## Contributing
 
@@ -158,7 +162,7 @@ To submit a patch:
 
 ## License
 
-These overview profiles are licensed under the MIT license.
+EVE Online Overview Profile Generator is licensed under the MIT license.
 
 ## Warranty
 
