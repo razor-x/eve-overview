@@ -1,15 +1,15 @@
 ---
 include:
-  - asteroid
-  - celestial
-  - charge
-  - deployable
-  - drone
-  - entity
-  - npc
-  - orbitals
-  - planetary_interaction
-  - ship
-  - sovereignty_structures
-  - station
-  - structure
+  - _asteroid
+  - _celestial
+  - _charge
+  - _deployable
+  - _drone
+  - _entity
+  - _npc
+  - _orbitals
+  - _planetary_interaction
+  - _ship
+  - _sovereignty_structures
+  - _station
+  - _structure
