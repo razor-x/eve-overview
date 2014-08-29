@@ -1,0 +1,11 @@
+---
+include:
+  - _ship-assault_frigate
+  - _ship-covert_ops
+  - _ship-electronic_attack_ship
+  - _ship-expedition_frigate
+  - _ship-frigate
+  - _ship-interceptor
+  - _ship-prototype_exploration_ship
+  - _ship-rookie_ship
+  - _ship-stealth_bomber
