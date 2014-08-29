@@ -97,8 +97,8 @@ name: skirmish
 symbol: ❏
 level: 1
 groups:
-  - ships
-  - planets
+  - pvp
+  - celestial
 states:
   - all
 ````
