@@ -106,15 +106,39 @@ states:
 The `name`, `symbol`, and `level` parameters control
 the in-game display of the preset name.
 
-The `groups` parameter is an array that references any number of
-`.yml` files in the `groups` folder.
-Each group file is just an array of object ids.
-The preset will use the objects from all supplied groups.
-
 The `states` parameter is an array that references any number of
 `.yml` files in the `states` folder.
-Each state file is just an array of state ids.
 The preset will use the filters defined in all supplied states.
+
+The `groups` parameter is an array that references any number of
+`.yml` files in the `groups` folder.
+The preset will use the objects from all supplied groups.
+
+### States
+
+Each state file is just an array of state ids.
+
+### Groups
+
+Each group file can contain two attributes:
+
+- `types` is just an array of object ids.
+- `include` is an array of other groups.
+
+Do not include a group that references the group that is including it.
+
+An example group file looks like
+
+````yaml
+# groups/pvp.yml
+---
+include:
+  - ships
+  - planets
+types:
+  - 100
+  - 101
+````
 
 ## Requirements
 

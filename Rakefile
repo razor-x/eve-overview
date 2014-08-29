@@ -74,9 +74,9 @@ def load_preset(preset)
 end
 
 def format_preset(preset)
-  [ format_preset_name(preset), [
-    ['filteredStates', merge_arrays_from('states', preset[:states])],
-    ['groups', merge_arrays_from('groups', preset[:groups])]
+  [format_preset_name(preset), [
+    ['filteredStates', merge_states(preset[:states])],
+    ['groups', merge_groups(preset[:groups])]
   ]]
 end
 
@@ -88,10 +88,30 @@ def format_tab_name(tab)
   "<color=0x#{tab[:color]}>   #{tab[:name]}   </color>"
 end
 
-def merge_arrays_from(type, names)
+def merge_states(names)
   array = []
   names.each do |name|
-    array << YAML.load_file(File.join(type, "#{name}.yml"))
+    array << YAML.load_file(File.join('states', "#{name}.yml"))
   end
   array.flatten.uniq
+end
+
+def merge_groups(names)
+  hash = ActiveSupport::HashWithIndifferentAccess.new
+  names.each do |name|
+    hash.merge! YAML.load_file(File.join('groups', "#{name}.yml"))
+  end
+
+  reduce_group(hash).uniq.sort
+end
+
+def reduce_group(group)
+  types = []
+  types << group[:types] unless group[:types].nil?
+  types << group[:include].map do |v|
+    reduce_group ActiveSupport::HashWithIndifferentAccess.new(
+      YAML.load_file(File.join('groups', "#{v}.yml"))
+    )
+  end unless group[:include].nil?
+  types.flatten.uniq
 end
