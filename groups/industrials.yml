@@ -1,0 +1,8 @@
+---
+include:
+  - _ship-blockade_runner
+  - _ship-deep_space_transport
+  - _ship-exhumer
+  - _ship-industrial
+  - _ship-industrial_command_ship
+  - _ship-mining_barge

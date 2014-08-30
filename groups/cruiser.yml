@@ -1,0 +1,9 @@
+---
+include:
+  - _ship-combat_recon_ship
+  - _ship-cruiser
+  - _ship-force_recon_ship
+  - _ship-heavy_assault_cruiser
+  - _ship-heavy_interdiction_cruiser
+  - _ship-logistics
+  - _ship-strategic_cruiser

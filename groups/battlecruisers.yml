@@ -1,0 +1,5 @@
+---
+include:
+  - _ship-attack_battlecruiser
+  - _ship-combat_battlecruiser
+  - _ship-command_ship

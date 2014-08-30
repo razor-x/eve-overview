@@ -1,0 +1,6 @@
+---
+include:
+  - _ship-battleship
+  - _ship-black_ops
+  - _ship-elite_battleship
+  - _ship-marauder
