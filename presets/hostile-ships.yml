@@ -1,0 +1,9 @@
+---
+name: ships
+symbol: ♞ hostile
+level: 1
+groups:
+  - pvp
+  - _ship
+states:
+  - hostile

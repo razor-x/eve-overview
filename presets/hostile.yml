@@ -1,0 +1,11 @@
+---
+name: ""
+symbol: ♞ hostile
+level: 0
+groups:
+  - pvp
+  - _ship
+  - drones-combat
+  - drones-fighters
+states:
+  - hostile
