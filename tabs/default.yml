@@ -1,25 +1,25 @@
 ---
 - name: ✈
   color: FFFFBB33
-  overview: all
-  bracket: all
+  overview: travel
+  bracket: brackets-all
 
 - name: primary
   color: FF33B5E5
-  overview: all
-  bracket: all
+  overview: hostile
+  bracket: brackets-all
 
 - name: tactical
   color: FF99CC00
-  overview: all
-  bracket: all
+  overview: hostile-minimal
+  bracket: brackets-all
 
 - name: auxiliary
   color: FFAA66CC
-  overview: all
-  bracket: all
+  overview: dscan-skirmish
+  bracket: brackets-all
 
 - name: disengage
   color: FFFF4444
-  overview: all
-  bracket: all
+  overview: extra-podsaver
+  bracket: brackets-all
