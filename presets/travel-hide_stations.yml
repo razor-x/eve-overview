@@ -1,0 +1,9 @@
+---
+name: hide stations
+symbol: ✈ travel
+level: 1
+groups:
+  - gates
+  - minimal
+states:
+  - all

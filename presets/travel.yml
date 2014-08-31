@@ -1,0 +1,10 @@
+---
+name: ""
+symbol: ✈ travel
+level: 0
+groups:
+  - gates
+  - _station
+  - minimal
+states:
+  - all

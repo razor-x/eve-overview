@@ -1,0 +1,11 @@
+---
+name: pvp
+symbol: ✈ travel
+level: 1
+groups:
+  - gates
+  - _station
+  - pvp
+  - _ship
+states:
+  - hostile
