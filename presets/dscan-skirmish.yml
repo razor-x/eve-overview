@@ -1,0 +1,13 @@
+---
+name: skirmish ✛
+symbol: ✥ dscan
+level: 1
+groups:
+  - pvp
+  - _ship
+  - gates
+  - _celestial-force_field
+  - _celestial-planet
+  - _celestial-asteroid_belt
+states:
+  - hostile
