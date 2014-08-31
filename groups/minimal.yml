@@ -1,0 +1,4 @@
+---
+include:
+  - _charge-scanner_probe
+  - _deployable
