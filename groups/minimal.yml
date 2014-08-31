@@ -1,4 +1,5 @@
 ---
 include:
   - _charge-scanner_probe
-  - _deployable
+  - _deployable-mobile_warp_disruptor
+  - bombs
