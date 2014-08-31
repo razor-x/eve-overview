@@ -8,6 +8,7 @@ groups:
   - gates
   - _celestial-force_field
   - _celestial-planet
+  - _orbitals-orbital_infrastructure
   - _celestial-asteroid_belt
 states:
   - hostile

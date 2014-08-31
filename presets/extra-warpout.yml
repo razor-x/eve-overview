@@ -1,0 +1,10 @@
+---
+name: warpout
+symbol: ✪ extra
+level: 1
+groups:
+  - minimal
+  - _celestial-planet
+  - _orbitals-orbital_infrastructure
+states:
+  - all
