@@ -2,7 +2,7 @@ require 'active_support/core_ext/hash'
 require 'active_support/core_ext/string'
 require 'yaml'
 
-build = '_overviews'
+build = 'Overview'
 
 task default: :build
 task build: [:reset_build_directory, :compile_overviews]
@@ -23,7 +23,7 @@ task :compile_overviews do
 end
 
 task travis: [:build] do
-  system 'tar', '-czf', 'overviews.tar.gz', '-C', build, '.'
+  system 'tar', '-czf', 'overviews.tar.gz', '--no-xattrs', build
 end
 
 def compile_overview(name, path, overview)

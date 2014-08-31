@@ -154,7 +154,7 @@ Install the required gems with
 $ bundle
 ````
 
-Build the overview files to the `_overviews` directory with
+Build the overview files to the `Overview` directory with
 
 ````bash
 $ rake
