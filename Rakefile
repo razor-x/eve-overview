@@ -81,7 +81,7 @@ def format_preset(preset)
 end
 
 def format_preset_name(preset)
-  "#{preset[:symbol]} " + '-' * preset[:level] + " #{preset[:name]}"
+  "#{preset[:symbol]}" + ' -- ' * preset[:level] + "#{preset[:name]}"
 end
 
 def format_tab_name(tab)
