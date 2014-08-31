@@ -97,9 +97,12 @@ def merge_states(names)
 end
 
 def merge_groups(names)
-  hash = ActiveSupport::HashWithIndifferentAccess.new
+  hash = ActiveSupport::HashWithIndifferentAccess.new include: [], types: []
   names.each do |name|
-    hash.merge! YAML.load_file(File.join('groups', "#{name}.yml"))
+    sub_hash = ActiveSupport::HashWithIndifferentAccess.new YAML.load_file(File.join('groups', "#{name}.yml"))
+    %i(types include).each do |k|
+      hash[k].concat sub_hash[k] unless sub_hash[k].nil?
+    end
   end
 
   reduce_group(hash).uniq.sort
