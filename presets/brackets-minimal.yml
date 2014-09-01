@@ -1,0 +1,11 @@
+---
+name: minimal
+symbol: ❏ brackets
+level: 1
+groups:
+  - _celestial-sun
+  - beacons
+  - gates
+  - bombs
+states:
+  - all
