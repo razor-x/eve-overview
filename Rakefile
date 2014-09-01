@@ -13,12 +13,13 @@ task :reset_build_directory do
 end
 
 task :compile_overviews do
-  Dir['overviews/*.yml'].each do |overview|
-    name = File.basename(overview, File.extname(overview))
-    compile_overview(
-      name, File.join(build, "#{name}.yaml"),
-      ActiveSupport::HashWithIndifferentAccess.new(YAML.load_file(overview))
-    )
+  Dir['overviews/*.yml'].each do |path|
+    overview = ActiveSupport::HashWithIndifferentAccess.new(YAML.load_file(path))
+    name = File.basename(path, File.extname(path))
+    overview[:tabs].each do |tab|
+      overview[:tab] = tab
+      compile_overview name, File.join(build, "#{name}-#{tab}.yaml"), overview
+    end
   end
 end
 
@@ -29,8 +30,9 @@ end
 def compile_overview(name, path, overview)
   overview_hash = {}
   overview.each do |k, v|
+    next if k.to_sym == :tabs
     opts = YAML.load_file(File.join(k.pluralize, "#{v}.yml"))
-    if k.to_sym == :tabs
+    if k.to_sym == :tab
       overview_hash.merge! format_tabs(opts)
     else
       overview_hash.merge! opts

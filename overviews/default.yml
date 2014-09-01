@@ -4,4 +4,5 @@ columns: default
 flags: default
 labels: default
 settings: default
-tabs: default
+tabs:
+  - default
