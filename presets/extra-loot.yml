@@ -1,0 +1,11 @@
+---
+name: loot
+symbol: ✪ extra
+level: 1
+groups:
+  - common-pvp
+  - containers
+  - _celestial-wreck
+  - _ship
+states:
+  - hostile
