@@ -7,5 +7,6 @@ groups:
   - _ship
   - drones-combat
   - drones-fighters
+  - rats
 states:
   - hostile

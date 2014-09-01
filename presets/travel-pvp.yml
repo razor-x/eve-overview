@@ -7,5 +7,6 @@ groups:
   - gates
   - _station
   - _ship
+  - rats
 states:
   - hostile
