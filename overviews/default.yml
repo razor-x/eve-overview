@@ -6,3 +6,4 @@ labels: default
 settings: default
 tabs:
   - default
+  - mission
