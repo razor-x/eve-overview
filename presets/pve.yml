@@ -1,0 +1,12 @@
+---
+name: ""
+symbol: ♣ pve
+level: 0
+groups:
+  - common-pve
+  - rats
+  - large_collidables
+  - _ship
+  - _drone
+states:
+  - hostile

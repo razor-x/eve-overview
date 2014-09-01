@@ -1,0 +1,10 @@
+---
+name: harvestables
+symbol: ♣ pve
+level: 1
+groups:
+  - common-pve
+  - _asteroid
+  - _celestial-harvestable_cloud
+states:
+  - hostile

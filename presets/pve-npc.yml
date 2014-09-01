@@ -1,0 +1,9 @@
+---
+name: npc
+symbol: ♣ pve
+level: 0
+groups:
+  - common-pve
+  - rats
+states:
+  - hostile
