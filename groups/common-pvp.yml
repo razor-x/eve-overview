@@ -1,10 +1,7 @@
 ---
 include:
+  - common-minimal
   - _celestial-sun
-  - _charge-scanner_probe
   - _deployable
-  - beacons
-  - bombs
-  - bubbles
   - gates
   - _station

@@ -1,6 +1,3 @@
 ---
 include:
-  - _charge-scanner_probe
-  - beacons
-  - bombs
-  - bubbles
+  - common-minimal
