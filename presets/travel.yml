@@ -3,8 +3,8 @@ name: ""
 symbol: ✈ travel
 level: 0
 groups:
+  - common-minimal
   - gates
   - _station
-  - minimal
 states:
   - all

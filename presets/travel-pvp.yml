@@ -3,9 +3,9 @@ name: pvp
 symbol: ✈ travel
 level: 1
 groups:
+  - common-pvp
   - gates
   - _station
-  - pvp
   - _ship
 states:
   - hostile

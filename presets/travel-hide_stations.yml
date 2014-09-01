@@ -3,7 +3,7 @@ name: hide stations
 symbol: ✈ travel
 level: 1
 groups:
+  - common-minimal
   - gates
-  - minimal
 states:
   - all

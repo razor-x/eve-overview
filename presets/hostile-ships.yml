@@ -3,7 +3,7 @@ name: ships
 symbol: ♞ hostile
 level: 1
 groups:
-  - pvp
+  - common-pvp
   - _ship
 states:
   - hostile

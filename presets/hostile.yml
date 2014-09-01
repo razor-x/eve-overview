@@ -3,7 +3,7 @@ name: ""
 symbol: ♞ hostile
 level: 0
 groups:
-  - pvp
+  - common-pvp
   - _ship
   - drones-combat
   - drones-fighters

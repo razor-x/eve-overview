@@ -3,7 +3,7 @@ name: minimal
 symbol: ♞ hostile
 level: 1
 groups:
-  - minimal
+  - common-minimal
   - _celestial-sun
   - _ship
 states:

@@ -3,7 +3,7 @@ name: warpout
 symbol: ✪ extra
 level: 1
 groups:
-  - minimal
+  - common-minimal
   - _celestial-planet
   - _orbitals-orbital_infrastructure
 states:
