@@ -1,7 +1,7 @@
 ---
 name: npc
 symbol: ♣ pve
-level: 0
+level: 1
 groups:
   - common-pve
   - rats
