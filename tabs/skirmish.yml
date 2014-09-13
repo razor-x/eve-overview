@@ -16,10 +16,10 @@
 
 - name: long range scan
   color: FFAA66CC
-  overview: dscan-long
+  overview: dscan-skirmish-long
   bracket: brackets-all
 
 - name: short range scan
   color: FFFF4444
-  overview: dscan-short
+  overview: dscan-skirmish-short
   bracket: brackets-all
