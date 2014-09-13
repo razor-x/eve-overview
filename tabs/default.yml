@@ -16,7 +16,7 @@
 
 - name: auxiliary
   color: FFAA66CC
-  overview: dscan-skirmish
+  overview: dscan-skirmish-long
   bracket: brackets-all
 
 - name: disengage
