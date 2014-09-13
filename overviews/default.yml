@@ -6,3 +6,6 @@ settings: default
 tabs:
   - default
   - mission
+  - pve
+  - pvp
+  - skirmish
