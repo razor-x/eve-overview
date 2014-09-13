@@ -1,0 +1,25 @@
+---
+- name: ✈
+  color: FFFFBB33
+  overview: travel
+  bracket: brackets-all
+
+- name: hostile
+  color: FF33B5E5
+  overview: hostile-minimal
+  bracket: brackets-all
+
+- name: tactical
+  color: FF99CC00
+  overview: hostile-drones
+  bracket: brackets-all
+
+- name: long range scan
+  color: FFAA66CC
+  overview: dscan-long
+  bracket: brackets-all
+
+- name: short range scan
+  color: FFFF4444
+  overview: dscan-short
+  bracket: brackets-all
