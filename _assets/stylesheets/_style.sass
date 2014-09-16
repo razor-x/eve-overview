@@ -1,0 +1,17 @@
+html
+  overflow-y: scroll
+
+// Foundation 5.2.1 sets
+// height: 100%
+// which breaks the layout
+body
+  height: auto
+
+body
+  padding: 1rem
+  @media #{$medium-up}
+    padding: 5rem
+
+section.content, body > header
+  max-width: nth($large-range, 1)
+  margin: auto
