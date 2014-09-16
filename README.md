@@ -1,8 +1,8 @@
-# Jekyll & ZURB
+# EVE Overview project page built with Jekyll & ZURB
 
 [![MIT License](http://img.shields.io/badge/license-MIT-red.svg?style=flat)](./LICENSE.txt)
-[![Dependency Status](http://img.shields.io/gemnasium/razor-x/jekyll-and-zurb.svg?style=flat)](https://gemnasium.com/razor-x/jekyll-and-zurb)
-[![Build Status](http://img.shields.io/travis/razor-x/jekyll-and-zurb/demo.svg?style=flat)](https://travis-ci.org/razor-x/jekyll-and-zurb)
+
+This README content is cloned from the Jekyll & ZURB README.
 
 Source for your personal blog running on Jekyll and Foundation 5.
 Just clone and blog: create the `_posts` and `_drafts` folder.

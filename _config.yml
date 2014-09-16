@@ -1,8 +1,8 @@
 ---
 # Jekyll options.
-name: Site Name
-domain: http://razor-x.github.io/jekyll-and-zurb
-baseurl: http://razor-x.github.io/jekyll-and-zurb
+name: EVE Overview
+domain: http://io.evansosenko.com/eve-overview
+baseurl: http://io.evansosenko.com/eve-overview
 markdown: redcarpet
 highlighter: pygments
 
@@ -28,7 +28,7 @@ gems:
 
 # Jekyll::AssetsPlugin options.
 assets:
-  baseurl: http://razor-x.github.io/jekyll-and-zurb/assets/
+  baseurl: http://io.evansosenko.com/eve-overview/assets/
   sources:
     - _assets/images
     - _assets/javascripts
@@ -49,24 +49,24 @@ cdn:
 keywords: [ blog, personal ]
 
 # Uncomment below to set default meta info.
-# meta:
-#   locale: en_US
-#   description: "My Site's default description."
-#   title:
-#     prefix: ""
-#     suffix: " - Site Name"
-#   twitter:
-#     default_card: summary
-#     site: "@example.com"
-#     creator: "@username"
+meta:
+  locale: en_US
+  description: "Generates DRY modular overview profiles."
+  title:
+    prefix: ""
+    suffix: " - EVE Overview"
+  twitter:
+    default_card: summary
+    site: "@evansosenko"
+    creator: "@evansosenko"
 
 # Uncomment below and add your Disqus Shortname to enable Disqus.
 # disqus: shortname
 
 # Uncomment below and add your Tracking ID and URL to enable Google Analytics.
-# google_analytics:
-#   id: UA-00000000-0
-#   url: example.com
+google_analytics:
+  id: UA-19631381-4
+  url: evansosenko.com
 
 # Uncomment below and add your Piwik URL to enable Piwik.
 # piwik: https://example.com/piwik/
@@ -112,21 +112,21 @@ keywords: [ blog, personal ]
 #         width: '500'
 
 # Uncomment below to configure social media.
-# social:
-#   facebook:
-#     enabled: true
-#   google:
-#     enabled: true
-#     gcfg:
-#       lang: en-US
-#       parsetags: onload
-#   twitter:
-#     enabled: true
+social:
+  facebook:
+    enabled: true
+  google:
+    enabled: true
+    gcfg:
+      lang: en-US
+      parsetags: onload
+  twitter:
+    enabled: true
 
 # Include code from other repos in the final build.
 # Each array has the format
 # - [ repo, branch, subdirectory, treeish (optional) ]
 # Uncomment this example to includes a copy of the gh-pages branch of this repo at
-# http://razor-x.github.io/jekyll-and-zurb/inception/jekyll-and-zurb/
+# http://io.evansosenko.com/eve-overview/inception/jekyll-and-zurb/
 # :sub_content:
 #   - [ "https://github.com/razor-x/jekyll-and-zurb", gh-pages, inception/jekyll-and-zurb ]
