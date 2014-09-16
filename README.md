@@ -60,8 +60,11 @@ Just clone this with
 $ git clone https://github.com/razor-x/jekyll-and-zurb.git my-blog
 ````
 
-run `bundle && bower install` and create the `_posts` folder.
+run `bundle update && bower install` and create the `_posts` folder.
 Head over to the [Jekyll Docs](http://jekyllrb.com/docs/home/) for the rest of the details.
+
+Running off the `master` branch may be unstable and is not suitable for production.
+Only tagged releases are considered stable.
 
 ## Demo site and documentation
 
