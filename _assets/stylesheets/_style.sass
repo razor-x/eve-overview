@@ -12,6 +12,12 @@ body
   @media #{$medium-up}
     padding: 5rem
 
-section.content, body > header
+#content, body > header, body > footer
   max-width: nth($large-range, 1)
   margin: auto
+
+a
+  +hover_glow($clr-eve-orange)
+
+a.icon::before
+  padding-right: 1rem

@@ -4,3 +4,14 @@ $snow: #F9F9F9
 
 // EVE Colors
 $clr-eve-orange: #ffa500
+
+//
+// Custom Mixins
+//
+
+// Glow effect on hover
+=hover_glow($color)
+  transition: all 0.25s ease-in
+
+  &:hover
+    color: $color

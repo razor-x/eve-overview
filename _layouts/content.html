@@ -1,0 +1,18 @@
+---
+layout: default
+---
+<section id="content">
+  <nav data-magellan-expedition="fixed">
+    <dl class="sub-nav">
+      <dt>{{ page.title }}</dt>
+    {% for link in page.subnav %}
+      <dd data-magellan-arrival="{{ link.id }}"><a href="#{{ link.id }}">{{ link.name }}</a></dd>
+    {% endfor %}
+    </dl>
+  </nav>
+
+  {% include downloads.html %}
+
+  {{ content }}
+
+</section>
