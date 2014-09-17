@@ -1,8 +1,12 @@
-# EVE Overview project page built with Jekyll & ZURB
+# EVE Online Overview Profile Generator
+
+_Project page built with Jekyll & ZURB_
 
 [![MIT License](http://img.shields.io/badge/license-MIT-red.svg?style=flat)](./LICENSE.txt)
+[![Build Status](http://img.shields.io/travis/razor-x/eve-overview/project-site.svg?style=flat)](https://travis-ci.org/razor-x/eve-overview)
 
-This README content is cloned from the Jekyll & ZURB README.
+The rest of this README is just cloned from
+[Jekyll & ZURB](https://github.com/razor-x/jekyll-and-zurb).
 
 Source for your personal blog running on Jekyll and Foundation 5.
 Just clone and blog: create the `_posts` and `_drafts` folder.
