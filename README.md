@@ -1,6 +1,6 @@
-# EVE Online Overview Profile Generator
+# EVE Online Overview Generator
 
-_Generates DRY modular overview profiles._
+_Generate DRY modular overviews._
 
 [![MIT License](http://img.shields.io/badge/license-MIT-red.svg?style=flat)](./LICENSE.txt)
 [![Dependency Status](http://img.shields.io/gemnasium/razor-x/eve-overview.svg?style=flat)](https://gemnasium.com/razor-x/eve-overview)
@@ -165,7 +165,7 @@ $ rake
 
 ### Source Code
 
-The [source for EVE Online Overview Profile Generator][source]
+The [source for EVE Online Overview Generator][source]
 is hosted on GitHub.
 To clone the project run
 
@@ -189,7 +189,7 @@ To submit a patch:
 
 ## License
 
-EVE Online Overview Profile Generator is licensed under the MIT license.
+EVE Online Overview Generator is licensed under the MIT license.
 
 ## Warranty
 
