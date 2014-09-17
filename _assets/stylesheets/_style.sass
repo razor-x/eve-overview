@@ -19,5 +19,15 @@ body
 a
   +hover_glow($clr-eve-orange)
 
-a.icon::before
-  padding-right: 1rem
+#buttons
+  a
+    width: 100%
+    text-align: left
+
+    @media #{$medium-up}
+      width: auto
+      text-align: center
+      font-size: 1.5rem
+
+    &::before
+      padding-right: 1rem

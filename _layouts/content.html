@@ -2,6 +2,8 @@
 layout: default
 ---
 <section id="content">
+  {% include buttons.html %}
+
   <nav data-magellan-expedition="fixed">
     <dl class="sub-nav">
       <dt>{{ page.title }}</dt>
@@ -10,8 +12,6 @@ layout: default
     {% endfor %}
     </dl>
   </nav>
-
-  {% include buttons.html %}
 
   {{ content }}
 
