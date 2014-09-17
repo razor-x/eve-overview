@@ -25,3 +25,12 @@ $(document).foundation()
 
 # Invoke highlight.js on page load.
 hljs.initHighlightingOnLoad()
+
+# Set release download url.
+$.get 'https://api.github.com/repos/<%= site.config['source_repo'] %>/releases',
+  (data) ->
+    container = $("#download")
+    container.attr "href", data[0].assets[0].browser_download_url
+    container.fadeOut ->
+      $(this).removeClass 'disabled'
+      $(this).text('Download overview pack').fadeIn()

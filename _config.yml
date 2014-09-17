@@ -130,3 +130,6 @@ social:
 # http://io.evansosenko.com/eve-overview/inception/jekyll-and-zurb/
 # :sub_content:
 #   - [ "https://github.com/razor-x/jekyll-and-zurb", gh-pages, inception/jekyll-and-zurb ]
+
+# GitHub source repository.
+source_repo: razor-x/eve-overview
