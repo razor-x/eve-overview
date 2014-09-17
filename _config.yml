@@ -46,12 +46,12 @@ cdn:
     - [ "https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js", "!window.jQuery", "jquery/dist/jquery" ]
 
 # Keywords will be merged with categories, tags, and page keywords.
-keywords: [ blog, personal ]
+keywords: [ eve online, eve, overview, overviews, overview generator, tool, yaml, yml, ruby, dry ]
 
 # Uncomment below to set default meta info.
 meta:
   locale: en_US
-  description: "Generate DRY modular overviews."
+  description: "Generate DRY modular overviews for EVE Online."
   title:
     prefix: ""
     suffix: ""
