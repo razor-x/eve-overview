@@ -4,7 +4,7 @@ _Generates DRY modular overview profiles._
 
 [![MIT License](http://img.shields.io/badge/license-MIT-red.svg?style=flat)](./LICENSE.txt)
 [![Dependency Status](http://img.shields.io/gemnasium/razor-x/eve-overview.svg?style=flat)](https://gemnasium.com/razor-x/eve-overview)
-[![Build Status](http://img.shields.io/travis/razor-x/eve-overview.svg?style=flat)](https://travis-ci.org/razor-x/eve-overview)
+[![Build Status](http://img.shields.io/travis/razor-x/eve-overview/master.svg?style=flat)](https://travis-ci.org/razor-x/eve-overview)
 
 ## Installation
 
