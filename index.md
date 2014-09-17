@@ -1,4 +1,4 @@
 ---
 layout: content
-title: EVE Overview Generator
+title: Overview Generator - EVE Online
 ---

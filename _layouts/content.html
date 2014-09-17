@@ -6,7 +6,7 @@ layout: default
 
   <nav data-magellan-expedition="fixed">
     <dl class="sub-nav">
-      <dt>{{ page.title }}</dt>
+      <dt>{{ site.name }}</dt>
     {% for link in page.subnav %}
       <dd data-magellan-arrival="{{ link.id }}"><a href="#{{ link.id }}">{{ link.name }}</a></dd>
     {% endfor %}

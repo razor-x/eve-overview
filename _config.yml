@@ -1,6 +1,6 @@
 ---
 # Jekyll options.
-name: EVE Overview
+name: EVE Online Overview Generator
 domain: http://io.evansosenko.com/eve-overview
 baseurl: http://io.evansosenko.com/eve-overview
 markdown: redcarpet
@@ -51,10 +51,10 @@ keywords: [ blog, personal ]
 # Uncomment below to set default meta info.
 meta:
   locale: en_US
-  description: "Generates DRY modular overview profiles."
+  description: "Generate DRY modular overviews."
   title:
     prefix: ""
-    suffix: " - EVE Overview"
+    suffix: ""
   twitter:
     default_card: summary
     site: "@evansosenko"

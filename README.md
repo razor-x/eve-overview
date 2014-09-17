@@ -1,4 +1,4 @@
-# EVE Online Overview Profile Generator
+# EVE Online Overview Generator
 
 _Project page built with Jekyll & ZURB_
 
