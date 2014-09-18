@@ -7,3 +7,27 @@
 - src: overview-hostile-minimal.jpg
   thumb: overview-hostile-minimal-th.jpg
   caption: Minimal preset
+
+- src: overview-dscan-skirmish.jpg
+  thumb: overview-dscan-skirmish-th.jpg
+  caption: D-scan skirmish preset
+
+- src: overview-pve.jpg
+  thumb: overview-pve-th.jpg
+  caption: PvE preset
+
+- src: overview-pve-npc.jpg
+  thumb: overview-pve-npc-th.jpg
+  caption: PvE NPC preset
+
+- src: overview-pve-mining.jpg
+  thumb: overview-pve-mining-th.jpg
+  caption: Mining preset
+
+- src: overview-extra-salvage.jpg
+  thumb: overview-extra-salvage-th.jpg
+  caption: Salvage preset
+
+- src: overview-extra-warpout.jpg
+  thumb: overview-extra-warpout-th.jpg
+  caption: Warpout preset
