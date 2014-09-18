@@ -2,10 +2,10 @@
 
 _Generate DRY modular overviews._
 
-[![MIT License](http://img.shields.io/badge/license-MIT-red.svg?style=flat)](./LICENSE.txt)
-[![CCP Copyright Notice](http://img.shields.io/badge/CCP-Copyright_Notice-red.svg?style=flat)](./CCP_COPYRIGHT_NOTICE.txt)
-[![Dependency Status](http://img.shields.io/gemnasium/razor-x/eve-overview.svg?style=flat)](https://gemnasium.com/razor-x/eve-overview)
-[![Build Status](http://img.shields.io/travis/razor-x/eve-overview/master.svg?style=flat)](https://travis-ci.org/razor-x/eve-overview)
+[![MIT License](https://img.shields.io/badge/license-MIT-red.svg?style=flat)](./LICENSE.txt)
+[![CCP Copyright Notice](https://img.shields.io/badge/CCP-Copyright_Notice-red.svg?style=flat)](./CCP_COPYRIGHT_NOTICE.txt)
+[![Dependency Status](https://img.shields.io/gemnasium/razor-x/eve-overview.svg?style=flat)](https://gemnasium.com/razor-x/eve-overview)
+[![Build Status](https://img.shields.io/travis/razor-x/eve-overview/master.svg?style=flat)](https://travis-ci.org/razor-x/eve-overview)
 
 ## Description
 
