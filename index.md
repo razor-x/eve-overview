@@ -9,6 +9,16 @@ subnav:
 <a name="introduction"></a>
 <h2 data-magellan-destination="introduction">Introduction</h2>
 
+<ul class="clearing-thumbs clearing-feature" data-clearing>
+{% for img in site.data.overview_images %}
+  <li{% if img.featured %} class="clearing-featured-img"{% endif %}>
+    <a href="{{ img.src | asset_path }}">
+      <img src="{{ img.thumb | asset_path }}">
+    </a>
+  </li>
+{% endfor %}
+</ul>
+
 __Don't die on patch day because you missed adding that new ship-type to one of your presets!__
 
 The EVE Online Overview Generator facilitates creating and maintaining overview packs.
