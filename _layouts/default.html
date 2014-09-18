@@ -21,7 +21,16 @@
   {{ content }}
 
   <footer>
-    <p>EVE Online Overview Generator is licensed under the MIT license. Copyright © 2014 Evan Boyd Sosenko.</p>
+    <p>{{ site.data.text.license }} {{ site.data.text.copyright }}</p>
+    <p>
+      {{ site.data.text.ccp_copyright }}
+      <a data-reveal-id="ccp_copyright_notice">{{ site.data.text.ccp_copyright_title }}</a>
+    </p>
+    <div id="ccp_copyright_notice" class="reveal-modal" data-reveal>
+      <h3>{{ site.data.text.ccp_copyright_title }}</h3>
+      <p>{{ site.data.text.ccp_copyright_notice }}</p>
+      <a class="close-reveal-modal">&#215;</a>
+    </div>
     {% include social-buttons.html %}
   </footer>
 
