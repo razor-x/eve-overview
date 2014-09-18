@@ -3,6 +3,7 @@
 _Generate DRY modular overviews._
 
 [![MIT License](http://img.shields.io/badge/license-MIT-red.svg?style=flat)](./LICENSE.txt)
+[![CCP Copyright Notice](http://img.shields.io/badge/CCP-Copyright_Notice-red.svg?style=flat)](./CCP_COPYRIGHT_NOTICE.txt)
 [![Dependency Status](http://img.shields.io/gemnasium/razor-x/eve-overview.svg?style=flat)](https://gemnasium.com/razor-x/eve-overview)
 [![Build Status](http://img.shields.io/travis/razor-x/eve-overview/master.svg?style=flat)](https://travis-ci.org/razor-x/eve-overview)
 
@@ -84,6 +85,8 @@ To submit a patch:
 ## License
 
 EVE Online Overview Generator is licensed under the MIT license.
+
+All Eve Related Materials © CCP hf. All rights reserved. Used with permission.
 
 ## Warranty
 
