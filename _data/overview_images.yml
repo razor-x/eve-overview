@@ -2,8 +2,8 @@
 - src: overview-travel.jpg
   thumb: overview-travel-th.jpg
   caption: Travel preset
+  featured: true
 
 - src: overview-hostile-minimal.jpg
   thumb: overview-hostile-minimal-th.jpg
   caption: Minimal preset
-  featured: true
