@@ -22,7 +22,7 @@
 <meta property="og:url" content="http://io.evansosenko.com/eve-overview/" />
 <meta property="og:site_name" content="EVE Online Overview Generator" />
 
-<meta property="og:updated_time" content=" 2014-09-18T02:39:52+00:00" />
+<meta property="og:updated_time" content=" 2014-09-18T07:09:03+00:00" />
 
 
   <meta property="og:locale" content="en_US" />
@@ -56,7 +56,7 @@
 
   <link type="text/plain" rel="author" href="humans.txt" />
   <script src="https://ajax.googleapis.com/ajax/libs/webfont/1.5.0/webfont.js"></script>
-  <link rel="stylesheet" href="http://io.evansosenko.com/eve-overview/assets/app-036743808be1d2a77fd7506c93c6cc81.css">
+  <link rel="stylesheet" href="http://io.evansosenko.com/eve-overview/assets/app-f4a48e53249469b515770607135bab16.css">
   <script>(function(){"use strict";WebFont.load({google:{families:["Open+Sans:400,300,300italic,400italic,600,700,600italic,700italic,800,800italic:latin,latin-ext","Inconsolata:400,700"]},custom:{families:["foundation-icons"],testStrings:{"foundation-icons":"\uf100\uf101\uf102\uf103"}}})}).call(this);</script>
   <script src="http://io.evansosenko.com/eve-overview/assets/head-8307cd50fa5b7d2934c318e3c7b70434.js"></script>
 </head>
@@ -82,22 +82,102 @@
         <a href="#introduction">introduction</a>
       </dd>
     
+      <dd data-magellan-arrival="usage">
+        <a href="#usage">usage</a>
+      </dd>
+    
+      <dd data-magellan-arrival="structure">
+        <a href="#structure">structure</a>
+      </dd>
+    
     </dl>
   </nav>
 
   <p><a name="introduction"></a>
-<h3 data-magellan-destination="introduction">Introduction</h3></p>
+<h2 data-magellan-destination="introduction">Introduction</h2></p>
+
+<p><strong>Don&#39;t die on patch day because you missed adding that new ship-type to one of your presets!</strong></p>
 
 <p>The EVE Online Overview Generator facilitates creating and maintaining overview packs.</p>
 
-<p>The overviews are created out of game by editing YAML files
-and then running a Ruby script to compile the overview files for import into the EVE client.</p>
+<p>Essentially, you define a common set of LEGO bricks and build your overviews with them.</p>
+
+<p>First, create overviews out of game by editing a set of YAML files.
+Then, generate importable overview files by running the included Ruby script.</p>
 
 <p>Rather than a single YAML file per overview, the various overview settings are split
 into many files which can be reused to create custom overviews
-based on a set of common groups, presets, settings, etc.</p>
+based on a set of common groups, presets, settings, etc.
+The modular design makes updating, sharing, and customizing simple.</p>
 
-<p>Essentially, you define a common set of LEGO bricks and build your overviews with them.</p>
+<p><a name="usage"></a>
+<h2 data-magellan-destination="usage">How can I use this?</h2></p>
+
+<h3>Use the default pack</h3>
+
+<p>This project maintains several overview groups and presets.
+Each release provides a set default overview profiles
+you can download and import directly into the EVE client.</p>
+
+<ol>
+<li>Download the latest release using the button at the top of this page.</li>
+<li>The downloaded archive contains an <code>Overview</code> folder.
+The contents of this folder should be extracted to your <code>EVE/Overview</code> folder.
+If you are unsure of the location of the <code>Overview</code> folder,
+you can export your current overview and the client will show the export location.</li>
+<li>In the EVE client, reset your overview to the default.</li>
+<li>In the EVE client, import any of the extracted <code>.yaml</code> overview files.</li>
+</ol>
+
+<ul>
+<li>Each <code>.yaml</code> file has a name of the form <code>[overview]-[tabs].yaml</code>.
+Each file with the same <code>[overview]</code> name will be identical
+except for the differently configured tab names and default tab presets.</li>
+<li>There is no need to reset your overview settings when loading
+or switching between profiles with the same <code>[overview]</code> prefix.</li>
+<li>For each different <code>[tabs]</code> preset that use the same <code>[overview]</code>,
+you should create an in-game overview link in your notepad to quickly switch between presets.</li>
+</ul>
+
+<h3>Make your own or customize this one</h3>
+
+<h4>Requirements</h4>
+
+<ul>
+<li>A text editor, e.g., <a href="https://atom.io/">Atom</a>.</li>
+<li><a href="https://www.ruby-lang.org/">Ruby</a>, any version 2 release.</li>
+<li>The <a href="http://bundler.io/">Bundler</a> gem.</li>
+<li>Optionally, a <a href="https://github.com/">GitHub</a> account and <a href="http://git-scm.com/">git</a>, <a href="https://windows.github.com/">GitHub Windows</a>, or <a href="https://mac.github.com/">GitHub Mac</a>.
+If you are not familiar with git, <a href="https://try.github.io/">you can try it in your browser</a>.
+You can download and edit the source directly without using version control,
+however this is strongly discouraged.</li>
+</ul>
+
+<p>Setting up this software is beyond the scope of this documentation.
+Packages should be available for most major Linux distributions:
+for Ruby, I recommend using <a href="https://github.com/sstephenson/rbenv">rbenv</a>.
+Packages for Mac should be available through <a href="http://brew.sh/">Homebrew</a>.
+Packages for Windows can be installed with <a href="https://chocolatey.org/">Chocolatey</a>.</p>
+
+<h4>Instructions</h4>
+
+<ol>
+<li>Fork or clone the <a href="https://github.com/razor-x/eve-overview">source repository</a>.
+You can also fork someone else&#39;s fork to base your overview off theirs.</li>
+<li>Run <code>bundle</code> to install the needed Ruby gems.</li>
+<li>Edit the <code>.yml</code> files according to their descriptions in the next section.</li>
+<li>Run <code>rake</code> to build the overview files to the <code>Overview</code> folder.</li>
+</ol>
+
+<p>Optionally, you can setup Travis CI to automatically build your overviews.
+See this project&#39;s <a href="https://github.com/razor-x/eve-overview/blob/master/.travis.yml">.travis.yml</a> file as an example
+and the <a href="http://docs.travis-ci.com/user/deployment/releases/">corresponding documentation</a> for details.</p>
+
+<p><a name="structure"></a>
+<h2 data-magellan-destination="structure">Overview structure</h2></p>
+
+<p>This section covers how the modular file structure of the Overview Generator
+fits together to generate the importable overview files.</p>
 
 
 </section>
