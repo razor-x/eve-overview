@@ -12,6 +12,12 @@ body
   @media #{$medium-up}
     padding: 5rem
 
+p, ul, ol
+  max-width: 1.2 * nth($medium-range, 1)
+
+.sub-nav a
+  text-transform: capitalize
+
 #content, body > header, body > footer
   max-width: nth($large-range, 1)
   margin: auto
@@ -39,9 +45,3 @@ a
 
     &::before
       padding-right: 1rem
-
-.sub-nav a
-  text-transform: capitalize
-
-p, ul, ol
-  max-width: 1.2 * nth($medium-range, 1)
