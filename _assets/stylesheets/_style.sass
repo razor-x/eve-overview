@@ -16,8 +16,8 @@ body
     color: $monsoon
     font-size: 0.9rem
 
-p, ul, ol
-  max-width: 1.2 * nth($medium-range, 1)
+a
+  +hover_glow($clr-eve-orange)
 
 .sub-nav a
   text-transform: capitalize
@@ -26,11 +26,9 @@ p, ul, ol
   max-width: nth($large-range, 1)
   margin: auto
 
-a
-  +hover_glow($clr-eve-orange)
-
 #content
   p, ul, ol
+    max-width: 1.2 * nth($medium-range, 1)
     a
       border-bottom: 1px dotted $clr-eve-orange
 
