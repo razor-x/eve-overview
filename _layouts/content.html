@@ -8,7 +8,9 @@ layout: default
     <dl class="sub-nav">
       <dt>{{ site.name }}</dt>
     {% for link in page.subnav %}
-      <dd data-magellan-arrival="{{ link.id }}"><a href="#{{ link.id }}">{{ link.name }}</a></dd>
+      <dd data-magellan-arrival="{{ link.id }}">
+        <a href="#{{ link.id }}">{% if link.name %}{{ link.name }}{% else %}{{ link.id }}{% endif %}</a>
+      </dd>
     {% endfor %}
     </dl>
   </nav>
