@@ -2,10 +2,10 @@ language: ruby
 rvm: 2.1.2
 
 before_install:
-- 'echo ''gem: --no-document'' > ~/.gemrc'
+  - 'echo ''gem: --no-document'' > ~/.gemrc'
 
 install:
-- bundle update
+  - bundle update
 
 script: bundle exec rake travis
 
