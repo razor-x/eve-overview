@@ -1,10 +1,15 @@
-# EVE Online Overview Generator
+# [EVE Online Overview Generator]
 
 _Generate DRY modular overviews._
 
 [![MIT License](http://img.shields.io/badge/license-MIT-red.svg?style=flat)](./LICENSE.txt)
 [![Dependency Status](http://img.shields.io/gemnasium/razor-x/eve-overview.svg?style=flat)](https://gemnasium.com/razor-x/eve-overview)
 [![Build Status](http://img.shields.io/travis/razor-x/eve-overview/master.svg?style=flat)](https://travis-ci.org/razor-x/eve-overview)
+
+This README is intended primarily for developers and contributors.
+__Visit the [project site][EVE Online Overview Generator] for full documentaton.__
+
+[EVE Online Overview Generator]: http://io.evansosenko.com/eve-overview/
 
 ## Installation
 
