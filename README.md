@@ -8,18 +8,19 @@ _Generate DRY modular overviews._
 
 ## Description
 
+__Don't die on patch day because you missed adding that new ship-type to one of your presets!__
+
 The EVE Online Overview Generator facilitates creating and maintaining overview packs.
 
-The overviews are created out of game by editing YAML files
-and then running a Ruby script to compile the overview files for import into the EVE client.
+Essentially, you define a common set of LEGO bricks and build your overviews with them.
+
+First, create overviews out of game by editing a set of YAML files.
+Then, generate importable overview files by running the included Ruby script.
 
 Rather than a single YAML file per overview, the various overview settings are split
 into many files which can be reused to create custom overviews
 based on a set of common groups, presets, settings, etc.
-
-Essentially, you define a common set of LEGO bricks and build your overviews with them.
-
-This README is intended primarily for developers and contributors.
+The modular design makes updating, sharing, and customizing simple.
 
 __Visit the [project site][EVE Online Overview Generator] for full documentation.__
 
