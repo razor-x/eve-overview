@@ -8,24 +8,21 @@
   
 
 
-  <title>Overview Generator - EVE Online</title>
-  <meta property="og:title" content="Overview Generator - EVE Online" />
-
 
 
   
 
 
 
-  <meta name="description" content="Generate DRY modular overviews." />
-  <meta property="og:description" content="Generate DRY modular overviews." />
+  <meta name="description" content="Generate DRY modular overviews for EVE Online." />
+  <meta property="og:description" content="Generate DRY modular overviews for EVE Online." />
 
 
 <link rel="canonical" href="http://io.evansosenko.com/eve-overview/" />
 <meta property="og:url" content="http://io.evansosenko.com/eve-overview/" />
 <meta property="og:site_name" content="EVE Online Overview Generator" />
 
-<meta property="og:updated_time" content=" 2014-09-17T23:52:30+00:00" />
+<meta property="og:updated_time" content=" 2014-09-18T02:39:52+00:00" />
 
 
   <meta property="og:locale" content="en_US" />
@@ -34,7 +31,7 @@
 
 
 
-  <meta property="keywords" content="blog,personal" />
+  <meta property="keywords" content="eve online,eve,overview,overviews,overview generator,tool,yaml,yml,ruby,dry" />
 
 
 
@@ -59,7 +56,7 @@
 
   <link type="text/plain" rel="author" href="humans.txt" />
   <script src="https://ajax.googleapis.com/ajax/libs/webfont/1.5.0/webfont.js"></script>
-  <link rel="stylesheet" href="http://io.evansosenko.com/eve-overview/assets/app-4d57916b5fe942fcb7bd2935b34b71f0.css">
+  <link rel="stylesheet" href="http://io.evansosenko.com/eve-overview/assets/app-036743808be1d2a77fd7506c93c6cc81.css">
   <script>(function(){"use strict";WebFont.load({google:{families:["Open+Sans:400,300,300italic,400italic,600,700,600italic,700italic,800,800italic:latin,latin-ext","Inconsolata:400,700"]},custom:{families:["foundation-icons"],testStrings:{"foundation-icons":"\uf100\uf101\uf102\uf103"}}})}).call(this);</script>
   <script src="http://io.evansosenko.com/eve-overview/assets/head-8307cd50fa5b7d2934c318e3c7b70434.js"></script>
 </head>
@@ -81,10 +78,27 @@
     <dl class="sub-nav">
       <dt>EVE Online Overview Generator</dt>
     
+      <dd data-magellan-arrival="introduction">
+        <a href="#introduction">introduction</a>
+      </dd>
+    
     </dl>
   </nav>
 
-  
+  <p><a name="introduction"></a>
+<h3 data-magellan-destination="introduction">Introduction</h3></p>
+
+<p>The EVE Online Overview Generator facilitates creating and maintaining overview packs.</p>
+
+<p>The overviews are created out of game by editing YAML files
+and then running a Ruby script to compile the overview files for import into the EVE client.</p>
+
+<p>Rather than a single YAML file per overview, the various overview settings are split
+into many files which can be reused to create custom overviews
+based on a set of common groups, presets, settings, etc.</p>
+
+<p>Essentially, you define a common set of LEGO bricks and build your overviews with them.</p>
+
 
 </section>
 
