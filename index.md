@@ -47,3 +47,55 @@ you can download and import directly into the EVE client.
   or switching between profiles with the same `[overview]` prefix.
 - For each different `[tabs]` preset that use the same `[overview]`,
   you should create an in-game overview link in your notepad to quickly switch between presets.
+
+### Make your own or customize this one
+
+#### Requirements
+
+- A text editor, e.g., [Atom].
+- [Ruby], any version 2 release.
+- The [Bundler] gem.
+- Optionally, a [GitHub] account and [git], [GitHub Windows], or [GitHub Mac].
+  If you are not familiar with git, [you can try it in your browser][tryGit].
+  You can download and edit the source directly without using version control,
+  however this is strongly discouraged.
+
+Setting up this software is beyond the scope of this documentation.
+Packages should be available for most major Linux distributions:
+for Ruby, I recommend using [rbenv].
+Packages for Mac should be available through [Homebrew].
+Packages for Windows can be installed with [Chocolatey].
+
+[Atom]: https://atom.io/
+[Bundler]: http://bundler.io/
+[Chocolatey]: https://chocolatey.org/
+[git]: http://git-scm.com/
+[GitHub]: https://github.com/
+[GitHub Windows]: https://windows.github.com/
+[GitHub Mac]: https://mac.github.com/
+[Homebrew]: http://brew.sh/
+[rbenv]: https://github.com/sstephenson/rbenv
+[Ruby]: https://www.ruby-lang.org/
+[tryGit]: https://try.github.io/
+
+#### Instructions
+
+1. Fork or clone the [source repository].
+   You can also fork someone else's fork to base your overview off theirs.
+2. Run `bundle` to install the needed Ruby gems.
+2. Edit the `.yml` files according to their descriptions in the next section.
+3. Run `rake` to build the overview files to the `Overview` folder.
+
+Optionally, you can setup Travis CI to automatically build your overviews.
+See this project's [.travis.yml][travis.yml] file as an example
+and the [corresponding documentation][GitHub Releases Uploading] for details.
+
+[travis.yml]: https://github.com/{{ site.source_repo }}/blob/master/.travis.yml
+[GitHub Releases Uploading]: http://docs.travis-ci.com/user/deployment/releases/
+[source repository]: https://github.com/{{ site.source_repo }}
+
+<a name="structure"></a>
+<h2 data-magellan-destination="structure">Overview structure</h2>
+
+This section covers how the modular file structure of the Overview Generator
+fits together to generate the importable overview files.
