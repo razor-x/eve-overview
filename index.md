@@ -13,7 +13,7 @@ subnav:
 {% for img in site.data.overview_images %}
   <li{% if img.featured %} class="clearing-featured-img"{% endif %}>
     <a href="{{ img.src | asset_path }}">
-      <img src="{{ img.thumb | asset_path }}">
+      <img data-caption="{{ img.caption }}" alt="{{ img.caption }}" src="{{ img.thumb | asset_path }}">
     </a>
   </li>
 {% endfor %}
