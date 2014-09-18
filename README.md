@@ -13,7 +13,7 @@ The EVE Online Overview Generator facilitates creating and maintaining overview 
 The overviews are created out of game by editing YAML files
 and then running a Ruby script to compile the overview files for import into the EVE client.
 
-Rather then a single YAML file per overview, the various overview settings are split
+Rather than a single YAML file per overview, the various overview settings are split
 into many files which can be reused to create custom overviews
 based on a set of common groups, presets, settings, etc.
 
@@ -21,14 +21,14 @@ Essentially, you define a common set of LEGO bricks and build your overviews wit
 
 This README is intended primarily for developers and contributors.
 
-__Visit the [project site][EVE Online Overview Generator] for full documentaton.__
+__Visit the [project site][EVE Online Overview Generator] for full documentation.__
 
 [EVE Online Overview Generator]: http://io.evansosenko.com/eve-overview/
 
 ## Installation
 
 Download the pre-built overview YAML files under [releases]
-and import them into the EVE client (reseting the overview first is recommended).
+and import them into the EVE client (resetting the overview first is recommended).
 
 Alternatively, clone or fork this project and build your own overviews.
 
