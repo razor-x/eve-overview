@@ -43,9 +43,7 @@ you can download and import directly into the EVE client.
 - Each `.yaml` file has a name of the form `[overview]-[tabs].yaml`.
   Each file with the same `[overview]` name will be identical
   except for the differently configured tab names and default tab presets.
-
 - There is no need to reset your overview settings when loading
   or switching between profiles with the same `[overview]` prefix.
-
 - For each different `[tabs]` preset that use the same `[overview]`,
   you should create an in-game overview link in your notepad to quickly switch between presets.
