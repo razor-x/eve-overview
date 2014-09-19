@@ -6,6 +6,7 @@ subnav:
   - id: structure
   - id: tabs
   - id: presets
+  - id: states
   - id: groups
 ---
 
@@ -359,5 +360,129 @@ and the first two tabs of a PvP setup,
 <a name="presets"></a>
 <h3 data-magellan-destination="presets">Presets</h3>
 
+Each overview tab in the EVE client loads an overview preset,
+which determines what appears in the current overview window,
+and a bracket preset, which determines which brackets appear in space.
+Presets are normally created and saved manually in the EVE client,
+however this is tedious and prone to error.
+
+Each file in the `presets` folder corresponds to a saved preset.
+Every preset defined this way will be included in every generated
+importable overview file, and thus may be imported into the EVE client.
+
+Preset files define which object types to display through groups,
+and which state filters to apply using states.
+
+The `name`, `symbol`, and `level` keys determine the preset name.
+
+The `groups` key is a list of files in the `groups` folder.
+
+The `states` key is a list of files in the `states` folder.
+
+For example, a clean PvP preset is
+
+```yaml
+# presets/hostile-minimal.yml
+---
+name: minimal
+symbol: ♞ hostile
+level: 1
+groups:
+  - common-minimal
+  - _celestial-sun
+  - _ship
+states:
+  - hostile
+```
+
+In this case, the preset will appear in-game as `♞ hostile -- minimal`.
+
+The preset will show all objects defined in the files
+`groups/common-minimal.yml`, `groups/_celestial-sun.yml`, `groups/_ship.yml`.
+Specifically it will show the sun, all ship types, and a common set of required PvP objects
+such as bombs, probes, etc.
+
+It will use the `states/hostile.yml` file, thus hiding friendlies.
+
+<a name="states"></a>
+<h3 data-magellan-destination="states">States</h3>
+
+Files under `states` define a set of filtered states
+which may be referred to and reused to create presets.
+
+These files are most easily created by setting the filters
+in the EVE client, and then pulling the array of numeric ids
+from the exported file.
+
+For example, this filters out all friendly ships from displaying
+
+```yaml
+#  states/hostile.yml
+---
+  - 11
+  - 12
+  - 14
+  - 15
+  - 16
+  - 21
+  - 45
+  - 49
+```
+
 <a name="groups"></a>
 <h3 data-magellan-destination="groups">Groups</h3>
+
+Groups collect object types together under a custom name
+so they may be referred to and reused to create presets.
+
+Groups can contain two keys:
+
+- `types` - an array of object type ids
+- `include` - an array of groups to include in this group
+
+By convention, all groups that are prefixed with an underscore correspond
+exactly to the group of objects with the same name in the EVE client.
+For example, `groups/_celestial.yml` is everything under the Celestial group,
+and `groups/_celestial-moon.yml` is only the Moon type under the Celestial group.
+
+For example, the default `common-minimal` group
+
+```yaml
+# groups/common-minimal.yml
+---
+include:
+  - _charge-scanner_probe
+  - beacons
+  - bombs
+  - bubbles
+```
+
+only includes other groups such as
+
+```yaml
+# groups/_charge-scanner_probe.yml
+---
+types:
+  - 479
+```
+
+and
+
+```yaml
+# groups/bubbles.yml
+---
+include:
+  - _charge-interdiction_probe
+  - _deployable-mobile_warp_disruptor
+```
+
+and
+
+```yaml
+# groups/bombs.yml
+---
+types:
+  - 90
+  - 863
+  - 864
+```
