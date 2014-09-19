@@ -308,6 +308,54 @@ userSettings:
 <a name="tabs"></a>
 <h3 data-magellan-destination="tabs">Tabs</h3>
 
+Files under `tabs` define the name of each tab and which
+overview presets and bracket presets are loaded for that tab.
+
+You can define up to five tabs.
+
+Each tab must set the following keys:
+
+- `name` - the title that labels the tab
+- `color` - the hex color value to use for the tab label
+- `overview` - the overview preset to use for the tab
+- `bracket` - the bracket preset to use for the tab
+
+The `overview` and `bracket` keys can point to any file under the `presets` folder.
+
+For example, here are the first two tabs of a PvE setup,
+
+```yaml
+# tabs/pve.yml
+---
+- name: npc
+  color: FF99CC00
+  overview: pve-npc
+  bracket: brackets-all
+
+- name: salvage
+  color: FFFF4444
+  overview: extra-loot
+  bracket: brackets-all
+...
+```
+
+and the first two tabs of a PvP setup,
+
+```yaml
+# tabs/pvp.yml
+---
+- name: ✈
+  color: FFFFBB33
+  overview: travel
+  bracket: brackets-all
+
+- name: hostile
+  color: FF33B5E5
+  overview: hostile-minimal
+  bracket: brackets-all
+...
+```
+
 <a name="presets"></a>
 <h3 data-magellan-destination="presets">Presets</h3>
 
