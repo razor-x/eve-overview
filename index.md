@@ -142,7 +142,7 @@ e.g., this overview will use `appearances/default.yml`, `columns/default.yml`,
 These attributes will be described now.
 Tabs, presets and groups are explained in their own sections.
 
-The following is the simplest way to create any `yml` file for one of the
+The following is the simplest way to create any `.yml` file for one of the
 four types: appearance, columns, labels, or settings.
 
 1. Setup the corresponding overview options in the EVE client.
