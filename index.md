@@ -142,7 +142,7 @@ The first four attributes load options from the corresponding file,
 e.g., this overview will use `appearances/default.yml`, `columns/default.yml`,
 `labels/default.yml`, and `settings/default.yml`.
 These attributes will be described now.
-Tabs, presets and groups are explained in their own sections.
+Tabs are explained in their own section.
 
 The following is the simplest way to create any `.yml` file for one of the
 four types: appearance, columns, labels, or settings.
