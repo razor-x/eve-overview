@@ -5,10 +5,7 @@ subnav:
   - id: introduction
   - id: usage
   - id: structure
-  - id: tabs
-  - id: presets
-  - id: states
-  - id: groups
+    name: Overview structure
 ---
 
 <a name="introduction"></a>
@@ -44,7 +41,7 @@ The modular design makes updating, sharing, and customizing simple.
 ### Use the default pack
 
 This project maintains several overview groups and presets.
-Each release provides a set default overview profiles
+Each release provides a set of default overview profiles
 you can download and import directly into the EVE client.
 
 1. Download the latest release using the button at the top of this page.
@@ -141,8 +138,8 @@ tab settings defined in `tabs/pve.yml` and `tabs/pvp.yml`.
 The first four attributes load options from the corresponding file,
 e.g., this overview will use `appearances/default.yml`, `columns/default.yml`,
 `labels/default.yml`, and `settings/default.yml`.
-These attributes will be described now.
-Tabs are explained in their own section.
+
+### Basic settings and appearance
 
 The following is the simplest way to create any `.yml` file for one of the
 four types: appearance, columns, labels, or settings.
@@ -307,8 +304,7 @@ userSettings:
     - true
 ```
 
-<a name="tabs"></a>
-<h3 data-magellan-destination="tabs">Tabs</h3>
+### Tabs
 
 Files under `tabs` define the name of each tab and which
 overview presets and bracket presets are loaded for that tab.
@@ -358,8 +354,9 @@ and the first two tabs of a PvP setup,
 ...
 ```
 
-<a name="presets"></a>
-<h3 data-magellan-destination="presets">Presets</h3>
+Note that the ellipses indicate the code for the other three tabs was removed for brevity.
+
+### Presets
 
 Each overview tab in the EVE client loads an overview preset,
 which determines what appears in the current overview window,
@@ -405,8 +402,7 @@ such as bombs, probes, etc.
 
 It will use the `states/hostile.yml` file, thus hiding friendlies.
 
-<a name="states"></a>
-<h3 data-magellan-destination="states">States</h3>
+### States
 
 Files under `states` define a set of filtered states
 which may be referred to and reused to create presets.
@@ -430,8 +426,7 @@ For example, this filters out all friendly ships from displaying
   - 49
 ```
 
-<a name="groups"></a>
-<h3 data-magellan-destination="groups">Groups</h3>
+### Groups
 
 Groups collect object types together under a custom name
 so they may be referred to and reused to create presets.
