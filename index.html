@@ -22,7 +22,7 @@
 <meta property="og:url" content="http://io.evansosenko.com/eve-overview/" />
 <meta property="og:site_name" content="EVE Online Overview Generator" />
 
-<meta property="og:updated_time" content=" 2014-09-19T00:47:06+00:00" />
+<meta property="og:updated_time" content=" 2014-09-19T01:14:45+00:00" />
 
 
   <meta property="og:locale" content="en_US" />
@@ -433,6 +433,50 @@ four types: appearance, columns, labels, or settings.</p>
 <p><a name="tabs"></a>
 <h3 data-magellan-destination="tabs">Tabs</h3></p>
 
+<p>Files under <code>tabs</code> define the name of each tab and which
+overview presets and bracket presets are loaded for that tab.</p>
+
+<p>You can define up to five tabs.</p>
+
+<p>Each tab must set the following keys:</p>
+
+<ul>
+<li><code>name</code> - the title that labels the tab</li>
+<li><code>color</code> - the hex color value to use for the tab label</li>
+<li><code>overview</code> - the overview preset to use for the tab</li>
+<li><code>bracket</code> - the bracket preset to use for the tab</li>
+</ul>
+
+<p>The <code>overview</code> and <code>bracket</code> keys can point to any file under the <code>presets</code> folder.</p>
+
+<p>For example, here are the first two tabs of a PvE setup,</p>
+<div class="highlight"><pre><code class="language-yaml" data-lang="yaml"><span class="c1"># tabs/pve.yml</span>
+<span class="nn">---</span>
+<span class="p-Indicator">-</span> <span class="l-Scalar-Plain">name</span><span class="p-Indicator">:</span> <span class="l-Scalar-Plain">npc</span>
+  <span class="l-Scalar-Plain">color</span><span class="p-Indicator">:</span> <span class="l-Scalar-Plain">FF99CC00</span>
+  <span class="l-Scalar-Plain">overview</span><span class="p-Indicator">:</span> <span class="l-Scalar-Plain">pve-npc</span>
+  <span class="l-Scalar-Plain">bracket</span><span class="p-Indicator">:</span> <span class="l-Scalar-Plain">brackets-all</span>
+
+<span class="p-Indicator">-</span> <span class="l-Scalar-Plain">name</span><span class="p-Indicator">:</span> <span class="l-Scalar-Plain">salvage</span>
+  <span class="l-Scalar-Plain">color</span><span class="p-Indicator">:</span> <span class="l-Scalar-Plain">FFFF4444</span>
+  <span class="l-Scalar-Plain">overview</span><span class="p-Indicator">:</span> <span class="l-Scalar-Plain">extra-loot</span>
+  <span class="l-Scalar-Plain">bracket</span><span class="p-Indicator">:</span> <span class="l-Scalar-Plain">brackets-all</span>
+<span class="nn">...</span>
+</code></pre></div>
+<p>and the first two tabs of a PvP setup,</p>
+<div class="highlight"><pre><code class="language-yaml" data-lang="yaml"><span class="c1"># tabs/pvp.yml</span>
+<span class="nn">---</span>
+<span class="p-Indicator">-</span> <span class="l-Scalar-Plain">name</span><span class="p-Indicator">:</span> <span class="l-Scalar-Plain">✈</span>
+  <span class="l-Scalar-Plain">color</span><span class="p-Indicator">:</span> <span class="l-Scalar-Plain">FFFFBB33</span>
+  <span class="l-Scalar-Plain">overview</span><span class="p-Indicator">:</span> <span class="l-Scalar-Plain">travel</span>
+  <span class="l-Scalar-Plain">bracket</span><span class="p-Indicator">:</span> <span class="l-Scalar-Plain">brackets-all</span>
+
+<span class="p-Indicator">-</span> <span class="l-Scalar-Plain">name</span><span class="p-Indicator">:</span> <span class="l-Scalar-Plain">hostile</span>
+  <span class="l-Scalar-Plain">color</span><span class="p-Indicator">:</span> <span class="l-Scalar-Plain">FF33B5E5</span>
+  <span class="l-Scalar-Plain">overview</span><span class="p-Indicator">:</span> <span class="l-Scalar-Plain">hostile-minimal</span>
+  <span class="l-Scalar-Plain">bracket</span><span class="p-Indicator">:</span> <span class="l-Scalar-Plain">brackets-all</span>
+<span class="nn">...</span>
+</code></pre></div>
 <p><a name="presets"></a>
 <h3 data-magellan-destination="presets">Presets</h3></p>
 
