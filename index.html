@@ -22,7 +22,7 @@
 <meta property="og:url" content="http://io.evansosenko.com/eve-overview/" />
 <meta property="og:site_name" content="EVE Online Overview Generator" />
 
-<meta property="og:updated_time" content=" 2014-09-18T23:26:33+00:00" />
+<meta property="og:updated_time" content=" 2014-09-19T00:34:57+00:00" />
 
 
   <meta property="og:locale" content="en_US" />
@@ -56,7 +56,7 @@
 
   <link type="text/plain" rel="author" href="humans.txt" />
   <script src="https://ajax.googleapis.com/ajax/libs/webfont/1.5.0/webfont.js"></script>
-  <link rel="stylesheet" href="http://io.evansosenko.com/eve-overview/assets/app-f6c42ed271d9b72233ed6e6071035497.css">
+  <link rel="stylesheet" href="http://io.evansosenko.com/eve-overview/assets/app-644883240d05b43205acb5213418fd06.css">
   <script>(function(){"use strict";WebFont.load({google:{families:["Open+Sans:400,300,300italic,400italic,600,700,600italic,700italic,800,800italic:latin,latin-ext","Inconsolata:400,700"]},custom:{families:["foundation-icons"],testStrings:{"foundation-icons":"\uf100\uf101\uf102\uf103"}}})}).call(this);</script>
   <script src="http://io.evansosenko.com/eve-overview/assets/head-8307cd50fa5b7d2934c318e3c7b70434.js"></script>
 </head>
@@ -88,6 +88,18 @@
     
       <dd data-magellan-arrival="structure">
         <a href="#structure">structure</a>
+      </dd>
+    
+      <dd data-magellan-arrival="tabs">
+        <a href="#tabs">tabs</a>
+      </dd>
+    
+      <dd data-magellan-arrival="presets">
+        <a href="#presets">presets</a>
+      </dd>
+    
+      <dd data-magellan-arrival="groups">
+        <a href="#groups">groups</a>
       </dd>
     
     </dl>
@@ -230,6 +242,202 @@ and the <a href="http://docs.travis-ci.com/user/deployment/releases/">correspond
 
 <p>This section covers how the modular file structure of the Overview Generator
 fits together to generate the importable overview files.</p>
+
+<h3>Overview</h3>
+
+<p>Each file under <code>overviews</code> will generate a set of importable <code>.yaml</code> files:
+one for each selected group of tabs.</p>
+
+<p>For example,</p>
+<div class="highlight"><pre><code class="language-yaml" data-lang="yaml"><span class="c1"># overviews/default.yml</span>
+<span class="nn">---</span>
+<span class="l-Scalar-Plain">appearance</span><span class="p-Indicator">:</span> <span class="l-Scalar-Plain">default</span>
+<span class="l-Scalar-Plain">columns</span><span class="p-Indicator">:</span> <span class="l-Scalar-Plain">default</span>
+<span class="l-Scalar-Plain">labels</span><span class="p-Indicator">:</span> <span class="l-Scalar-Plain">default</span>
+<span class="l-Scalar-Plain">settings</span><span class="p-Indicator">:</span> <span class="l-Scalar-Plain">default</span>
+<span class="l-Scalar-Plain">tabs</span><span class="p-Indicator">:</span>
+  <span class="p-Indicator">-</span> <span class="l-Scalar-Plain">pve</span>
+  <span class="p-Indicator">-</span> <span class="l-Scalar-Plain">pvp</span>
+</code></pre></div>
+<p>will generate <code>Overview/default-pve.yaml</code> and <code>Overview/default-pvp.yaml</code>.
+Thus, there will be two overview files that are identical aside from the
+tab settings defined in <code>tabs/pve.yml</code> and <code>tabs/pvp.yml</code>.</p>
+
+<p>The first four attributes load options from the corresponding file,
+e.g., this overview will use <code>appearances/default.yml</code>, <code>columns/default.yml</code>,
+<code>labels/default.yml</code>, and <code>settings/default.yml</code>.
+These attributes will be described now.
+Tabs, presets and groups are explained in their own sections.</p>
+
+<p>The following is the simplest way to create any <code>yml</code> file for one of the
+four types: appearance, columns, labels, or settings.</p>
+
+<ol>
+<li>Setup the corresponding overview options in the EVE client.</li>
+<li>Export the overview from the EVE client to a file.</li>
+<li>Open the exported file and copy and pate the corresponding keys.</li>
+</ol>
+
+<h4>Appearance</h4>
+
+<p>Files under <code>appearances</code> define the tag, color, background color, and blink priority.</p>
+
+<p>The following keys should be defined here:</p>
+
+<ul>
+<li><code>flagOrder</code></li>
+<li><code>flagStates</code></li>
+<li><code>backgroundOrder</code></li>
+<li><code>backgroundStates</code></li>
+<li><code>stateBlinks</code></li>
+<li><code>stateColorsNameList</code></li>
+</ul>
+
+<p>For example,</p>
+<div class="highlight"><pre><code class="language-yaml" data-lang="yaml"><span class="c1"># appearances/default.yml</span>
+<span class="nn">---</span>
+<span class="l-Scalar-Plain">flagOrder</span><span class="p-Indicator">:</span>
+  <span class="p-Indicator">-</span> <span class="l-Scalar-Plain">13</span>
+  <span class="p-Indicator">-</span> <span class="l-Scalar-Plain">44</span>
+  <span class="p-Indicator">-</span> <span class="l-Scalar-Plain">52</span>
+  <span class="l-Scalar-Plain">...</span>
+
+<span class="l-Scalar-Plain">flagStates</span><span class="p-Indicator">:</span>
+  <span class="p-Indicator">-</span> <span class="l-Scalar-Plain">9</span>
+  <span class="p-Indicator">-</span> <span class="l-Scalar-Plain">11</span>
+  <span class="p-Indicator">-</span> <span class="l-Scalar-Plain">12</span>
+  <span class="l-Scalar-Plain">...</span>
+
+<span class="l-Scalar-Plain">backgroundOrder</span><span class="p-Indicator">:</span>
+  <span class="p-Indicator">-</span> <span class="l-Scalar-Plain">13</span>
+  <span class="p-Indicator">-</span> <span class="l-Scalar-Plain">44</span>
+  <span class="p-Indicator">-</span> <span class="l-Scalar-Plain">52</span>
+  <span class="l-Scalar-Plain">...</span>
+
+<span class="l-Scalar-Plain">backgroundStates</span><span class="p-Indicator">:</span>
+  <span class="p-Indicator">-</span> <span class="l-Scalar-Plain">9</span>
+  <span class="p-Indicator">-</span> <span class="l-Scalar-Plain">10</span>
+  <span class="p-Indicator">-</span> <span class="l-Scalar-Plain">11</span>
+  <span class="l-Scalar-Plain">...</span>
+
+<span class="l-Scalar-Plain">stateBlinks</span><span class="p-Indicator">:</span>
+  <span class="p-Indicator">-</span> <span class="p-Indicator">-</span> <span class="l-Scalar-Plain">background_13</span>
+    <span class="p-Indicator">-</span> <span class="l-Scalar-Plain">false</span>
+  <span class="p-Indicator">-</span> <span class="p-Indicator">-</span> <span class="l-Scalar-Plain">background_44</span>
+    <span class="p-Indicator">-</span> <span class="l-Scalar-Plain">false</span>
+  <span class="p-Indicator">-</span> <span class="p-Indicator">-</span> <span class="l-Scalar-Plain">flag_13</span>
+    <span class="p-Indicator">-</span> <span class="l-Scalar-Plain">true</span>
+  <span class="l-Scalar-Plain">...</span>
+
+<span class="l-Scalar-Plain">stateColorsNameList</span><span class="p-Indicator">:</span>
+  <span class="p-Indicator">-</span> <span class="p-Indicator">-</span> <span class="l-Scalar-Plain">background_10</span>
+    <span class="p-Indicator">-</span> <span class="l-Scalar-Plain">white</span>
+  <span class="p-Indicator">-</span> <span class="p-Indicator">-</span> <span class="l-Scalar-Plain">background_12</span>
+    <span class="p-Indicator">-</span> <span class="l-Scalar-Plain">darkBlue</span>
+  <span class="l-Scalar-Plain">...</span>
+</code></pre></div>
+<p>Note that the ellipses indicate some content was removed for brevity.</p>
+
+<h4>Columns</h4>
+
+<p>Files under <code>columns</code> define the columns and the order they appear in the overview.</p>
+
+<p>The following keys should be defined here:</p>
+
+<ul>
+<li><code>columnOrder</code></li>
+<li><code>overviewColumns</code></li>
+</ul>
+
+<p>For example,</p>
+<div class="highlight"><pre><code class="language-yaml" data-lang="yaml"><span class="c1"># columns/default.yml</span>
+<span class="nn">---</span>
+<span class="l-Scalar-Plain">columnOrder</span><span class="p-Indicator">:</span>
+  <span class="p-Indicator">-</span> <span class="l-Scalar-Plain">ICON</span>
+  <span class="p-Indicator">-</span> <span class="l-Scalar-Plain">DISTANCE</span>
+  <span class="p-Indicator">-</span> <span class="l-Scalar-Plain">NAME</span>
+  <span class="p-Indicator">-</span> <span class="l-Scalar-Plain">TYPE</span>
+  <span class="p-Indicator">-</span> <span class="l-Scalar-Plain">ALLIANCE</span>
+
+<span class="l-Scalar-Plain">overviewColumns</span><span class="p-Indicator">:</span>
+  <span class="p-Indicator">-</span> <span class="l-Scalar-Plain">ALLIANCE</span>
+  <span class="p-Indicator">-</span> <span class="l-Scalar-Plain">DISTANCE</span>
+  <span class="p-Indicator">-</span> <span class="l-Scalar-Plain">ICON</span>
+  <span class="p-Indicator">-</span> <span class="l-Scalar-Plain">NAME</span>
+  <span class="p-Indicator">-</span> <span class="l-Scalar-Plain">TYPE</span>
+</code></pre></div>
+<h4>Labels</h4>
+
+<p>Files under <code>labels</code> define how objects are labeled in space.</p>
+
+<p>The following keys should be defined here:</p>
+
+<ul>
+<li><code>shipLabelOrder</code></li>
+<li><code>shipLabels</code></li>
+</ul>
+
+<p>For example,</p>
+<div class="highlight"><pre><code class="language-yaml" data-lang="yaml"><span class="c1"># labels/default.yml</span>
+<span class="nn">---</span>
+<span class="l-Scalar-Plain">shipLabelOrder</span><span class="p-Indicator">:</span>
+  <span class="p-Indicator">-</span> <span class="l-Scalar-Plain">ship type</span>
+  <span class="p-Indicator">-</span> <span class="l-Scalar-Plain">alliance</span>
+  <span class="p-Indicator">-</span> <span class="l-Scalar-Plain">corporation</span>
+  <span class="p-Indicator">-</span> <span class="l-Scalar-Plain">pilot name</span>
+  <span class="p-Indicator">-</span> <span class="l-Scalar-Plain">ship name</span>
+  <span class="p-Indicator">-</span> <span class="l-Scalar-Plain">null</span>
+
+<span class="l-Scalar-Plain">shipLabels</span><span class="p-Indicator">:</span>
+  <span class="p-Indicator">-</span> <span class="p-Indicator">-</span> <span class="l-Scalar-Plain">null</span>
+    <span class="p-Indicator">-</span> <span class="p-Indicator">-</span> <span class="p-Indicator">-</span> <span class="l-Scalar-Plain">post</span>
+        <span class="p-Indicator">-</span> <span class="s">&#39;&#39;</span>
+      <span class="p-Indicator">-</span> <span class="p-Indicator">-</span> <span class="l-Scalar-Plain">pre</span>
+        <span class="p-Indicator">-</span> <span class="s">&#39;[&#39;</span>
+      <span class="p-Indicator">-</span> <span class="p-Indicator">-</span> <span class="l-Scalar-Plain">state</span>
+        <span class="p-Indicator">-</span> <span class="l-Scalar-Plain">0</span>
+      <span class="p-Indicator">-</span> <span class="p-Indicator">-</span> <span class="l-Scalar-Plain">type</span>
+        <span class="p-Indicator">-</span> <span class="l-Scalar-Plain">null</span>
+  <span class="p-Indicator">-</span> <span class="p-Indicator">-</span> <span class="l-Scalar-Plain">alliance</span>
+    <span class="p-Indicator">-</span> <span class="p-Indicator">-</span> <span class="p-Indicator">-</span> <span class="l-Scalar-Plain">post</span>
+        <span class="p-Indicator">-</span> <span class="s">&#39;}&#39;</span>
+      <span class="p-Indicator">-</span> <span class="p-Indicator">-</span> <span class="l-Scalar-Plain">pre</span>
+        <span class="p-Indicator">-</span> <span class="s">&#39;</span><span class="nv"> </span><span class="s">{&#39;</span>
+      <span class="p-Indicator">-</span> <span class="p-Indicator">-</span> <span class="l-Scalar-Plain">state</span>
+        <span class="p-Indicator">-</span> <span class="l-Scalar-Plain">1</span>
+      <span class="p-Indicator">-</span> <span class="p-Indicator">-</span> <span class="l-Scalar-Plain">type</span>
+        <span class="p-Indicator">-</span> <span class="l-Scalar-Plain">alliance</span>
+  <span class="l-Scalar-Plain">...</span>
+</code></pre></div>
+<p>Note that the ellipses indicate some content was removed for brevity.</p>
+
+<h4>Settings</h4>
+
+<p>Files under <code>settings</code> define any other general overview settings.</p>
+
+<p>The following key should be defined here:</p>
+
+<ul>
+<li><code>userSettings</code></li>
+</ul>
+
+<p>For example,</p>
+<div class="highlight"><pre><code class="language-yaml" data-lang="yaml"><span class="c1"># settings/default.yml</span>
+<span class="nn">---</span>
+<span class="l-Scalar-Plain">userSettings</span><span class="p-Indicator">:</span>
+  <span class="p-Indicator">-</span> <span class="p-Indicator">-</span> <span class="l-Scalar-Plain">hideCorpTicker</span>
+    <span class="p-Indicator">-</span> <span class="l-Scalar-Plain">true</span>
+  <span class="p-Indicator">-</span> <span class="p-Indicator">-</span> <span class="l-Scalar-Plain">overviewBroadcastsToTop</span>
+    <span class="p-Indicator">-</span> <span class="l-Scalar-Plain">true</span>
+</code></pre></div>
+<p><a name="tabs"></a>
+<h3 data-magellan-destination="tabs">Tabs</h3></p>
+
+<p><a name="presets"></a>
+<h3 data-magellan-destination="presets">Presets</h3></p>
+
+<p><a name="groups"></a>
+<h3 data-magellan-destination="groups">Groups</h3></p>
 
 
 </section>
