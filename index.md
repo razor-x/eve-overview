@@ -1,6 +1,6 @@
 ---
 layout: content
-title EVE Online Overview Generator
+title: EVE Online Overview Generator
 subnav:
   - id: introduction
   - id: usage
