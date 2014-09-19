@@ -147,7 +147,7 @@ four types: appearance, columns, labels, or settings.
 
 1. Setup the corresponding overview options in the EVE client.
 2. Export the overview from the EVE client to a file.
-3. Open the exported file and copy and pate the corresponding keys.
+3. Open the exported file and copy and paste the corresponding keys.
 
 #### Appearance
 
