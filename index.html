@@ -22,7 +22,7 @@
 <meta property="og:url" content="http://io.evansosenko.com/eve-overview/" />
 <meta property="og:site_name" content="EVE Online Overview Generator" />
 
-<meta property="og:updated_time" content=" 2014-09-19T18:23:57+00:00" />
+<meta property="og:updated_time" content=" 2014-09-19T19:13:57+00:00" />
 
 
   <meta property="og:locale" content="en_US" />
@@ -96,6 +96,10 @@
     
       <dd data-magellan-arrival="presets">
         <a href="#presets">presets</a>
+      </dd>
+    
+      <dd data-magellan-arrival="states">
+        <a href="#states">states</a>
       </dd>
     
       <dd data-magellan-arrival="groups">
@@ -480,9 +484,117 @@ overview presets and bracket presets are loaded for that tab.</p>
 <p><a name="presets"></a>
 <h3 data-magellan-destination="presets">Presets</h3></p>
 
+<p>Each overview tab in the EVE client loads an overview preset,
+which determines what appears in the current overview window,
+and a bracket preset, which determines which brackets appear in space.
+Presets are normally created and saved manually in the EVE client,
+however this is tedious and prone to error.</p>
+
+<p>Each file in the <code>presets</code> folder corresponds to a saved preset.
+Every preset defined this way will be included in every generated
+importable overview file, and thus may be imported into the EVE client.</p>
+
+<p>Preset files define which object types to display through groups,
+and which state filters to apply using states.</p>
+
+<p>The <code>name</code>, <code>symbol</code>, and <code>level</code> keys determine the preset name.</p>
+
+<p>The <code>groups</code> key is a list of files in the <code>groups</code> folder.</p>
+
+<p>The <code>states</code> key is a list of files in the <code>states</code> folder.</p>
+
+<p>For example, a clean PvP preset is</p>
+<div class="highlight"><pre><code class="language-yaml" data-lang="yaml"><span class="c1"># presets/hostile-minimal.yml</span>
+<span class="nn">---</span>
+<span class="l-Scalar-Plain">name</span><span class="p-Indicator">:</span> <span class="l-Scalar-Plain">minimal</span>
+<span class="l-Scalar-Plain">symbol</span><span class="p-Indicator">:</span> <span class="l-Scalar-Plain">♞ hostile</span>
+<span class="l-Scalar-Plain">level</span><span class="p-Indicator">:</span> <span class="l-Scalar-Plain">1</span>
+<span class="l-Scalar-Plain">groups</span><span class="p-Indicator">:</span>
+  <span class="p-Indicator">-</span> <span class="l-Scalar-Plain">common-minimal</span>
+  <span class="p-Indicator">-</span> <span class="l-Scalar-Plain">_celestial-sun</span>
+  <span class="p-Indicator">-</span> <span class="l-Scalar-Plain">_ship</span>
+<span class="l-Scalar-Plain">states</span><span class="p-Indicator">:</span>
+  <span class="p-Indicator">-</span> <span class="l-Scalar-Plain">hostile</span>
+</code></pre></div>
+<p>In this case, the preset will appear in-game as <code>♞ hostile -- minimal</code>.</p>
+
+<p>The preset will show all objects defined in the files
+<code>groups/common-minimal.yml</code>, <code>groups/_celestial-sun.yml</code>, <code>groups/_ship.yml</code>.
+Specifically it will show the sun, all ship types, and a common set of required PvP objects
+such as bombs, probes, etc.</p>
+
+<p>It will use the <code>states/hostile.yml</code> file, thus hiding friendlies.</p>
+
+<p><a name="states"></a>
+<h3 data-magellan-destination="states">States</h3></p>
+
+<p>Files under <code>states</code> define a set of filtered states
+which may be referred to and reused to create presets.</p>
+
+<p>These files are most easily created by setting the filters
+in the EVE client, and then pulling the array of numeric ids
+from the exported file.</p>
+
+<p>For example, this filters out all friendly ships from displaying</p>
+<div class="highlight"><pre><code class="language-yaml" data-lang="yaml"><span class="c1">#  states/hostile.yml</span>
+<span class="nn">---</span>
+  <span class="p-Indicator">-</span> <span class="l-Scalar-Plain">11</span>
+  <span class="p-Indicator">-</span> <span class="l-Scalar-Plain">12</span>
+  <span class="p-Indicator">-</span> <span class="l-Scalar-Plain">14</span>
+  <span class="p-Indicator">-</span> <span class="l-Scalar-Plain">15</span>
+  <span class="p-Indicator">-</span> <span class="l-Scalar-Plain">16</span>
+  <span class="p-Indicator">-</span> <span class="l-Scalar-Plain">21</span>
+  <span class="p-Indicator">-</span> <span class="l-Scalar-Plain">45</span>
+  <span class="p-Indicator">-</span> <span class="l-Scalar-Plain">49</span>
+</code></pre></div>
 <p><a name="groups"></a>
 <h3 data-magellan-destination="groups">Groups</h3></p>
 
+<p>Groups collect object types together under a custom name
+so they may be referred to and reused to create presets.</p>
+
+<p>Groups can contain two keys:</p>
+
+<ul>
+<li><code>types</code> - an array of object type ids</li>
+<li><code>include</code> - an array of groups to include in this group</li>
+</ul>
+
+<p>By convention, all groups that are prefixed with an underscore correspond
+exactly to the group of objects with the same name in the EVE client.
+For example, <code>groups/_celestial.yml</code> is everything under the Celestial group,
+and <code>groups/_celestial-moon.yml</code> is only the Moon type under the Celestial group.</p>
+
+<p>For example, the default <code>common-minimal</code> group</p>
+<div class="highlight"><pre><code class="language-yaml" data-lang="yaml"><span class="c1"># groups/common-minimal.yml</span>
+<span class="nn">---</span>
+<span class="l-Scalar-Plain">include</span><span class="p-Indicator">:</span>
+  <span class="p-Indicator">-</span> <span class="l-Scalar-Plain">_charge-scanner_probe</span>
+  <span class="p-Indicator">-</span> <span class="l-Scalar-Plain">beacons</span>
+  <span class="p-Indicator">-</span> <span class="l-Scalar-Plain">bombs</span>
+  <span class="p-Indicator">-</span> <span class="l-Scalar-Plain">bubbles</span>
+</code></pre></div>
+<p>only includes other groups such as</p>
+<div class="highlight"><pre><code class="language-yaml" data-lang="yaml"><span class="c1"># groups/_charge-scanner_probe.yml</span>
+<span class="nn">---</span>
+<span class="l-Scalar-Plain">types</span><span class="p-Indicator">:</span>
+  <span class="p-Indicator">-</span> <span class="l-Scalar-Plain">479</span>
+</code></pre></div>
+<p>and</p>
+<div class="highlight"><pre><code class="language-yaml" data-lang="yaml"><span class="c1"># groups/bubbles.yml</span>
+<span class="nn">---</span>
+<span class="l-Scalar-Plain">include</span><span class="p-Indicator">:</span>
+  <span class="p-Indicator">-</span> <span class="l-Scalar-Plain">_charge-interdiction_probe</span>
+  <span class="p-Indicator">-</span> <span class="l-Scalar-Plain">_deployable-mobile_warp_disruptor</span>
+</code></pre></div>
+<p>and</p>
+<div class="highlight"><pre><code class="language-yaml" data-lang="yaml"><span class="c1"># groups/bombs.yml</span>
+<span class="nn">---</span>
+<span class="l-Scalar-Plain">types</span><span class="p-Indicator">:</span>
+  <span class="p-Indicator">-</span> <span class="l-Scalar-Plain">90</span>
+  <span class="p-Indicator">-</span> <span class="l-Scalar-Plain">863</span>
+  <span class="p-Indicator">-</span> <span class="l-Scalar-Plain">864</span>
+</code></pre></div>
 
 </section>
 
