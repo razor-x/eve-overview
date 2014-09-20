@@ -24,7 +24,7 @@ task :compile_overviews do
 end
 
 task travis: [:build] do
-  system 'tar', '-czf', 'overviews.tar.gz', build
+  system 'zip', '-r', 'overviews.zip', build
 end
 
 def compile_overview(name, path, overview)
