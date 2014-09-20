@@ -20,11 +20,19 @@ body
 a
   +hover_glow($clr-eve-orange)
 
-.sub-nav a
-  text-transform: capitalize
+.sub-nav
+  dt
+    width: 100%
+    margin-left: 0
+
+  a
+    text-transform: capitalize
 
 aside.social-buttons
   margin-top: 1rem
+
+#navigation.fixed
+  margin-left: 1rem
 
 #content, body > header, body > footer
   max-width: nth($large-range, 1)
