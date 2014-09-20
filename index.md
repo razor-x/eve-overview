@@ -60,6 +60,11 @@ you can download and import directly into the EVE client.
 - For each different `[tabs]` preset that use the same `[overview]`,
   you should create an in-game overview link in your notepad to quickly switch between presets.
 
+Special thanks to [Oh Takashawa] for maintaining Sarah's Overview Pack
+which inspired much of style behind the packaged default overview.
+
+[Oh Takashawa]: https://twitter.com/OhTakashawa
+
 ### Make your own or customize this one
 
 #### Requirements
