@@ -92,24 +92,24 @@ google_analytics:
 # Foundation Interchange markup support added to
 # Jekyll Picture Tag (https://github.com/robwierzbowski/jekyll-picture-tag)
 # Uncomment below to enable responsive images.
-# picture:
-#   markup: 'interchange'
-#   source: pictures/fullsize
-#   output: pictures
-#   presets:
-#     default:
-#       ppi: [ 1, 1.5, 2 ]
-#       source_large:
-#         media: '(large)'
-#         width: '1440'
-#       source_medium:
-#         media: '(medium)'
-#         width: '1280'
-#       source_small:
-#         media: '(small)'
-#         width: '768'
-#       source_default:
-#         width: '500'
+picture:
+  markup: 'interchange'
+  source: pictures/fullsize
+  output: pictures
+  presets:
+    default:
+      ppi: [ 1, 1.5, 2 ]
+      source_large:
+        media: '(large)'
+        width: '1440'
+      source_medium:
+        media: '(medium)'
+        width: '1280'
+      source_small:
+        media: '(small)'
+        width: '768'
+      source_default:
+        width: '500'
 
 # Uncomment below to configure social media.
 social:

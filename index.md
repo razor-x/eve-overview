@@ -1,6 +1,7 @@
 ---
 layout: content
 title: Overview Generator for EVE Online
+picture: overview.jpg
 subnav:
   - id: introduction
   - id: usage
