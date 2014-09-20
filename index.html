@@ -25,7 +25,7 @@
 <meta property="og:url" content="http://io.evansosenko.com/eve-overview/" />
 <meta property="og:site_name" content="EVE Online Overview Generator" />
 
-<meta property="og:updated_time" content=" 2014-09-20T04:32:39+00:00" />
+<meta property="og:updated_time" content=" 2014-09-20T20:23:25+00:00" />
 
 
   <meta property="og:locale" content="en_US" />
@@ -241,6 +241,20 @@ You can also fork someone else&#39;s fork to base your overview off theirs.</li>
 See this project&#39;s <a href="https://github.com/razor-x/eve-overview/blob/master/.travis.yml">.travis.yml</a> file as an example
 and the <a href="http://docs.travis-ci.com/user/deployment/releases/">corresponding documentation</a> for details.</p>
 
+<h4>Updating</h4>
+
+<p>You can pull updates from this project into your fork using git.
+This way, you can maintain your own overview pack,
+but still benefit directly from updates to the original project.</p>
+
+<p>Just add this as a remote,</p>
+<div class="highlight"><pre><code class="language-bash" data-lang="bash"><span class="nv">$ </span>git remote add upstream https://github.com/razor-x/eve-overview
+</code></pre></div>
+<p>When you want to merge updates, fetch and merge.
+For example,</p>
+<div class="highlight"><pre><code class="language-bash" data-lang="bash"><span class="nv">$ </span>git fetch --no-tags upstream
+<span class="nv">$ </span>git merge upstream/master
+</code></pre></div>
 <p><a name="structure"></a>
 <h2 data-magellan-destination="structure">Overview structure</h2></p>
 
