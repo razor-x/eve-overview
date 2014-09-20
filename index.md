@@ -116,6 +116,26 @@ and the [corresponding documentation][GitHub Releases Uploading] for details.
 [GitHub Releases Uploading]: http://docs.travis-ci.com/user/deployment/releases/
 [source repository]: https://github.com/{{ site.source_repo }}
 
+#### Updating
+
+You can pull updates from this project into your fork using git.
+This way, you can maintain your own overview pack,
+but still benefit directly from updates to the original project.
+
+Just add this as a remote,
+
+````bash
+$ git remote add upstream https://github.com/razor-x/eve-overview
+````
+
+When you want to merge updates, fetch and merge.
+For example,
+
+````bash
+$ git fetch --no-tags upstream
+$ git merge upstream/master
+````
+
 <a name="structure"></a>
 <h2 data-magellan-destination="structure">Overview structure</h2>
 
