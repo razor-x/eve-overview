@@ -6,6 +6,8 @@ subnav:
   - id: usage
   - id: structure
     name: Overview structure
+  - id: faq
+    name: FAQ
 ---
 
 <a name="introduction"></a>
@@ -34,6 +36,8 @@ Rather than a single YAML file per overview, the various overview settings are s
 into many files which can be reused to create custom overviews
 based on a set of common groups, presets, settings, etc.
 The modular design makes updating, sharing, and customizing simple.
+
+Read on for the details or check out the [FAQ](#faq).
 
 <a name="usage"></a>
 <h2 data-magellan-destination="usage">How can I use this?</h2>
@@ -487,3 +491,73 @@ types:
   - 863
   - 864
 ```
+<a name="faq"></a>
+<h2 data-magellan-destination="faq">FAQ</h2>
+
+#### Who are you?
+
+I've been playing EVE since 2008 and am currently a Core member of [Agony Unleashed].
+
+#### Should I trust you?
+
+Can you really trust anyone in EVE other than Chribba?
+
+As for trusting the overview, the entire project is open source and open to scrutiny.
+Please submit any bugs or issues you find.
+Don't fly what you can't afford to loose.
+I'm not responsible for any loses you might incur while using the overview.
+
+> This software is provided "as is" and without any express or
+> implied warranties, including, without limitation, the implied
+> warranties of merchantibility and fitness for a particular
+> purpose.
+
+#### Is this an overview pack?
+
+Yes, but it's much more.
+
+Anyone who wants a new overview can use the provided overview pack out of the box.
+
+If you are setup with the listed requirements you can use this
+as a base for customizing or making your own pack.
+
+#### Should I use this?
+
+Do you want a new overview?
+
+Do you want to make an overview pack for yourself,
+corporation, alliance, or the general public?
+
+Do you like the idea of having your overview under version control
+and appreciate the flexibility and precision of the modular design?
+
+If you answered yes to any of the above then you should try this!
+
+#### Where is the graphical interface?
+
+My goal with this project is to track my overview in version control
+in a [DRY] format while keeping everything in human readable text files.
+I have no plans to write a web interface or a graphical program.
+
+#### I still don't get it?
+
+That's okay. You can still just download the pack.
+
+I didn't intend to this to be generally accessible to everyone.
+If you have any development or general hacking experience
+the listed requirements should already be familiar or at lease approachable.
+
+#### Can I contribute?
+
+Yes. This project (including this project site)
+is open source and hosted on GitHub.
+Pull requests and issue reports are welcome.
+Keep in mind that everyone has a different opinion on what makes a good overview,
+so I can't possibly promise to incorporate all suggestions.
+
+If you find this useful, I will accept ISK donations
+to the in-game corporation `Measure Zero`.
+
+[Agony Unleashed]: http://www.agony-unleashed.com/
+[DRY]: https://en.wikipedia.org/wiki/Don't_repeat_yourself
+
