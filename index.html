@@ -8,8 +8,8 @@
   
 
 
-  <title>EVE Online Overview Generator</title>
-  <meta property="og:title" content="EVE Online Overview Generator" />
+  <title>Overview Generator for EVE Online</title>
+  <meta property="og:title" content="Overview Generator for EVE Online" />
 
 
 
@@ -25,7 +25,7 @@
 <meta property="og:url" content="http://io.evansosenko.com/eve-overview/" />
 <meta property="og:site_name" content="EVE Online Overview Generator" />
 
-<meta property="og:updated_time" content=" 2014-09-19T19:48:01+00:00" />
+<meta property="og:updated_time" content=" 2014-09-20T00:31:27+00:00" />
 
 
   <meta property="og:locale" content="en_US" />
@@ -59,14 +59,15 @@
 
   <link type="text/plain" rel="author" href="humans.txt" />
   <script src="https://ajax.googleapis.com/ajax/libs/webfont/1.5.0/webfont.js"></script>
-  <link rel="stylesheet" href="http://io.evansosenko.com/eve-overview/assets/app-644883240d05b43205acb5213418fd06.css">
+  <link rel="stylesheet" href="http://io.evansosenko.com/eve-overview/assets/app-b6b381d86a733c5f86c8bf13ad38e20e.css">
   <script>(function(){"use strict";WebFont.load({google:{families:["Open+Sans:400,300,300italic,400italic,600,700,600italic,700italic,800,800italic:latin,latin-ext","Inconsolata:400,700"]},custom:{families:["foundation-icons"],testStrings:{"foundation-icons":"\uf100\uf101\uf102\uf103"}}})}).call(this);</script>
   <script src="http://io.evansosenko.com/eve-overview/assets/head-8307cd50fa5b7d2934c318e3c7b70434.js"></script>
 </head>
 
 <body>
   <header>
-    <h1><a href="http://io.evansosenko.com/eve-overview/">EVE Online Overview Generator</a></h1>
+    <a name="top"></a>
+    <h1 data-magellan-destination="top"><a href="http://io.evansosenko.com/eve-overview/">EVE Online Overview Generator</a></h1>
   </header>
 
   <section id="content">
@@ -80,6 +81,7 @@
   <nav data-magellan-expedition="fixed">
     <dl class="sub-nav">
       <dt>EVE Online Overview Generator</dt>
+      <dd data-magellan-arrival="top"><a class="fi-arrow-up" href="#top" title="top"></a></dd>
     
       <dd data-magellan-arrival="introduction">
         <a href="#introduction">introduction</a>
@@ -90,23 +92,11 @@
       </dd>
     
       <dd data-magellan-arrival="structure">
-        <a href="#structure">structure</a>
+        <a href="#structure">Overview structure</a>
       </dd>
     
-      <dd data-magellan-arrival="tabs">
-        <a href="#tabs">tabs</a>
-      </dd>
-    
-      <dd data-magellan-arrival="presets">
-        <a href="#presets">presets</a>
-      </dd>
-    
-      <dd data-magellan-arrival="states">
-        <a href="#states">states</a>
-      </dd>
-    
-      <dd data-magellan-arrival="groups">
-        <a href="#groups">groups</a>
+      <dd data-magellan-arrival="faq">
+        <a href="#faq">FAQ</a>
       </dd>
     
     </dl>
@@ -181,13 +171,15 @@ into many files which can be reused to create custom overviews
 based on a set of common groups, presets, settings, etc.
 The modular design makes updating, sharing, and customizing simple.</p>
 
+<p>Read on for the details or check out the <a href="#faq">FAQ</a>.</p>
+
 <p><a name="usage"></a>
 <h2 data-magellan-destination="usage">How can I use this?</h2></p>
 
 <h3>Use the default pack</h3>
 
 <p>This project maintains several overview groups and presets.
-Each release provides a set default overview profiles
+Each release provides a set of default overview profiles
 you can download and import directly into the EVE client.</p>
 
 <ol>
@@ -209,6 +201,9 @@ or switching between profiles with the same <code>[overview]</code> prefix.</li>
 <li>For each different <code>[tabs]</code> preset that use the same <code>[overview]</code>,
 you should create an in-game overview link in your notepad to quickly switch between presets.</li>
 </ul>
+
+<p>Special thanks to <a href="https://twitter.com/OhTakashawa">Oh Takashawa</a> for maintaining Sarah&#39;s Overview Pack
+which inspired much of style behind the packaged default overview.</p>
 
 <h3>Make your own or customize this one</h3>
 
@@ -272,9 +267,9 @@ tab settings defined in <code>tabs/pve.yml</code> and <code>tabs/pvp.yml</code>.
 
 <p>The first four attributes load options from the corresponding file,
 e.g., this overview will use <code>appearances/default.yml</code>, <code>columns/default.yml</code>,
-<code>labels/default.yml</code>, and <code>settings/default.yml</code>.
-These attributes will be described now.
-Tabs are explained in their own section.</p>
+<code>labels/default.yml</code>, and <code>settings/default.yml</code>.</p>
+
+<h3>Basic settings and appearance</h3>
 
 <p>The following is the simplest way to create any <code>.yml</code> file for one of the
 four types: appearance, columns, labels, or settings.</p>
@@ -437,8 +432,7 @@ four types: appearance, columns, labels, or settings.</p>
   <span class="p-Indicator">-</span> <span class="p-Indicator">-</span> <span class="l-Scalar-Plain">overviewBroadcastsToTop</span>
     <span class="p-Indicator">-</span> <span class="l-Scalar-Plain">true</span>
 </code></pre></div>
-<p><a name="tabs"></a>
-<h3 data-magellan-destination="tabs">Tabs</h3></p>
+<h3>Tabs</h3>
 
 <p>Files under <code>tabs</code> define the name of each tab and which
 overview presets and bracket presets are loaded for that tab.</p>
@@ -484,8 +478,9 @@ overview presets and bracket presets are loaded for that tab.</p>
   <span class="l-Scalar-Plain">bracket</span><span class="p-Indicator">:</span> <span class="l-Scalar-Plain">brackets-all</span>
 <span class="nn">...</span>
 </code></pre></div>
-<p><a name="presets"></a>
-<h3 data-magellan-destination="presets">Presets</h3></p>
+<p>Note that the ellipses indicate the code for the other three tabs was removed for brevity.</p>
+
+<h3>Presets</h3>
 
 <p>Each overview tab in the EVE client loads an overview preset,
 which determines what appears in the current overview window,
@@ -528,8 +523,7 @@ such as bombs, probes, etc.</p>
 
 <p>It will use the <code>states/hostile.yml</code> file, thus hiding friendlies.</p>
 
-<p><a name="states"></a>
-<h3 data-magellan-destination="states">States</h3></p>
+<h3>States</h3>
 
 <p>Files under <code>states</code> define a set of filtered states
 which may be referred to and reused to create presets.</p>
@@ -550,8 +544,7 @@ from the exported file.</p>
   <span class="p-Indicator">-</span> <span class="l-Scalar-Plain">45</span>
   <span class="p-Indicator">-</span> <span class="l-Scalar-Plain">49</span>
 </code></pre></div>
-<p><a name="groups"></a>
-<h3 data-magellan-destination="groups">Groups</h3></p>
+<h3>Groups</h3>
 
 <p>Groups collect object types together under a custom name
 so they may be referred to and reused to create presets.</p>
@@ -598,6 +591,78 @@ and <code>groups/_celestial-moon.yml</code> is only the Moon type under the Cele
   <span class="p-Indicator">-</span> <span class="l-Scalar-Plain">863</span>
   <span class="p-Indicator">-</span> <span class="l-Scalar-Plain">864</span>
 </code></pre></div>
+<p><a name="faq"></a>
+<h2 data-magellan-destination="faq">FAQ</h2></p>
+
+<h4>Who are you?</h4>
+
+<p>I&#39;ve been playing EVE since 2008 and am currently a Core member of <a href="http://www.agony-unleashed.com/">Agony Unleashed</a>.</p>
+
+<h4>Should I trust you?</h4>
+
+<p>Can you really trust anyone in EVE other than Chribba?</p>
+
+<p>As for trusting the overview, the entire project is open source and open to scrutiny.
+Please submit any bugs or issues you find.
+Don&#39;t fly what you can&#39;t afford to loose.
+I&#39;m not responsible for any loses you might incur while using the overview.</p>
+
+<blockquote>
+<p>This software is provided &quot;as is&quot; and without any express or
+implied warranties, including, without limitation, the implied
+warranties of merchantibility and fitness for a particular
+purpose.</p>
+</blockquote>
+
+<h4>Is this an overview pack?</h4>
+
+<p>Yes, but it&#39;s much more.</p>
+
+<p>Anyone who wants a new overview can use the provided overview pack out of the box.</p>
+
+<p>If you are setup with the listed requirements you can use this
+as a base for customizing or making your own pack.</p>
+
+<h4>Should I use this?</h4>
+
+<p>Do you want a new overview?</p>
+
+<p>Do you want to make an overview pack for yourself,
+corporation, alliance, or the general public?</p>
+
+<p>Do you like the idea of having your overview under version control
+and appreciate the flexibility and precision of the modular design?</p>
+
+<p>If you answered yes to any of the above then you should try this!</p>
+
+<p>Note that I&#39;m still adding presets and tweaking the default overview,
+but I&#39;ve been using this as my primary overview for while now.</p>
+
+<h4>Where is the graphical interface?</h4>
+
+<p>My goal with this project is to track my overview in version control
+in a <a href="https://en.wikipedia.org/wiki/Don&#x27;t_repeat_yourself">DRY</a> format while keeping everything in human readable text files.
+I have no plans to write a web interface or a graphical program.</p>
+
+<h4>I still don&#39;t get it?</h4>
+
+<p>That&#39;s okay. You can still just download the pack.</p>
+
+<p>I didn&#39;t intend to this to be generally accessible to everyone.
+If you have any development or general hacking experience
+the listed requirements should already be familiar or at lease approachable.</p>
+
+<h4>Can I contribute?</h4>
+
+<p>Yes. This project (including this project site)
+is open source and hosted on GitHub.
+Pull requests and issue reports are welcome.
+Keep in mind that everyone has a different opinion on what makes a good overview,
+so I can&#39;t possibly promise to incorporate all suggestions.</p>
+
+<p>If you find this useful, I will accept ISK donations
+to the in-game corporation <code>Measure Zero</code>.</p>
+
 
 </section>
 
@@ -653,6 +718,6 @@ nor can it be liable for any damage arising from the use of this website.
 
 
 
-  <script>    'use strict';    yepnope([          {        load: 'https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js',        complete: function () {          if ( !window.jQuery ) {            yepnope('http://io.evansosenko.com/eve-overview/assets/jquery/dist/jquery-998ae0397dd9b25c44fbc8fa84556b4b.js');          }        }      },          'http://io.evansosenko.com/eve-overview/assets/app-2bd6b06d63234fc9cc37b60b61038076.js'    ]);      !function(e,t,n){var c,o=e.getElementsByTagName(t)[0];e.getElementById(n)||(c=e.createElement(t),c.id=n,c.src="https://connect.facebook.net/en_US/all.js#xfbml=1",o.parentNode.insertBefore(c,o))}(document,"script","facebook-jssdk");        window.___gcfg={lang:"en-US",parsetags:"onload"},function(){var e=document.createElement("script");e.type="text/javascript",e.async=!0,e.src="https://apis.google.com/js/plusone.js";var t=document.getElementsByTagName("script")[0];t.parentNode.insertBefore(e,t)}();        !function(t,e,r){var n,s=t.getElementsByTagName(e)[0],i="https";t.getElementById(r)||(n=t.createElement(e),n.id=r,n.src=i+"://platform.twitter.com/widgets.js",s.parentNode.insertBefore(n,s))}(document,"script","twitter-wjs");          !function(e,a,t,n,s,c,o){e.GoogleAnalyticsObject=s,e[s]=e[s]||function(){(e[s].q=e[s].q||[]).push(arguments)},e[s].l=1*new Date,c=a.createElement(t),o=a.getElementsByTagName(t)[0],c.async=1,c.src=n,o.parentNode.insertBefore(c,o)}(window,document,"script","https://www.google-analytics.com/analytics.js","ga"),ga("create","UA-19631381-4","evansosenko.com"),ga("require","displayfeatures"),ga("send","pageview");      </script>
+  <script>    'use strict';    yepnope([          {        load: 'https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js',        complete: function () {          if ( !window.jQuery ) {            yepnope('http://io.evansosenko.com/eve-overview/assets/jquery/dist/jquery-998ae0397dd9b25c44fbc8fa84556b4b.js');          }        }      },          'http://io.evansosenko.com/eve-overview/assets/app-4a6a6476d8492fa2355f629645e7fbbc.js'    ]);      !function(e,t,n){var c,o=e.getElementsByTagName(t)[0];e.getElementById(n)||(c=e.createElement(t),c.id=n,c.src="https://connect.facebook.net/en_US/all.js#xfbml=1",o.parentNode.insertBefore(c,o))}(document,"script","facebook-jssdk");        window.___gcfg={lang:"en-US",parsetags:"onload"},function(){var e=document.createElement("script");e.type="text/javascript",e.async=!0,e.src="https://apis.google.com/js/plusone.js";var t=document.getElementsByTagName("script")[0];t.parentNode.insertBefore(e,t)}();        !function(t,e,r){var n,s=t.getElementsByTagName(e)[0],i="https";t.getElementById(r)||(n=t.createElement(e),n.id=r,n.src=i+"://platform.twitter.com/widgets.js",s.parentNode.insertBefore(n,s))}(document,"script","twitter-wjs");          !function(e,a,t,n,s,c,o){e.GoogleAnalyticsObject=s,e[s]=e[s]||function(){(e[s].q=e[s].q||[]).push(arguments)},e[s].l=1*new Date,c=a.createElement(t),o=a.getElementsByTagName(t)[0],c.async=1,c.src=n,o.parentNode.insertBefore(c,o)}(window,document,"script","https://www.google-analytics.com/analytics.js","ga"),ga("create","UA-19631381-4","evansosenko.com"),ga("require","displayfeatures"),ga("send","pageview");      </script>
 </body>
 </html>
