@@ -533,6 +533,9 @@ and appreciate the flexibility and precision of the modular design?
 
 If you answered yes to any of the above then you should try this!
 
+Note that I'm still adding presets and tweaking the default overview,
+but I've been using this as my primary overview for while now.
+
 #### Where is the graphical interface?
 
 My goal with this project is to track my overview in version control
