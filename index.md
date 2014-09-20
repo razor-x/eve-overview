@@ -547,9 +547,9 @@ I have no plans to write a web interface or a graphical program.
 
 That's okay. You can still just download the pack.
 
-I didn't intend this to be generally accessible to everyone.
+I didn't intend for this to be generally accessible to everyone.
 If you have any development or general hacking experience
-the listed requirements should already be familiar or at lease approachable.
+the listed requirements should be familiar or at lease approachable.
 
 #### Can I contribute?
 
