@@ -35,4 +35,4 @@ $.get 'https://api.github.com/repos/<%= site.config['source_repo'] %>/releases',
     container.attr "href", data[0].assets[0].browser_download_url
     container.fadeOut ->
       $(this).removeClass 'disabled'
-      $(this).text("Download overview pack (#{data[0].tag_name})").fadeIn()
+      $(this).text("Get the overview pack (#{data[0].tag_name})").fadeIn()
