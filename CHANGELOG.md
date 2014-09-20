@@ -1,6 +1,6 @@
 # Changelog
 
-## HEAD
+## 0.1.1
 
 - Use zip file over tar file for overview package.
 
