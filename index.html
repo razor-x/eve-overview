@@ -25,7 +25,7 @@
 <meta property="og:url" content="http://io.evansosenko.com/eve-overview/" />
 <meta property="og:site_name" content="EVE Online Overview Generator" />
 
-<meta property="og:updated_time" content=" 2014-09-20T20:23:25+00:00" />
+<meta property="og:updated_time" content=" 2014-09-23T18:58:19+00:00" />
 
 
   <meta property="og:locale" content="en_US" />
@@ -230,11 +230,17 @@ Packages for Windows can be installed with <a href="https://chocolatey.org/">Cho
 <h4>Instructions</h4>
 
 <ol>
-<li>Fork or clone the <a href="https://github.com/razor-x/eve-overview">source repository</a>.
-You can also fork someone else&#39;s fork to base your overview off theirs.</li>
-<li>Run <code>bundle</code> to install the needed Ruby gems.</li>
-<li>Edit the <code>.yml</code> files according to their descriptions in the next section.</li>
-<li>Run <code>rake</code> to build the overview files to the <code>Overview</code> folder.</li>
+<li><p>Fork or clone the <a href="https://github.com/razor-x/eve-overview">source repository</a>. You should only need the <code>master</code> branch.</p>
+<div class="highlight"><pre><code class="language-bash" data-lang="bash"><span class="nv">$ </span>git clone https://github.com/razor-x/eve-overview.git --branch master
+</code></pre></div>
+<p>You can also fork someone else&#39;s fork to base your overview off theirs.</p></li>
+<li><p>Install the needed Ruby gems with</p>
+<div class="highlight"><pre><code class="language-bash" data-lang="bash"><span class="nv">$ </span>bundle
+</code></pre></div></li>
+<li><p>Edit the <code>.yml</code> files according to their descriptions in the next section.</p></li>
+<li><p>Build the overview files to the <code>Overview</code> folder with</p>
+<div class="highlight"><pre><code class="language-bash" data-lang="bash"><span class="nv">$ </span>rake
+</code></pre></div></li>
 </ol>
 
 <p>Optionally, you can setup Travis CI to automatically build your overviews.
@@ -248,7 +254,7 @@ This way, you can maintain your own overview pack,
 but still benefit directly from updates to the original project.</p>
 
 <p>Just add this as a remote,</p>
-<div class="highlight"><pre><code class="language-bash" data-lang="bash"><span class="nv">$ </span>git remote add upstream https://github.com/razor-x/eve-overview
+<div class="highlight"><pre><code class="language-bash" data-lang="bash"><span class="nv">$ </span>git remote add upstream https://github.com/razor-x/eve-overview.git
 </code></pre></div>
 <p>When you want to merge updates, fetch and merge.
 For example,</p>
