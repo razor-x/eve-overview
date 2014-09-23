@@ -102,11 +102,24 @@ Packages for Windows can be installed with [Chocolatey].
 
 #### Instructions
 
-1. Fork or clone the [source repository].
-   You can also fork someone else's fork to base your overview off theirs.
-2. Run `bundle` to install the needed Ruby gems.
-2. Edit the `.yml` files according to their descriptions in the next section.
-3. Run `rake` to build the overview files to the `Overview` folder.
+1. Fork or clone the [source repository]. You should only need the `master` branch.
+
+    ````bash
+    $ git clone https://github.com/{{ site.source_repo }}.git --branch master
+    ````
+    You can also fork someone else's fork to base your overview off theirs.
+
+2. Install the needed Ruby gems with
+
+    ````bash
+    $ bundle
+    ````
+3. Edit the `.yml` files according to their descriptions in the next section.
+4. Build the overview files to the `Overview` folder with
+
+    ````bash
+    $ rake
+    ````
 
 Optionally, you can setup Travis CI to automatically build your overviews.
 See this project's [.travis.yml][travis.yml] file as an example
@@ -125,7 +138,7 @@ but still benefit directly from updates to the original project.
 Just add this as a remote,
 
 ````bash
-$ git remote add upstream https://github.com/razor-x/eve-overview
+$ git remote add upstream https://github.com/{{ site.source_repo }}.git
 ````
 
 When you want to merge updates, fetch and merge.
