@@ -1,8 +1,8 @@
 ---
 # Jekyll options.
 name: EVE Online Overview Generator
-domain: http://io.evansosenko.com/eve-overview
-baseurl: http://io.evansosenko.com/eve-overview
+domain: https://io.evansosenko.com/eve-overview
+baseurl: https://io.evansosenko.com/eve-overview
 markdown: redcarpet
 highlighter: pygments
 
@@ -28,7 +28,7 @@ gems:
 
 # Jekyll::AssetsPlugin options.
 assets:
-  baseurl: http://io.evansosenko.com/eve-overview/assets/
+  baseurl: https://io.evansosenko.com/eve-overview/assets/
   sources:
     - _assets/images
     - _assets/javascripts
