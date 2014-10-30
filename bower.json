@@ -2,7 +2,7 @@
   "name": "Jekyll & ZURB",
   "dependencies": {
     "fastclick": "1.0.3",
-    "highlightjs": "8.0.0",
+    "highlightjs": "8.3.0",
     "foundation": "5.4.4",
     "foundation-icon-fonts": "latest",
     "jquery": "2.1.1",
