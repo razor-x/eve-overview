@@ -25,7 +25,7 @@ The modular design makes updating, sharing, and customizing simple.
 
 __Visit the [project site][EVE Online Overview Generator] for full documentation.__
 
-[EVE Online Overview Generator]: http://io.evansosenko.com/eve-overview/
+[EVE Online Overview Generator]: https://io.evansosenko.com/eve-overview/
 
 ## Installation
 
