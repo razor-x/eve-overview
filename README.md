@@ -1,13 +1,13 @@
 # Jekyll & ZURB
 
-[![MIT License](http://img.shields.io/badge/license-MIT-red.svg?style=flat)](./LICENSE.txt)
-[![Dependency Status](http://img.shields.io/gemnasium/razor-x/jekyll-and-zurb.svg?style=flat)](https://gemnasium.com/razor-x/jekyll-and-zurb)
-[![Build Status](http://img.shields.io/travis/razor-x/jekyll-and-zurb/demo.svg?style=flat)](https://travis-ci.org/razor-x/jekyll-and-zurb)
+[![MIT License](https://img.shields.io/badge/license-MIT-red.svg?style=flat)](./LICENSE.txt)
+[![Dependency Status](https://img.shields.io/gemnasium/razor-x/jekyll-and-zurb.svg?style=flat)](https://gemnasium.com/razor-x/jekyll-and-zurb)
+[![Build Status](https://img.shields.io/travis/razor-x/jekyll-and-zurb/demo.svg?style=flat)](https://travis-ci.org/razor-x/jekyll-and-zurb)
 
 Source for your personal blog running on Jekyll and Foundation 5.
 Just clone and blog: create the `_posts` and `_drafts` folder.
 
-Demo at [io.evansosenko.com/jekyll-and-zurb/](http://io.evansosenko.com/jekyll-and-zurb/).
+Demo at [io.evansosenko.com/jekyll-and-zurb/](https://io.evansosenko.com/jekyll-and-zurb/).
 
 Lots of baked in features that work even if you don't want to use Foundation.
 
@@ -78,7 +78,7 @@ real examples and documentation for the included features.
 That branch is automatically built and published by Travis CI.
 
 Demo site hosted on GitHub pages:
-[io.evansosenko.com/jekyll-and-zurb/](http://io.evansosenko.com/jekyll-and-zurb/).
+[io.evansosenko.com/jekyll-and-zurb/](https://io.evansosenko.com/jekyll-and-zurb/).
 
 ## Add future update support
 
