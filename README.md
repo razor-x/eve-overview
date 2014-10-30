@@ -60,7 +60,7 @@ Just clone this with
 $ git clone https://github.com/razor-x/jekyll-and-zurb.git my-blog
 ````
 
-run `bundle update && bower install` and create the `_posts` folder.
+run `bundle && bower install` and create the `_posts` folder.
 Head over to the [Jekyll Docs](http://jekyllrb.com/docs/home/) for the rest of the details.
 
 Running off the `master` branch may be unstable and is not suitable for production.
@@ -163,7 +163,8 @@ $ git push
 ## Updating
 
 The `Gemfile` is using pessimistic version constraints for everything,
-so if you don't want to wait for updates, you need to bump the versions yourself.
+so if you don't want to wait for updates, you need to bump the versions yourself,
+run `bundle update` and commit the updated `Gemfile.lock`.
 
 JavaScript library versions need to be updated in `bower.json` and `_config.yml` (for CDN support).
 If you want to update Foundation, update the version number in `bower.json`.
