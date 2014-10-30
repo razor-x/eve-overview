@@ -2,8 +2,9 @@
 
 ## HEAD
 
+- Check-in Gemfile.lock.
 - Jekyll to 2.4.0.
-- Foundation to 5.4.4.
+- Foundation to 5.4.7.
 - Compass to 1.0.1.
 
 ## 2.3.0

@@ -19,6 +19,7 @@ exclude:
   - Rakefile
   - bower.json
   - bower_components
+  - vendor
 
 gems:
   - json
@@ -127,7 +128,7 @@ social:
 # Each array has the format
 # - [ repo, branch, subdirectory, treeish (optional) ]
 # Uncomment this example to includes a copy of the gh-pages branch of this repo at
-# http://io.evansosenko.com/eve-overview/inception/jekyll-and-zurb/
+# https://razor-x.github.io/jekyll-and-zurb/inception/jekyll-and-zurb/
 # :sub_content:
 #   - [ "https://github.com/razor-x/jekyll-and-zurb", gh-pages, inception/jekyll-and-zurb ]
 

@@ -2,8 +2,8 @@
 
 _Project page built with Jekyll & ZURB_
 
-[![MIT License](http://img.shields.io/badge/license-MIT-red.svg?style=flat)](./LICENSE.txt)
-[![Build Status](http://img.shields.io/travis/razor-x/eve-overview/project-site.svg?style=flat)](https://travis-ci.org/razor-x/eve-overview)
+[![MIT License](https://img.shields.io/badge/license-MIT-red.svg?style=flat)](./LICENSE.txt)
+[![Build Status](https://img.shields.io/travis/razor-x/eve-overview/project-site.svg?style=flat)](https://travis-ci.org/razor-x/eve-overview)
 
 The rest of this README is just cloned from
 [Jekyll & ZURB](https://github.com/razor-x/jekyll-and-zurb).
@@ -11,7 +11,7 @@ The rest of this README is just cloned from
 Source for your personal blog running on Jekyll and Foundation 5.
 Just clone and blog: create the `_posts` and `_drafts` folder.
 
-Demo at [io.evansosenko.com/jekyll-and-zurb/](http://io.evansosenko.com/jekyll-and-zurb/).
+Demo at [io.evansosenko.com/jekyll-and-zurb/](https://io.evansosenko.com/jekyll-and-zurb/).
 
 Lots of baked in features that work even if you don't want to use Foundation.
 
@@ -64,7 +64,7 @@ Just clone this with
 $ git clone https://github.com/razor-x/jekyll-and-zurb.git my-blog
 ````
 
-run `bundle update && bower install` and create the `_posts` folder.
+run `bundle && bower install` and create the `_posts` folder.
 Head over to the [Jekyll Docs](http://jekyllrb.com/docs/home/) for the rest of the details.
 
 Running off the `master` branch may be unstable and is not suitable for production.
@@ -82,7 +82,7 @@ real examples and documentation for the included features.
 That branch is automatically built and published by Travis CI.
 
 Demo site hosted on GitHub pages:
-[io.evansosenko.com/jekyll-and-zurb/](http://io.evansosenko.com/jekyll-and-zurb/).
+[io.evansosenko.com/jekyll-and-zurb/](https://io.evansosenko.com/jekyll-and-zurb/).
 
 ## Add future update support
 
@@ -167,7 +167,8 @@ $ git push
 ## Updating
 
 The `Gemfile` is using pessimistic version constraints for everything,
-so if you don't want to wait for updates, you need to bump the versions yourself.
+so if you don't want to wait for updates, you need to bump the versions yourself,
+run `bundle update` and commit the updated `Gemfile.lock`.
 
 JavaScript library versions need to be updated in `bower.json` and `_config.yml` (for CDN support).
 If you want to update Foundation, update the version number in `bower.json`.
