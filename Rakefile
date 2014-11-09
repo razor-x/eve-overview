@@ -120,8 +120,8 @@ task :ghpages do
   deploy_branch = repo.match(/github\.io\.git$/) ? 'master' : 'gh-pages'
   rev = %x(git rev-parse HEAD).strip
 
-  system 'bundle update'
-  system 'bower update'
+  system 'bundle install'
+  system 'bower install'
 
   Dir.mktmpdir do |dir|
     system "git clone --branch #{deploy_branch} #{repo} #{dir}"
