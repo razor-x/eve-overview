@@ -79,8 +79,10 @@ def load_preset(preset)
 end
 
 def format_preset(preset)
+  states = merge_states(preset[:states])
   [format_preset_name(preset), [
-    ['filteredStates', merge_states(preset[:states])],
+    ['alwaysShownStates', states[:show]],
+    ['filteredStates', states[:hide]],
     ['groups', merge_groups(preset[:groups])]
   ]]
 end
@@ -95,10 +97,16 @@ end
 
 def merge_states(names)
   array = []
+  states = {show: [], hide: []}
   names.each do |name|
-    array << YAML.load_file(File.join('states', "#{name}.yml"))
+    array << ActiveSupport::HashWithIndifferentAccess.new(
+      YAML.load_file(File.join('states', "#{name}.yml"))
+    )
   end
-  array.flatten.uniq
+  array.each do |v|
+    v.each { |k, v| states[k.to_sym].concat v }
+  end
+  states.each { |v| v.flatten.uniq }
 end
 
 def merge_groups(names)
