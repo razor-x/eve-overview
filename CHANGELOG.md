@@ -1,6 +1,6 @@
 # Changelog
 
-## HEAD
+## 2.4.0
 
 - Check-in Gemfile.lock.
 - Jekyll to 2.4.0.
