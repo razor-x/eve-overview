@@ -9,6 +9,8 @@ subnav:
     name: Overview structure
   - id: faq
     name: FAQ
+  - id: changelog
+    name: CHANGELOG
 ---
 
 <a name="introduction"></a>
@@ -598,3 +600,9 @@ to the in-game corporation `Measure Zero`.
 [Agony Unleashed]: http://www.agony-unleashed.com/
 [DRY]: https://en.wikipedia.org/wiki/Don't_repeat_yourself
 
+<a name="changelog"></a>
+<a data-magellan-destination="changelog"></a>
+
+<div id="changelog">
+  <h2>Loading CHANGELOG.</h2>
+</div>
