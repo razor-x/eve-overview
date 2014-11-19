@@ -3,6 +3,8 @@
 ## HEAD
 
 - New state syntax for always shown states.
+- Add state for always show fleet-only.
+- Friendly states now only show (and always show) friendlies.
 
 ## 0.1.1
 
