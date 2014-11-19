@@ -51,6 +51,8 @@ This project maintains several overview groups and presets.
 Each release provides a set of default overview profiles
 you can download and import directly into the EVE client.
 
+#### Installation
+
 1. Download the latest release using the button at the top of this page.
 2. The downloaded archive contains an `Overview` folder.
    The contents of this folder should be extracted to your `EVE/Overview` folder.
@@ -66,6 +68,48 @@ you can download and import directly into the EVE client.
   or switching between profiles with the same `[overview]` prefix.
 - For each different `[tabs]` preset that use the same `[overview]`,
   you should create an in-game overview link in your notepad to quickly switch between presets.
+
+#### Included presets
+
+Presets are organized into groups and optimized for a given activity or role.
+Most presets include common "required" objects such as bombs and scanner probes,
+although some very specific presets may purposely exclude such things.
+The following is meant as a summary.
+To see exactly what makes up each preset,
+see the source code for the version you are using or check in the EVE client.
+
+- ✈ travel
+  - Designed to be loaded into the first tab.
+  - Shows rats.
+  - The default travel preset shows stations and gates.
+  - Includes a preset that hides stations.
+  - Includes a preset that shows hostiles.
+- ♞ hostile
+  - Presets that display hostile entities.
+  - The minimal preset shows only ships and the sun.
+  - Includes presets for drones.
+  - Includes a versatile set of presets to filter by ship classes
+    ([in development](https://github.com/razor-x/eve-overview/issues/1)).
+- ★ friendly
+  - Works just like the hostile presets, but only shows friendlies.
+- ✫ fleet
+  ([in development](https://github.com/razor-x/eve-overview/issues/3))
+  - Works just like the hostile presets, but only shows fleet members.
+- ♖ sov
+  ([in development](https://github.com/razor-x/eve-overview/issues/2))
+  - Presets tailored for sovereignty warfare.
+- ♣ pve
+  - Includes presets for mining, missioning, and ratting.
+  - Specialized PvE presets
+    ([in development](https://github.com/razor-x/eve-overview/issues/4)).
+- ✥ dscan
+  - Presets designed to be used by the directional scanner.
+- ✪ extra
+  - Utility presets.
+  - Includes a warpout preset for escaping to celestials.
+  - The loot preset shows hostiles while the salvage preset does not.
+- ❏ brackets
+  - Presets designed to be loaded as brackets.
 
 Special thanks to [Oh Takashawa] for maintaining Sarah's Overview Pack
 which inspired much of style behind the packaged default overview.
