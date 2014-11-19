@@ -72,6 +72,13 @@ which inspired much of style behind the packaged default overview.
 
 [Oh Takashawa]: https://twitter.com/OhTakashawa
 
+### Use a community pack
+
+If you have created an overview pack with this generator,
+create a new issue in the [GitHub issue tracker], and I'll add a link here.
+
+[GitHub issue tracker]: https://github.com/razor-x/eve-overview/issues
+
 ### Make your own or customize this one
 
 #### Requirements
