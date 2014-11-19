@@ -1,6 +1,6 @@
 # Changelog
 
-## HEAD
+## 0.2.0
 
 - New state syntax for always shown states.
 - Add state for always show fleet-only.
