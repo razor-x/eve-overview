@@ -25,7 +25,7 @@
 <meta property="og:url" content="https://io.evansosenko.com/eve-overview/" />
 <meta property="og:site_name" content="EVE Online Overview Generator" />
 
-<meta property="og:updated_time" content=" 2014-11-09T06:17:19+00:00" />
+<meta property="og:updated_time" content=" 2014-11-19T02:28:47+00:00" />
 
 
   <meta property="og:locale" content="en_US" />
@@ -551,24 +551,26 @@ such as bombs, probes, etc.</p>
 
 <h3>States</h3>
 
-<p>Files under <code>states</code> define a set of filtered states
+<p>Files under <code>states</code> define a set of filtered and always-shown states
 which may be referred to and reused to create presets.</p>
 
 <p>These files are most easily created by setting the filters
 in the EVE client, and then pulling the array of numeric ids
 from the exported file.</p>
 
-<p>For example, this filters out all friendly ships from displaying</p>
-<div class="highlight"><pre><code class="language-yaml" data-lang="yaml"><span class="c1">#  states/hostile.yml</span>
+<p>For example, this filters out all ships from displaying,
+but always shows fleet members</p>
+<div class="highlight"><pre><code class="language-yaml" data-lang="yaml"><span class="c1">#  states/fleet.yml</span>
 <span class="nn">---</span>
+<span class="l-Scalar-Plain">show</span><span class="p-Indicator">:</span>
   <span class="p-Indicator">-</span> <span class="l-Scalar-Plain">11</span>
-  <span class="p-Indicator">-</span> <span class="l-Scalar-Plain">12</span>
-  <span class="p-Indicator">-</span> <span class="l-Scalar-Plain">14</span>
-  <span class="p-Indicator">-</span> <span class="l-Scalar-Plain">15</span>
-  <span class="p-Indicator">-</span> <span class="l-Scalar-Plain">16</span>
+<span class="l-Scalar-Plain">hide</span><span class="p-Indicator">:</span>
+  <span class="p-Indicator">-</span> <span class="l-Scalar-Plain">13</span>
+  <span class="p-Indicator">-</span> <span class="l-Scalar-Plain">17</span>
+  <span class="p-Indicator">-</span> <span class="l-Scalar-Plain">18</span>
+  <span class="p-Indicator">-</span> <span class="l-Scalar-Plain">19</span>
   <span class="p-Indicator">-</span> <span class="l-Scalar-Plain">21</span>
-  <span class="p-Indicator">-</span> <span class="l-Scalar-Plain">45</span>
-  <span class="p-Indicator">-</span> <span class="l-Scalar-Plain">49</span>
+  <span class="p-Indicator">-</span> <span class="l-Scalar-Plain">44</span>
 </code></pre></div>
 <h3>Groups</h3>
 
