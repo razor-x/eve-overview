@@ -449,26 +449,28 @@ It will use the `states/hostile.yml` file, thus hiding friendlies.
 
 ### States
 
-Files under `states` define a set of filtered states
+Files under `states` define a set of filtered and always-shown states
 which may be referred to and reused to create presets.
 
 These files are most easily created by setting the filters
 in the EVE client, and then pulling the array of numeric ids
 from the exported file.
 
-For example, this filters out all friendly ships from displaying
+For example, this filters out all ships from displaying,
+but always shows fleet members
 
 ```yaml
-#  states/hostile.yml
+#  states/fleet.yml
 ---
+show:
   - 11
-  - 12
-  - 14
-  - 15
-  - 16
+hide:
+  - 13
+  - 17
+  - 18
+  - 19
   - 21
-  - 45
-  - 49
+  - 44
 ```
 
 ### Groups
