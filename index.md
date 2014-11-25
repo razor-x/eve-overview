@@ -92,10 +92,10 @@ see the source code for the version you are using or check in the EVE client.
     ([in development](https://github.com/razor-x/eve-overview/issues/1)).
 - ★ friendly
   - Works just like the hostile presets, but only shows friendlies.
-- ✫ fleet
+- ☆ fleet
   ([in development](https://github.com/razor-x/eve-overview/issues/3))
   - Works just like the hostile presets, but only shows fleet members.
-- ♖ sov
+- ♜ sov
   ([in development](https://github.com/razor-x/eve-overview/issues/2))
   - Presets tailored for sovereignty warfare.
 - ♣ pve
