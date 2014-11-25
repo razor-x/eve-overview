@@ -1,5 +1,9 @@
 # Changelog
 
+## HEAD
+
+- New ship class presets for hostile, friendly, and fleet members.
+
 ## 0.2.0
 
 - New state syntax for always shown states.
