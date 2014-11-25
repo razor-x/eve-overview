@@ -1,0 +1,11 @@
+---
+name: ""
+symbol: ✫ fleet
+level: 0
+groups:
+  - common-pvp
+  - _ship
+  - drones-combat
+  - drones-fighters
+states:
+  - friendly

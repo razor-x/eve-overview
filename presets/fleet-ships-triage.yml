@@ -1,0 +1,10 @@
+---
+name: triage
+symbol: ✫ fleet
+level: 3
+groups:
+  - common-minimal-ships
+  - _ship-carrier
+  - _ship-logistics
+states:
+  - friendly

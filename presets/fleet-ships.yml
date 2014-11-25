@@ -1,0 +1,9 @@
+---
+name: ships
+symbol: ✫ fleet
+level: 1
+groups:
+  - common-pvp
+  - _ship
+states:
+  - friendly

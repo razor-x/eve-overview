@@ -1,0 +1,10 @@
+---
+name: all capitals
+symbol: ✫ fleet
+level: 3
+groups:
+  - common-minimal-ships
+  - ships-capitals
+  - ships-super_capitals
+states:
+  - friendly
