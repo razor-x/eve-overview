@@ -58,8 +58,14 @@ you can download and import directly into the EVE client.
    The contents of this folder should be extracted to your `EVE/Overview` folder.
    If you are unsure of the location of the `Overview` folder,
    you can export your current overview and the client will show the export location.
-3. In the EVE client, reset your overview to the default.
-4. In the EVE client, import any of the extracted `.yaml` overview files.
+   (See step 4 below for where to find the option to "Export Overview Settings".)
+3. In the EVE client, select "Open Overview Settings"
+   from the overview menu button (top-left of the Overview window).
+4. Reset your overview to the default (press "Reset All Overview Settings" under the "Misc" tab).
+5. Import any of the extracted `.yaml` overview files: select "Import Overview Settings"
+   from the overview settings menu (top-left of the Overview Settings window) and select a file from the left.
+   Be sure to click "Check All" before importing to import all of the presets.
+   If you do not want to import every preset, simply deselect any you do not want.
 
 - Each `.yaml` file has a name of the form `[overview]-[tabs].yaml`.
   Each file with the same `[overview]` name will be identical
