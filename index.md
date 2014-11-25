@@ -29,6 +29,7 @@ subnav:
 __Don't die on patch day because you missed adding that new ship-type to one of your presets!__
 
 The EVE Online Overview Generator facilitates creating and maintaining overview packs.
+Download the comprehensive, tested, and up-to-date overview pack, or build your own!
 
 Essentially, you define a common set of LEGO bricks and build your overviews with them.
 
