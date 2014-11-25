@@ -1,7 +1,7 @@
 ---
-name: super capitals
+name: super-capitals
 symbol: ♞ hostile
-level: 2
+level: 3
 groups:
   - common-minimal-ships
   - ships-super_capitals

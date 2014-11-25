@@ -1,7 +1,7 @@
 ---
 name: sub-capitals
 symbol: ♞ hostile
-level: 2
+level: 3
 groups:
   - common-minimal-ships
   - ships-subcapitals
