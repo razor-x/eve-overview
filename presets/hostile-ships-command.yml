@@ -1,0 +1,10 @@
+---
+name: command ships
+symbol: ♞ hostile
+level: 2
+groups:
+  - common-minimal-ships
+  - _ship-command_ship
+  - _ship-industrial_command_ship
+states:
+  - hostile

@@ -1,0 +1,9 @@
+---
+name: battlecruisers
+symbol: ♞ hostile
+level: 2
+groups:
+  - common-minimal-ships
+  - ships-battlecruisers
+states:
+  - hostile

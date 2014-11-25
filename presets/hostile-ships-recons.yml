@@ -1,0 +1,10 @@
+---
+name: recons
+symbol: ♞ hostile
+level: 2
+groups:
+  - common-minimal-ships
+  - _ship-combat_recon_ship
+  - _ship-force_recon_ship
+states:
+  - hostile

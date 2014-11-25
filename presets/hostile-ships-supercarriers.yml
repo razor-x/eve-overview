@@ -1,0 +1,9 @@
+---
+name: supercarriers
+symbol: ♞ hostile
+level: 2
+groups:
+  - common-minimal-ships
+  - _ship-supercarrier
+states:
+  - hostile

@@ -1,0 +1,10 @@
+---
+name: tackle
+symbol: ♞ hostile
+level: 3
+groups:
+  - common-minimal-ships
+  - ships-frigates
+  - _ship-interdictor
+states:
+  - hostile

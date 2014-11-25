@@ -1,0 +1,10 @@
+---
+name: interdictors
+symbol: ♞ hostile
+level: 2
+groups:
+  - common-minimal-ships
+  - _ship-heavy_interdiction_cruiser
+  - _ship-interdictor
+states:
+  - hostile

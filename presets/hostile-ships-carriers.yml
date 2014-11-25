@@ -1,0 +1,9 @@
+---
+name: carriers
+symbol: ♞ hostile
+level: 2
+groups:
+  - common-minimal-ships
+  - _ship-carrier
+states:
+  - hostile

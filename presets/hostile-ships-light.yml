@@ -1,0 +1,13 @@
+---
+name: lightweight
+symbol: ♞ hostile
+level: 3
+groups:
+  - common-minimal-ships
+  - _ship-capsule
+  - _ship-shuttle
+  - ships-frigates
+  - ships-destroyers
+  - ships-cruisers
+states:
+  - hostile

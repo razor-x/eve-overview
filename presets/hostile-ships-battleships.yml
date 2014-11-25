@@ -1,0 +1,9 @@
+---
+name: battleships
+symbol: ♞ hostile
+level: 2
+groups:
+  - common-minimal-ships
+  - ships-battleships
+states:
+  - hostile

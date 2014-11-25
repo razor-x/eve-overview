@@ -1,0 +1,10 @@
+---
+name: heavyweight
+symbol: ♞ hostile
+level: 3
+groups:
+  - common-minimal-ships
+  - ships-battlecruisers
+  - ships-battleships
+states:
+  - hostile
