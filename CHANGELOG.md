@@ -3,6 +3,7 @@
 ## HEAD
 
 - New ship class presets for hostile, friendly, and fleet members.
+- Changed preset naming for clearer hierarchy.
 
 ## 0.2.0
 
