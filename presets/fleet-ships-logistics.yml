@@ -1,6 +1,6 @@
 ---
 name: logistics
-symbol: ✫ fleet
+symbol: ☆ fleet
 level: 2
 groups:
   - common-minimal-ships

@@ -1,6 +1,6 @@
 ---
 name: triage
-symbol: ✫ fleet
+symbol: ☆ fleet
 level: 3
 groups:
   - common-minimal-ships
