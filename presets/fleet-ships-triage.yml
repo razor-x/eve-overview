@@ -7,4 +7,4 @@ groups:
   - _ship-carrier
   - _ship-logistics
 states:
-  - friendly
+  - fleet

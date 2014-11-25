@@ -6,4 +6,4 @@ groups:
   - common-minimal-ships
   - _ship-logistics
 states:
-  - friendly
+  - fleet

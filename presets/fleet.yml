@@ -8,4 +8,4 @@ groups:
   - drones-combat
   - drones-fighters
 states:
-  - friendly
+  - fleet

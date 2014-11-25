@@ -6,4 +6,4 @@ groups:
   - common-minimal-ships
   - ships-subcapitals
 states:
-  - friendly
+  - fleet

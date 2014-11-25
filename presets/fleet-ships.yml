@@ -6,4 +6,4 @@ groups:
   - common-pvp
   - _ship
 states:
-  - friendly
+  - fleet
