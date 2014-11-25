@@ -88,7 +88,10 @@ def format_preset(preset)
 end
 
 def format_preset_name(preset)
-  "#{preset[:symbol]}" + ' -- ' * preset[:level] + "#{preset[:name]}"
+  return "#{preset[:symbol]} #{'- ' * 4}" if preset[:level] == 0 && preset[:name].empty?
+  return "#{preset[:symbol]} #{'- ' * 4}#{preset[:name]}" if preset[:level] == 0
+
+  "#{preset[:symbol]}#{' - ' * (4 - preset[:level])}#{preset[:name]}"
 end
 
 def format_tab_name(tab)
