@@ -1,7 +1,7 @@
 ---
 - name: ✈
   color: FFFFBB33
-  overview: travel
+  overview: travel-pvp
   bracket: brackets-all
 
 - name: hostile

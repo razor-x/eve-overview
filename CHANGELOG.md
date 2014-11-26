@@ -1,5 +1,9 @@
 # Changelog
 
+## HEAD
+
+- Set pvp travel preset as travel tab in PvP tabs.
+
 ## 0.3.0
 
 - New ship class presets for hostile, friendly, and fleet members.
