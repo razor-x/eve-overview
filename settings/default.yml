@@ -3,4 +3,4 @@ userSettings:
   - - hideCorpTicker
     - true
   - - overviewBroadcastsToTop
-    - true
+    - false

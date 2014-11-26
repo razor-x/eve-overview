@@ -3,6 +3,7 @@
 ## HEAD
 
 - Set pvp travel preset as travel tab in PvP tabs.
+- Disable moving broadcasted entries to top.
 
 ## 0.3.0
 
