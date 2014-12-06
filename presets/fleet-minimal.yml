@@ -1,0 +1,10 @@
+---
+name: minimal
+symbol: ☆ fleet
+level: 1
+groups:
+  - common-minimal
+  - _celestial-sun
+  - _ship
+states:
+  - fleet

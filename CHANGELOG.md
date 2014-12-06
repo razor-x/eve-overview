@@ -1,5 +1,9 @@
 # Changelog
 
+## HEAD
+
+- Add fleet and friendly minimal presets.
+
 ## 0.3.1
 
 - Set pvp travel preset as travel tab in PvP tabs.
