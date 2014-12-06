@@ -113,6 +113,7 @@ see the source code for the version you are using or check in the EVE client.
   - Utility presets.
   - Includes a warpout preset for escaping to celestials.
   - The loot preset shows hostiles while the salvage preset does not.
+  - Small gang presets show both friendlies and hostiles.
 - ❏ brackets
   - Presets designed to be loaded as brackets.
 
