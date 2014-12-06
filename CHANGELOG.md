@@ -2,6 +2,7 @@
 
 ## HEAD
 
+- Add small gang presets.
 - Add fleet and friendly minimal presets.
 
 ## 0.3.1

@@ -1,0 +1,12 @@
+---
+name: small gang
+symbol: ✪ extra
+level: 1
+groups:
+  - common-pvp
+  - _ship
+  - drones-combat
+  - drones-fighters
+  - rats
+states:
+  - all
