@@ -1,6 +1,6 @@
 # Changelog
 
-## HEAD
+## 0.4.0
 
 - Add small gang presets.
 - Add fleet and friendly minimal presets.
