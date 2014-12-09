@@ -1,5 +1,9 @@
 # Changelog
 
+## HEAD
+
+- Add tactical destroyers.
+
 ## 0.4.0
 
 - Add small gang presets.
