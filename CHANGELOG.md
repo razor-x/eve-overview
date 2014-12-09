@@ -1,7 +1,8 @@
 # Changelog
 
-## HEAD
+## 0.5.0
 
+- Update for Rhea.
 - Add tactical destroyers.
 
 ## 0.4.0
