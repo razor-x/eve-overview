@@ -52,6 +52,10 @@ This project maintains several overview groups and presets.
 Each release provides a set of default overview profiles
 you can download and import directly into the EVE client.
 
+You can join the in-game channel `Overview Generator` for one-click overview links,
+however each link can only include five presets,
+so I recommend downloading and importing the full pack (see below).
+
 #### Installation or upgrade
 
 1. Download the latest release using the button at the top of this page.
@@ -645,6 +649,11 @@ I didn't intend for this to be generally accessible to everyone.
 If you have any development or general hacking experience
 the listed requirements should be familiar or at lease approachable.
 
+#### Where can I get help?
+
+If you found a bug or have a feature request, create a new issue with the [GitHub issue tracker].
+If you want real-time help or have general questions, join the [Gitter chat].
+
 #### Can I contribute?
 
 Yes. This project (including this project site)
@@ -653,11 +662,14 @@ Pull requests and issue reports are welcome.
 Keep in mind that everyone has a different opinion on what makes a good overview,
 so I can't possibly promise to incorporate all suggestions.
 
+For real-time developer chatter, join the [Gitter chat].
+
 If you find this useful, I will accept ISK donations
 to the in-game corporation `Measure Zero`.
 
 [Agony Unleashed]: http://www.agony-unleashed.com/
 [DRY]: https://en.wikipedia.org/wiki/Don't_repeat_yourself
+[Gitter chat]: https://gitter.im/razor-x/eve-overview
 
 <a name="changelog"></a>
 <a data-magellan-destination="changelog"></a>
