@@ -1,5 +1,9 @@
 # Changelog
 
+## HEAD
+
+- Update rake to 10.4.
+
 ## 2.4.0
 
 - Check-in Gemfile.lock.
