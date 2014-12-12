@@ -2,6 +2,7 @@
 
 ## HEAD
 
+- Update highlightjs to 8.4.
 - Update Jekyll to 2.5.
 - Update uglifier to 2.6.
 - Update rake to 10.4.
