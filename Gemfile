@@ -9,7 +9,7 @@ gem 'jekyll', '~> 2.4.0'
 
 # Jekyll::AssetsPlugin and dependencies
 gem 'jekyll-assets', '~> 0.10.0'
-gem 'uglifier', '~> 2.5.0'
+gem 'uglifier', '~> 2.6.0'
 gem 'coffee-script', '2.3.0'
 gem 'compass', '~> 1.0.1'
 

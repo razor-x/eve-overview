@@ -2,6 +2,7 @@
 
 ## HEAD
 
+- Update uglifier to 2.6.
 - Update rake to 10.4.
 
 ## 2.4.0
