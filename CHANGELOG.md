@@ -1,6 +1,6 @@
 # Changelog
 
-## HEAD
+## 2.4.1
 
 - Update highlightjs to 8.4.
 - Update Jekyll to 2.5.
