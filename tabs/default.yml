@@ -5,7 +5,7 @@
   bracket: brackets-all
 
 - name: primary
-  color: FF33B5E5
+  color: FFFF4444
   overview: hostile-minimal
   bracket: brackets-all
 
@@ -20,6 +20,6 @@
   bracket: brackets-all
 
 - name: disengage
-  color: FFFF4444
+  color: FF33B5E5
   overview: extra-warpout
   bracket: brackets-all

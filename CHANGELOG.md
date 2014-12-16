@@ -1,5 +1,9 @@
 # Changelog
 
+## HEAD
+
+- Swap teal and red colors on tab titles.
+
 ## 0.5.0
 
 - Update for Rhea.

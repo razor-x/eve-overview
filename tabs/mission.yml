@@ -5,7 +5,7 @@
   bracket: brackets-all
 
 - name: mission
-  color: FF33B5E5
+  color: FFFF4444
   overview: pve
   bracket: brackets-all
 
@@ -20,6 +20,6 @@
   bracket: brackets-all
 
 - name: salvage
-  color: FFFF4444
+  color: FF33B5E5
   overview: extra-salvage
   bracket: brackets-all
