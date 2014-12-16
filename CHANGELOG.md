@@ -1,6 +1,6 @@
 # Changelog
 
-## HEAD
+## 0.5.1
 
 - Swap teal and red colors on tab titles.
 
