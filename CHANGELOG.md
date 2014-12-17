@@ -2,6 +2,7 @@
 
 ## HEAD
 
+- Update Foundation to 5.0.0.
 - Update jQuery to 2.1.2.
 - Update mini_magick to 4.0.1.
 

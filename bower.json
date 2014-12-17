@@ -3,7 +3,7 @@
   "dependencies": {
     "fastclick": "1.0.3",
     "highlightjs": "8.4.0",
-    "foundation": "5.4.7",
+    "foundation": "5.5.0",
     "foundation-icon-fonts": "d596a3cfb3c0b8b46e56879ce9b4514efff4a60b",
     "jquery": "2.1.2",
     "normalize-css": "3.0.2",
