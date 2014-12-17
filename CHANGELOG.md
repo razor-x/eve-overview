@@ -1,5 +1,9 @@
 # Changelog
 
+## HEAD
+
+- Update mini_magick to 4.0.1.
+
 ## 2.4.1
 
 - Update highlightjs to 8.4.
