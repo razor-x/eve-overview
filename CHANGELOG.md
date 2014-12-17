@@ -2,6 +2,7 @@
 
 ## HEAD
 
+- Update jQuery to 2.1.2.
 - Update mini_magick to 4.0.1.
 
 ## 2.4.1
