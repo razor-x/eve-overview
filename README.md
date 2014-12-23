@@ -35,7 +35,7 @@ Lots of baked in features that work even if you don't want to use Foundation.
 
   * Syntax highlighting with [highlight.js](http://highlightjs.org/).
   * Load fonts with [Web Font Loader](https://github.com/typekit/webfontloader).
-  * Load JavaScript asynchronously with [yepnope](http://yepnopejs.com/).
+  * Load JavaScript asynchronously with [HeadJS](http://headjs.com).
   * [Load GitHub Gists asynchronously](https://gist.github.com/razor-x/8288761).
   * Meta data system for SEO and social media support.
 

@@ -1,5 +1,9 @@
 # Changelog
 
+## HEAD
+
+- Replace yepnope with HeadJS.
+
 ## 2.5.0
 
 - Update Foundation to 5.5.0.

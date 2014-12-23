@@ -32,19 +32,30 @@
 {% capture site_javascript %}
   <script>
     'use strict';
-    yepnope([
+
+     function load_app() {
+      if (
+      {% for lib in site.cdn.libs %}
+        {{ lib[1] }}{% unless forloop.last %} && {% endunless %}
+      {% endfor %}
+      ) { head.load('{% asset_path app.js %}') };
+    };
+
+    head.load([
     {% for lib in site.cdn.libs %}
-      {
-        load: '{% if site.cdn_enabled %}{{ lib[0] }}{% else %}{{ lib[2] | asset_path }}{% endif %}',
-        complete: function () {
-          if ( {{ lib[1] }} ) {
-            yepnope('{{ lib[2] | asset_path }}');
-          }
-        }
-      },
+      {'asset_{{ forloop.index0 }}': '{% if site.cdn_enabled %}{{ lib[0] }}{% else %}{{ lib[2] | asset_path }}{% endif %}'}
+      {% unless forloop.last %},{% endunless %}
     {% endfor %}
-      '{% asset_path app.js %}'
     ]);
+
+  {% for lib in site.cdn.libs %}
+    head.ready('asset_{{ forloop.index0 }}', function() {
+      if ( !{{ lib[1] }} ) {
+        head.load('{{ lib[2] | asset_path }}', load_app);
+      } else { load_app(); };
+    });
+  {% endfor %}
+
   {% if site.social.facebook.enabled %}
     {% asset vendor/social-facebook %}
   {% endif %}
