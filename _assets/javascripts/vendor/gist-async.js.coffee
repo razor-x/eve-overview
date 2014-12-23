@@ -1,7 +1,7 @@
 # Load GitHub Gists asynchronously
 # and optionally specify which file to show.
 #
-# Requires jQuery and Modernizr.load or yepnope.
+# Requires jQuery.
 #
 # Based on Mark Selby's async-gists.js:
 # https://gist.github.com/markselby/7209751
@@ -19,15 +19,13 @@ $ ->
   code = []
   stylesheets = []
 
-  # Set the asynchronous asset loader function.
-  loader =
-    if yepnope?
-      yepnope
-    else if Modernizr?
-      Modernizr.load if Modernizr.load?
-
-  unless loader?
-    elements.addClass('loading-failed')
+  # The asynchronous asset loader function.
+  loader = (url) ->
+    link = document.createElement 'link'
+    link.type = 'text/css'
+    link.rel = 'stylesheet'
+    link.href = url
+    document.getElementsByTagName('head')[0].appendChild link
     return
 
   elements.addClass('loading')
