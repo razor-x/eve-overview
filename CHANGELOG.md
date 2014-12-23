@@ -1,5 +1,11 @@
 # Changelog
 
+## 2.5.0
+
+- Update Foundation to 5.5.0.
+- Update jQuery to 2.1.3.
+- Update mini_magick to 4.0.1.
+
 ## 2.4.1
 
 - Update highlightjs to 8.4.
