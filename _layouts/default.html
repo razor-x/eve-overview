@@ -10,6 +10,7 @@
   {% stylesheet app %}
   {% javascript head %}
   <script>{% asset fonts.js %}</script>
+  <script>{% asset load.js %}</script>
 </head>
 
 <body>
@@ -27,8 +28,6 @@
 {% if site.social.facebook.enabled %}
   <div id="fb-root"></div>
 {% endif %}
-
-  <script>{% asset load.js %}</script>
 
   <script>
     'use strict';
