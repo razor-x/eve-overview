@@ -31,7 +31,6 @@
 
   <script>{% asset load.js %}</script>
 
-{% capture site_javascript %}
   <script>
     'use strict';
   {% if site.social.facebook.enabled %}
@@ -58,7 +57,5 @@
     {% asset vendor/piwik.js %}
   {% endif %}
   </script>
-{% endcapture %}
-{{ site_javascript | strip_newlines }}
 </body>
 </html>
