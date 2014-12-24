@@ -6,7 +6,7 @@ load_app = ->
 
 head.load [
 <% site.config['cdn']['libs'].each_with_index do |lib, i| %>
-  asset_<%= i %>: '<%= site.config["cdn_enabled"] ? lib[0] : site.asset_path(lib[2]) %>'
+  {asset_<%= i %>: '<%= site.config["cdn_enabled"] ? lib[0] : site.asset_path(lib[2]) %>'}
 <% end %>
 ]
 
