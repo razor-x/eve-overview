@@ -7,10 +7,9 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   {% include meta.html %}
   <link type="text/plain" rel="author" href="{{ site.baseurl }}/humans.txt" />
-  <script src="https://ajax.googleapis.com/ajax/libs/webfont/1.5.0/webfont.js"></script>
   {% stylesheet app %}
-  <script>{% asset fonts %}</script>
   {% javascript head %}
+  <script>{% asset fonts.js %}</script>
 </head>
 
 <body>
@@ -40,47 +39,33 @@
   <div id="fb-root"></div>
 {% endif %}
 
-{% capture site_javascript %}
+  <script>{% asset load.js %}</script>
+
   <script>
     'use strict';
-    yepnope([
-    {% for lib in site.cdn.libs %}
-      {
-        load: '{% if site.cdn_enabled %}{{ lib[0] }}{% else %}{{ lib[2] | asset_path }}{% endif %}',
-        complete: function () {
-          if ( {{ lib[1] }} ) {
-            yepnope('{{ lib[2] | asset_path }}');
-          }
-        }
-      },
-    {% endfor %}
-      '{% asset_path app.js %}'
-    ]);
   {% if site.social.facebook.enabled %}
-    {% asset vendor/social-facebook %}
+    {% asset vendor/social-facebook.js %}
   {% endif %}
 
   {% if site.social.google.enabled %}
-    {% asset vendor/social-google %}
+    {% asset vendor/social-google.js %}
   {% endif %}
 
   {% if site.social.twitter.enabled %}
-    {% asset vendor/social-twitter %}
+    {% asset vendor/social-twitter.js %}
   {% endif %}
 
   {% if page.comments and site.disqus %}
-    {% asset vendor/disqus %}
+    {% asset vendor/disqus.js %}
   {% endif %}
 
   {% if site.google_analytics %}
-    {% asset vendor/google-analytics %}
+    {% asset vendor/google-analytics.js %}
   {% endif %}
 
   {% if site.piwik %}
-    {% asset vendor/piwik %}
+    {% asset vendor/piwik.js %}
   {% endif %}
   </script>
-{% endcapture %}
-{{ site_javascript | strip_newlines }}
 </body>
 </html>

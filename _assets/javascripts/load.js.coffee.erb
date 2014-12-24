@@ -1,0 +1,19 @@
+'use strict'
+
+load_app = ->
+  if <%= site.config['cdn']['libs'].transpose[1].join ' && ' %>
+    head.load '<%= site.asset_path "app.js" %>'
+
+head.load [
+<% site.config['cdn']['libs'].each_with_index do |lib, i| %>
+  {asset_<%= i %>: '<%= site.config["cdn_enabled"] ? lib[0] : site.asset_path(lib[2]) %>'}
+<% end %>
+]
+
+<% site.config['cdn']['libs'].each_with_index do |lib, i| %>
+head.ready 'asset_<%= i %>', ->
+  if !<%= lib[1] %>
+    head.load '<%= site.asset_path lib[2] %>', load_app
+  else
+    load_app()
+<% end %>

@@ -39,12 +39,14 @@ assets:
     css: sass
     js: uglifier
 
-# Use a cdn to load some libraries.
+# Use a CDN to load some libraries.
+# Libraries are loaded first, asynchronously,
+# and should not depend on each other.
 cdn_enabled: true
 cdn:
-  # [ url, fallback test, local asset fallback path ]
+  # [ url, loaded check, local asset fallback path ]
   libs:
-    - [ "https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js", "!window.jQuery", "jquery/dist/jquery" ]
+    - [ "https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js", "window.jQuery", "jquery/dist/jquery" ]
 
 # Keywords will be merged with categories, tags, and page keywords.
 keywords: [ eve online, eve, overview, overviews, overview generator, tool, yaml, yml, ruby, dry ]
