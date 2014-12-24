@@ -2,6 +2,7 @@
 
 ## HEAD
 
+- Optimize script loading.
 - Replace yepnope with HeadJS.
 
 ## 2.5.0
