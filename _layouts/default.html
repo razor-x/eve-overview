@@ -11,7 +11,7 @@
   <script>{% asset load.js %}</script>
 </head>
 
-<body>
+<body style="display:none;">
   <header>
     <h1><a href="{{ site.baseurl }}/">{{ site.name }}</a></h1>
   </header>
@@ -32,7 +32,6 @@
 
   <script>
     'use strict';
-    document.getElementsByTagName('body')[0].style.display = 'none'
 
   {% if site.social.facebook.enabled %}
     {% asset vendor/social-facebook.js %}
