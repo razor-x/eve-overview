@@ -1,5 +1,9 @@
 # Changelog
 
+## HEAD
+
+- Require fonts in head.js instead of inline.
+
 ## 2.6.0
 
 - Enable autosize for Jekyll Assets.
