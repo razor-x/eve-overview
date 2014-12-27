@@ -2,6 +2,7 @@
 
 ## HEAD
 
+- Travis CI updates.
 - Require fonts in head.js instead of inline.
 
 ## 2.6.0

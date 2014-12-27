@@ -3,6 +3,7 @@ language: [ ruby, node_js ]
 rvm: [ 2.2.0 ]
 node_js: [ 0.10 ]
 cache: bundler
+sudo: false
 
 before_script:
   - npm install bower -g
