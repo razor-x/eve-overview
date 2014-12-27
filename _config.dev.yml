@@ -5,6 +5,7 @@ assets:
   baseurl: /assets/
   cachebust: none
   cache: false
+  gzip: []
   compress:
     css: null
     js: null
