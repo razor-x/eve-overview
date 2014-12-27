@@ -1,7 +1,9 @@
 # Changelog
 
-## HEAD
+## 2.6.0
 
+- Enable autosize for Jekyll Assets.
+- Load app.css with HeadJS.
 - Optimize script loading.
 - Replace yepnope with HeadJS.
 

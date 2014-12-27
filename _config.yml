@@ -38,6 +38,7 @@ assets:
   compress:
     css: sass
     js: uglifier
+  autosize: true
 
 # Use a CDN to load some libraries.
 # Libraries are loaded first, asynchronously,

@@ -7,9 +7,10 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   {% include meta.html %}
   <link type="text/plain" rel="author" href="{{ site.baseurl }}/humans.txt" />
-  {% stylesheet app %}
   {% javascript head %}
+  <script>head.load('{% asset_path app.css %}');</script>
   <script>{% asset fonts.js %}</script>
+  <script>{% asset load.js %}</script>
 </head>
 
 <body>
@@ -38,8 +39,6 @@
 {% if site.social.facebook.enabled %}
   <div id="fb-root"></div>
 {% endif %}
-
-  <script>{% asset load.js %}</script>
 
   <script>
     'use strict';
