@@ -11,7 +11,7 @@
   <script>{% asset load.js %}</script>
 </head>
 
-<body>
+<body style="display:none;">
   <header>
     <a name="top"></a>
     <h1 data-magellan-destination="top"><a href="{{ site.baseurl }}/">{{ site.name }}</a></h1>
@@ -40,7 +40,6 @@
 
   <script>
     'use strict';
-    document.getElementsByTagName('body')[0].style.display = 'none'
 
   {% if site.social.facebook.enabled %}
     {% asset vendor/social-facebook.js %}

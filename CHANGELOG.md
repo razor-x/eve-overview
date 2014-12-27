@@ -1,5 +1,9 @@
 # Changelog
 
+## 2.6.2
+
+- Fix body display bug.
+
 ## 2.6.1
 
 - Avoid flash of unstyled content due to asynchronously loading CSS.
