@@ -1,6 +1,6 @@
 # Changelog
 
-## HEAD
+## 2.6.1
 
 - Avoid flash of unstyled content due to asynchronously loading CSS.
 - Travis CI updates.
