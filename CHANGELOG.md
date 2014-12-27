@@ -1,6 +1,6 @@
 # Changelog
 
-## HEAD
+## 2.6.2
 
 - Fix body display bug.
 
