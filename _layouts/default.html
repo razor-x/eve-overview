@@ -8,8 +8,6 @@
   {% include meta.html %}
   <link type="text/plain" rel="author" href="{{ site.baseurl }}/humans.txt" />
   {% javascript head %}
-  <script>head.load('{% asset_path app.css %}');</script>
-  <script>{% asset fonts.js %}</script>
   <script>{% asset load.js %}</script>
 </head>
 
@@ -42,6 +40,8 @@
 
   <script>
     'use strict';
+    document.getElementsByTagName('body')[0].style.display = 'none'
+
   {% if site.social.facebook.enabled %}
     {% asset vendor/social-facebook.js %}
   {% endif %}
