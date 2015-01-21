@@ -1,6 +1,6 @@
 # Changelog
 
-## HEAD
+## 2.7.1
 
 Version 2.6.1 introduced a change that would
 print your deploy token in the Travis CI build.
