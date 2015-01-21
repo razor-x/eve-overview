@@ -1,6 +1,6 @@
 # Changelog
 
-## HEAD
+## 2.7.3
 
 - Fix issue where display property on body could cause display bugs.
 
