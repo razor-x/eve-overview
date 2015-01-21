@@ -1,14 +1,24 @@
 {
-  "name": "Jekyll & ZURB",
+  "name": "jekyll-and-zurb",
+  "version": "2.7.1",
+  "homepage": "https://github.com/razor-x/jekyll-and-zurb",
+  "authors": [
+    "Evan Sosenko <razorx@evansosenko.com>"
+  ],
+  "description": "Jekyll skeleton built on ZURB Foundation.",
+  "keywords": [
+    "zurb",
+    "foundation",
+    "jekyll"
+  ],
+  "license": "MIT",
   "dependencies": {
     "fastclick": "1.0.3",
-    "highlightjs": "8.4.0",
-    "foundation": "5.5.0",
     "foundation-icon-fonts": "d596a3cfb3c0b8b46e56879ce9b4514efff4a60b",
-    "jquery": "2.1.3",
-    "webfontloader": "1.5.13",
+    "foundation": "5.5.0",
+    "headjs": "1.0.3",
+    "highlightjs": "8.4.0",
     "normalize-css": "3.0.2",
-    "modernizr": "2.8.3",
-    "headjs": "1.0.3"
+    "webfontloader": "1.5.13"
   }
 }

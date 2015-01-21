@@ -1,5 +1,9 @@
 # Changelog
 
+## HEAD
+
+- Regenerate bower.json.
+
 ## 2.7.1
 
 Version 2.6.1 introduced a change that would
