@@ -23,6 +23,7 @@ Lots of baked in features that work even if you don't want to use Foundation.
     with [Travis CI](https://travis-ci.org/).
   * Easily incorporate the source from other web projects as
     subdirectories in your site (see sub_content in `_config.yml`).
+  * [LiveReload](http://livereload.com/) support. Just run `guard`.
 
 ### Running [Foundation by ZURB](http://foundation.zurb.com/).
 
@@ -42,6 +43,7 @@ Lots of baked in features that work even if you don't want to use Foundation.
   * Load JavaScript asynchronously with [HeadJS](http://headjs.com).
   * [Load GitHub Gists asynchronously](https://gist.github.com/razor-x/8288761).
   * Meta data system for SEO and social media support.
+  * Complete favicon set from [Favic-o-matic](http://www.favicomatic.com/).
 
 ### Analytics and social features.
 

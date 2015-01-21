@@ -1,5 +1,10 @@
 # Changelog
 
+## 2.7.0
+
+- Add favicon.
+- Add LiveReload support.
+
 ## 2.6.2
 
 - Fix body display bug.
