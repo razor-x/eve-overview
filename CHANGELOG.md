@@ -1,6 +1,6 @@
 # Changelog
 
-## HEAD
+## 2.7.0
 
 - Add favicon.
 - Add LiveReload support.
