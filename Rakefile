@@ -52,29 +52,29 @@ task :build do
 end
 
 # rake test
-desc 'Generate the site and start a server (no auto generate).'
+desc 'Generate the site and start a server (no auto-regeneration).'
 task :test do
-  spawn 'jekyll', 'serve', '--config', testing_config
+  spawn 'jekyll', 'serve', '--no-watch', '--config', testing_config
 end
 
 # rake watch
 desc 'Start a server and watch the site for changes.'
 task :watch do
-  spawn 'jekyll', 'serve', '--watch', '--config', testing_config
+  spawn 'jekyll', 'serve', '--config', testing_config
 end
 
 # rake dev
 desc 'Start a server and watch the site for changes.' + "\n" +
      'Loads _config.dev.yml as an additional config file.'
 task :dev do
-  spawn 'jekyll', 'serve', '--watch', '--config', dev_config
+  spawn 'jekyll', 'serve', '--config', dev_config
 end
 
 # rake draft
 desc 'Start a server and watch the site for changes.' + "\n" +
      'Include all drafts in site.'
 task :draft do
-  spawn 'jekyll', 'serve', '--watch', '--drafts', '--config', testing_config
+  spawn 'jekyll', 'serve', '--drafts', '--config', testing_config
 end
 
 # rake deploy
