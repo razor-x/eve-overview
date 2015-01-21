@@ -1,6 +1,6 @@
 # Changelog
 
-## HEAD
+## 2.7.2
 
 - Regenerate bower.json.
 
