@@ -39,6 +39,7 @@ Lots of baked in features that work even if you don't want to use Foundation.
   * Load JavaScript asynchronously with [HeadJS](http://headjs.com).
   * [Load GitHub Gists asynchronously](https://gist.github.com/razor-x/8288761).
   * Meta data system for SEO and social media support.
+  * Complete favicon set from [Favic-o-matic](http://www.favicomatic.com/).
 
 ### Analytics and social features.
 

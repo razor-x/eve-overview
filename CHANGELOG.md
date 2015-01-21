@@ -2,6 +2,7 @@
 
 ## HEAD
 
+- Add favicon.
 - Add LiveReload support.
 
 ## 2.6.2

@@ -25,6 +25,7 @@
 <link rel="canonical" href="{{ site.domain }}{{ url }}" />
 <meta property="og:url" content="{{ site.domain }}{{ url }}" />
 <meta property="og:site_name" content="{{ site.name }}" />
+<meta name="application-name" content="{{ site.name }}"/>
 
 <meta property="og:updated_time" content="{% if page.meta.update %}{{ page.meta.update | date_to_xmlschema }}{% elsif page.date %}{{ page.date | date_to_xmlschema }}{% else %} {{ site.time | date_to_xmlschema }}{% endif %}" />
 
