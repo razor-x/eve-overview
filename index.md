@@ -41,7 +41,10 @@ into many files which can be reused to create custom overviews
 based on a set of common groups, presets, settings, etc.
 The modular design makes updating, sharing, and customizing simple.
 
-Read on for the details or check out the [FAQ](#faq).
+Read on for the details or check out the [FAQ](#faq)
+and [thread on the official EVE Online forums][thread].
+
+[thread]: https://forums.eveonline.com/default.aspx?g=posts&m=5289211
 
 <a name="usage"></a>
 <h2 data-magellan-destination="usage">How can I use this?</h2>
