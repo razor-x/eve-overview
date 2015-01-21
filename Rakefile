@@ -159,12 +159,16 @@ task :travis do
     sh %Q(rsync -rt --del --exclude=".git" --exclude=".nojekyll" #{destination} #{dir})
     Dir.chdir dir do
       # setup credentials so Travis CI can push to GitHub
-      sh "git config user.name '#{ENV['GIT_NAME']}'"
-      sh "git config user.email '#{ENV['GIT_EMAIL']}'"
+      verbose false do
+        sh "git config user.name '#{ENV['GIT_NAME']}'"
+        sh "git config user.email '#{ENV['GIT_EMAIL']}'"
+      end
 
       sh 'git add --all'
       sh "git commit -m 'Built from #{rev}'."
-      sh "git push -q #{deploy_url} #{deploy_branch}"
+      verbose false do
+        sh "git push -q #{deploy_url} #{deploy_branch}"
+      end
     end
   end
 end
