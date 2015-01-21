@@ -1,17 +1,7 @@
 html
   overflow-y: scroll
 
-// Foundation 5.2.1 sets
-// height: 100%
-// which breaks the layout
 body
-  height: auto
-
-body
-  padding: 1rem
-  @media #{$medium-up}
-    padding: 5rem
-
   > footer p
     margin-bottom: 0
     color: $monsoon
@@ -37,6 +27,7 @@ article.markdown-body h2
 #content, body > header, body > footer
   max-width: nth($large-range, 1)
   margin: auto
+  padding: 1rem
 
 body > footer
   margin-top: 1rem
