@@ -16,10 +16,14 @@ exclude:
   - VERSION
   - Gemfile.lock
   - Gemfile
+  - Guardfile
   - Rakefile
   - bower.json
   - bower_components
   - vendor
+
+livereload:
+  port: 35729
 
 gems:
   - json

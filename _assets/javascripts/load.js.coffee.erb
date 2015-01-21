@@ -1,5 +1,11 @@
 'use strict'
 
+<% if site.config['livereload'] %>
+<% if site.config['livereload']['enable'] %>
+head.load "#{window.location.protocol}//#{window.location.hostname}:<%= site.config['livereload']['port'] %>/livereload.js"
+<% end %>
+<% end %>
+
 head.load '<%= site.asset_path "app.css" %>', ->
   document.getElementsByTagName('body')[0].style.display = 'initial'
 

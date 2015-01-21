@@ -19,6 +19,7 @@ Lots of baked in features that work even if you don't want to use Foundation.
     with [Travis CI](https://travis-ci.org/).
   * Easily incorporate the source from other web projects as
     subdirectories in your site (see sub_content in `_config.yml`).
+  * [LiveReload](http://livereload.com/) support. Just run `guard`.
 
 ### Running [Foundation by ZURB](http://foundation.zurb.com/).
 

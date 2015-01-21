@@ -4,6 +4,10 @@ host: 0.0.0.0
 
 assets:
   baseurl: /assets/
+  gzip: []
 
 google_analytics: false
 piwik: false
+
+livereload:
+  enable: true

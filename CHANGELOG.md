@@ -1,5 +1,9 @@
 # Changelog
 
+## HEAD
+
+- Add LiveReload support.
+
 ## 2.6.2
 
 - Fix body display bug.
