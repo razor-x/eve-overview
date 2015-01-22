@@ -1,5 +1,9 @@
 # Changelog
 
+## HEAD
+
+- Update Facebook Like Button code.
+
 ## 2.7.3
 
 - Fix issue where display property on body could cause display bugs.
