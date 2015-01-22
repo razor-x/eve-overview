@@ -1,6 +1,6 @@
 # Changelog
 
-## HEAD
+## 2.7.5
 
 - Don't use async loading for critial assets
   to prevent flash of unstyled content.
