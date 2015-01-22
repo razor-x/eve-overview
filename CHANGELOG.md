@@ -1,5 +1,10 @@
 # Changelog
 
+## HEAD
+
+- Don't use async loading for critial assets
+  to prevent flash of unstyled content.
+
 ## 2.7.4
 
 - Update Google +1 Button code.

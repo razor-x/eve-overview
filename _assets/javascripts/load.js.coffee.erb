@@ -6,9 +6,6 @@ head.load "#{window.location.protocol}//#{window.location.hostname}:<%= site.con
 <% end %>
 <% end %>
 
-head.load '<%= site.asset_path "app.css" %>', ->
-  document.getElementsByTagName('body')[0].style.visibility = 'initial'
-
 load_app = ->
   if <%= site.config['cdn']['libs'].transpose[1].join ' && ' %>
     head.load '<%= site.asset_path "app.js" %>'
