@@ -2,6 +2,7 @@
 
 ## HEAD
 
+- Update Google +1 Button code.
 - Update Facebook Like Button code.
 
 ## 2.7.3
