@@ -1,6 +1,6 @@
 # Changelog
 
-## HEAD
+## 2.7.4
 
 - Update Google +1 Button code.
 - Update Facebook Like Button code.
