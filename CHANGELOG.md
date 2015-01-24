@@ -3,6 +3,7 @@
 ## HEAD
 
 - Fix body visibility.
+- Fix Facebook Like Button aync issue.
 
 ## 2.7.5
 
