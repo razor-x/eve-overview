@@ -24,7 +24,7 @@ $ ->
       @style.setProperty 'visibility', 'visible', 'important'
 
   <%= if site.config['social']['facebook']['enabled'] then
-    "FB.Event.subscribe 'xfbml.render', -> recordLoaded 'facebook'"
+    "window.fbAsyncInit = -> FB.Event.subscribe('xfbml.render', -> recordLoaded 'facebook')"
   end unless site.config['social']['facebook'].nil? %>
 
   <%= if site.config['social']['google']['enabled'] then

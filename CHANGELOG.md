@@ -1,5 +1,10 @@
 # Changelog
 
+## 2.7.6
+
+- Fix body visibility.
+- Fix Facebook Like Button aync issue.
+
 ## 2.7.5
 
 - Don't use async loading for critial assets
