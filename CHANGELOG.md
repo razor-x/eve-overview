@@ -1,6 +1,6 @@
 # Changelog
 
-## HEAD
+## 2.7.6
 
 - Fix body visibility.
 - Fix Facebook Like Button aync issue.
