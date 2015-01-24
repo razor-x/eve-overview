@@ -1,5 +1,9 @@
 # Changelog
 
+## HEAD
+
+- Fix body visibility.
+
 ## 2.7.5
 
 - Don't use async loading for critial assets
