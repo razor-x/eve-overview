@@ -16,9 +16,6 @@
     end unless site.config['picture'].nil?
 %>
 
-# Load this when using social buttons.
-<% if site.config['social'] then require_asset 'social-buttons' end %>
-
 # Invoke Foundation.
 $(document).foundation()
 
