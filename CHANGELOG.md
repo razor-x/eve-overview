@@ -1,5 +1,10 @@
 # Changelog
 
+## 2.8.0
+
+- Update Foundation to 5.5.1.
+- Remove social button fade-in (kept breaking).
+
 ## 2.7.6
 
 - Fix body visibility.
