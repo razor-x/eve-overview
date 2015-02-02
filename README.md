@@ -11,6 +11,9 @@ Demo at [io.evansosenko.com/jekyll-and-zurb/](https://io.evansosenko.com/jekyll-
 
 Lots of baked in features that work even if you don't want to use Foundation.
 
+If you like this, check out the sister project
+[Jekyll & deck.js](https://github.com/razor-x/jekyll-and-deck.js).
+
 ### Bare bones [Jekyll](http://jekyllrb.com/) site or blog: HTML5 & CSS3 ready.
 
   * Basic [Rake](https://github.com/jimweirich/rake) tasks with support
