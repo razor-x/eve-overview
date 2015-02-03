@@ -1,10 +1,6 @@
 # Changelog
 
-## 2.8.2
-
-- Travis CI optimizations.
-
-## 2.8.1
+## HEAD
 
 - Fix Twitter button width bug.
 
