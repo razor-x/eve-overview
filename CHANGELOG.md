@@ -1,5 +1,9 @@
 # Changelog
 
+## HEAD
+
+- Fix Twitter button width bug.
+
 ## 2.8.0
 
 - Update Foundation to 5.5.1.
