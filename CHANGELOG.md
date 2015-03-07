@@ -2,6 +2,7 @@
 
 ## HEAD
 
+- Add drifters and roaming sleepers.
 - Add Mobile Vault.
 
 ## 0.5.1

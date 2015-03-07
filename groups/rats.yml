@@ -6,6 +6,8 @@ include:
   - _entity-protective_sentry_gun
   - _entity-tutorial_drone
   - _entity-rogue_drone
+  - _entity-roaming_sleepers_cruiser
+  - _entity-drifters_battleship
   - _npc-mission_npc
   - _npc-pirate_npc
   - entities-asteroid_mordus_legion
