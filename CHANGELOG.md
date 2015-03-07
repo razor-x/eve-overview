@@ -1,6 +1,6 @@
 # Changelog
 
-## HEAD
+## 0.6.0
 
 - Add drifters and roaming sleepers.
 - Add Mobile Vault.
