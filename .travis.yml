@@ -1,6 +1,6 @@
 ---
 language: [ ruby, node_js ]
-rvm: [ 2.2.0 ]
+rvm: [ 2.2.1 ]
 node_js: [ 0.12 ]
 cache:
   bundler: true
