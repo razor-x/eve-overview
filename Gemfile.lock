@@ -86,14 +86,23 @@ GEM
     json (1.8.2)
     kramdown (1.6.0)
     liquid (2.6.2)
+<<<<<<< HEAD
     listen (2.10.0)
       celluloid (~> 0.16.0)
+=======
+    listen (2.9.0)
+      celluloid (>= 0.15.2)
+>>>>>>> Update minor gem dependencies.
       rb-fsevent (>= 0.9.3)
       rb-inotify (>= 0.9)
     lumberjack (1.0.9)
     mercenary (0.3.5)
     method_source (0.8.2)
+<<<<<<< HEAD
     mini_magick (4.1.1)
+=======
+    mini_magick (4.1.0)
+>>>>>>> Update minor gem dependencies.
     multi_json (1.11.0)
     nenv (0.2.0)
     notiffany (0.0.6)
