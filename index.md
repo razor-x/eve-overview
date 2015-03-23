@@ -599,8 +599,8 @@ types:
 
 #### Who are you?
 
-I've been playing EVE since 2008
-and am currently a Core member of [Agony Unleashed].
+I've been playing EVE since 2008 as Leon Razor.
+I am currently a Core member of [Agony Unleashed].
 
 #### Should I trust you?
 
