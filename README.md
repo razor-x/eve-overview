@@ -2,8 +2,8 @@
 
 _Project page built with Jekyll & ZURB_
 
-[![MIT License](https://img.shields.io/badge/license-MIT-red.svg?style=flat)](./LICENSE.txt)
-[![Build Status](https://img.shields.io/travis/razor-x/eve-overview/project-site.svg?style=flat)](https://travis-ci.org/razor-x/eve-overview)
+[![MIT License](https://img.shields.io/badge/license-MIT-red.svg)](./LICENSE.txt)
+[![Build Status](https://img.shields.io/travis/razor-x/eve-overview/project-site.svg)](https://travis-ci.org/razor-x/eve-overview)
 
 The rest of this README is just cloned from
 [Jekyll & ZURB](https://github.com/razor-x/jekyll-and-zurb).
