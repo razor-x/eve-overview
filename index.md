@@ -599,7 +599,7 @@ types:
 
 #### Who are you?
 
-I've been playing EVE since 2008 as Leon Razor.
+I've been playing EVE since 2008 as [Leon Razor].
 I am currently a Core member of [Agony Unleashed].
 
 #### Should I trust you?
@@ -677,6 +677,7 @@ to the in-game corporation `Measure Zero`.
 [Agony Unleashed]: http://www.agony-unleashed.com/
 [DRY]: https://en.wikipedia.org/wiki/Don't_repeat_yourself
 [Gitter chat]: https://gitter.im/razor-x/eve-overview
+[Leon Razor]: https://gate.eveonline.com/Profile/Leon%20Razor
 
 <a name="changelog"></a>
 <a data-magellan-destination="changelog"></a>
