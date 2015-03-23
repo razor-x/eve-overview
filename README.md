@@ -2,11 +2,11 @@
 
 _Generate DRY modular overviews._
 
-[![MIT License](https://img.shields.io/badge/license-MIT-red.svg?style=flat)](./LICENSE.txt)
-[![CCP Copyright Notice](https://img.shields.io/badge/CCP-copyright_notice-red.svg?style=flat)](./CCP_COPYRIGHT_NOTICE.txt)
-[![Dependency Status](https://img.shields.io/gemnasium/razor-x/eve-overview.svg?style=flat)](https://gemnasium.com/razor-x/eve-overview)
-[![Build Status](https://img.shields.io/travis/razor-x/eve-overview/master.svg?style=flat)](https://travis-ci.org/razor-x/eve-overview)
-[![Gitter Chat](https://img.shields.io/badge/chat-gitter-1dce73.svg?style=flat)](https://gitter.im/razor-x/eve-overview)
+[![MIT License](https://img.shields.io/badge/license-MIT-red.svg)](./LICENSE.txt)
+[![CCP Copyright Notice](https://img.shields.io/badge/CCP-copyright_notice-red.svg)](./CCP_COPYRIGHT_NOTICE.txt)
+[![Dependency Status](https://img.shields.io/gemnasium/razor-x/eve-overview.svg)](https://gemnasium.com/razor-x/eve-overview)
+[![Build Status](https://img.shields.io/travis/razor-x/eve-overview/master.svg)](https://travis-ci.org/razor-x/eve-overview)
+[![Gitter Chat](https://img.shields.io/badge/chat-gitter-1dce73.svg)](https://gitter.im/razor-x/eve-overview)
 
 ## Description
 
