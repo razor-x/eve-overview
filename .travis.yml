@@ -1,5 +1,7 @@
 language: ruby
-rvm: 2.1.2
+rvm: 2.2.1
+cache: bundler
+sudo: false
 
 before_install:
   - 'echo ''gem: --no-document'' > ~/.gemrc'
