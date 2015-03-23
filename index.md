@@ -20,7 +20,8 @@ subnav:
 {% for img in site.data.overview_images %}
   <li{% if img.featured %} class="clearing-featured-img"{% endif %}>
     <a href="{{ img.src | asset_path }}">
-      <img data-caption="{{ img.caption }}" alt="{{ img.caption }}" src="{{ img.thumb | asset_path }}">
+      <img data-caption="{{ img.caption }}" alt="{{ img.caption }}"
+           src="{{ img.thumb | asset_path }}" />
     </a>
   </li>
 {% endfor %}
@@ -506,8 +507,8 @@ In this case, the preset will appear in-game as `♞ hostile -- minimal`.
 
 The preset will show all objects defined in the files
 `groups/common-minimal.yml`, `groups/_celestial-sun.yml`, `groups/_ship.yml`.
-Specifically it will show the sun, all ship types, and a common set of required PvP objects
-such as bombs, probes, etc.
+Specifically it will show the sun, all ship types,
+and a common set of required PvP objects such as bombs, probes, etc.
 
 It will use the `states/hostile.yml` file, thus hiding friendlies.
 
@@ -598,13 +599,15 @@ types:
 
 #### Who are you?
 
-I've been playing EVE since 2008 and am currently a Core member of [Agony Unleashed].
+I've been playing EVE since 2008
+and am currently a Core member of [Agony Unleashed].
 
 #### Should I trust you?
 
 Can you really trust anyone in EVE other than Chribba?
 
-As for trusting the overview, the entire project is open source and open to scrutiny.
+As for trusting the overview,
+the entire project is open source and open to scrutiny.
 Please submit any bugs or issues you find.
 Don't fly what you can't afford to loose.
 I'm not responsible for any loses you might incur while using the overview.
@@ -654,7 +657,8 @@ the listed requirements should be familiar or at lease approachable.
 
 #### Where can I get help?
 
-If you found a bug or have a feature request, create a new issue with the [GitHub issue tracker].
+If you found a bug or have a feature request,
+create a new issue with the [GitHub issue tracker].
 If you want real-time help or have general questions, join the [Gitter chat].
 
 #### Can I contribute?
