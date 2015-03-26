@@ -48,15 +48,15 @@ Ruby ≥ 2 with [Bundler](http://bundler.io/).
 
 Install the required gems with
 
-````bash
+```bash
 $ bundle
-````
+```
 
 Build the overview files to the `Overview` directory with
 
-````bash
+```bash
 $ rake
-````
+```
 
 ## Development and Testing
 
@@ -66,9 +66,9 @@ The [source for EVE Online Overview Generator][source]
 is hosted on GitHub.
 To clone the project run
 
-````bash
+```bash
 $ git clone https://github.com/razor-x/eve-overview.git
-````
+```
 
 [source]: https://github.com/razor-x/eve-overview
 
