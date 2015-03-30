@@ -38,4 +38,3 @@ $.get 'https://api.github.com/repos/<%= site.config['source_repo'] %>/releases',
     $.ajax "https://api.github.com/repos/<%= site.config['source_repo'] %>/contents/CHANGELOG.md?ref=#{tag}",
       headers: {Accept: 'application/vnd.github.v3.html'}
     .done (data) -> $('#changelog').replaceWith(data)
-
