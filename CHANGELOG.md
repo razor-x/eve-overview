@@ -6,10 +6,6 @@
 
 ## 2.8.1
 
-- Travis CI optimizations.
-
-## 2.8.1
-
 - Fix Twitter button width bug.
 
 ## 2.8.0
