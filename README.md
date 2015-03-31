@@ -134,10 +134,14 @@ $ git checkout --orphan gh-pages
 
 and **remove all files and folders except the `.git` directory**.
 
+````bash
+$ git reset .
+$ git clean -fdx
+````
+
 Then, make an initial commit with only `index.html`, push it, and make sure it goes live online.
 
 ````bash
-$ git add --all
 $ echo "GitHub Pages placeholder" > index.html
 $ git add index.html
 $ git commit -m "GitHub Pages placeholder"
