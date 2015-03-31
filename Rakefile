@@ -147,6 +147,7 @@ task :travis do
   end
 
   verbose false do
+    sh 'eval `ssh-agent -s`'
     sh 'chmod 600 .deploy_key'
     sh 'ssh-add .deploy_key'
   end
