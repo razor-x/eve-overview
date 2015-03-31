@@ -151,13 +151,24 @@ Next, install the travis gem,
 $ gem install travis
 ````
 
-create a [GitHub Personal Access Token](https://github.com/settings/applications),
-and add your name, email, and token to travis as encrypted data
+create a [GitHub Deploy Key](https://developer.github.com/guides/managing-deploy-keys/#deploy-keys),
+and name the private key `.deploy_key`.
+Encrypt it with
+
+````bash
+$ travis encrypt-file .deploy_key
+````
+
+Commit the encrypted file `.deploy_key.enc` and replace the first `before_install` command
+with the generated one.
+
+Add your name, and email to travis as encrypted data
 (fill in your values in the command below),
 
 ````bash
-$ travis encrypt 'GIT_NAME="Your Name" GIT_EMAIL=you@example.com GH_TOKEN=token'
+$ travis encrypt 'GIT_NAME="Your Name" GIT_EMAIL=you@example.com'
 ````
+
 and replace the secure string in `.travis.yml` with the one you just got;
 also set the branch you want to build (normally `master`, see the comments in that file).
 
