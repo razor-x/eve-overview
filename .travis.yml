@@ -19,6 +19,7 @@ before_script:
 # replace the first command below with the generated one.
 before_install:
   - openssl aes-256-cbc -K $encrypted_3078eeabf3e7_key -iv $encrypted_3078eeabf3e7_iv -in .deploy_key.enc -out .deploy_key -d
+  - eval "$(ssh-agent)"
   - 'echo ''gem: --no-document'' > ~/.gemrc'
 
 script: bundle exec rake travis
