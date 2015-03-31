@@ -151,7 +151,9 @@ task :travis do
     sh 'ssh-add .deploy_key'
   end
 
-  repo = %x(git config remote.origin.url).strip
+  repo = %x(git config remote.origin.url)
+         .gsub(%r{^git://}, 'git@')
+         .sub(%r{/}, ':').strip
   deploy_branch = repo.match(/github\.io\.git$/) ? 'master' : 'gh-pages'
   rev = %x(git rev-parse HEAD).strip
 
