@@ -14,7 +14,7 @@ before_script:
 
 # Install the travis gem.
 # Create a deploy key and encrypt it with:
-# $ travis encrypt-file deploy_key.pem
+# $ travis encrypt-file .deploy_key
 # Commit the encrypted file and
 # replace the first command below with the generated one.
 before_install:
