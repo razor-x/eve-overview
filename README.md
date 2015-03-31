@@ -159,8 +159,8 @@ Encrypt it with
 $ travis encrypt-file .deploy_key
 ````
 
-Commit the encrypted file `.deploy_key.enc` and replace the first `before_install` command
-with the generated one.
+Commit the encrypted file `.deploy_key.enc` and replace
+the first `before_install` command in `.travis.yml` with the generated one.
 
 Add your name, and email to travis as encrypted data
 (fill in your values in the command below),
