@@ -2,6 +2,7 @@
 
 ## HEAD
 
+- Use `<noscript>` tag and no `src` for picture-tag interchange mode.
 - Travis CI deployment now uses deploy keys instead of personal access tokens.
   If you use this feature you must follow the new setup instructions.
 
