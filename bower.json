@@ -17,8 +17,8 @@
     "foundation-icon-fonts": "d596a3cfb3c0b8b46e56879ce9b4514efff4a60b",
     "foundation": "5.5.1",
     "headjs": "1.0.3",
-    "highlightjs": "8.4.0",
-    "normalize-css": "3.0.2",
+    "highlightjs": "8.5.0",
+    "normalize-css": "3.0.3",
     "webfontloader": "1.5.16"
   }
 }
