@@ -672,7 +672,7 @@ so I can't possibly promise to incorporate all suggestions.
 For real-time developer chatter, join the [Gitter chat].
 
 If you find this useful, I will accept ISK donations
-to the in-game corporation `Measure Zero`.
+to the in-game character [Leon Razor].
 
 [Agony Unleashed]: http://www.agony-unleashed.com/
 [DRY]: https://en.wikipedia.org/wiki/Don't_repeat_yourself
