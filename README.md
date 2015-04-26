@@ -7,7 +7,7 @@ _Generate DRY modular overviews._
 [![Dependency Status](https://img.shields.io/gemnasium/razor-x/eve-overview.svg)](https://gemnasium.com/razor-x/eve-overview)
 [![Build Status](https://img.shields.io/travis/razor-x/eve-overview/master.svg)](https://travis-ci.org/razor-x/eve-overview)
 [![Gitter Chat](https://img.shields.io/badge/chat-gitter-1dce73.svg)](https://gitter.im/razor-x/eve-overview)
-[![Donate ISK](https://img.shields.io/badge/Donate%20ISK-Measure%20Zero-blue.svg)](https://gate.eveonline.com/Corporation/Measure%20Zero)
+[![Donate ISK](https://img.shields.io/badge/Donate%20ISK-Leon%20Razor-blue.svg)](https://gate.eveonline.com/Profile/Leon%20Razor)
 
 ## Description
 
