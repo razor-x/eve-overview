@@ -12,7 +12,7 @@ GEM
     coffee-script (2.4.1)
       coffee-script-source
       execjs
-    coffee-script-source (1.9.1)
+    coffee-script-source (1.9.1.1)
     colorator (0.1)
     compass (1.0.3)
       chunky_png (~> 1.2)
@@ -93,7 +93,7 @@ GEM
     lumberjack (1.0.9)
     mercenary (0.3.5)
     method_source (0.8.2)
-    mini_magick (4.2.1)
+    mini_magick (4.2.3)
     multi_json (1.11.0)
     nenv (0.2.0)
     notiffany (0.0.6)
