@@ -1,16 +1,5 @@
 ---
 include:
-  - _entity-destructible_agents_in_space
-  - _entity-destructible_sentry_gun
-  - _entity-pirate_drone
-  - _entity-protective_sentry_gun
-  - _entity-tutorial_drone
-  - _entity-rogue_drone
-  - _entity-roaming_sleepers_cruiser
-  - _entity-drifters_battleship
-  - _npc-mission_npc
-  - _npc-pirate_npc
-  - entities-asteroid_mordus_legion
-  - entities-deadspace
-  - entities-faction_warfare
-  - entities-mission
+  - rats-neutral
+  - rats-amarr-caldari
+  - rats-gallente-minmatar

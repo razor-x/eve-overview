@@ -1,0 +1,13 @@
+---
+name: small gang fw (gallente / minmatar)
+symbol: ✪ extra
+level: 1
+groups:
+  - common-pvp
+  - _ship
+  - drones-combat
+  - drones-fighters
+  - rats-neutral
+  - rats-amarr-caldari
+states:
+  - all
