@@ -51,7 +51,7 @@ cdn_enabled: true
 cdn:
   # [ url, loaded check, local asset fallback path ]
   libs:
-    - [ "https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js", "window.jQuery", "jquery/dist/jquery" ]
+    - [ "https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js", "window.jQuery", "jquery/dist/jquery" ]
 
 # Keywords will be merged with categories, tags, and page keywords.
 keywords: [ blog, personal ]

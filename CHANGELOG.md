@@ -1,5 +1,9 @@
 # Changelog
 
+## HEAD
+
+- Update jQuery to 2.1.4.
+
 ## 2.9.0
 
 - Update Foundation to 5.2.2.
