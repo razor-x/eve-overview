@@ -1,6 +1,6 @@
 # Jekyll & ZURB
 
-[![MIT License](https://img.shields.io/badge/license-MIT-red.svg)](./LICENSE.txt)
+[![MIT License](http://img.shields.io/github/license/razor-x/jekyll-and-zurb.svg)](./LICENSE.txt)
 [![Dependency Status](https://img.shields.io/gemnasium/razor-x/jekyll-and-zurb.svg)](https://gemnasium.com/razor-x/jekyll-and-zurb)
 [![Build Status](https://img.shields.io/travis/razor-x/jekyll-and-zurb/demo.svg)](https://travis-ci.org/razor-x/jekyll-and-zurb)
 
