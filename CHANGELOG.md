@@ -1,6 +1,6 @@
 # Changelog
 
-## HEAD
+## 2.9.0
 
 - Update Foundation to 5.2.2.
 - Use `<noscript>` tag and no `src` for picture-tag interchange mode.
