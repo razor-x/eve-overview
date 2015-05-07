@@ -7,7 +7,6 @@ _Generate DRY modular overviews._
 [![Dependency Status](https://img.shields.io/gemnasium/razor-x/eve-overview.svg)](https://gemnasium.com/razor-x/eve-overview)
 [![Build Status](https://img.shields.io/travis/razor-x/eve-overview/master.svg)](https://travis-ci.org/razor-x/eve-overview)
 [![Gitter Chat](https://img.shields.io/badge/chat-gitter-1dce73.svg)](https://gitter.im/razor-x/eve-overview)
-[![Donate ISK](https://img.shields.io/badge/Donate%20ISK-Leon%20Razor-blue.svg)](https://gate.eveonline.com/Profile/Leon%20Razor)
 
 ## Description
 
@@ -26,6 +25,8 @@ based on a set of common groups, presets, settings, etc.
 The modular design makes updating, sharing, and customizing simple.
 
 __Visit the [project site][EVE Online Overview Generator] for full documentation.__
+
+[![Donate ISK](https://img.shields.io/badge/Donate%20ISK-Leon%20Razor-blue.svg)](https://gate.eveonline.com/Profile/Leon%20Razor)
 
 [EVE Online Overview Generator]: https://io.evansosenko.com/eve-overview/
 
