@@ -33,4 +33,4 @@ branches:
 # $ travis encrypt 'GIT_NAME="Your Name" GIT_EMAIL=you@example.com'
 # Replace the value of secure with your generated value.
 env:
-  - secure: "ZsXjYKbT1DET7wTVJRWNP0Ms2P1QiVsDT+gqsTKLI/k2y3c9I2l138yr31RGB0rdEhkLgSYqd1KwxoNsubMdsEcGZiReI6/uCliDSTWf2JTy0tUiVDhwB2YGBz8PkiB2oR+TWDRHtn16qv0bFkQ7xoEskTUrb6KWW4wOiVGkDGk="
+  - secure: "Tlv6KPbkXe+hw98RuxD4gHwT6WLpirqlaFl6jUI/N/XnqANLVAEfzTlncUc3pd8R1yE/I+oRvQFacpO92f6K/Evu1ZK3/Ehyia8dK8WBo384R1c8XmWJBK78Ei4fnZt28u1wdeg0TF0a6yPhKlqATShRitrINPfGsL6jca+vROk="
