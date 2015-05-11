@@ -1,6 +1,6 @@
 # Changelog
 
-## HEAD
+## 2.9.1
 
 - Update jQuery to 2.1.4.
 
