@@ -1,7 +1,7 @@
 ---
 language: [ ruby, node_js ]
-rvm: [ 2.2.1 ]
-node_js: [ 0.12 ]
+rvm: [ 2.2.2 ]
+node_js: [ iojs ]
 cache:
   bundler: true
   directories:
@@ -33,4 +33,4 @@ branches:
 # $ travis encrypt 'GIT_NAME="Your Name" GIT_EMAIL=you@example.com'
 # Replace the value of secure with your generated value.
 env:
-  - secure: "GzZMg8ffItBI3HUdojRnZVvi6zunvBoTJIzgD9JxJgKqRd2VLXng1ICq4J0xL/n704hUJzZUe8BueUehv5z6OGl4pMF5LOgOFde6seCm/1wqvHcT4+Str6OX6u5QacXbmx8H3pTVx+9/dEQLgz2JsMX+tDyo6eTNz656djznGy4="
+  - secure: "JGcH9djQ3DmoBpjYhD0gYAtmYWEZwIOBenItxTSKvt5418/4Qnmfb4Eb4uueyFCO5RThAL4fRScdunc0DtaGjnVW75dFzyK0Ds5tOrf1RQSoBLNc4kf88oC/iDYfEmT/HuNNuKvCrQxH9AgDBdpculH5u137alnl2jJ9G5MirQ4="
