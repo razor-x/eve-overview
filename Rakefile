@@ -153,7 +153,8 @@ task :travis do
 
   # generate a staging config if set in environment
   url = ENV['JEKYLL_STAGING_URL'].to_s
-  if url.to_i > 0
+  unless url.empty?
+    puts 'Creating _config.staging.yml.'
     staging = {'domain' => url, 'baseurl' => url,
                'assets' => {'baseurl' => "#{url}/assets"}}
     File.open('_config.staging.yml','w') { |f| f.write staging.to_yaml }
@@ -184,7 +185,8 @@ task :travis do
       end
 
       # overwrite robots.txt if staging site
-      if url.to_i > 0
+      unless url.empty?
+        puts 'Creating robots.txt for staging site.'
         robots_txt = "User-agent: *\nDisallow: /\n"
         File.open('robots.txt','w') { |f| f.write robots_txt }
       end
