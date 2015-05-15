@@ -160,7 +160,7 @@ task :travis do
   Dir.mktmpdir do |dir|
     dir = File.join dir, 'site'
     sh 'bundle exec rake build'
-    fail "Build failed." unless Dir.exists? destination
+    fail 'Build failed.' unless Dir.exists? destination
     sh "git clone --branch #{deploy_branch} #{repo} #{dir}"
     sh %Q(rsync -rt --del --exclude=".git" --exclude=".nojekyll" --exclude=".deploy_key*" #{destination} #{dir})
     Dir.chdir dir do
