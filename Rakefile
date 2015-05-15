@@ -9,6 +9,7 @@ config = YAML.load_file '_config.yml'
 
 testing_config = '_config.yml,_config.testing.yml'
 dev_config = '_config.yml,_config.dev.yml'
+staging_config = '_config.yml,_config.staging.yml'
 
 config[:destination] ||= '_site/'
 config[:sub_content] ||= []
@@ -32,7 +33,11 @@ end
 # rake build
 desc 'Generate the site'
 task :build do
-  sh 'bundle', 'exec', 'jekyll', 'build'
+  if File.exists? '_config.staging.yml'
+    sh 'bundle', 'exec', 'jekyll', 'build', '--config', staging_config
+  else
+    sh 'bundle', 'exec', 'jekyll', 'build'
+  end
 
   config[:sub_content].each do |content|
     repo = content[0]
@@ -146,6 +151,14 @@ task :travis do
     next
   end
 
+  # generate a staging config if set in environment
+  url = ENV['JEKYLL_STAGING_URL'].to_s
+  if url.to_i > 0
+    staging = {'domain' => url, 'baseurl' => url,
+               'assets' => {'baseurl' => "#{url}/assets"}}
+    File.open('_config.staging.yml','w') { |f| f.write staging.to_yaml }
+  end
+
   verbose false do
     sh 'chmod 600 .deploy_key'
     sh 'ssh-add .deploy_key'
@@ -168,6 +181,12 @@ task :travis do
       verbose false do
         sh "git config user.name '#{ENV['GIT_NAME']}'"
         sh "git config user.email '#{ENV['GIT_EMAIL']}'"
+      end
+
+      # overwrite robots.txt if staging site
+      if url.to_i > 0
+        robots_txt = "User-agent: *\nDisallow: /\n"
+        File.open('robots.txt','w') { |f| f.write robots_txt }
       end
 
       sh 'git add --all'

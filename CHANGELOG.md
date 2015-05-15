@@ -1,5 +1,9 @@
 # Changelog
 
+## HEAD
+
+- Add staging environment support for Travis CI builds.
+
 ## 2.9.1
 
 - Update jQuery to 2.1.4.
