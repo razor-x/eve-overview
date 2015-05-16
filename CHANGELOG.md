@@ -1,6 +1,6 @@
 # Changelog
 
-## HEAD
+## 0.6.1
 
 - Add faction warfare presets (under extra).
 
