@@ -1,5 +1,9 @@
 # Changelog
 
+## HEAD
+
+- Add faction warfare presets (under extra).
+
 ## 0.6.0
 
 - Add drifters and roaming sleepers.
