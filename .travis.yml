@@ -6,9 +6,6 @@ sudo: false
 before_install:
   - 'echo ''gem: --no-document'' > ~/.gemrc'
 
-install:
-  - bundle update
-
 script: bundle exec rake travis
 
 deploy:
