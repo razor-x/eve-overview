@@ -24,7 +24,7 @@ task :compile_overviews do
 end
 
 task travis: [:build] do
-  system 'zip', '-r', 'overviews.zip', build
+  system 'zip', '-r', "eve-overview-v#{File.read('VERSION').strip}.zip", build
 end
 
 def compile_overview(name, path, overview)

@@ -12,7 +12,7 @@ deploy:
   provider: releases
   api_key:
     secure: E4Rieypa6Nsy75bdGGcr6JyJs8Jhvli5s9v7Gjoivu9r7IRMcXxNC4HviVpbNpVIR2gUUubiQUUM8ODradpMMI9D8JY1diW2FWQqdUKQFvp0RWHf6tYl5+MpqV4YqWk7GzSFcLG2G8TYSOBtAAJ4ftfhhUPcAzrBMig0h7v042I=
-  file: overviews.zip
+  file: eve-overview-${TRAVIS_TAG}.zip
   skip_cleanup: true
   on:
     tags: true
