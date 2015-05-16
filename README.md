@@ -2,6 +2,7 @@
 
 _Generate DRY modular overviews._
 
+[![Release](https://img.shields.io/github/release/razor-x/eve-overview.svg)](https://github.com/razor-x/eve-overview/releases)
 [![MIT License](https://img.shields.io/github/license/razor-x/eve-overview.svg)](./LICENSE.txt)
 [![Dependency Status](https://img.shields.io/gemnasium/razor-x/eve-overview.svg)](https://gemnasium.com/razor-x/eve-overview)
 [![Build Status](https://img.shields.io/travis/razor-x/eve-overview/master.svg)](https://travis-ci.org/razor-x/eve-overview)
