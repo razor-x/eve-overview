@@ -1,5 +1,16 @@
 # Changelog
 
+## HEAD
+
+- Switch to using [rake-jekyll] for git based deployment.
+  You may now set the `SOURCE_BRANCH` environment variable
+  to enable testing on all other branches.
+- Use gist-aysnc bower package.
+- Remove Sub-content feature.
+- Add staging environment support for Travis CI builds.
+
+[rake-jekyll]: https://github.com/jirutka/rake-jekyll
+
 ## 2.9.1
 
 - Update jQuery to 2.1.4.
