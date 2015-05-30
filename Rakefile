@@ -11,7 +11,6 @@ dev_config = '_config.yml,_config.dev.yml'
 staging_config = '_config.yml,_config.staging.yml'
 
 config[:destination] ||= '_site/'
-config[:sub_content] ||= []
 destination = File.join config[:destination], '/'
 
 # Set "rake draft" as default task.
@@ -32,27 +31,9 @@ end
 # rake build
 desc 'Generate the site'
 task :build do
-  if File.exists? '_config.staging.yml'
-    sh 'bundle', 'exec', 'jekyll', 'build', '--config', staging_config
-  else
-    sh 'bundle', 'exec', 'jekyll', 'build'
-  end
-
-  config[:sub_content].each do |content|
-    repo = content[0]
-    branch = content[1]
-    dir = content[2]
-    rev = content[3]
-    Dir.chdir config[:destination] do
-      FileUtils.mkdir_p dir
-      sh "git clone -b #{branch} #{repo} #{dir}"
-      Dir.chdir dir do
-        sh "git checkout #{rev}" if rev
-        FileUtils.remove_entry_secure '.git'
-        FileUtils.remove_entry_secure '.nojekyll' if File.exists? '.nojekyll'
-      end if dir
-    end if Dir.exists? config[:destination]
-  end
+  args = []
+  args.concat ['--config', staging_config] if File.exists? '_config.staging.yml'
+  sh 'bundle', 'exec', 'jekyll', 'build', *staging
 end
 
 # rake test

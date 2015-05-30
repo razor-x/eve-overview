@@ -2,6 +2,7 @@
 
 ## HEAD
 
+- Remove Sub-content feature.
 - Add staging environment support for Travis CI builds.
 
 ## 2.9.1

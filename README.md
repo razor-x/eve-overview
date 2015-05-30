@@ -20,8 +20,6 @@ If you like this, check out the sister project
     for dev and testing modes, run `rake -D` for info.
   * Automatically publish to [GitHub pages](http://pages.github.com/)
     with [Travis CI](https://travis-ci.org/).
-  * Easily incorporate the source from other web projects as
-    subdirectories in your site (see sub_content in `_config.yml`).
   * [LiveReload](http://livereload.com/) support. Just run `guard`.
 
 ### Running [Foundation by ZURB](http://foundation.zurb.com/).
