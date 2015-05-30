@@ -1,10 +1,9 @@
-# Standard library
 require 'fileutils'
 require 'rake'
 require 'tmpdir'
 require 'yaml'
 
-# Load the configuration file
+# Load the configuration file.
 config = YAML.load_file '_config.yml'
 
 testing_config = '_config.yml,_config.testing.yml'
@@ -15,10 +14,10 @@ config[:destination] ||= '_site/'
 config[:sub_content] ||= []
 destination = File.join config[:destination], '/'
 
-# Set "rake draft" as default task
+# Set "rake draft" as default task.
 task :default => :draft
 
-# Spawn a server and kill it gracefully when interrupt is received
+# Spawn a server and kill it gracefully when interrupt is received.
 def spawn *cmd
   pid = Process.spawn 'bundle', 'exec', *cmd
 
