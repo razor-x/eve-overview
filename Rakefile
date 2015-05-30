@@ -14,7 +14,7 @@ config[:destination] ||= '_site/'
 destination = File.join config[:destination], '/'
 
 # Set "rake draft" as default task.
-task :default => :draft
+task default: [:draft]
 
 # Spawn a server and kill it gracefully when interrupt is received.
 def spawn *cmd
@@ -64,7 +64,7 @@ end
 
 # rake deploy
 desc 'Deploy the site using rsync.'
-task :deploy => :build do
+task deploy: [:build] do
   fail 'Error: must add :depoly: section to _config.yml.' if config[:deploy].nil?
 
   local = File.expand_path destination
@@ -85,15 +85,15 @@ task :deploy => :build do
 
     excludes = upload_only.nil? ? [] : upload_only.collect { |e| "--exclude='#{e}'" }
 
-    rsync = [ 'rsync', *flags, '--del', *excludes,
-              "#{local}/", "#{user}@#{server}:#{path}" ].join(' ')
+    rsync = ['rsync', *flags, '--del', *excludes,
+              "#{local}/", "#{user}@#{server}:#{path}"].join(' ')
 
     p "Now running: #{rsync}"
     sh rsync
 
     if upload_only
-      rsync_uploads = [ 'rsync', *flags,
-                        "#{local}/", "#{user}@#{server}:#{path}" ].join(' ')
+      rsync_uploads = ['rsync', *flags,
+                        "#{local}/", "#{user}@#{server}:#{path}"].join(' ')
       p "Now running: #{rsync_uploads}"
       sh rsync_uploads
     end
