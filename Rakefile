@@ -28,6 +28,7 @@ def spawn *cmd
   while switch do sleep 1 end
 end
 
+# Command to build static site to destination (as an Array).
 def build_site_command(destination=nil)
   args = []
   args.concat ['--destination', destination] unless destination.nil?
