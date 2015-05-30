@@ -1,5 +1,6 @@
 require 'fileutils'
 require 'rake'
+require 'rake-jekyll'
 require 'tmpdir'
 require 'yaml'
 
@@ -8,7 +9,6 @@ config = YAML.load_file '_config.yml'
 
 testing_config = '_config.yml,_config.testing.yml'
 dev_config = '_config.yml,_config.dev.yml'
-staging_config = '_config.yml,_config.staging.yml'
 
 config[:destination] ||= '_site/'
 destination = File.join config[:destination], '/'
@@ -28,12 +28,21 @@ def spawn *cmd
   while switch do sleep 1 end
 end
 
+def build_site_command(destination=nil)
+  args = []
+  args.concat ['--destination', destination] unless destination.nil?
+
+  if File.exists? '_config.staging.yml'
+    args.concat ['--config', '_config.yml,_config.staging.yml']
+  end
+
+  ['bundle', 'exec', 'jekyll', 'build', *args]
+end
+
 # rake build
 desc 'Generate the site'
 task :build do
-  args = []
-  args.concat ['--config', staging_config] if File.exists? '_config.staging.yml'
-  sh 'bundle', 'exec', 'jekyll', 'build', *staging
+  sh(*build_site_command)
 end
 
 # rake test
@@ -100,39 +109,36 @@ task deploy: [:build] do
   end
 end
 
-# rake ghpages
-desc 'Generate site and publish to GitHub Pages'
-task :ghpages do
-  repo = %x(git config remote.origin.url).strip
-  deploy_branch = repo.match(/github\.io\.git$/) ? 'master' : 'gh-pages'
-  rev = %x(git rev-parse HEAD).strip
+# rake publish
+Rake::Jekyll::GitDeployTask.new(:publish) do |t|
+  t.description = 'Generate the site and push changes to remote repository'
+  t.author_date = -> { '' }
 
-  sh 'bundle install'
-  sh 'bower install'
+  t.remote_url = -> {
+    %x(git config remote.origin.url)
+    .gsub(%r{^git://}, 'git@')
+    .sub(%r{/}, ':').strip
+  }
 
-  Dir.mktmpdir do |dir|
-    sh "git clone --branch #{deploy_branch} #{repo} #{dir}"
-    sh 'bundle exec rake build'
-    sh %Q(rsync -rt --delete-after --exclude=".git" --exclude=".nojekyll" --exclude=".deploy_key*" #{destination} #{dir})
-    Dir.chdir dir do
-      sh 'git add --all'
-      sh "git commit -m 'Built from #{rev}'."
-      sh 'git push'
-    end
-  end
+  t.deploy_branch = -> {
+    t.remote_url.match(/github\.io\.git$/) ? 'master' : 'gh-pages'
+  }
+
+  t.jekyll_build = -> (dest_dir) {
+    Rake.sh(*build_site_command(dest_dir))
+  }
+
+  t.skip_commit = -> {
+    ENV['TRAVIS_PULL_REQUEST'].to_i > 0 ||
+      %w[yes y true 1].include?(ENV['SKIP_COMMIT'].to_s.downcase) ||
+      (!ENV['SOURCE_BRANCH'].nil? && ENV['SOURCE_BRANCH'] != ENV['TRAVIS_BRANCH'])
+  }
 end
 
-# rake travis
-desc 'Generate site from Travis CI and publish site to GitHub Pages'
-task :travis do
-  # if this is a pull request, do a simple build of the site and stop
-  if ENV['TRAVIS_PULL_REQUEST'].to_s.to_i > 0
-    puts 'Pull request detected. Executing build only.'
-    sh 'bundle exec rake build'
-    next
-  end
-
-  # generate a staging config if set in environment
+# rake travis_env
+desc 'Prepare the Travis CI build environment'
+task :travis_env do
+  # Generate a staging config if staging URL is set.
   url = ENV['JEKYLL_STAGING_URL'].to_s
   unless url.empty?
     puts 'Creating _config.staging.yml.'
@@ -141,43 +147,14 @@ task :travis do
     File.open('_config.staging.yml','w') { |f| f.write staging.to_yaml }
   end
 
+  # Setup the deploy key.
+  puts 'Adding deploy key.'
   verbose false do
     sh 'chmod 600 .deploy_key'
     sh 'ssh-add .deploy_key'
   end
-
-  repo = %x(git config remote.origin.url)
-         .gsub(%r{^git://}, 'git@')
-         .sub(%r{/}, ':').strip
-  deploy_branch = repo.match(/github\.io\.git$/) ? 'master' : 'gh-pages'
-  rev = %x(git rev-parse HEAD).strip
-
-  Dir.mktmpdir do |dir|
-    dir = File.join dir, 'site'
-    sh 'bundle exec rake build'
-    fail 'Build failed.' unless Dir.exists? destination
-    sh "git clone --branch #{deploy_branch} #{repo} #{dir}"
-    sh %Q(rsync -rt --del --exclude=".git" --exclude=".nojekyll" --exclude=".deploy_key*" #{destination} #{dir})
-    Dir.chdir dir do
-      # setup credentials so Travis CI can push to GitHub
-      verbose false do
-        sh "git config user.name '#{ENV['GIT_NAME']}'"
-        sh "git config user.email '#{ENV['GIT_EMAIL']}'"
-      end
-
-      # overwrite robots.txt if staging site
-      unless url.empty?
-        puts 'Creating robots.txt for staging site.'
-        robots_txt = "User-agent: *\nDisallow: /\n"
-        File.open('robots.txt','w') { |f| f.write robots_txt }
-      end
-
-      sh 'git add --all'
-      sh "git commit -m 'Built from #{rev}'."
-
-      verbose false do
-        sh "git push -q #{repo} #{deploy_branch}"
-      end
-    end
-  end
 end
+
+# rake travis
+desc 'Generate site from Travis CI and publish site to GitHub Pages'
+task travis: [:travis_env, :publish]

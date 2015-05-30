@@ -24,11 +24,6 @@ before_install:
 
 script: bundle exec rake travis
 
-# Set the branch that will be built and published to GitHub pages.
-branches:
-  only:
-    - demo
-
 # Run the command below (fill in your name and email):
 # $ travis encrypt 'GIT_NAME="Your Name" GIT_EMAIL=you@example.com'
 # Replace the value of secure with your generated value.

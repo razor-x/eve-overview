@@ -160,15 +160,14 @@ $ travis encrypt-file .deploy_key
 Commit the encrypted file `.deploy_key.enc` and replace
 the first `before_install` command in `.travis.yml` with the generated one.
 
-Add your name, and email to travis as encrypted data
-(fill in your values in the command below),
+Set the source branch that will be used to build the site.
 
 ```bash
-$ travis encrypt 'GIT_NAME="Your Name" GIT_EMAIL=you@example.com'
+$ travis env set SOURCE_BRANCH master
 ```
 
-and replace the secure string in `.travis.yml` with the one you just got;
-also set the branch you want to build (normally `master`, see the comments in that file).
+Other branches will still be built for testing,
+but only changes to the `SOURCE_BRANCH` will be deployed.
 
 Finally, switch on your repo in Travis CI and push your changes.
 

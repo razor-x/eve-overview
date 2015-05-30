@@ -2,8 +2,11 @@
 
 ## HEAD
 
+- Switch to using [rake-jekyll] for git based deployment.
 - Remove Sub-content feature.
 - Add staging environment support for Travis CI builds.
+
+[rake-jekyll]: https://github.com/jirutka/rake-jekyll
 
 ## 2.9.1
 
