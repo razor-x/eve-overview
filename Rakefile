@@ -37,33 +37,33 @@ task :build do
 end
 
 # rake test
-desc 'Generate the site and start a server (no auto-regeneration).'
+desc 'Generate the site and start a server (no auto-regeneration)'
 task :test do
   spawn 'jekyll', 'serve', '--no-watch', '--config', testing_config
 end
 
 # rake watch
-desc 'Start a server and watch the site for changes.'
+desc 'Start a server and watch the site for changes'
 task :watch do
   spawn 'jekyll', 'serve', '--config', testing_config
 end
 
 # rake dev
-desc 'Start a server and watch the site for changes.' + "\n" +
-     'Loads _config.dev.yml as an additional config file.'
+desc 'Start a server and watch the site for changes:' + "\n" +
+     'loads _config.dev.yml as an additional config file'
 task :dev do
   spawn 'jekyll', 'serve', '--config', dev_config
 end
 
 # rake draft
-desc 'Start a server and watch the site for changes.' + "\n" +
-     'Include all drafts in site.'
+desc 'Start a server and watch the site for changes:' + "\n" +
+     'include all drafts in site'
 task :draft do
   spawn 'jekyll', 'serve', '--drafts', '--config', testing_config
 end
 
 # rake deploy
-desc 'Deploy the site using rsync.'
+desc 'Deploy the site using rsync'
 task deploy: [:build] do
   fail 'Error: must add :depoly: section to _config.yml.' if config[:deploy].nil?
 
@@ -101,7 +101,7 @@ task deploy: [:build] do
 end
 
 # rake ghpages
-desc 'Generate site and publish to GitHub Pages.'
+desc 'Generate site and publish to GitHub Pages'
 task :ghpages do
   repo = %x(git config remote.origin.url).strip
   deploy_branch = repo.match(/github\.io\.git$/) ? 'master' : 'gh-pages'
@@ -123,7 +123,7 @@ task :ghpages do
 end
 
 # rake travis
-desc 'Generate site from Travis CI and publish site to GitHub Pages.'
+desc 'Generate site from Travis CI and publish site to GitHub Pages'
 task :travis do
   # if this is a pull request, do a simple build of the site and stop
   if ENV['TRAVIS_PULL_REQUEST'].to_s.to_i > 0
