@@ -5,6 +5,8 @@
 - Switch to using [rake-jekyll] for git based deployment.
   You may now set the `SOURCE_BRANCH` environment variable
   to enable testing on all other branches.
+- Split main body content out from the default layout
+  and into a new body layout.
 - Use gist-aysnc bower package.
 - Remove Sub-content feature.
 - Add staging environment support for Travis CI builds.
