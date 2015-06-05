@@ -22,19 +22,29 @@ def spawn *cmd
 
   switch = true
   Signal.trap 'SIGINT' do
-    Process.kill( :QUIT, pid ) && Process.wait
+    Process.kill(:QUIT, pid) && Process.wait
     switch = false
   end
   while switch do sleep 1 end
 end
 
+# Generate a staging config if staging URL is set.
+def generate_staging_config(url, config)
+  staging = {'domain' => url, 'baseurl' => url,
+             'assets' => {'baseurl' => "#{url}/assets"}}
+  File.open(config, 'w') { |f| f.write staging.to_yaml }
+end
+
 # Command to build static site to destination (as an Array).
-def build_site_command(destination=nil)
+def build_site_command(destination=nil, staging_url='')
+  config = '_config.staging.yml'
+  generate_staging_config(staging_url, config) unless staging_url.empty?
+
   args = []
   args.concat ['--destination', destination] unless destination.nil?
 
-  if File.exists? '_config.staging.yml'
-    args.concat ['--config', '_config.yml,_config.staging.yml']
+  if File.exists? config
+    args.concat ['--config', "_config.yml,#{config}"]
   end
 
   ['bundle', 'exec', 'jekyll', 'build', *args]
@@ -43,7 +53,11 @@ end
 # rake build
 desc 'Generate the site'
 task :build do
-  sh(*build_site_command)
+  staging_url = ENV['STAGING_URL'].to_s
+  sh(*build_site_command(nil, staging_url))
+  if File.exists?('_config.staging.yml') && !staging_url.empty?
+    File.delete '_config.staging.yml'
+  end
 end
 
 # rake test
@@ -126,7 +140,7 @@ Rake::Jekyll::GitDeployTask.new(:publish) do |t|
   }
 
   t.jekyll_build = -> (dest_dir) {
-    Rake.sh(*build_site_command(dest_dir))
+    Rake.sh(*build_site_command(dest_dir, ENV['STAGING_URL'].to_s))
   }
 
   t.skip_commit = -> {
@@ -139,15 +153,6 @@ end
 # rake travis_env
 desc 'Prepare the Travis CI build environment'
 task :travis_env do
-  # Generate a staging config if staging URL is set.
-  url = ENV['JEKYLL_STAGING_URL'].to_s
-  unless url.empty?
-    puts 'Creating _config.staging.yml.'
-    staging = {'domain' => url, 'baseurl' => url,
-               'assets' => {'baseurl' => "#{url}/assets"}}
-    File.open('_config.staging.yml','w') { |f| f.write staging.to_yaml }
-  end
-
   # Setup the deploy key.
   puts 'Adding deploy key.'
   verbose false do
