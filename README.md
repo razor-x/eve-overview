@@ -179,7 +179,7 @@ $ git push
 
 ### Staging site
 
-If the environment variable `JEKYLL_STAGING_URL` is set,
+If the environment variable `STAGING_URL` is set,
 then this value will be used to set `domain`, `baseurl`, and the assets `baseurl`.
 This is useful when you want to setup a staging site
 on a separate development repository.
