@@ -10,6 +10,7 @@
 - Use gist-aysnc bower package.
 - Remove Sub-content feature.
 - Add staging environment support for Travis CI builds.
+- Add 404 page.
 
 [rake-jekyll]: https://github.com/jirutka/rake-jekyll
 
