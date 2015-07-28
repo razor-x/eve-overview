@@ -229,7 +229,7 @@ one for each selected group of tabs.
 
 For example,
 
-```yaml
+```haml
 # overviews/default.yml
 ---
 appearance: default
@@ -273,7 +273,7 @@ The following keys should be defined here:
 
 For example,
 
-```yaml
+```haml
 # appearances/default.yml
 ---
 flagOrder:
@@ -330,7 +330,7 @@ The following keys should be defined here:
 
 For example,
 
-```yaml
+```haml
 # columns/default.yml
 ---
 columnOrder:
@@ -359,7 +359,7 @@ The following keys should be defined here:
 
 For example,
 
-```yaml
+```haml
 # labels/default.yml
 ---
 shipLabelOrder:
@@ -404,7 +404,7 @@ The following key should be defined here:
 
 For example,
 
-```yaml
+```haml
 # settings/default.yml
 ---
 userSettings:
@@ -432,7 +432,7 @@ The `overview` and `bracket` keys can point to any file under the `presets` fold
 
 For example, here are the first two tabs of a PvE setup,
 
-```yaml
+```haml
 # tabs/pve.yml
 ---
 - name: npc
@@ -449,7 +449,7 @@ For example, here are the first two tabs of a PvE setup,
 
 and the first two tabs of a PvP setup,
 
-```yaml
+```haml
 # tabs/pvp.yml
 ---
 - name: ✈
@@ -489,7 +489,7 @@ The `states` key is a list of files in the `states` folder.
 
 For example, a clean PvP preset is
 
-```yaml
+```haml
 # presets/hostile-minimal.yml
 ---
 name: minimal
@@ -524,7 +524,7 @@ from the exported file.
 For example, this filters out all ships from displaying,
 but always shows fleet members
 
-```yaml
+```haml
 #  states/fleet.yml
 ---
 show:
@@ -555,7 +555,7 @@ and `groups/_celestial-moon.yml` is only the Moon type under the Celestial group
 
 For example, the default `common-minimal` group
 
-```yaml
+```haml
 # groups/common-minimal.yml
 ---
 include:
@@ -567,7 +567,7 @@ include:
 
 only includes other groups such as
 
-```yaml
+```haml
 # groups/_charge-scanner_probe.yml
 ---
 types:
@@ -576,7 +576,7 @@ types:
 
 and
 
-```yaml
+```haml
 # groups/bubbles.yml
 ---
 include:
@@ -586,7 +586,7 @@ include:
 
 and
 
-```yaml
+```haml
 # groups/bombs.yml
 ---
 types:
