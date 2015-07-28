@@ -11,6 +11,7 @@
 - Remove Sub-content feature.
 - Add staging environment support for Travis CI builds.
 - Add 404 page.
+- Optimize Travis build by adding bower to package.json.
 
 [rake-jekyll]: https://github.com/jirutka/rake-jekyll
 
