@@ -18,8 +18,9 @@
     "foundation": "5.5.2",
     "gist-async": "1.0.1",
     "headjs": "1.0.3",
-    "highlightjs": "8.5.0",
+    "highlightjs": "8.6.0",
     "normalize-css": "3.0.3",
-    "webfontloader": "1.5.18"
+    "picturefill": "2.3.1",
+    "webfontloader": "1.6.5"
   }
 }

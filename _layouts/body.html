@@ -1,0 +1,35 @@
+---
+layout: default
+---
+
+<header>
+  <a name="top"></a>
+  <h1 data-magellan-destination="top"><a href="{{ site.baseurl }}/">{{ site.name }}</a></h1>
+</header>
+
+{{ content }}
+
+<footer>
+  <p>{{ site.data.text.license }} {{ site.data.text.copyright }}</p>
+  <p>
+    {{ site.data.text.ccp_copyright }}
+    <a data-reveal-id="ccp_copyright_notice">{{ site.data.text.ccp_copyright_title }}</a>
+  </p>
+  <p>
+    <a href="https://gate.eveonline.com/Corporation/Measure%20Zero">
+      <img
+        src="https://img.shields.io/badge/Donate%20ISK-Measure%20Zero-blue.svg"
+        alt="Donate ISK to Measure Zero" />
+    </a>
+    <a href="https://gitter.im/razor-x/eve-overview">
+      <img src="https://badges.gitter.im/razor-x/eve-overview.svg" alt="Gitter" />
+    </a>
+  </p>
+  {% include social-buttons.html %}
+</footer>
+
+<div id="ccp_copyright_notice" class="reveal-modal" data-reveal>
+  <h3>{{ site.data.text.ccp_copyright_title }}</h3>
+  <p>{{ site.data.text.ccp_copyright_notice }}</p>
+  <a class="close-reveal-modal">×</a>
+</div>
