@@ -171,22 +171,22 @@ Packages for Windows can be installed with [Chocolatey].
 
 1. Fork or clone the [source repository]. You should only need the `master` branch.
 
-    ````bash
+    ```bash
     $ git clone https://github.com/{{ site.source_repo }}.git --branch master
-    ````
+    ```
     You can also fork someone else's fork to base your overview off theirs.
 
 2. Install the needed Ruby gems with
 
-    ````bash
+    ```bash
     $ bundle
-    ````
+    ```
 3. Edit the `.yml` files according to their descriptions in the next section.
 4. Build the overview files to the `Overview` folder with
 
-    ````bash
+    ```bash
     $ rake
-    ````
+    ```
 
 Optionally, you can setup Travis CI to automatically build your overviews.
 See this project's [.travis.yml][travis.yml] file as an example
@@ -204,17 +204,17 @@ but still benefit directly from updates to the original project.
 
 Just add this as a remote,
 
-````bash
+```bash
 $ git remote add upstream https://github.com/{{ site.source_repo }}.git
-````
+```
 
 When you want to merge updates, fetch and merge.
 For example,
 
-````bash
+```bash
 $ git fetch --no-tags upstream
 $ git merge upstream/master
-````
+```
 
 <a name="structure"></a>
 <h2 data-magellan-destination="structure">Overview structure</h2>
