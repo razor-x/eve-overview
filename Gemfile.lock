@@ -36,7 +36,7 @@ GEM
       addressable (~> 2.3, >= 2.3.5)
     ffi (1.9.10)
     formatador (0.2.5)
-    guard (2.12.8)
+    guard (2.13.0)
       formatador (>= 0.2.4)
       listen (>= 2.7, <= 4.0)
       lumberjack (~> 1.0)
@@ -85,7 +85,7 @@ GEM
       listen (~> 2.7)
     json (1.8.3)
     kramdown (1.8.0)
-    liquid (2.6.2)
+    liquid (2.6.3)
     listen (2.10.1)
       celluloid (~> 0.16.0)
       rb-fsevent (>= 0.9.3)
@@ -96,7 +96,7 @@ GEM
     mini_magick (4.2.7)
     multi_json (1.11.2)
     nenv (0.2.0)
-    notiffany (0.0.6)
+    notiffany (0.0.7)
       nenv (~> 0.1)
       shellany (~> 0.0)
     parslet (1.5.0)
@@ -157,4 +157,4 @@ DEPENDENCIES
   uglifier (~> 2.7.0)
 
 BUNDLED WITH
-   1.10.5
+   1.10.6
