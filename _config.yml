@@ -80,21 +80,21 @@ keywords: [ blog, personal ]
 # piwik: https://example.com/piwik/
 
 # Uncomment below to enable deploy.
-# :deploy:
-#   # only :rsync supported
-#   :protocol: :rsync
+# deploy:
+#   # only rsync supported
+#   protocol: rsync
 #   # domain name
-#   :server: example.com
+#   server: example.com
 #   # remote username
-#   :user: www
+#   user: www
 #   # remote port
-#   :port: 22
+#   port: 22
 #   # path to remote folder where contents of _site should go
 #   # must have trailing slash
-#   :path: /var/www/example.com/htdocs/
+#   path: /var/www/example.com/htdocs/
 #   # site files and folders that should be uploaded but not synced
 #   # remote content will not be removed from these files and folders
-#   :upload_only:
+#   upload_only:
 #     - content/
 
 # Foundation Interchange markup support added to

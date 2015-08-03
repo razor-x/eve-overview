@@ -2,6 +2,8 @@
 
 ## HEAD
 
+- Deploy keys can be overridden via the `DEPLOY_KEY`
+  environment variable.
 - Switch to using [rake-jekyll] for git based deployment.
   You may now set the `SOURCE_BRANCH` environment variable
   to enable testing on all other branches.

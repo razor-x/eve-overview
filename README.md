@@ -114,6 +114,9 @@ $ git checkout -b jekyll-and-zurb upstream/master
 
 ## Automatic publishing to GitHub pages with Travis CI
 
+Note: you can still use Travis CI for testing only (no deploy step):
+simply add `SKIP_DEPLOY=true` to the Travis environment.
+
 If you are hosting at `username.github.io` you will need to leave the `master` branch empty
 and put your code in a different branch.
 The `master` branch otherwise functions like the `gh-pages` branch below.
@@ -149,7 +152,8 @@ Next, install the travis gem,
 $ gem install travis
 ```
 
-create a [GitHub Deploy Key](https://developer.github.com/guides/managing-deploy-keys/#deploy-keys),
+create a
+[GitHub Deploy Key](https://developer.github.com/guides/managing-deploy-keys/#deploy-keys),
 and name the private key `.deploy_key`.
 Encrypt it with
 
@@ -157,8 +161,16 @@ Encrypt it with
 $ travis encrypt-file .deploy_key
 ```
 
-Commit the encrypted file `.deploy_key.enc` and replace
-the first `before_install` command in `.travis.yml` with the generated one.
+Commit the encrypted file `.deploy_key.enc` and modify
+the `before_install` quoted command in `.travis.yml` to match the generated one.
+
+Instead of (or in addition to) checking `.deploy_key.enc` into the repository,
+if the `DEPLOY_KEY` environment variable is not empty, then its value will be
+used to override the contents of the `.deploy_key` file during the build.
+This is useful if you need to have repository specific deploy keys
+(convenient when forking or maintaining a staging site as described below).
+Do not use actual newlines or spaces in the environment variable string;
+instead, `[NL]` will be converted to a real newline and `[SP]` to a real space.
 
 Set the source branch that will be used to build the site.
 
