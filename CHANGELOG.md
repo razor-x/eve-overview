@@ -1,6 +1,6 @@
 # Changelog
 
-## HEAD
+## 2.10.0
 
 - Deploy keys can be overridden via the `DEPLOY_KEY`
   environment variable.
