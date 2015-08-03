@@ -20,6 +20,7 @@ exclude:
   - Rakefile
   - bower.json
   - bower_components
+  - node_modules
   - vendor
 
 livereload:
