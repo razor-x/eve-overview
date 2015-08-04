@@ -2,6 +2,7 @@
 
 ## HEAD
 
+- Remove Compass.
 - Remove default webfonts.
 - Load Foundation Icon Fonts from cdnjs.
 - Update jekyll-assets to 1.0.0.

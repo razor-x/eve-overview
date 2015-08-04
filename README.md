@@ -31,7 +31,6 @@ If you like this, check out the sister project
 ### Asset pipeline with [Jekyll::AssetsPlugin](https://github.com/ixti/jekyll-assets).
 
   * [Bower](http://bower.io/) for asset dependency management.
-  * [Compass](http://compass-style.org/), [Sass](http://sass-lang.com/), [CoffeeScript](http://coffeescript.org/).
 
 ### Modern web libraries and patterns.
 

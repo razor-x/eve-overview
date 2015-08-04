@@ -8,4 +8,4 @@ Location: Your Location, Country
 
 Standards: HTML5, CSS3
 Components: Modernizr, jQuery, Web Font Loader, HeadJS, highlight.js, Foundation by ZURB, Foundation Icon Fonts
-Software: Ruby, Rake, Jekyll, Jekyll::AssetsPlugin, Sprockets, Compass, Sass, Uglifier
+Software: Ruby, Rake, Jekyll, Jekyll::AssetsPlugin, Sprockets, Sass, Uglifier
