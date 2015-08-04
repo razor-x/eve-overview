@@ -2,6 +2,7 @@
 
 ## HEAD
 
+- Remove default webfonts.
 - Load Foundation Icon Fonts from cdnjs.
 - Update jekyll-assets to 1.0.0.
 - Use `h2` for 404 page.
