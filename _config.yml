@@ -29,7 +29,6 @@ livereload:
 gems:
   - json
   - jekyll-assets
-  - jekyll-assets/compass
   - coffee_script
 
 # Jekyll::AssetsPlugin options.
