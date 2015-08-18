@@ -81,8 +81,8 @@ keywords: [ blog, personal ]
 
 # Uncomment below to enable deploy.
 # deploy:
-#   # only rsync supported
-#   protocol: rsync
+#   # only :rsync supported
+#   protocol: :rsync
 #   # domain name
 #   server: example.com
 #   # remote username
