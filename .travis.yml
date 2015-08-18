@@ -15,7 +15,6 @@ sudo: false
 
 before_script:
   - npm install
-  - npm run install
 
 # Install the travis gem.
 # Create a deploy key and encrypt it with:
