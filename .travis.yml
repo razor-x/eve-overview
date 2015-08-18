@@ -5,7 +5,7 @@ language:
 rvm:
   - 2.2.2
 node_js:
-  - iojs
+  - iojs-v2.5.0
 cache:
   bundler: true
   directories:
