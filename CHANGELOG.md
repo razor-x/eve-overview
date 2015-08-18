@@ -1,6 +1,6 @@
 # Changelog
 
-## HEAD
+## 2.11.1
 
 - Fix gist tag not loading async.
 
