@@ -1,6 +1,6 @@
 # Changelog
 
-## HEAD
+## 2.11.2
 
 - Update minor dependencies.
 
