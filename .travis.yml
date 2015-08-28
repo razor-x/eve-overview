@@ -3,9 +3,9 @@ language:
   - ruby
   - node_js
 rvm:
-  - 2.2.2
+  - 2
 node_js:
-  - iojs-v2.5.0
+  - stable
 cache:
   bundler: true
   directories:
