@@ -1,5 +1,22 @@
 # Changelog
 
+## 2.11.2
+
+- Update minor dependencies.
+
+## 2.11.1
+
+- Fix gist tag not loading async.
+
+## 2.11.0
+
+- Use io.js v2.5.0.
+- Remove Compass.
+- Remove default webfonts.
+- Load Foundation Icon Fonts from cdnjs.
+- Update jekyll-assets to 1.0.0.
+- Use `h2` for 404 page.
+
 ## 2.10.0
 
 - Deploy keys can be overridden via the `DEPLOY_KEY`

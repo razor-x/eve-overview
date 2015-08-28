@@ -1,7 +1,4 @@
-require 'fileutils'
-require 'rake'
 require 'rake-jekyll'
-require 'tmpdir'
 require 'yaml'
 
 # Load the configuration file.
