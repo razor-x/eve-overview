@@ -14,4 +14,4 @@ Hosting: GitHub Pages, CloudFlare
 
 /* LICENSE */
 
-Copyright © 2013-2014 Evan Sosenko
+Copyright © 2014-2015 Evan Sosenko
