@@ -4,6 +4,6 @@
   },
   "private": true,
   "devDependencies": {
-    "bower": "^1.4.1"
+    "bower": "^1.5.2"
   }
 }
