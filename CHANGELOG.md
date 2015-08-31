@@ -1,6 +1,6 @@
 # Changelog
 
-## HEAD
+## 2.11.4
 
 - Fix bug with ssh-agent command.
 
