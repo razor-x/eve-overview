@@ -1,5 +1,9 @@
 # Changelog
 
+## HEAD
+
+- Fix bug with ssh-agent command.
+
 ## 2.11.3
 
 - Fix issue when using `DEPLOY_KEY`.
