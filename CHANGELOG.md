@@ -3,6 +3,7 @@
 ## 2.11.2
 
 - Update minor dependencies.
+- Fix issue when using `DEPLOY_KEY`.
 
 ## 2.11.1
 

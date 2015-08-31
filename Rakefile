@@ -148,6 +148,10 @@ task :travis_env do
   if File.exists? '.deploy_key'
     sh 'chmod 600 .deploy_key'
   end
+
+  unless deploy_key.empty?
+    sh 'ssh-add .deploy_key'
+  end
 end
 
 # rake staging_env
