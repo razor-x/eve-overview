@@ -4,6 +4,7 @@
 
 - Update minor dependencies.
 - Fix issue when using `DEPLOY_KEY`.
+- Set staging site CNAME with `CNAME` environment variable.
 
 ## 2.11.1
 

@@ -195,6 +195,10 @@ then this value will be used to set `domain`, `baseurl`, and the assets `baseurl
 This is useful when you want to setup a staging site
 on a separate development repository.
 
+You may override the CNAME for the staging site by setting
+the `CNAME` environment variable.
+Set `CNAME` to `false` to remove the `CNAME` file on build.
+
 ## Updating
 
 The `Gemfile` is using pessimistic version constraints for everything,

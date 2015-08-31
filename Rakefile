@@ -167,4 +167,11 @@ task :staging_env do
 
   File.open(staging_config_file, 'w') { |f| f.write staging_config.to_yaml }
   File.open('robots.txt', 'w') { |f| f.write "User-agent: *\nDisallow: /" }
+
+  cname = ENV['CNAME'].to_s
+  if cname == 'false'
+    File.delete('CNAME') if File.exists?('CNAME')
+  elsif !cname.empty?
+    File.open('CNAME', 'w') { |f| f.write cname }
+  end
 end
