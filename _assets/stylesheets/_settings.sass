@@ -71,10 +71,10 @@
 @import variables
 
 // We use this to control whether or not CSS classes come through in the gem files.
-$include-html-classes: true
+$include-html-classes: false
 
 // $include-print-styles: true
-$include-html-global-classes: $include-html-classes
+$include-html-global-classes: true
 
 // b. Grid
 // - - - - - - - - - - - - - - - - - - - - - - - - -
@@ -210,7 +210,7 @@ $body-font-color: $gainsboro
 // e. Typography
 // - - - - - - - - - - - - - - - - - - - - - - - - -
 
-// $include-html-type-classes: $include-html-classes
+$include-html-type-classes: true
 
 // We use these to control header font styles
 // $header-font-family: $body-font-family
@@ -401,7 +401,7 @@ $anchor-font-color: $body-font-color
 // @if $align-block-grid-to-grid {$block-grid-default-spacing: $column-gutter}
 
 // Enables media queries for block-grid classes. Set to false if writing semantic HTML.
-// $block-grid-media-queries: true
+$block-grid-media-queries: false
 
 // 04. Breadcrumbs
 // - - - - - - - - - - - - - - - - - - - - - - - - -
@@ -437,7 +437,7 @@ $anchor-font-color: $body-font-color
 // 05. Buttons
 // - - - - - - - - - - - - - - - - - - - - - - - - -
 
-// $include-html-button-classes: $include-html-classes
+$include-html-button-classes: true
 
 // We use these to build padding for buttons.
 // $button-tny: rem-calc(10)
@@ -500,7 +500,7 @@ $anchor-font-color: $body-font-color
 // 07. Clearing
 // - - - - - - - - - - - - - - - - - - - - - - - - -
 
-// $include-html-clearing-classes: $include-html-classes
+$include-html-clearing-classes: true
 
 // We use these to set the background colors for parts of Clearing.
 // $clearing-bg: $oil
@@ -824,7 +824,7 @@ $anchor-font-color: $body-font-color
 // 17. Magellan
 // - - - - - - - - - - - - - - - - - - - - - - - - -
 
-// $include-html-magellan-classes: $include-html-classes
+$include-html-magellan-classes: true
 
 $magellan-bg: $jet
 // $magellan-padding: 10px
@@ -1121,7 +1121,7 @@ $magellan-bg: $jet
 // 25. Reveal
 // - - - - - - - - - - - - - - - - - - - - - - - - -
 
-// $include-html-reveal-classes: $include-html-classes
+$include-html-reveal-classes: true
 
 // We use these to control the style of the reveal overlay.
 // $reveal-overlay-bg: rgba($black, .45)
@@ -1234,7 +1234,7 @@ $reveal-modal-bg: $oil
 // 28. Sub Nav
 // - - - - - - - - - - - - - - - - - - - - - - - - -
 
-// $include-html-nav-classes: $include-html-classes
+$include-html-nav-classes: true
 
 // We use these to control margin and padding
 $sub-nav-list-margin: rem-calc(0 0 18)
@@ -1476,7 +1476,7 @@ $sub-nav-list-margin: rem-calc(0 0 18)
 // 36. Visibility Classes
 // - - - - - - - - - - - - - - - - - - - - - - - - -
 
-// $include-html-visibility-classes: $include-html-classes
+$include-html-visibility-classes: true
 // $include-accessibility-classes: true
 // $include-table-visibility-classes: true
 // $include-legacy-visibility-classes: true
