@@ -6,6 +6,7 @@ build = 'Overview'
 
 task default: :build
 task build: [:reset_build_directory, :compile_overviews]
+task travis: [:build, :zip]
 
 task :reset_build_directory do
   FileUtils.remove_entry_secure build if Dir.exist? build
@@ -23,7 +24,7 @@ task :compile_overviews do
   end
 end
 
-task travis: [:build] do
+task :zip do
   system 'zip', '-r', "eve-overview-v#{File.read('VERSION').strip}.zip",
          build, 'README.md', 'LICENSE.txt', 'CHANGELOG.md', 'VERSION'
 end
