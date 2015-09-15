@@ -1,5 +1,9 @@
 # Changelog
 
+## HEAD
+
+- Add Entosis Command Node.
+
 ## 0.6.1
 
 - Add faction warfare presets (under extra).
