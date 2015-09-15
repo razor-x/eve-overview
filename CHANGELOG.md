@@ -2,6 +2,7 @@
 
 ## HEAD
 
+- Add Amarr Navy Roaming entities.
 - Add Deployable Structures.
 - Add Entosis Command Node.
 - Add Entosis Command Node to short D-Scan.
