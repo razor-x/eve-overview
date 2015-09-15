@@ -3,6 +3,7 @@
 ## HEAD
 
 - Add Entosis Command Node.
+- Add Entosis Command Node to short D-Scan.
 
 ## 0.6.1
 

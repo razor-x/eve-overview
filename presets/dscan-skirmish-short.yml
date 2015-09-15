@@ -10,5 +10,6 @@ groups:
   - _celestial-planet
   - _orbitals-orbital_infrastructure
   - _celestial-asteroid_belt
+  - _celestial-entosis_command_node
 states:
   - hostile
