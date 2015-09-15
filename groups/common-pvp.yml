@@ -5,3 +5,4 @@ include:
   - _deployable
   - gates
   - _station
+  - _deployable-structures
