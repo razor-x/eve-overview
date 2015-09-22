@@ -1,6 +1,6 @@
 # Changelog
 
-## HEAD
+## 2.11.5
 
 - Set Modernizr version to force version 2 as 3 is incompatible.
 
