@@ -1,5 +1,9 @@
 # Changelog
 
+## 2.11.5
+
+- Set Modernizr version to force version 2 as 3 is incompatible.
+
 ## 2.11.4
 
 - Fix bug with ssh-agent command.
