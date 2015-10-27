@@ -2,6 +2,7 @@
 
 ## HEAD
 
+- Add mission supercarrier.
 - Add Blood Raider Event ships.
 
 ## 0.7.0
