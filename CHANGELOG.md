@@ -1,6 +1,6 @@
 # Changelog
 
-## HEAD
+## 0.8.0
 
 - Add mission supercarrier.
 - Add Blood Raider Event ships.
