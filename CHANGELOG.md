@@ -1,5 +1,9 @@
 # Changelog
 
+## HEAD
+
+- Add Blood Raider Event ships.
+
 ## 0.7.0
 
 - Add Amarr Navy Roaming entities.
