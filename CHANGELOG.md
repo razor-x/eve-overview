@@ -2,6 +2,7 @@
 
 ## HEAD
 
+- Tactical destroyers now consistently display with other destroyer types.
 - Add Deadspace Sleepers.
 - Add Serpentis Event ships.
 - Fix: Blood Raider Event ships missing from `_entity.yml`.

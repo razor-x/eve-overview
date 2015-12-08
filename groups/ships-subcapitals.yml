@@ -13,6 +13,7 @@ include:
   - _ship-cruiser
   - _ship-deep_space_transport
   - _ship-destroyer
+  - _ship-tactical_destroyer
   - _ship-electronic_attack_ship
   - _ship-elite_battleship
   - _ship-exhumer
