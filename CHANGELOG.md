@@ -2,6 +2,7 @@
 
 ## HEAD
 
+- Add new force auxiliary ships.
 - Add new logistics frigates.
 - Add new command destroyers.
 - Add Deadspace Sleepers.

@@ -5,6 +5,7 @@ level: 3
 groups:
   - common-minimal-ships
   - _ship-carrier
+  - _ship-force_auxiliary
   - _ship-logistics
   - _ship-logistics_frigate
 states:
