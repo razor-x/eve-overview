@@ -1,5 +1,9 @@
 # Changelog
 
+## HEAD
+
+- Fix: Blood Raider Event ships missing from `_entity.yml`.
+
 ## 0.8.0
 
 - Add mission supercarrier.
