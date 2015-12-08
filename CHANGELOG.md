@@ -2,6 +2,7 @@
 
 ## HEAD
 
+- Add Serpentis Event ships.
 - Fix: Blood Raider Event ships missing from `_entity.yml`.
 - Fix: mission supercarrier missing from `_entity.yml`.
 
