@@ -8,13 +8,12 @@ include:
   - _ship-capsule
   - _ship-combat_battlecruiser
   - _ship-combat_recon_ship
+  - _ship-command_destroyers
   - _ship-command_ship
   - _ship-covert_ops
   - _ship-cruiser
   - _ship-deep_space_transport
   - _ship-destroyer
-  - _ship-tactical_destroyer
-  - _ship-command_destroyers
   - _ship-electronic_attack_ship
   - _ship-elite_battleship
   - _ship-exhumer
@@ -35,3 +34,4 @@ include:
   - _ship-shuttle
   - _ship-stealth_bomber
   - _ship-strategic_cruiser
+  - _ship-tactical_destroyer
