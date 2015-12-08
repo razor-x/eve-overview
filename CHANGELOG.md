@@ -3,6 +3,7 @@
 ## HEAD
 
 - Fix: Blood Raider Event ships missing from `_entity.yml`.
+- Fix: mission supercarrier missing from `_entity.yml`.
 
 ## 0.8.0
 
