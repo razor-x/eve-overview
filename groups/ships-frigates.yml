@@ -6,6 +6,7 @@ include:
   - _ship-expedition_frigate
   - _ship-frigate
   - _ship-interceptor
+  - _ship-logistics_frigate
   - _ship-prototype_exploration_ship
   - _ship-rookie_ship
   - _ship-stealth_bomber

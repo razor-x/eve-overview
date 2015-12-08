@@ -5,5 +5,6 @@ level: 2
 groups:
   - common-minimal-ships
   - _ship-logistics
+  - _ship-logistics_frigate
 states:
   - fleet

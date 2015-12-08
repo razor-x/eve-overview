@@ -27,6 +27,7 @@ include:
   - _ship-interceptor
   - _ship-interdictor
   - _ship-logistics
+  - _ship-logistics_frigate
   - _ship-marauder
   - _ship-mining_barge
   - _ship-prototype_exploration_ship

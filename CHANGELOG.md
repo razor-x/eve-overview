@@ -2,6 +2,7 @@
 
 ## HEAD
 
+- Add new logistics frigates.
 - Add new command destroyers.
 - Add Deadspace Sleepers.
 - Add Serpentis Event ships.
