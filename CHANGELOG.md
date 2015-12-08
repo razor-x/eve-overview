@@ -1,6 +1,6 @@
 # Changelog
 
-## HEAD
+## 0.9.0
 
 - Add new force auxiliary ships.
 - Add new logistics frigates.
