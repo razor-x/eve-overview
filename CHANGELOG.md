@@ -3,6 +3,7 @@
 ## HEAD
 
 - Structure group renamed to Starbase.
+- Add new Structure group.
 - Add Structure AoE Missile and count as bomb.
 
 ## 0.9.0
