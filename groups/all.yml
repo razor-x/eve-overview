@@ -6,6 +6,7 @@ include:
   - _deployable
   - _drone
   - _entity
+  - _fighter
   - _npc
   - _orbitals
   - _planetary_interaction

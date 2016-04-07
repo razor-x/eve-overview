@@ -2,6 +2,7 @@
 
 ## HEAD
 
+- Add new Fighter group.
 - Add Guristas event ships.
 - Structure group renamed to Starbase.
 - Add new Structure group.
