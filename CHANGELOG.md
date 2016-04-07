@@ -1,5 +1,9 @@
 # Changelog
 
+## HEAD
+
+- Add Structure AoE Missile and count as bomb.
+
 ## 0.9.0
 
 - Add new force auxiliary ships.
