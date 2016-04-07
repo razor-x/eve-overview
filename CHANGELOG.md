@@ -1,6 +1,6 @@
 # Changelog
 
-## HEAD
+## 0.10.0
 
 - Add new Fighter group.
 - Add Guristas event ships.
