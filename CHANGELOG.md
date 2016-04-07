@@ -2,6 +2,7 @@
 
 ## HEAD
 
+- Add Guristas event ships.
 - Structure group renamed to Starbase.
 - Add new Structure group.
 - Add Structure AoE Missile and count as bomb.
