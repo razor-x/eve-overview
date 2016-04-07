@@ -10,6 +10,6 @@ include:
   - _orbitals
   - _planetary_interaction
   - _ship
+  - _starbase
   - _sovereignty_structures
   - _station
-  - _structure
