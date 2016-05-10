@@ -1,5 +1,9 @@
 # Changelog
 
+## HEAD
+
+- Add new asteroid NPC entities.
+
 ## 0.10.0
 
 - Add new Fighter group.
