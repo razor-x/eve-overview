@@ -1,6 +1,6 @@
 # Changelog
 
-## HEAD
+## 0.11.0
 
 - Add new asteroid NPC entities.
 
