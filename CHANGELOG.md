@@ -1,6 +1,6 @@
 # Changelog
 
-## HEAD
+## 0.12.0
 
 - Add Super Weapon Beacon.
 - Add new entities:
