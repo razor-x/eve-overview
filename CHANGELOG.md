@@ -2,6 +2,7 @@
 
 ## HEAD
 
+- Add Super Weapon Beacon.
 - Add new entities:
   - Event container.
   - Tutorial seekers.
