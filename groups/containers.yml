@@ -1,4 +1,6 @@
 ---
+include:
+  - _entity-event_container
 types:
   - 12
   - 306

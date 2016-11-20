@@ -1,5 +1,16 @@
 # Changelog
 
+## HEAD
+
+- Add new entities:
+  - Event container.
+  - Tutorial seekers.
+  - Roaming entities.
+  - Angel Cartel event ships.
+  - Amarr event ships.
+  - Hidden Zenith ships.
+  - ◆ ships.
+
 ## 0.11.0
 
 - Add new asteroid NPC entities.

@@ -5,6 +5,7 @@ include:
   - _entity-pirate_drone
   - _entity-protective_sentry_gun
   - _entity-tutorial_drone
+  - _entity-tutorial_seekers
   - _entity-rogue_drone
   - _entity-roaming_sleepers_cruiser
   - _entity-drifters_battleship
@@ -19,3 +20,8 @@ include:
   - entities-deadspace_sleeper
   - entities-guristas_event
   - entities-asteroid
+  - entities-amarr_event
+  - entities-angel_cartel_event
+  - entities-hidden_zenith
+  - entities-roaming
+  - entities-◆
