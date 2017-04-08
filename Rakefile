@@ -152,6 +152,9 @@ task :travis_env do
   unless deploy_key.empty?
     sh 'ssh-add .deploy_key'
   end
+
+  sh 'git config --global user.name "Evan Sosenko"'
+  sh 'git config --global user.email "razorx@evansosenko.com"'
 end
 
 # rake staging_env
