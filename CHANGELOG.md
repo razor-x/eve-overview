@@ -1,5 +1,15 @@
 # Changelog
 
+## 1.0.0 / 2018-03-07
+
+- Remove all legacy types.
+- Add all new celestials.
+- Add all new asteroids.
+- Add and update structures.
+- Add and update all entities.
+  - All event entities are now under irregular.
+  - The irregular container is also under containers.
+
 ## 0.12.0
 
 - Add Super Weapon Beacon.
