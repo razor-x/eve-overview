@@ -1,4 +1,7 @@
 ---
+types:
+  - 1165
+
 include:
   - _asteroid
   - _celestial
@@ -9,7 +12,6 @@ include:
   - _fighter
   - _npc
   - _orbitals
-  - _planetary_interaction
   - _ship
   - _starbase
   - _sovereignty_structures

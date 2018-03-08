@@ -1,7 +1,3 @@
 ---
-types:
-  - 549
-  - 1023
-
 include:
   - _fighter
