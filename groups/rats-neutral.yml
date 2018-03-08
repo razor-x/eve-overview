@@ -2,6 +2,7 @@
 include:
   - _entity-destructible_agents_in_space
   - _entity-destructible_sentry_gun
+  - _entity-irregular
   - _entity-pirate_drone
   - _entity-protective_sentry_gun
   - _entity-tutorial_drone
@@ -15,13 +16,8 @@ include:
   - entities-deadspace
   - entities-mission
   - entities-amarr_navy_roaming
-  - entities-blood_raider_event
-  - entities-serpentis_event
   - entities-deadspace_sleeper
-  - entities-guristas_event
   - entities-asteroid
-  - entities-amarr_event
-  - entities-angel_cartel_event
   - entities-hidden_zenith
   - entities-roaming
   - entities-◆
