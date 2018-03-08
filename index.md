@@ -610,7 +610,7 @@ As for trusting the overview,
 the entire project is open source and open to scrutiny.
 Please submit any bugs or issues you find.
 Don't fly what you can't afford to lose.
-I'm not responsible for any loses you might incur while using the overview.
+I'm not responsible for any losses you might incur while using the overview.
 
 > This software is provided "as is" and without any express or
 > implied warranties, including, without limitation, the implied
