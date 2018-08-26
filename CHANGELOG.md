@@ -1,5 +1,11 @@
 # Changelog
 
+## 1.1.0 / 2018-08-26
+
+- Add new celestial types since last update.
+- Add Abyssal Trace to gates.
+- Add Flag Cruiser to cruiser group.
+
 ## 1.0.0 / 2018-03-07
 
 - Remove all legacy types.
