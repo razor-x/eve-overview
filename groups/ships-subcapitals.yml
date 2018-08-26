@@ -12,6 +12,7 @@ include:
   - _ship-command_ship
   - _ship-covert_ops
   - _ship-cruiser
+  - _ship-flag-cruiser
   - _ship-deep_space_transport
   - _ship-destroyer
   - _ship-electronic_attack_ship
