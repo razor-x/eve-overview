@@ -1,5 +1,10 @@
 # Changelog
 
+## 1.2.0 / 2018-08-30
+
+- Add Abyssal entities.
+- Add Flag Cruiser to subcapitals group.
+
 ## 1.1.0 / 2018-08-26
 
 - Add new celestial types since last update.
