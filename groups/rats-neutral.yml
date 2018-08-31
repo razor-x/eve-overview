@@ -12,6 +12,7 @@ include:
   - _entity-drifters_battleship
   - _npc-mission_npc
   - _npc-pirate_npc
+  - entities-abyssal
   - entities-asteroid_mordus_legion
   - entities-deadspace
   - entities-mission
