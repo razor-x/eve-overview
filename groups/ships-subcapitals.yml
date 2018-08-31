@@ -22,6 +22,7 @@ include:
   - _ship-force_recon_ship
   - _ship-frigate
   - _ship-heavy_assault_cruiser
+  - _ship-flag-cruiser
   - _ship-heavy_interdiction_cruiser
   - _ship-industrial_command_ship
   - _ship-industrial
