@@ -3,8 +3,9 @@ name: salvage
 symbol: ✪ extra
 level: 1
 groups:
-  - common-minimal
+  - common-pvp
   - containers
   - _celestial-wreck
+  - _ship
 states:
   - hostile
