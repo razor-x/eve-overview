@@ -5,6 +5,7 @@ include:
   - _entity-irregular
   - _entity-pirate_drone
   - _entity-protective_sentry_gun
+  - _entity-retaliating
   - _entity-tutorial_drone
   - _entity-tutorial_seekers
   - _entity-rogue_drone
