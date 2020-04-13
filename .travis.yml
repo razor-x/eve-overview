@@ -11,7 +11,7 @@ script: bundle exec rake travis
 deploy:
   provider: releases
   api_key:
-    secure: JQmx4sGKq9eDv4r9bTQrFqNwvwjoSZT9rpDalwNzu1tjiu6sQqwsdXBZH+Zbye//k29xH14O+y5wYWZKwpy4rii4n6Er9mxWU9obMuVcg9JUIea+21BigDwv3YelcS6Fd+YvSizkp4gBwlOlGaP5kYxg39OYg3V29TlpZ6VhVSs=
+    secure: Fa+Upwbo6tTNUS9c4NYTlgwtwt2U8aiTC1oodNEpFeEfQaMt1l9VK3AchEH3xCwTh8+g2jwDM3E2CoA95V+1S8fZ5bHiXvz7kdzHxNymCBKLFcayzyI1zzs4kjTFvmAIFVEksmrObzptCdkibJIMskSMLQqaRPeZOdUFlhgE7W0=
   file: eve-overview-${TRAVIS_TAG}.zip
   skip_cleanup: true
   on:
