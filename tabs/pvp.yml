@@ -21,12 +21,12 @@
 
 - name: auxiliary
   color: FF33B5E5
-  overview: rats
+  overview: pve-npc
   bracket: brackets-all
 
-- name: drones
+- name: system
   color: FFFF9933
-  overview: hostile-drones
+  overview: dscan-skirmish-long
   bracket: brackets-all
 
 - name: loot
