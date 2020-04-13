@@ -6,5 +6,6 @@ groups:
   - common-minimal
   - containers
   - _celestial-wreck
+  - _entity-precursor_cache
 states:
   - hostile
