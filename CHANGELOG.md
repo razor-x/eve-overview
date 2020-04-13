@@ -1,8 +1,12 @@
 # Changelog
 
+## 2.1.0 / 2020-04-12
+
+- Add 8 tabs to pvp.
+
 ## 2.0.0 / 2020-04-12
 
-- Add 8 tabs.
+- Add 8 tabs to pve and skirmish.
 - (**Breaking**) Swap loot and salvage presets.
 - Add all new overview types since last update.
 
