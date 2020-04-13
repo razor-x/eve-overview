@@ -11,8 +11,8 @@ __Don't die on patch day because you missed adding that new ship-type to one of 
 
 ### Overview Pack
 
-An exhaustive and customizable overview pack.
-Download from the [main site](https://io.evansosenko.com/eve-overview/)
+An exhaustive and customizable overview pack:
+download from the [main site](https://io.evansosenko.com/eve-overview/).
 For questions, submit a new GitHub issue.
 
 _I only update this pack when I'm actively playing EVE.
