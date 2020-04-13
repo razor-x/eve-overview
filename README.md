@@ -3,14 +3,22 @@
 _Generate DRY modular overviews._
 
 [![Release](https://img.shields.io/github/release/razor-x/eve-overview.svg)](https://github.com/razor-x/eve-overview/releases)
-[![MIT License](https://img.shields.io/github/license/razor-x/eve-overview.svg)](./LICENSE.txt)
-[![Dependency Status](https://img.shields.io/gemnasium/razor-x/eve-overview.svg)](https://gemnasium.com/razor-x/eve-overview)
 [![Build Status](https://img.shields.io/travis/razor-x/eve-overview/master.svg)](https://travis-ci.org/razor-x/eve-overview)
-[![Gitter Chat](https://img.shields.io/badge/chat-gitter-1dce73.svg)](https://gitter.im/razor-x/eve-overview)
+
+__Don't die on patch day because you missed adding that new ship-type to one of your presets!__
 
 ## Description
 
-__Don't die on patch day because you missed adding that new ship-type to one of your presets!__
+### Overview Pack
+
+An exhaustive and customizable overview pack.
+Download from the [main site](https://io.evansosenko.com/eve-overview/)
+For questions, submit a new GitHub issue.
+
+_I only update this pack when I'm actively playing EVE.
+If you would like me to release an update, please submit an issue._
+
+### Generator
 
 The EVE Online Overview Generator facilitates creating and maintaining overview packs.
 
