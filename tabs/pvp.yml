@@ -21,5 +21,20 @@
 
 - name: auxiliary
   color: FF33B5E5
+  overview: rats
+  bracket: brackets-all
+
+- name: drones
+  color: FFFF9933
+  overview: hostile-drones
+  bracket: brackets-all
+
+- name: loot
+  color: FFFFFF00
   overview: extra-loot
+  bracket: brackets-all
+
+- name: escape
+  color: FFFF00FF
+  overview: extra-warpout
   bracket: brackets-all
