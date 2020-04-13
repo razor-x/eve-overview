@@ -1,5 +1,9 @@
 # Changelog
 
+## 2.1.1 / 2020-04-12
+
+- Fix pvp tabs.
+
 ## 2.1.0 / 2020-04-12
 
 - Add 8 tabs to pvp.
