@@ -1,5 +1,12 @@
 # Changelog
 
+## 2.2.0 / 2020-07-17
+
+- Add new type:
+  - Invisible Beacon
+  - Temporary Collidable Structure
+  - Exotic Artefact
+
 ## 2.1.1 / 2020-04-12
 
 - Fix pvp tabs.
