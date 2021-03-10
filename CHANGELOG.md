@@ -1,8 +1,16 @@
 # Changelog
 
+## 2.3.0 / 2021-03-04
+
+- Add new types:
+  - New celestials
+  - Mobile Cynosural Beacon
+  - Interdiction Burst Probe
+  - Disrupted Gate
+
 ## 2.2.0 / 2020-07-17
 
-- Add new type:
+- Add new types:
   - Invisible Beacon
   - Temporary Collidable Structure
   - Exotic Artefact
