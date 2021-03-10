@@ -2,6 +2,7 @@
 include:
   - _celestial-stargate
   - _celestial-warp_gate
+  - _celestial-disrupted_gate
   - _celestial-wormhole
   - _celestial-abyssal-trace
   - _starbase-jump_portal_array
