@@ -46,10 +46,6 @@ end
 # Set `rake draft` as default task.
 task default: [:draft]
 
-# rake travis
-desc 'Generate site from Travis CI and publish site to GitHub Pages'
-task travis: [:staging_env, :travis_env, :publish]
-
 # rake build
 desc 'Generate the site'
 task build: [:staging_env] do
@@ -132,29 +128,6 @@ Rake::Jekyll::GitDeployTask.new(:publish) do |t|
   t.jekyll_build = -> (dest_dir) {
     Rake.sh(*build_site_command(dest_dir))
   }
-end
-
-# rake travis_env
-desc 'Prepare the Travis CI build environment'
-task :travis_env do
-  next if ENV['SKIP_DEPLOY'].to_s == 'true' && ENV['REQUIRE_KEY'].to_s != 'true'
-
-  deploy_key = ENV['DEPLOY_KEY'].to_s
-  .split('[NL]').join("\n").gsub('[SP]', ' ')
-  unless deploy_key.empty?
-    File.open('.deploy_key', 'w') { |f| f.write deploy_key }
-  end
-
-  if File.exists? '.deploy_key'
-    sh 'chmod 600 .deploy_key'
-  end
-
-  unless deploy_key.empty?
-    sh 'ssh-add .deploy_key'
-  end
-
-  sh 'git config --global user.name "Evan Sosenko"'
-  sh 'git config --global user.email "razorx@evansosenko.com"'
 end
 
 # rake staging_env
