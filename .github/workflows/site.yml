@@ -1,13 +1,15 @@
 ---
-name: release
+name: project-site
 
 on:
   push:
     branches:
-      - project-site
+      - '**'
+      - '!master'
+      - '!project-site'
 
 jobs:
-  deploy:
+  build:
     runs-on: ubuntu-20.04
     steps:
       - name: Checkout
@@ -24,9 +26,3 @@ jobs:
         run: npm install
       - name: Build
         run: bundle exec rake build
-      - name: Publish 🚀
-        uses: JamesIves/github-pages-deploy-action@4.1.5
-        with:
-          branch: master
-          folder: _site
-          clean: true
