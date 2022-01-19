@@ -1,5 +1,7 @@
 ---
 include:
+  - _entity-air
+  - _entity-unidentified
   - _entity-destructible_agents_in_space
   - _entity-destructible_sentry_gun
   - _entity-irregular
