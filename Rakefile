@@ -4,9 +4,8 @@ require 'yaml'
 
 build = 'Overview'
 
-task default: :build
+task default: [:build, :zip]
 task build: [:reset_build_directory, :compile_overviews]
-task travis: [:build, :zip]
 
 task :reset_build_directory do
   FileUtils.remove_entry_secure build if Dir.exist? build

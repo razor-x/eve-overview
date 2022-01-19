@@ -3,7 +3,7 @@
 _Generate DRY modular overviews._
 
 [![Release](https://img.shields.io/github/release/razor-x/eve-overview.svg)](https://github.com/razor-x/eve-overview/releases)
-[![Build Status](https://img.shields.io/travis/razor-x/eve-overview/master.svg)](https://travis-ci.org/razor-x/eve-overview)
+[![GitHub Actions](https://github.com/razor-x/eve-overview/workflows/main/badge.svg)](https://github.com/razor-x/eve-overview/actions)
 
 __Don't die on patch day because you missed adding that new ship-type to one of your presets!__
 
