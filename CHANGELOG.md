@@ -1,5 +1,9 @@
 # Changelog
 
+## 2.4.1 / 2022-01-18
+
+- Fix release action.
+
 ## 2.4.0 / 2022-01-18
 
 - Add new types:

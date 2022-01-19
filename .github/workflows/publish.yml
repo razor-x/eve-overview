@@ -21,5 +21,4 @@ jobs:
       - name: Release
         uses: softprops/action-gh-release@v1
         with:
-          files: Release.txt
-          file: eve-overview-*.zip
+          files: eve-overview-*.zip
