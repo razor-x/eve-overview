@@ -600,7 +600,7 @@ types:
 #### Who are you?
 
 I've been playing EVE since 2008 as [Leon Razor].
-I am currently a Core member of [Agony Unleashed].
+I am a former Core member of [Agony Unleashed].
 
 #### Should I trust you?
 
@@ -638,9 +638,6 @@ and appreciate the flexibility and precision of the modular design?
 
 If you answered yes to any of the above then you should try this!
 
-Note that I'm still adding presets and tweaking the default overview,
-but I've been using this as my primary overview for while now.
-
 #### Where is the graphical interface?
 
 My goal with this project is to track my overview in version control
@@ -659,7 +656,6 @@ the listed requirements should be familiar or at lease approachable.
 
 If you found a bug or have a feature request,
 create a new issue with the [GitHub issue tracker].
-If you want real-time help or have general questions, join the [Gitter chat].
 
 #### Can I contribute?
 
@@ -669,14 +665,11 @@ Pull requests and issue reports are welcome.
 Keep in mind that everyone has a different opinion on what makes a good overview,
 so I can't possibly promise to incorporate all suggestions.
 
-For real-time developer chatter, join the [Gitter chat].
-
 If you find this useful, I will accept ISK donations
 to the in-game character [Leon Razor].
 
 [Agony Unleashed]: http://www.agony-unleashed.com/
 [DRY]: https://en.wikipedia.org/wiki/Don't_repeat_yourself
-[Gitter chat]: https://gitter.im/razor-x/eve-overview
 [Leon Razor]: https://gate.eveonline.com/Profile/Leon%20Razor
 
 <a name="changelog"></a>
