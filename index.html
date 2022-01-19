@@ -1,0 +1,915 @@
+<!DOCTYPE html>
+<!--[if IE 9]><html class="lt-ie10" lang="en" prefix="og: http://ogp.me/ns#"> <![endif]-->
+<html class="no-js" lang="en" prefix="og: http://ogp.me/ns#">
+<head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  
+
+
+  <title>EVE Overview Generator and Overview Pack</title>
+  <meta property="og:title" content="EVE Overview Generator and Overview Pack" />
+
+
+
+  
+
+
+
+  <meta name="description" content="Generate DRY modular overviews for EVE Online." />
+  <meta property="og:description" content="Generate DRY modular overviews for EVE Online." />
+
+
+<link rel="canonical" href="https://io.evansosenko.com/eve-overview/" />
+<meta property="og:url" content="https://io.evansosenko.com/eve-overview/" />
+<meta property="og:site_name" content="EVE Online Overview Generator" />
+<meta name="application-name" content="EVE Online Overview Generator"/>
+
+<meta property="og:updated_time" content=" 2022-01-19T05:11:18+00:00" />
+
+
+  <meta property="og:locale" content="en_US" />
+
+
+
+
+
+  <meta property="keywords" content="eve online,eve,overview,overviews,overview generator,tool,yaml,yml,ruby,dry" />
+
+
+
+  <meta property="og:image" content="https://io.evansosenko.com/eve-overview/pictures/fullsize/overview.jpg" />
+
+
+
+
+
+
+
+
+
+  <meta name="twitter:card" content="summary" />
+
+
+
+  <meta name="twitter:site" content="@evansosenko" />
+
+
+
+  <meta name="twitter:creator" content="@evansosenko" />
+
+
+  <link rel="apple-touch-icon-precomposed" sizes="57x57" href="https://io.evansosenko.com/eve-overview/assets/favicon/apple-touch-icon-57x57-44e0df7c9b7442f3f0a1e87557a26530.png" />
+<link rel="apple-touch-icon-precomposed" sizes="114x114" href="https://io.evansosenko.com/eve-overview/assets/favicon/apple-touch-icon-114x114-ecd79854faf59d6519b0be70119bf2ae.png" />
+<link rel="apple-touch-icon-precomposed" sizes="72x72" href="https://io.evansosenko.com/eve-overview/assets/favicon/apple-touch-icon-72x72-2597cd3ac043f07c9c9c008804dbc01e.png" />
+<link rel="apple-touch-icon-precomposed" sizes="144x144" href="https://io.evansosenko.com/eve-overview/assets/favicon/apple-touch-icon-144x144-d1e01b533e6e7999d14750725cf3d5b8.png" />
+<link rel="apple-touch-icon-precomposed" sizes="60x60" href="https://io.evansosenko.com/eve-overview/assets/favicon/apple-touch-icon-60x60-1d69ba2d9901739a3ec769d7516fcfce.png" />
+<link rel="apple-touch-icon-precomposed" sizes="120x120" href="https://io.evansosenko.com/eve-overview/assets/favicon/apple-touch-icon-120x120-886289e411a3cf18bd815467a5a7799d.png" />
+<link rel="apple-touch-icon-precomposed" sizes="76x76" href="https://io.evansosenko.com/eve-overview/assets/favicon/apple-touch-icon-76x76-726a76dffe938e815cbeed4677a89827.png" />
+<link rel="apple-touch-icon-precomposed" sizes="152x152" href="https://io.evansosenko.com/eve-overview/assets/favicon/apple-touch-icon-152x152-606795bacf5e40183e59c4d8cb687319.png" />
+<link rel="icon" type="image/png" href="https://io.evansosenko.com/eve-overview/assets/favicon/favicon-196x196-f518b5ba5d9799864953c03bb10de942.png" sizes="196x196" />
+<link rel="icon" type="image/png" href="https://io.evansosenko.com/eve-overview/assets/favicon/favicon-96x96-28c1bd5ff65644c0742d8b29db224099.png" sizes="96x96" />
+<link rel="icon" type="image/png" href="https://io.evansosenko.com/eve-overview/assets/favicon/favicon-32x32-50073f0940f5a9e4c833310f961aabfe.png" sizes="32x32" />
+<link rel="icon" type="image/png" href="https://io.evansosenko.com/eve-overview/assets/favicon/favicon-16x16-e6d316bc585428cb908e3a6ad1019bf2.png" sizes="16x16" />
+<link rel="icon" type="image/png" href="https://io.evansosenko.com/eve-overview/assets/favicon/favicon-128-909e7ce67516631ab89e25b058cf89ed.png" sizes="128x128" />
+<meta name="msapplication-TileColor" content="#FFFFFF" />
+<meta name="msapplication-TileImage" content="https://io.evansosenko.com/eve-overview/assets/favicon/mstile-144x144-d1e01b533e6e7999d14750725cf3d5b8.png" />
+<meta name="msapplication-square70x70logo" content="https://io.evansosenko.com/eve-overview/assets/favicon/mstile-70x70-909e7ce67516631ab89e25b058cf89ed.png" />
+<meta name="msapplication-square150x150logo" content="https://io.evansosenko.com/eve-overview/assets/favicon/mstile-150x150-ac46c0695f404b2e7d248a74e5376e98.png" />
+<meta name="msapplication-wide310x150logo" content="https://io.evansosenko.com/eve-overview/assets/favicon/mstile-310x150-9ba52d0b4a5504985c147a1edf1cd26a.png" />
+<meta name="msapplication-square310x310logo" content="https://io.evansosenko.com/eve-overview/assets/favicon/mstile-310x310-a7a229675fca62d09c7e63c238f3baa9.png" />
+
+  <link type="text/plain" rel="author" href="https://io.evansosenko.com/eve-overview/humans.txt" />
+  <link rel="stylesheet" href="https://io.evansosenko.com/eve-overview/assets/app-ad0e5b819e87cb8dc3ec3a721bc61976.css">
+  <script src="https://io.evansosenko.com/eve-overview/assets/head-29692722edf9ffc51e28f0c09cc411e7.js"></script>
+</head>
+
+<body>
+  <header>
+  <a name="top"></a>
+  <h1 data-magellan-destination="top"><a href="https://io.evansosenko.com/eve-overview/">EVE Online Overview Generator</a></h1>
+</header>
+
+<section id="content">
+  <nav id="buttons">
+  <a class="button secondary icon fi-social-github" href="https://github.com/razor-x/eve-overview">Source on GitHub</a>
+  <a class="button secondary icon fi-archive" href="https://github.com/razor-x/eve-overview/releases">All versions</a>
+  <a id="download" class="button disabled icon fi-download">Retrieving latest release</a>
+</nav>
+
+
+  <nav id="navigation" data-magellan-expedition="fixed">
+    <dl class="sub-nav">
+      <dt>EVE Online Overview Generator</dt>
+      <dd data-magellan-arrival="top"><a class="fi-arrow-up" href="#top" title="top"></a></dd>
+    
+      <dd data-magellan-arrival="introduction">
+        <a href="#introduction">introduction</a>
+      </dd>
+    
+      <dd data-magellan-arrival="usage">
+        <a href="#usage">usage</a>
+      </dd>
+    
+      <dd data-magellan-arrival="structure">
+        <a href="#structure">Overview structure</a>
+      </dd>
+    
+      <dd data-magellan-arrival="faq">
+        <a href="#faq">FAQ</a>
+      </dd>
+    
+      <dd data-magellan-arrival="changelog">
+        <a href="#changelog">CHANGELOG</a>
+      </dd>
+    
+    </dl>
+  </nav>
+
+  <p><a name="introduction"></a>
+<h2 data-magellan-destination="introduction">Introduction</h2></p>
+
+<ul class="clearing-thumbs clearing-feature" data-clearing>
+
+  <li class="clearing-featured-img">
+    <a href="https://io.evansosenko.com/eve-overview/assets/overview-travel-d39564a41224938db99c4b135926958d.jpg">
+      <img data-caption="Travel preset" alt="Travel preset"
+           src="https://io.evansosenko.com/eve-overview/assets/overview-travel-th-58a43a32eca2923a3e9e7f09c0b0c94c.jpg" />
+    </a>
+  </li>
+
+  <li>
+    <a href="https://io.evansosenko.com/eve-overview/assets/overview-hostile-minimal-386527a608629b1cc9e8cf8697e13765.jpg">
+      <img data-caption="Minimal preset" alt="Minimal preset"
+           src="https://io.evansosenko.com/eve-overview/assets/overview-hostile-minimal-th-985b69ccb7fac58f611fd79ffc273d8d.jpg" />
+    </a>
+  </li>
+
+  <li>
+    <a href="https://io.evansosenko.com/eve-overview/assets/overview-dscan-skirmish-e17a2b7fa64447399e227673bc88d505.jpg">
+      <img data-caption="D-scan skirmish preset" alt="D-scan skirmish preset"
+           src="https://io.evansosenko.com/eve-overview/assets/overview-dscan-skirmish-th-bf117a82b4a43a1301c5aa2024a326e3.jpg" />
+    </a>
+  </li>
+
+  <li>
+    <a href="https://io.evansosenko.com/eve-overview/assets/overview-pve-bb49a1c4887b758f1cf5e043e5f1b5a5.jpg">
+      <img data-caption="PvE preset" alt="PvE preset"
+           src="https://io.evansosenko.com/eve-overview/assets/overview-pve-th-359bdd2bff721f9b2a2a5b5d0aa039cb.jpg" />
+    </a>
+  </li>
+
+  <li>
+    <a href="https://io.evansosenko.com/eve-overview/assets/overview-pve-npc-8df1ca4b3b4af78b084e1f5c3ad74de3.jpg">
+      <img data-caption="PvE NPC preset" alt="PvE NPC preset"
+           src="https://io.evansosenko.com/eve-overview/assets/overview-pve-npc-th-e63205174a7dc968c3d1375528f8a5c2.jpg" />
+    </a>
+  </li>
+
+  <li>
+    <a href="https://io.evansosenko.com/eve-overview/assets/overview-pve-mining-8da134fc3ea3ba748580b5e6291b7aa5.jpg">
+      <img data-caption="Mining preset" alt="Mining preset"
+           src="https://io.evansosenko.com/eve-overview/assets/overview-pve-mining-th-82c4836d8c451c93e58186ef2a80cf1f.jpg" />
+    </a>
+  </li>
+
+  <li>
+    <a href="https://io.evansosenko.com/eve-overview/assets/overview-extra-salvage-9f4a5a8708b0e8f267c940f0da74df6b.jpg">
+      <img data-caption="Salvage preset" alt="Salvage preset"
+           src="https://io.evansosenko.com/eve-overview/assets/overview-extra-salvage-th-203bc4c97c40cf249fcdb34fd0eaee94.jpg" />
+    </a>
+  </li>
+
+  <li>
+    <a href="https://io.evansosenko.com/eve-overview/assets/overview-extra-warpout-fbfb3279cee682c4dc173bc0f89b5ed5.jpg">
+      <img data-caption="Warpout preset" alt="Warpout preset"
+           src="https://io.evansosenko.com/eve-overview/assets/overview-extra-warpout-th-9e7fb40c829c15a75bf1be3952d29d88.jpg" />
+    </a>
+  </li>
+
+</ul>
+
+<p><strong>Don&#39;t die on patch day because you missed adding that new ship-type to one of your presets!</strong></p>
+
+<p>The EVE Online Overview Generator facilitates creating and maintaining overview packs.
+Download the comprehensive, tested, and up-to-date overview pack, or build your own!</p>
+
+<p>Essentially, you define a common set of LEGO bricks and build your overviews with them.</p>
+
+<p>First, create overviews out of game by editing a set of YAML files.
+Then, generate importable overview files by running the included Ruby script.</p>
+
+<p>Rather than a single YAML file per overview, the various overview settings are split
+into many files which can be reused to create custom overviews
+based on a set of common groups, presets, settings, etc.
+The modular design makes updating, sharing, and customizing simple.</p>
+
+<p>Read on for the details or check out the <a href="#faq">FAQ</a>
+and <a href="https://forums.eveonline.com/default.aspx?g=posts&m=5289211">thread on the official EVE Online forums</a>.</p>
+
+<p><a name="usage"></a>
+<h2 data-magellan-destination="usage">How can I use this?</h2></p>
+
+<h3>Use the default pack</h3>
+
+<p>This project maintains several overview groups and presets.
+Each release provides a set of default overview profiles
+you can download and import directly into the EVE client.</p>
+
+<p>You can join the in-game channel <code>Overview Generator</code> for one-click overview links,
+however each link can only include five presets,
+so I recommend downloading and importing the full pack (see below).</p>
+
+<h4>Installation or upgrade</h4>
+
+<ol>
+<li>Download the latest release using the button at the top of this page.</li>
+<li>The downloaded archive contains an <code>Overview</code> folder.
+The contents of this folder should be extracted to your <code>EVE/Overview</code> folder.
+If you are unsure of the location of the <code>Overview</code> folder,
+you can export your current overview and the client will show the export location.
+(See step 4 below for where to find the option to &quot;Export Overview Settings&quot;.)</li>
+<li>In the EVE client, select &quot;Open Overview Settings&quot;
+from the overview menu button (top-left of the Overview window).</li>
+<li>Reset your overview to the default (press &quot;Reset All Overview Settings&quot; under the &quot;Misc&quot; tab).</li>
+<li>Import any of the extracted <code>.yaml</code> overview files: select &quot;Import Overview Settings&quot;
+from the overview settings menu (top-left of the Overview Settings window) and select a file from the left.
+Be sure to click &quot;Check All&quot; before importing to import all of the presets.
+If you do not want to import every preset, simply deselect any you do not want.</li>
+</ol>
+
+<ul>
+<li>Each <code>.yaml</code> file has a name of the form <code>[overview]-[tabs].yaml</code>.
+Each file with the same <code>[overview]</code> name will be identical
+except for the differently configured tab names and default tab presets.</li>
+<li>There is no need to reset your overview settings when loading
+or switching between profiles with the same <code>[overview]</code> prefix.</li>
+<li>For each different <code>[tabs]</code> preset that use the same <code>[overview]</code>,
+you should create an in-game overview link in your notepad to quickly switch between presets.</li>
+</ul>
+
+<h4>Included presets</h4>
+
+<p>Presets are organized into groups and optimized for a given activity or role.
+Most presets include common &quot;required&quot; objects such as bombs and scanner probes,
+although some very specific presets may purposely exclude such things.
+The following is meant as a summary.
+To see exactly what makes up each preset,
+see the source code for the version you are using or check in the EVE client.</p>
+
+<ul>
+<li>✈ travel
+
+<ul>
+<li>Designed to be loaded into the first tab.</li>
+<li>Shows rats.</li>
+<li>The default travel preset shows stations and gates.</li>
+<li>Includes a preset that hides stations.</li>
+<li>Includes a preset that shows hostiles.</li>
+</ul></li>
+<li>♞ hostile
+
+<ul>
+<li>Presets that display hostile entities.</li>
+<li>The minimal preset shows only ships and the sun.</li>
+<li>Includes presets for drones.</li>
+<li>Includes a versatile set of presets to filter by ship classes.</li>
+</ul></li>
+<li>★ friendly
+
+<ul>
+<li>Works just like the hostile presets, but only shows friendlies.</li>
+</ul></li>
+<li>☆ fleet
+
+<ul>
+<li>Works just like the hostile presets, but only shows fleet members.</li>
+</ul></li>
+<li>♜ sov
+(<a href="https://github.com/razor-x/eve-overview/issues/2">in development</a>)
+
+<ul>
+<li>Presets tailored for sovereignty warfare.</li>
+</ul></li>
+<li>♣ pve
+
+<ul>
+<li>Includes presets for mining, missioning, and ratting.</li>
+<li>Specialized PvE presets
+(<a href="https://github.com/razor-x/eve-overview/issues/4">in development</a>).</li>
+</ul></li>
+<li>✥ dscan
+
+<ul>
+<li>Presets designed to be used by the directional scanner.</li>
+</ul></li>
+<li>✪ extra
+
+<ul>
+<li>Utility presets.</li>
+<li>Includes a warpout preset for escaping to celestials.</li>
+<li>The loot preset shows hostiles while the salvage preset does not.</li>
+<li>Small gang presets show both friendlies and hostiles.</li>
+</ul></li>
+<li>❏ brackets
+
+<ul>
+<li>Presets designed to be loaded as brackets.</li>
+</ul></li>
+</ul>
+
+<p>Special thanks to <a href="https://twitter.com/OhTakashawa">Oh Takashawa</a> for maintaining Sarah&#39;s Overview Pack
+which inspired much of style behind the packaged default overview.</p>
+
+<h3>Use a community pack</h3>
+
+<p>If you have created an overview pack with this generator,
+create a new issue in the <a href="https://github.com/razor-x/eve-overview/issues">GitHub issue tracker</a>, and I&#39;ll add a link here.</p>
+
+<h3>Make your own or customize this one</h3>
+
+<h4>Requirements</h4>
+
+<ul>
+<li>A text editor, e.g., <a href="https://atom.io/">Atom</a>.</li>
+<li><a href="https://www.ruby-lang.org/">Ruby</a>, any version 2 release.</li>
+<li>The <a href="http://bundler.io/">Bundler</a> gem.</li>
+<li>Optionally, a <a href="https://github.com/">GitHub</a> account and <a href="http://git-scm.com/">git</a>, <a href="https://windows.github.com/">GitHub Windows</a>, or <a href="https://mac.github.com/">GitHub Mac</a>.
+If you are not familiar with git, <a href="https://try.github.io/">you can try it in your browser</a>.
+You can download and edit the source directly without using version control,
+however this is strongly discouraged.</li>
+</ul>
+
+<p>Setting up this software is beyond the scope of this documentation.
+Packages should be available for most major Linux distributions:
+for Ruby, I recommend using <a href="https://github.com/sstephenson/rbenv">rbenv</a>.
+Packages for Mac should be available through <a href="http://brew.sh/">Homebrew</a>.
+Packages for Windows can be installed with <a href="https://chocolatey.org/">Chocolatey</a>.</p>
+
+<h4>Instructions</h4>
+
+<ol>
+<li><p>Fork or clone the <a href="https://github.com/razor-x/eve-overview">source repository</a>. You should only need the <code>master</code> branch.</p>
+<div class="highlight"><pre><code class="language-bash" data-lang="bash"><span class="nv">$ </span>git clone https://github.com/razor-x/eve-overview.git --branch master
+</code></pre></div>
+<p>You can also fork someone else&#39;s fork to base your overview off theirs.</p></li>
+<li><p>Install the needed Ruby gems with</p>
+<div class="highlight"><pre><code class="language-bash" data-lang="bash"><span class="nv">$ </span>bundle
+</code></pre></div></li>
+<li><p>Edit the <code>.yml</code> files according to their descriptions in the next section.</p></li>
+<li><p>Build the overview files to the <code>Overview</code> folder with</p>
+<div class="highlight"><pre><code class="language-bash" data-lang="bash"><span class="nv">$ </span>rake
+</code></pre></div></li>
+</ol>
+
+<p>Optionally, you can setup Travis CI to automatically build your overviews.
+See this project&#39;s <a href="https://github.com/razor-x/eve-overview/blob/master/.travis.yml">.travis.yml</a> file as an example
+and the <a href="http://docs.travis-ci.com/user/deployment/releases/">corresponding documentation</a> for details.</p>
+
+<h4>Updating</h4>
+
+<p>You can pull updates from this project into your fork using git.
+This way, you can maintain your own overview pack,
+but still benefit directly from updates to the original project.</p>
+
+<p>Just add this as a remote,</p>
+<div class="highlight"><pre><code class="language-bash" data-lang="bash"><span class="nv">$ </span>git remote add upstream https://github.com/razor-x/eve-overview.git
+</code></pre></div>
+<p>When you want to merge updates, fetch and merge.
+For example,</p>
+<div class="highlight"><pre><code class="language-bash" data-lang="bash"><span class="nv">$ </span>git fetch --no-tags upstream
+<span class="nv">$ </span>git merge upstream/master
+</code></pre></div>
+<p><a name="structure"></a>
+<h2 data-magellan-destination="structure">Overview structure</h2></p>
+
+<p>This section covers how the modular file structure of the Overview Generator
+fits together to generate the importable overview files.</p>
+
+<h3>Overview</h3>
+
+<p>Each file under <code>overviews</code> will generate a set of importable <code>.yaml</code> files:
+one for each selected group of tabs.</p>
+
+<p>For example,</p>
+<div class="highlight"><pre><code class="language-haml" data-lang="haml"># overviews/default.yml
+<span class="p">-</span><span class="o">--</span>
+appearance: default
+columns: default
+labels: default
+settings: default
+tabs:
+  <span class="p">-</span> <span class="n">pve</span>
+  <span class="p">-</span> <span class="n">pvp</span>
+</code></pre></div>
+<p>will generate <code>Overview/default-pve.yaml</code> and <code>Overview/default-pvp.yaml</code>.
+Thus, there will be two overview files that are identical aside from the
+tab settings defined in <code>tabs/pve.yml</code> and <code>tabs/pvp.yml</code>.</p>
+
+<p>The first four attributes load options from the corresponding file,
+e.g., this overview will use <code>appearances/default.yml</code>, <code>columns/default.yml</code>,
+<code>labels/default.yml</code>, and <code>settings/default.yml</code>.</p>
+
+<h3>Basic settings and appearance</h3>
+
+<p>The following is the simplest way to create any <code>.yml</code> file for one of the
+four types: appearance, columns, labels, or settings.</p>
+
+<ol>
+<li>Setup the corresponding overview options in the EVE client.</li>
+<li>Export the overview from the EVE client to a file.</li>
+<li>Open the exported file and copy and paste the corresponding keys.</li>
+</ol>
+
+<h4>Appearance</h4>
+
+<p>Files under <code>appearances</code> define the tag, color, background color, and blink priority.</p>
+
+<p>The following keys should be defined here:</p>
+
+<ul>
+<li><code>flagOrder</code></li>
+<li><code>flagStates</code></li>
+<li><code>backgroundOrder</code></li>
+<li><code>backgroundStates</code></li>
+<li><code>stateBlinks</code></li>
+<li><code>stateColorsNameList</code></li>
+</ul>
+
+<p>For example,</p>
+<div class="highlight"><pre><code class="language-haml" data-lang="haml"># appearances/default.yml
+<span class="p">-</span><span class="o">--</span>
+flagOrder:
+  <span class="p">-</span> <span class="mi">13</span>
+  <span class="p">-</span> <span class="mi">44</span>
+  <span class="p">-</span> <span class="mi">52</span>
+  ...
+
+flagStates:
+  <span class="p">-</span> <span class="mi">9</span>
+  <span class="p">-</span> <span class="mi">11</span>
+  <span class="p">-</span> <span class="mi">12</span>
+  ...
+
+backgroundOrder:
+  <span class="p">-</span> <span class="mi">13</span>
+  <span class="p">-</span> <span class="mi">44</span>
+  <span class="p">-</span> <span class="mi">52</span>
+  ...
+
+backgroundStates:
+  <span class="p">-</span> <span class="mi">9</span>
+  <span class="p">-</span> <span class="mi">10</span>
+  <span class="p">-</span> <span class="mi">11</span>
+  ...
+
+stateBlinks:
+  <span class="p">-</span> <span class="o">-</span> <span class="n">background_13</span>
+    <span class="p">-</span> <span class="kp">false</span>
+  <span class="p">-</span> <span class="o">-</span> <span class="n">background_44</span>
+    <span class="p">-</span> <span class="kp">false</span>
+  <span class="p">-</span> <span class="o">-</span> <span class="n">flag_13</span>
+    <span class="p">-</span> <span class="kp">true</span>
+  ...
+
+stateColorsNameList:
+  <span class="p">-</span> <span class="o">-</span> <span class="n">background_10</span>
+    <span class="p">-</span> <span class="n">white</span>
+  <span class="p">-</span> <span class="o">-</span> <span class="n">background_12</span>
+    <span class="p">-</span> <span class="n">darkBlue</span>
+  ...
+</code></pre></div>
+<p>Note that the ellipses indicate some content was removed for brevity.</p>
+
+<h4>Columns</h4>
+
+<p>Files under <code>columns</code> define the columns and the order they appear in the overview.</p>
+
+<p>The following keys should be defined here:</p>
+
+<ul>
+<li><code>columnOrder</code></li>
+<li><code>overviewColumns</code></li>
+</ul>
+
+<p>For example,</p>
+<div class="highlight"><pre><code class="language-haml" data-lang="haml"># columns/default.yml
+<span class="p">-</span><span class="o">--</span>
+columnOrder:
+  <span class="p">-</span> <span class="no">ICON</span>
+  <span class="p">-</span> <span class="no">DISTANCE</span>
+  <span class="p">-</span> <span class="no">NAME</span>
+  <span class="p">-</span> <span class="no">TYPE</span>
+  <span class="p">-</span> <span class="no">ALLIANCE</span>
+
+overviewColumns:
+  <span class="p">-</span> <span class="no">ALLIANCE</span>
+  <span class="p">-</span> <span class="no">DISTANCE</span>
+  <span class="p">-</span> <span class="no">ICON</span>
+  <span class="p">-</span> <span class="no">NAME</span>
+  <span class="p">-</span> <span class="no">TYPE</span>
+</code></pre></div>
+<h4>Labels</h4>
+
+<p>Files under <code>labels</code> define how objects are labeled in space.</p>
+
+<p>The following keys should be defined here:</p>
+
+<ul>
+<li><code>shipLabelOrder</code></li>
+<li><code>shipLabels</code></li>
+</ul>
+
+<p>For example,</p>
+<div class="highlight"><pre><code class="language-haml" data-lang="haml"># labels/default.yml
+<span class="p">-</span><span class="o">--</span>
+shipLabelOrder:
+  <span class="p">-</span> <span class="n">ship</span> <span class="n">type</span>
+  <span class="p">-</span> <span class="n">alliance</span>
+  <span class="p">-</span> <span class="n">corporation</span>
+  <span class="p">-</span> <span class="n">pilot</span> <span class="nb">name</span>
+  <span class="p">-</span> <span class="n">ship</span> <span class="nb">name</span>
+  <span class="p">-</span> <span class="n">null</span>
+
+shipLabels:
+  <span class="p">-</span> <span class="o">-</span> <span class="n">null</span>
+    <span class="p">-</span> <span class="o">-</span> <span class="o">-</span> <span class="n">post</span>
+        <span class="p">-</span> <span class="s1">&#39;&#39;</span>
+      <span class="p">-</span> <span class="o">-</span> <span class="n">pre</span>
+        <span class="p">-</span> <span class="s1">&#39;[&#39;</span>
+      <span class="p">-</span> <span class="o">-</span> <span class="n">state</span>
+        <span class="p">-</span> <span class="mi">0</span>
+      <span class="p">-</span> <span class="o">-</span> <span class="n">type</span>
+        <span class="p">-</span> <span class="n">null</span>
+  <span class="p">-</span> <span class="o">-</span> <span class="n">alliance</span>
+    <span class="p">-</span> <span class="o">-</span> <span class="o">-</span> <span class="n">post</span>
+        <span class="p">-</span> <span class="s1">&#39;}&#39;</span>
+      <span class="p">-</span> <span class="o">-</span> <span class="n">pre</span>
+        <span class="p">-</span> <span class="s1">&#39; {&#39;</span>
+      <span class="p">-</span> <span class="o">-</span> <span class="n">state</span>
+        <span class="p">-</span> <span class="mi">1</span>
+      <span class="p">-</span> <span class="o">-</span> <span class="n">type</span>
+        <span class="p">-</span> <span class="n">alliance</span>
+  ...
+</code></pre></div>
+<p>Note that the ellipses indicate some content was removed for brevity.</p>
+
+<h4>Settings</h4>
+
+<p>Files under <code>settings</code> define any other general overview settings.</p>
+
+<p>The following key should be defined here:</p>
+
+<ul>
+<li><code>userSettings</code></li>
+</ul>
+
+<p>For example,</p>
+<div class="highlight"><pre><code class="language-haml" data-lang="haml"># settings/default.yml
+<span class="p">-</span><span class="o">--</span>
+userSettings:
+  <span class="p">-</span> <span class="o">-</span> <span class="n">hideCorpTicker</span>
+    <span class="p">-</span> <span class="kp">true</span>
+  <span class="p">-</span> <span class="o">-</span> <span class="n">overviewBroadcastsToTop</span>
+    <span class="p">-</span> <span class="kp">true</span>
+</code></pre></div>
+<h3>Tabs</h3>
+
+<p>Files under <code>tabs</code> define the name of each tab and which
+overview presets and bracket presets are loaded for that tab.</p>
+
+<p>You can define up to five tabs.</p>
+
+<p>Each tab must set the following keys:</p>
+
+<ul>
+<li><code>name</code> - the title that labels the tab</li>
+<li><code>color</code> - the hex color value to use for the tab label</li>
+<li><code>overview</code> - the overview preset to use for the tab</li>
+<li><code>bracket</code> - the bracket preset to use for the tab</li>
+</ul>
+
+<p>The <code>overview</code> and <code>bracket</code> keys can point to any file under the <code>presets</code> folder.</p>
+
+<p>For example, here are the first two tabs of a PvE setup,</p>
+<div class="highlight"><pre><code class="language-haml" data-lang="haml"># tabs/pve.yml
+<span class="p">-</span><span class="o">--</span>
+<span class="p">-</span> <span class="nb">name</span><span class="p">:</span> <span class="n">npc</span>
+  color: FF99CC00
+  overview: pve-npc
+  bracket: brackets-all
+
+<span class="p">-</span> <span class="nb">name</span><span class="p">:</span> <span class="n">salvage</span>
+  color: FFFF4444
+  overview: extra-loot
+  bracket: brackets-all
+...
+</code></pre></div>
+<p>and the first two tabs of a PvP setup,</p>
+<div class="highlight"><pre><code class="language-haml" data-lang="haml"># tabs/pvp.yml
+<span class="p">-</span><span class="o">--</span>
+<span class="p">-</span> <span class="nb">name</span><span class="p">:</span> <span class="err">✈</span>
+  color: FFFFBB33
+  overview: travel
+  bracket: brackets-all
+
+<span class="p">-</span> <span class="nb">name</span><span class="p">:</span> <span class="n">hostile</span>
+  color: FF33B5E5
+  overview: hostile-minimal
+  bracket: brackets-all
+...
+</code></pre></div>
+<p>Note that the ellipses indicate the code for the other three tabs was removed for brevity.</p>
+
+<h3>Presets</h3>
+
+<p>Each overview tab in the EVE client loads an overview preset,
+which determines what appears in the current overview window,
+and a bracket preset, which determines which brackets appear in space.
+Presets are normally created and saved manually in the EVE client,
+however this is tedious and prone to error.</p>
+
+<p>Each file in the <code>presets</code> folder corresponds to a saved preset.
+Every preset defined this way will be included in every generated
+importable overview file, and thus may be imported into the EVE client.</p>
+
+<p>Preset files define which object types to display through groups,
+and which state filters to apply using states.</p>
+
+<p>The <code>name</code>, <code>symbol</code>, and <code>level</code> keys determine the preset name.</p>
+
+<p>The <code>groups</code> key is a list of files in the <code>groups</code> folder.</p>
+
+<p>The <code>states</code> key is a list of files in the <code>states</code> folder.</p>
+
+<p>For example, a clean PvP preset is</p>
+<div class="highlight"><pre><code class="language-haml" data-lang="haml"># presets/hostile-minimal.yml
+<span class="p">-</span><span class="o">--</span>
+name: minimal
+symbol: ♞ hostile
+level: 1
+groups:
+  <span class="p">-</span> <span class="n">common</span><span class="o">-</span><span class="n">minimal</span>
+  <span class="p">-</span> <span class="n">_celestial</span><span class="o">-</span><span class="n">sun</span>
+  <span class="p">-</span> <span class="n">_ship</span>
+states:
+  <span class="p">-</span> <span class="n">hostile</span>
+</code></pre></div>
+<p>In this case, the preset will appear in-game as <code>♞ hostile -- minimal</code>.</p>
+
+<p>The preset will show all objects defined in the files
+<code>groups/common-minimal.yml</code>, <code>groups/_celestial-sun.yml</code>, <code>groups/_ship.yml</code>.
+Specifically it will show the sun, all ship types,
+and a common set of required PvP objects such as bombs, probes, etc.</p>
+
+<p>It will use the <code>states/hostile.yml</code> file, thus hiding friendlies.</p>
+
+<h3>States</h3>
+
+<p>Files under <code>states</code> define a set of filtered and always-shown states
+which may be referred to and reused to create presets.</p>
+
+<p>These files are most easily created by setting the filters
+in the EVE client, and then pulling the array of numeric ids
+from the exported file.</p>
+
+<p>For example, this filters out all ships from displaying,
+but always shows fleet members</p>
+<div class="highlight"><pre><code class="language-haml" data-lang="haml">#  states/fleet.yml
+<span class="p">-</span><span class="o">--</span>
+show:
+  <span class="p">-</span> <span class="mi">11</span>
+hide:
+  <span class="p">-</span> <span class="mi">13</span>
+  <span class="p">-</span> <span class="mi">17</span>
+  <span class="p">-</span> <span class="mi">18</span>
+  <span class="p">-</span> <span class="mi">19</span>
+  <span class="p">-</span> <span class="mi">21</span>
+  <span class="p">-</span> <span class="mi">44</span>
+</code></pre></div>
+<h3>Groups</h3>
+
+<p>Groups collect object types together under a custom name
+so they may be referred to and reused to create presets.</p>
+
+<p>Groups can contain two keys:</p>
+
+<ul>
+<li><code>types</code> - an array of object type ids</li>
+<li><code>include</code> - an array of groups to include in this group</li>
+</ul>
+
+<p>By convention, all groups that are prefixed with an underscore correspond
+exactly to the group of objects with the same name in the EVE client.
+For example, <code>groups/_celestial.yml</code> is everything under the Celestial group,
+and <code>groups/_celestial-moon.yml</code> is only the Moon type under the Celestial group.</p>
+
+<p>For example, the default <code>common-minimal</code> group</p>
+<div class="highlight"><pre><code class="language-haml" data-lang="haml"># groups/common-minimal.yml
+<span class="p">-</span><span class="o">--</span>
+include:
+  <span class="p">-</span> <span class="n">_charge</span><span class="o">-</span><span class="n">scanner_probe</span>
+  <span class="p">-</span> <span class="n">beacons</span>
+  <span class="p">-</span> <span class="n">bombs</span>
+  <span class="p">-</span> <span class="n">bubbles</span>
+</code></pre></div>
+<p>only includes other groups such as</p>
+<div class="highlight"><pre><code class="language-haml" data-lang="haml"># groups/_charge-scanner_probe.yml
+<span class="p">-</span><span class="o">--</span>
+types:
+  <span class="p">-</span> <span class="mi">479</span>
+</code></pre></div>
+<p>and</p>
+<div class="highlight"><pre><code class="language-haml" data-lang="haml"># groups/bubbles.yml
+<span class="p">-</span><span class="o">--</span>
+include:
+  <span class="p">-</span> <span class="n">_charge</span><span class="o">-</span><span class="n">interdiction_probe</span>
+  <span class="p">-</span> <span class="n">_deployable</span><span class="o">-</span><span class="n">mobile_warp_disruptor</span>
+</code></pre></div>
+<p>and</p>
+<div class="highlight"><pre><code class="language-haml" data-lang="haml"># groups/bombs.yml
+<span class="p">-</span><span class="o">--</span>
+types:
+  <span class="p">-</span> <span class="mi">90</span>
+  <span class="p">-</span> <span class="mi">863</span>
+  <span class="p">-</span> <span class="mi">864</span>
+</code></pre></div>
+<p><a name="faq"></a>
+<h2 data-magellan-destination="faq">FAQ</h2></p>
+
+<h4>Who are you?</h4>
+
+<p>I&#39;ve been playing EVE since 2008 as <a href="https://gate.eveonline.com/Profile/Leon%20Razor">Leon Razor</a>.
+I am currently a Core member of <a href="http://www.agony-unleashed.com/">Agony Unleashed</a>.</p>
+
+<h4>Should I trust you?</h4>
+
+<p>Can you really trust anyone in EVE other than Chribba?</p>
+
+<p>As for trusting the overview,
+the entire project is open source and open to scrutiny.
+Please submit any bugs or issues you find.
+Don&#39;t fly what you can&#39;t afford to lose.
+I&#39;m not responsible for any losses you might incur while using the overview.</p>
+
+<blockquote>
+<p>This software is provided &quot;as is&quot; and without any express or
+implied warranties, including, without limitation, the implied
+warranties of merchantibility and fitness for a particular
+purpose.</p>
+</blockquote>
+
+<h4>Is this an overview pack?</h4>
+
+<p>Yes, but it&#39;s much more.</p>
+
+<p>Anyone who wants a new overview can use the provided overview pack out of the box.</p>
+
+<p>If you are setup with the listed requirements you can use this
+as a base for customizing or making your own pack.</p>
+
+<h4>Should I use this?</h4>
+
+<p>Do you want a new overview?</p>
+
+<p>Do you want to make an overview pack for yourself,
+corporation, alliance, or the general public?</p>
+
+<p>Do you like the idea of having your overview under version control
+and appreciate the flexibility and precision of the modular design?</p>
+
+<p>If you answered yes to any of the above then you should try this!</p>
+
+<p>Note that I&#39;m still adding presets and tweaking the default overview,
+but I&#39;ve been using this as my primary overview for while now.</p>
+
+<h4>Where is the graphical interface?</h4>
+
+<p>My goal with this project is to track my overview in version control
+in a <a href="https://en.wikipedia.org/wiki/Don&#x27;t_repeat_yourself">DRY</a> format while keeping everything in human readable text files.
+I have no plans to write a web interface or a graphical program.</p>
+
+<h4>I still don&#39;t get it?</h4>
+
+<p>That&#39;s okay. You can still just download the pack.</p>
+
+<p>I didn&#39;t intend for this to be generally accessible to everyone.
+If you have any development or general hacking experience
+the listed requirements should be familiar or at lease approachable.</p>
+
+<h4>Where can I get help?</h4>
+
+<p>If you found a bug or have a feature request,
+create a new issue with the <a href="https://github.com/razor-x/eve-overview/issues">GitHub issue tracker</a>.
+If you want real-time help or have general questions, join the <a href="https://gitter.im/razor-x/eve-overview">Gitter chat</a>.</p>
+
+<h4>Can I contribute?</h4>
+
+<p>Yes. This project (including this project site)
+is open source and hosted on GitHub.
+Pull requests and issue reports are welcome.
+Keep in mind that everyone has a different opinion on what makes a good overview,
+so I can&#39;t possibly promise to incorporate all suggestions.</p>
+
+<p>For real-time developer chatter, join the <a href="https://gitter.im/razor-x/eve-overview">Gitter chat</a>.</p>
+
+<p>If you find this useful, I will accept ISK donations
+to the in-game character <a href="https://gate.eveonline.com/Profile/Leon%20Razor">Leon Razor</a>.</p>
+
+<p><a name="changelog"></a>
+<a data-magellan-destination="changelog"></a></p>
+
+<div id="changelog">
+  <h2>Loading CHANGELOG.</h2>
+</div>
+
+
+</section>
+
+
+<footer>
+  <p>EVE Online Overview Generator is licensed under the MIT license. Copyright © 2014-2015 Evan Boyd Sosenko.</p>
+  <p>
+    All Eve Related Materials © CCP hf. All rights reserved. Used with permission.
+    <a data-reveal-id="ccp_copyright_notice">CCP Copyright Notice</a>
+  </p>
+  <p>
+    <a href="https://gate.eveonline.com/Corporation/Measure%20Zero">
+      <img
+        src="https://img.shields.io/badge/Donate%20ISK-Measure%20Zero-blue.svg"
+        alt="Donate ISK to Measure Zero" />
+    </a>
+    <a href="https://gitter.im/razor-x/eve-overview">
+      <img src="https://badges.gitter.im/razor-x/eve-overview.svg" alt="Gitter" />
+    </a>
+  </p>
+  
+<aside class="social-buttons">
+
+  <div class="fb-like" data-href="https://io.evansosenko.com/eve-overview/index.html" data-layout="button_count" data-action="like" data-show-faces="false" data-share="true"></div>
+
+
+
+  
+  <div class="g-plus" data-action="share" data-annotation="bubble"></div>
+
+
+
+  
+    
+  
+  <a href="https://twitter.com/share" class="twitter-share-button" data-via="@evansosenko"></a>
+
+</aside>
+
+
+</footer>
+
+<div id="ccp_copyright_notice" class="reveal-modal" data-reveal>
+  <h3>CCP Copyright Notice</h3>
+  <p>EVE Online and the EVE logo are the registered trademarks of CCP hf.
+All rights are reserved worldwide. All other trademarks are the property of their respective owners.
+EVE Online, the EVE logo, EVE and all associated logos and designs are the intellectual property of CCP hf.
+All artwork, screenshots, characters, vehicles, storylines, world facts
+or other recognizable features of the intellectual property relating to these trademarks
+are likewise the intellectual property of CCP hf.
+CCP hf. has granted permission to EVE Online Overview Generator to use EVE Online
+and all associated logos and designs for promotional and information purposes on its website
+but does not endorse, and is not in any way affiliated with, EVE Online Overview Generator.
+CCP is in no way responsible for the content on or functioning of this website,
+nor can it be liable for any damage arising from the use of this website.
+</p>
+  <a class="close-reveal-modal">×</a>
+</div>
+
+
+
+  <div id="fb-root"></div>
+
+
+  <script>
+    'use strict';
+
+  
+    !function(e,t,n){var o,s=e.getElementsByTagName(t)[0];e.getElementById(n)||(o=e.createElement(t),o.id=n,o.src="https://connect.facebook.net/en_US/sdk.js#xfbml=1&version=v2.0",s.parentNode.insertBefore(o,s))}(document,"script","facebook-jssdk");
+  
+
+  
+    window.___gcfg={lang:"en-US",parsetags:"onload"},function(){var e=document.createElement("script");e.type="text/javascript",e.async=!0,e.src="https://apis.google.com/js/platform.js";var t=document.getElementsByTagName("script")[0];t.parentNode.insertBefore(e,t)}();
+  
+
+  
+    !function(t,e,r){var n,s=t.getElementsByTagName(e)[0],i="https";t.getElementById(r)||(n=t.createElement(e),n.id=r,n.src=i+"://platform.twitter.com/widgets.js",s.parentNode.insertBefore(n,s))}(document,"script","twitter-wjs");
+  
+
+  
+
+  
+    !function(e,a,t,n,s,c,o){e.GoogleAnalyticsObject=s,e[s]=e[s]||function(){(e[s].q=e[s].q||[]).push(arguments)},e[s].l=1*new Date,c=a.createElement(t),o=a.getElementsByTagName(t)[0],c.async=1,c.src=n,o.parentNode.insertBefore(c,o)}(window,document,"script","https://www.google-analytics.com/analytics.js","ga"),ga("create","UA-19631381-4","evansosenko.com"),ga("require","displayfeatures"),ga("send","pageview");
+  
+
+  
+  </script>
+</body>
+</html>

@@ -1,6 +1,0 @@
----
-include:
-  - _ship-destroyer
-  - _ship-tactical_destroyer
-  - _ship-command_destroyers
-  - _ship-interdictor

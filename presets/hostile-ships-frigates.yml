@@ -1,9 +1,0 @@
----
-name: frigates
-symbol: ♞ hostile
-level: 2
-groups:
-  - common-minimal-ships
-  - ships-frigates
-states:
-  - hostile

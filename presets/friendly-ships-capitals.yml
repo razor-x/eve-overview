@@ -1,9 +1,0 @@
----
-name: capitals
-symbol: ★ friendly
-level: 2
-groups:
-  - common-minimal-ships
-  - ships-capitals
-states:
-  - friendly

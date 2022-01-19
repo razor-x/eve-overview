@@ -1,8 +1,0 @@
----
-include:
-  - _ship-capital_industrial_ship
-  - _ship-carrier
-  - _ship-dreadnought
-  - _ship-force_auxiliary
-  - _ship-freighter
-  - _ship-jump_freighter

@@ -1,9 +1,0 @@
----
-name: sub-capitals
-symbol: ☆ fleet
-level: 3
-groups:
-  - common-minimal-ships
-  - ships-subcapitals
-states:
-  - fleet
