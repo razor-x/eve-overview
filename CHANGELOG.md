@@ -1,5 +1,13 @@
 # Changelog
 
+## 2.4.0 / 2022-01-18
+
+- Add new types:
+    - AIR entities.
+    - Unidentified entities.
+    - Mobile observatory.
+    - Mobile analysis beacon.
+
 ## 2.3.0 / 2021-03-04
 
 - Add new types:
