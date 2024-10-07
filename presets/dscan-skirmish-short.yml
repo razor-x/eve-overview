@@ -9,6 +9,7 @@ groups:
   - _celestial-force_field
   - _celestial-planet
   - _orbitals-orbital_infrastructure
+  - _orbitals-skyhook
   - _celestial-asteroid_belt
   - _celestial-entosis_command_node
 states:

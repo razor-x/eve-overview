@@ -6,6 +6,7 @@ include:
   - _entity-destructible_sentry_gun
   - _entity-irregular
   - _entity-pirate_drone
+  - _entity-pirate_entities
   - _entity-protective_sentry_gun
   - _entity-invading
   - _entity-retaliating
@@ -14,6 +15,7 @@ include:
   - _entity-rogue_drone
   - _entity-roaming_sleepers_cruiser
   - _entity-drifters_battleship
+  - _entity-guided_entities
   - _npc-mission_npc
   - _npc-pirate_npc
   - entities-abyssal
@@ -25,4 +27,6 @@ include:
   - entities-asteroid
   - entities-hidden_zenith
   - entities-roaming
+  - entities-homefront
+  - entities-insurgency
   - entities-◆

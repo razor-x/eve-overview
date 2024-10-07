@@ -1,6 +1,7 @@
 ---
 include:
   - _charge-scanner_probe
+  - _celestial-interstellar_shipcaster_beacon
   - beacons
   - bombs
   - bubbles

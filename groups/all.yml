@@ -1,7 +1,4 @@
 ---
-types:
-  - 1165
-
 include:
   - _asteroid
   - _celestial
