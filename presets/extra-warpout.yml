@@ -6,5 +6,6 @@ groups:
   - common-minimal
   - _celestial-planet
   - _orbitals-orbital_infrastructure
+  - _orbitals-skyhook
 states:
   - all
