@@ -1,0 +1,18 @@
+{
+  "$schema": "https://raw.githubusercontent.com/devcontainers/spec/main/schemas/devContainer.schema.json",
+  "name": "Ruby",
+  "build": {
+    "dockerfile": "Dockerfile",
+    "args": {
+      "VARIANT": "3"
+    }
+  },
+  "extensions": [
+    "rebornix.Ruby",
+    "ms-vsliveshare.vsliveshare",
+    "EditorConfig.EditorConfig",
+    "esbenp.prettier-vscode"
+  ],
+  "postCreateCommand": "bundle install",
+  "remoteUser": "vscode"
+}
