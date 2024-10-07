@@ -20,6 +20,8 @@ If you would like me to release an update, please submit an issue._
 
 ### Generator
 
+[![Open in GitHub Codespaces](https://github.com/codespaces/badge.svg)](https://codespaces.new/razor-x/eve-overview)
+
 The EVE Online Overview Generator facilitates creating and maintaining overview packs.
 
 Essentially, you define a common set of LEGO bricks and build your overviews with them.
