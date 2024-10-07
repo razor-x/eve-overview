@@ -81,6 +81,14 @@ $ git clone https://github.com/razor-x/eve-overview.git
 
 [source]: https://github.com/razor-x/eve-overview
 
+### Releasing a new version
+
+```
+$ bundle exec bump minor
+$ git tag v1.2.3
+$ git push --follow-tags
+```
+
 ## Contributing
 
 Please submit and comment on bug reports and feature requests.
