@@ -1,5 +1,18 @@
 # Changelog
 
+## 2.5.0 / 2024-10-06
+
+- Update groups with all new objects.
+- Add new neutral NPCs:
+    - New asteroid NPCs.
+    - New
+- Add new faction warfare battleships.
+- Add Skyhook to warpout and short dscan.
+- Add Lancer Dreadnought to dreadnoughts
+- Add Shipcaster to gates
+- Add Shipcaster beacon with beacons (not added to generic beacon group).
+- Add Compressible Gas to harvestables.
+
 ## 2.4.1 / 2022-01-18
 
 - Fix release action.
